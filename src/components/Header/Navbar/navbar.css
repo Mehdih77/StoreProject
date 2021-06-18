@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #fff !important;
+    font-size: 16px;
+  }
+  .navbar-brand img {
+    border-radius: 50%;
+    width: 55px;
+  }
+  .navbar-nav .nav-item:nth-child(1) a {
+    padding-right: 20px;
+    width: 120px;
+  }
+  .navbar-nav a:hover {
+    color: #f3696c !important;
+  }
+  .dropdown-menu {
+    border: none;
+    font-size: 13px;
+  }
+  

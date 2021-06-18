@@ -1,0 +1,13 @@
+.top-banner {
+    height: 60px;
+    border-radius: var(--border10);
+  }
+  .large-banner-top img {
+    border-radius: var(--border10);
+  }
+  .small-banner-top img {
+    height: 184px;
+    margin-top: 5px;
+    border-radius: var(--border10);
+  }
+  

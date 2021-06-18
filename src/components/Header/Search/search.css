@@ -1,0 +1,35 @@
+.navbar .form-control {
+    font-size: 13px;
+  }
+  .form-inline {
+    position: relative;
+  }
+  .navbar .btn {
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+  input[type="search"] {
+    width: 300px !important;
+  }
+  @media screen and (max-width: 900px) {
+    input[type="search"] {
+      width: 100% !important;
+    }
+  }
+  input[type="search"]:focus {
+    outline: none;
+    box-shadow: unset;
+    border: 1px solid #ced4da;
+  }
+  button[type="submit"] i:hover {
+    color: #f45052 !important;
+    transition: 0.1s linear;
+  }
+  button[type="submit"]:focus{
+    outline: none;
+    box-shadow: unset;
+  }
+  button[type="submit"]:active{
+    transform: scale(0.95);
+  }
