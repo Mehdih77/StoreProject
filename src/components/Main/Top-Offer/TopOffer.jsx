@@ -2,9 +2,9 @@ import React from 'react'
 import './topoffer.css'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-import "swiper/components/pagination/pagination.min.css"
-import SwiperCore, { Pagination } from 'swiper/core';
-SwiperCore.use([Pagination]);
+import "swiper/components/navigation/navigation.min.css";
+import SwiperCore, { Navigation } from 'swiper/core';
+SwiperCore.use([Navigation]);
 
 
 export default function TopOffer() {
@@ -14,12 +14,10 @@ export default function TopOffer() {
             <div className="container">
                 <div className="row">
                 <div className="col-md-3">
-                    <img className="top-offer-right" src="image/7.png" />
+                    <img className="top-offer-right w-100 my-5" src="image/7.png" />
                 </div>
                 <div className="col-md-9">
-                <Swiper slidesPerView={1} spaceBetween={15} pagination={{
-  "clickable": true
-}} breakpoints={{
+                <Swiper slidesPerView={1} spaceBetween={15} navigation={true} breakpoints={{
   "640": {
     "slidesPerView": 1,
     "spaceBetween": 20
@@ -30,63 +28,69 @@ export default function TopOffer() {
   },
   "1024": {
     "slidesPerView": 3,
-    "spaceBetween": 0
+    "spaceBetween": 10
   }
-}} className="mySwiper">
+}} className="mySwiper swiper-top-offer my-4 ml-2">
   <SwiperSlide><div class="card">
-  <img src="./image/3.jpg" class="card-img-top" alt="..."/>
+  <img src="./image/k.jpg" class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">کروسان</h5>
+    <p class="card-text">کروسان کاکائو پچ پچ بسته 6 عددی
+ با طعم کاکائو</p>
+    <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
   <SwiperSlide><div class="card">
-  <img src="./image/3.jpg" class="card-img-top" alt="..."/>
+  <img src="./image/esperi.jpg" class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">اسپری خوشبو کننده</h5>
+    <p class="card-text">اسپری خوشبو کننده بدن زنانه بیول مدل REMEMBER ME حجم 150 میلی لیتر
+</p>
+    <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
 <SwiperSlide><div class="card">
-  <img src="./image/3.jpg" class="card-img-top" alt="..."/>
+  <img src="./image/phone.jpg" class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">گوشی موبایل سامسونگ مدل Galaxy Z Fold2</h5>
+    <p class="card-text">گوشی موبایل سامسونگ مدل Galaxy Z Fold2 LTE SM-F916B تک سیم‌کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت
+</p>
+    <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
 <SwiperSlide><div class="card">
-  <img src="./image/3.jpg" class="card-img-top" alt="..."/>
+  <img src="./image/shoes.jpg" class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">کفش پیاده روی زنانه</h5>
+    <p class="card-text">کفش پیاده روی زنانه نیترو مدل PT کد 8050
+</p>
+    <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
 <SwiperSlide><div class="card">
-  <img src="./image/3.jpg" class="card-img-top" alt="..."/>
+  <img src="./image/k.jpg" class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">کروسان </h5>
+    <p class="card-text">کروسان کاکائو پچ پچ بسته 6 عددی
+ با طعم کاکائو</p>    <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
 <SwiperSlide><div class="card">
-  <img src="./image/3.jpg" class="card-img-top" alt="..."/>
+  <img src="./image/phone.jpg" class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">گوشی موبایل سامسونگ مدل Galaxy Z Fold2</h5>
+    <p class="card-text">گوشی موبایل سامسونگ مدل Galaxy Z Fold2 LTE SM-F916B تک سیم‌کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت
+</p>
+    <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
 <SwiperSlide><div class="card">
-  <img src="./image/3.jpg" class="card-img-top" alt="..."/>
+  <img src="./image/esperi.jpg" class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">اسپری خوشبو کننده</h5>
+    <p class="card-text">اسپری خوشبو کننده بدن زنانه بیول مدل REMEMBER ME حجم 150 میلی لیتر
+</p>
+    <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
   </Swiper></div>
