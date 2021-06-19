@@ -10,7 +10,7 @@
     left: 0;
   }
   input[type="search"] {
-    width: 300px !important;
+    width: 350px !important;
   }
   @media screen and (max-width: 900px) {
     input[type="search"] {

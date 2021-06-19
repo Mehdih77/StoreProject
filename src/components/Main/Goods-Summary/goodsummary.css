@@ -1,0 +1,24 @@
+.goods-summary{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+}
+.goods-summary-title{
+    text-align: center;
+    padding: 10px;
+    color: #656565!important;
+}
+.goods-main{
+    margin-top: 5px;
+}
+.goods-title{
+    font-size: 16px;
+}
+.goods-icon{
+    color: #00bfd6!important;
+    font-size: 27px;
+}
+.goods-qty{
+    color: #00bfd6!important;
+    font-size: 13px;
+}

@@ -1,0 +1,37 @@
+.supermarket{
+    background-color: #6BB927;
+}
+.swiper-top-offer .card-title{
+    font-size: 16px;
+    font-weight: 800;
+}
+.swiper-top-offer .card-text{
+    font-size: 14px;
+}
+.card{
+    width: 13rem;
+    min-height: 502px;
+    position: relative;
+}
+.card a{
+    position: absolute;
+    color: #fff!important;
+}
+.btn-top-offer{
+ bottom: 8px;
+ left: 60px;
+ background-color: #d63e40;
+ font-size: 14px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .card{
+        width: 16rem;
+        margin-right: 45px;
+    }
+    .btn-top-offer{
+        bottom: 6px;
+        left: 90px;
+       }
+}

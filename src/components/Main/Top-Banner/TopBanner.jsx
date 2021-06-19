@@ -32,7 +32,7 @@ export default function TopBanner() {
             <div className="col-lg-4">
                 <div className="row small-banner-top">
                     <div className="col-6 col-md-12">
-                        <img className="small-banner-top-1 w-100" src="./image/3.jpg" alt="banner" />
+                        <img className="small-banner-top-1 w-100" src="./image/gifff.gif" alt="banner" />
                     </div>
                     <div className="col-6 col-md-12">
                         <img className="small-banner-top-1 w-100" src="./image/4.jpg" alt="banner" />

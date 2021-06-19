@@ -10,7 +10,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
+          <ul className="navbar-nav mr-2">
             <li className="nav-item">
               <a className="nav-link" href="#">سوپر مارکت </a>
             </li>
@@ -35,7 +35,13 @@ export default function Navbar() {
             </li>
           </ul>
           <Search />
+          <div className="navbar-left d-flex ml-auto">
+        <div className="store-shop"><i class="fas fa-shopping-cart"><span className="qty-shop">3</span></i></div>
+        <div className="line-user-shop">|</div>
+        <div className="user-icon"><i class="fas fa-user"></i></div>
         </div>
+        </div>
+        
         </>
     )
 }
