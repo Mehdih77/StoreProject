@@ -1,5 +1,5 @@
 .top-offer{
-    background-color: #f45052;
+    background-color: #ef394e;
 }
 .swiper-top-offer .card-title{
     font-size: 16px;
@@ -10,7 +10,7 @@
 }
 .card{
     width: 13rem;
-    min-height: 502px;
+    min-height: 580px;
     position: relative;
 }
 .card a{
@@ -24,14 +24,57 @@
  font-size: 14px;
 }
 
+ /* price & time style */
+
+ .card-time{
+     position: absolute;
+     bottom: 15px;
+     left: 30px;
+ }
+
+.card-offprice,.card-price,.card-time{
+    text-align: left;
+}
+/* .card-offprice{
+    margin-top: 25px;
+} */
+.old-price{
+    padding-left: 5px;
+    text-decoration: line-through!important;
+    color: #7e7e7e!important;
+    font-size: 17px;
+}
+.card-off-tag{
+ background-color: #f45052;
+ color: #fff!important;
+ border-radius: 20px;
+ padding: 4px 6px 1px;
+ font-size: 15px;
+ font-weight: 700;
+
+}
+.card-price{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: -15px;
+}
+.card-clock{
+    margin: 0px 0 40px 0;
+    font-size: 15px;
+}
+.off-time{
+    padding-left: 5px;
+}
+
 
 @media screen and (max-width: 768px) {
     .card{
         width: 16rem;
         margin-right: 45px;
+        min-height: 640px;
     }
     .btn-top-offer{
-        bottom: 6px;
+        bottom: 50px;
         left: 90px;
        }
 }

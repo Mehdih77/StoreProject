@@ -38,6 +38,11 @@ export default function SuperMarket() {
 <p class="card-text">دوغ بدون گاز با طعم نعناع عالیس مقدار 1.5 لیتر بسته 6 عددی
 
   </p>
+  <div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
 <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
 </div>
 </div></SwiperSlide>
@@ -47,8 +52,12 @@ export default function SuperMarket() {
 <h5 class="card-title"> قهوه فوری مخلوط 1 × 3 نسکافه بسته 20 عددی
  </h5>
 <p class="card-text">قهوه فوری مخلوط 1 × 3 نسکافه بسته 20 عددی
-
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
 <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
 </div>
 </div></SwiperSlide>
@@ -58,8 +67,12 @@ export default function SuperMarket() {
 <h5 class="card-title"> مایع جلادهنده ماشین ظرفشویی پریل 
  </h5>
 <p class="card-text">مایع جلادهنده ماشین ظرفشویی پریل مقدار 750 گرم
-
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
 <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
 </div>
 </div></SwiperSlide>
@@ -68,9 +81,13 @@ export default function SuperMarket() {
 <div class="card-body">
 <h5 class="card-title">  کنسرو ماهی تون در روغن آلیش وزن 180 گرم
  </h5>
-<p class="card-text">کنسرو ماهی تون در روغن آلیش وزن 180 گرم
-     
+<p class="card-text">کنسرو ماهی تون در روغن آلیش وزن 180 گرم   
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
 <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
 </div>
 </div></SwiperSlide>
@@ -82,6 +99,11 @@ export default function SuperMarket() {
 <p class="card-text">
 قهوه فوری مخلوط 1 × 3 نسکافه بسته 20 عددی
   </p>    
+  <div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
 <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
 </div>
 </div></SwiperSlide>
@@ -91,8 +113,12 @@ export default function SuperMarket() {
 <h5 class="card-title">دوغ بدون گاز با طعم نعناع عالیس 
 </h5>
 <p class="card-text">دوغ بدون گاز با طعم نعناع عالیس مقدار 1.5 لیتر بسته 6 عددی
- 
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
 <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
 </div>
 </div></SwiperSlide>
@@ -102,8 +128,12 @@ export default function SuperMarket() {
 <h5 class="card-title">کنسرو ماهی تون در روغن آلیش وزن 180 گرم
   </h5>
 <p class="card-text"> کنسرو ماهی تون در روغن آلیش وزن 180 گرم
-
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
 <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
 </div>
 </div></SwiperSlide>

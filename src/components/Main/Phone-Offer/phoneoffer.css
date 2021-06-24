@@ -1,0 +1,60 @@
+.phone-offer {
+  border-radius: 15px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+  background-color: #fff;
+}
+.phone-offer-top-title {
+  font-size: 22px;
+  margin: 20px;
+  position: relative;
+  padding-right: 20px;
+}
+.phone-offer-top-title::after {
+  content: "";
+  min-width: 1105px;
+  height: 1px;
+  background-color: #dfdfdf;
+  position: absolute;
+  bottom: -17px;
+  right: 0;
+  left: 0;
+}
+.phone-card-custom-style {
+  min-height: 480px;
+  border: none;
+  margin: 10px;
+}
+.phone-card-custom-style:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+}
+.phone-img {
+  margin-top: 20px;
+}
+.phone-card-title {
+  font-size: 16px;
+}
+.phone-card-text {
+  text-align: left;
+  margin-top: 30px;
+  font-weight: 700;
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .phone-card-custom-style {
+    width: 16rem;
+    margin-right: 75px;
+  }
+  .phone-offer-top-title::after{
+    min-width: 440px;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .phone-offer-top-title::after{
+        min-width: 680px;
+    }
+  }
+  

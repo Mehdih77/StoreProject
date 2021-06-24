@@ -37,6 +37,11 @@ export default function TopOffer() {
     <h5 class="card-title">کروسان</h5>
     <p class="card-text">کروسان کاکائو پچ پچ بسته 6 عددی
  با طعم کاکائو</p>
+ <div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
     <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
@@ -46,6 +51,11 @@ export default function TopOffer() {
     <h5 class="card-title">اسپری خوشبو کننده</h5>
     <p class="card-text">اسپری خوشبو کننده بدن زنانه بیول مدل REMEMBER ME حجم 150 میلی لیتر
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
     <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
@@ -55,6 +65,11 @@ export default function TopOffer() {
     <h5 class="card-title">گوشی موبایل سامسونگ مدل Galaxy Z Fold2</h5>
     <p class="card-text">گوشی موبایل سامسونگ مدل Galaxy Z Fold2 LTE SM-F916B تک سیم‌کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
     <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
@@ -64,6 +79,11 @@ export default function TopOffer() {
     <h5 class="card-title">کفش پیاده روی زنانه</h5>
     <p class="card-text">کفش پیاده روی زنانه نیترو مدل PT کد 8050
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
     <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
@@ -72,7 +92,13 @@ export default function TopOffer() {
   <div class="card-body">
     <h5 class="card-title">کروسان </h5>
     <p class="card-text">کروسان کاکائو پچ پچ بسته 6 عددی
- با طعم کاکائو</p>    <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
+ با طعم کاکائو</p>  
+ <div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
+   <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
 <SwiperSlide><div class="card">
@@ -81,6 +107,11 @@ export default function TopOffer() {
     <h5 class="card-title">گوشی موبایل سامسونگ مدل Galaxy Z Fold2</h5>
     <p class="card-text">گوشی موبایل سامسونگ مدل Galaxy Z Fold2 LTE SM-F916B تک سیم‌کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
     <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>
@@ -90,6 +121,11 @@ export default function TopOffer() {
     <h5 class="card-title">اسپری خوشبو کننده</h5>
     <p class="card-text">اسپری خوشبو کننده بدن زنانه بیول مدل REMEMBER ME حجم 150 میلی لیتر
 </p>
+<div className="card-time">
+ <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
+ <p className="card-price">25,000 تومان</p>
+ <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
+ </div>
     <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
   </div>
 </div></SwiperSlide>

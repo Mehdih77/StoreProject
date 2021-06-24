@@ -5,6 +5,7 @@
   * {
     color: var(--text-color) !important;
     text-decoration: none!important;
+    list-style-type: none;
   }
   body {
     background-color: #f5f5f5;

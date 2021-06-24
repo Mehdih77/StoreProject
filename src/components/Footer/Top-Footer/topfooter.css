@@ -1,0 +1,28 @@
+.shop-name-footer {
+  font-size: 22px;
+  padding: 30px 0 10px;
+  color: #f3696c !important;
+  font-weight: 800;
+}
+.support-footer-text {
+  font-size: 15px;
+}
+.top-footer-icons {
+  display: flex;
+  justify-content: center;
+}
+.top-footer-icons p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 15px;
+  margin: 0 47px;
+  padding: 15px 0;
+}
+.top-footer-icons i {
+  font-size: 45px;
+  padding-bottom: 15px;
+}
+.top-footer-line-separotor {
+  border-bottom: 1px solid #dfdfdf;
+}
