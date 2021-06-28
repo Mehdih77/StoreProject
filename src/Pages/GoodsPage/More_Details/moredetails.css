@@ -1,0 +1,33 @@
+.scann-goods , .goods-detail-tap {
+  padding: 20px;
+}
+.scann-goods-title, .goods-detail-tap-title {
+  font-size: 17px;
+  font-weight: 700;
+}
+.scann-goods-name , .goods-detail-tap-name {
+  font-size: 13px;
+  margin-top: -10px;
+  color: #81858b!important;
+}
+.scann-goods-body {
+    font-size: 14px;
+    line-height: 30px;
+}
+.goods-detail-tap-body{
+    display: flex;
+    justify-content: space-between;
+}
+.goods-detail-tap-body-title{
+    font-weight: 700;
+    white-space: nowrap;
+    font-size: 18px;
+    margin-left: 100px;
+}
+.goods-detail-tap-body-table p{
+    color: #a1a3a8!important;
+    margin-left: 150px;
+}
+.goods-detail-tap-body-table span{
+
+}
