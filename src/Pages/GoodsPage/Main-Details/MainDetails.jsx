@@ -46,7 +46,7 @@ export default function MainDetails() {
 
             <div className='col-md-3 goodspage-buy'>
                 <p className='shop-title'>فروشنده</p>
-                <div>
+                <div className='shop-hover'>
                 <p className='shop-name'><i class="fas fa-store"></i>آنلاین شاپ</p>
                 <p className='shop-like'><span>100% </span>رضایت خریداران | عملکرد <span>عالی</span></p>
                 </div>

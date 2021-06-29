@@ -103,7 +103,7 @@
   font-weight: 700;
   white-space: nowrap;
   border-bottom: 1px solid #dfdfdf;
-  padding-bottom: 10px;
+  padding-bottom: 13px;
 }
 .goods-like {
   font-size: 14px;
@@ -156,7 +156,7 @@
   padding-left: 10px;
 }
 .post-free-text {
-    padding-top: 10px;
+  padding-top: 10px;
   font-size: 12px;
   font-weight: 500;
   padding-right: 28px;
@@ -186,6 +186,21 @@
   font-size: 16px;
   font-weight: 600;
   padding: 10px;
+}
+.shop-hover:hover {
+  background-color: #dfdfdf;
+  cursor: pointer;
+  position: relative;
+}
+.shop-hover:hover::after {
+  content: 'a';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #efefef;
+  background-color: #fff;
+  top: 0;
+  right: -311px;
 }
 .shop-name i {
   padding-left: 8px;
@@ -228,7 +243,7 @@
 }
 .goods-price-1 {
   font-size: 15px;
-  color: #b4b4b4!important;
+  color: #b4b4b4 !important;
 }
 .goods-price-2 {
   text-align: left;

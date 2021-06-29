@@ -1,33 +1,112 @@
-.scann-goods , .goods-detail-tap {
+.scann-goods,
+.goods-detail-tap,
+.vote-tab {
   padding: 20px;
 }
-.scann-goods-title, .goods-detail-tap-title {
+.scann-goods-title,
+.goods-detail-tap-title,
+.vote-tap-title {
   font-size: 17px;
   font-weight: 700;
 }
-.scann-goods-name , .goods-detail-tap-name {
+.scann-goods-name,
+.goods-detail-tap-name,
+.vote-tap-name {
   font-size: 13px;
   margin-top: -10px;
-  color: #81858b!important;
+  color: #81858b !important;
 }
+/* goods scann style  */
 .scann-goods-body {
-    font-size: 14px;
-    line-height: 30px;
+  font-size: 14px;
+  line-height: 30px;
 }
-.goods-detail-tap-body{
-    display: flex;
-    justify-content: space-between;
+/* goods detail style */
+.goods-detail-tap-body-title {
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 18px;
+  margin-left: 100px;
 }
-.goods-detail-tap-body-title{
-    font-weight: 700;
-    white-space: nowrap;
-    font-size: 18px;
-    margin-left: 100px;
+.goods-detail-tap-body-table-list {
+  display: flex;
+  font-size: 15px;
 }
-.goods-detail-tap-body-table p{
-    color: #a1a3a8!important;
-    margin-left: 150px;
+.goods-detail-tap-body-table-list-title {
+  color: #a1a3a8 !important;
+  flex: 0 0 40%;
+  margin-left: 20px;
 }
-.goods-detail-tap-body-table span{
-
+/* VOTE style RIGHT */
+.vote-tab-right {
+  margin-top: 20px;
+}
+.vote-tab-right .progress {
+  height: 6px;
+  width: 85%;
+  position: relative;
+}
+.progress-percent {
+  flex: 0 0 20%;
+  font-size: 14px;
+  position: absolute;
+}
+.progress-percent-custom-1 {
+  top: 21px;
+  left: 15px;
+}
+.progress-percent-custom-2 {
+  top: 76px;
+  left: 15px;
+}
+.progress-percent-custom-3 {
+  top: 131px;
+  left: 15px;
+}
+.progress-percent-custom-4 {
+  top: 186px;
+  left: 15px;
+}
+.progress-percent-custom-5 {
+  top: 241px;
+  left: 15px;
+}
+.progress-percent-custom-6 {
+  top: 296px;
+  left: 10px;
+}
+.vote-tab-right p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.vota-tab-right-main {
+  margin-bottom: 20px;
+}
+.vote-right-button {
+  background-color: #fff;
+  border: 1px solid #ef394e;
+  padding: 5px;
+  height: 40px;
+  border-radius: 10px;
+  color: #ef394e !important;
+  font-size: 15px;
+  font-weight: 600;
+}
+.vote-right-button:focus {
+  background-color: #f5808d;
+  border: 1px solid #ef394e;
+}
+/* VOTE style LEFT */
+.vote-tab-left {
+  margin: 10px 20px 0 0;
+}
+.vote-tab-left .media-body {
+  font-size: 14px;
+}
+.vote-tab-left .media-body h5 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.vote-tab-left .media img {
+  width: 50px;
 }

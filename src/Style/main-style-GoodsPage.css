@@ -11,6 +11,10 @@
     background-color: #fff;
     font-family: Sahel;
   }
+  button{
+    outline: none!important;
+  }
+
   
   @font-face {
     font-family: "Sahel";

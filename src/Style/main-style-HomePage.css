@@ -11,7 +11,9 @@
     background-color: #f5f5f5;
     font-family: Sahel;
   }
-  
+  button{
+    outline: none!important;
+  }
   @font-face {
     font-family: "Sahel";
     src: url(../fonts/Sahel.woff2) format("woff2"),
