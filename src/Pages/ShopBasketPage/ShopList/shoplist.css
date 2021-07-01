@@ -1,0 +1,48 @@
+.shop-card {
+  width: 100%;
+  min-height: 200px;
+  margin-right: 0px;
+}
+.card-img {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+}
+.shop-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 23px;
+}
+.shop-card-body {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.shop-card p {
+  margin: 5px 0;
+}
+.shop-qty {
+  display: flex;
+  width: 120px;
+  border: 1px solid #ef394e;
+  border-radius: 10px;
+  justify-content: space-between;
+  font-size: 19px;
+  margin: 0 25px 20px 0;
+}
+.shop-qty button {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  font-weight: 700;
+  margin: 0 10px;
+  font-size: 26px;
+
+}
+.shop-qty-add{
+    color: #00a049!important;
+}
+.shop-qty-remove{
+    color: #ef394e!important;
+
+}

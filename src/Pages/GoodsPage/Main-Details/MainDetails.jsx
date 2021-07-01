@@ -51,13 +51,6 @@ const DialogContent = withStyles((theme) => ({
   },
 }))(MuiDialogContent);
 
-const DialogActions = withStyles((theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(1),
-  },
-}))(MuiDialogActions);
-  
 
 
 export default function MainDetails() {
@@ -82,9 +75,6 @@ export default function MainDetails() {
                     <li><i title='نمودار قیمت' class="far fa-chart-bar"></i></li>
                 </ul>
             </div>
-            
-            
-
             <div className='col-6 col-md-3'>
                 <img className='img-fluid img-detail' src='./image/phone2.jpg' />
                 <div>
@@ -92,7 +82,7 @@ export default function MainDetails() {
 گالری تصاویر
       </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+        <DialogTitle id="customized-dialog-title" className='customized-dialog-title-goodspage' onClose={handleClose}>
         </DialogTitle>
         <DialogContent dividers>
         <Swiper style={{'--swiper-navigation-color': '#fff','--swiper-pagination-color': '#fff'}} spaceBetween={10} navigation={true} thumbs={{ swiper: thumbsSwiper }} className="mySwiper2">

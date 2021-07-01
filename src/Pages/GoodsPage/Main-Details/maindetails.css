@@ -98,8 +98,8 @@
   }
 }
 
-#customized-dialog-title {
-  padding-bottom: 48px;
+.customized-dialog-title-goodspage {
+  padding-bottom: 48px!important;
 }
 .gallery-button{
   border: 1px solid #dfdfdf!important;

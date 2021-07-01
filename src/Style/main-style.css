@@ -14,7 +14,11 @@
   button{
     outline: none!important;
   }
-
+  input:focus{
+    outline: none!important;
+    box-shadow: none!important;
+    border: 1px solid #ef394e!important;
+  }
   
   @font-face {
     font-family: "Sahel";

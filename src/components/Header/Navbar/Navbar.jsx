@@ -1,8 +1,68 @@
 import React from 'react'
 import Search from '../Search/Search'
 import './navbar.css'
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import MuiDialogTitle from '@material-ui/core/DialogTitle';
+import MuiDialogContent from '@material-ui/core/DialogContent';
+import MuiDialogActions from '@material-ui/core/DialogActions';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import Typography from '@material-ui/core/Typography';
+
+const styles = (theme) => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(2),
+  },
+  closeButton: {
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500],
+  },
+});
+
+const DialogTitle = withStyles(styles)((props) => {
+  const { children, classes, onClose, ...other } = props;
+  return (
+    <MuiDialogTitle disableTypography className={classes.root} {...other}>
+      <Typography variant="h6">{children}</Typography>
+      {onClose ? (
+        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </MuiDialogTitle>
+  );
+});
+
+const DialogContent = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+  },
+}))(MuiDialogContent);
+
+const DialogActions = withStyles((theme) => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(1),
+  },
+}))(MuiDialogActions);
 
 export default function Navbar() {
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
     return (
         <>
 <a className="navbar-brand" href="#"><img src="image/logo.png" alt="logo" /></a>
@@ -38,7 +98,32 @@ export default function Navbar() {
           <div className="navbar-left d-flex ml-auto">
         <div className="store-shop"><i class="fas fa-shopping-cart"><span className="qty-shop">3</span></i></div>
         <div className="line-user-shop">|</div>
-        <div className="user-icon"><i class="fas fa-user"></i></div>
+        <div className="user-icon"><i class="fas fa-user" onClick={handleClickOpen}></i>
+        <div>
+      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+        <DialogTitle id="customized-dialog-title" className='customized-dialog-title-user-login' onClose={handleClose}>
+              <p>ورود به سایت</p>
+        </DialogTitle>
+        <DialogContent dividers>
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">نام کاربری</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">رمز ورود</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" />
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1">مرا به خاطر بسپار</label>
+  </div>
+  <button type="submit" class="btn btn-login w-100">ورود</button>
+</form>
+        </DialogContent>
+      </Dialog>
+    </div>
+        </div>
         </div>
         </div>
         
