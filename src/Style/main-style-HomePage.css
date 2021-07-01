@@ -3,7 +3,7 @@
     --text-color: #616161;
   }
   * {
-    color: var(--text-color) !important;
+    color: var(--text-color);
     text-decoration: none!important;
     list-style-type: none;
   }
