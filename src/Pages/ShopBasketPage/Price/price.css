@@ -1,0 +1,27 @@
+.shop-price {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 20px 15px 20px 15px;
+  border-radius: 0.25rem;
+  font-size: 15px;
+  background-color: #fff;
+}
+.off-price {
+  margin: -10px 0;
+}
+.off-price p{
+  color: #ef394e !important;
+}
+.total-price {
+  font-weight: 600;
+  border-top: 1px solid #dfdfdf;
+  padding-top: 10px;
+}
+.shop-price-button {
+  background-color: #ef394e;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 600;
+  height: 50px;
+  border-radius: 15px;
+  outline: none;
+}

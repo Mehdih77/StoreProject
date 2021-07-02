@@ -8,11 +8,12 @@ import GoodsSummary from './Goods-Summary/GoodsSummary'
 import PhoneOffer from '../../components/Main/Phone-Offer/PhoneOffer'
 import BigBanner from './Big-Banner-bottom/BigBanner'
 import Footer from '../../components/Footer/Footer'
-import '../../Style/main-style-HomePage.css'
+import '../../Style/main-style.css'
 
 export default function HomePage() {
     return (
         <>
+                    <div className='body-custom-back-color '>
             <Header />
             <TopBanner />
             <TopOffer />
@@ -24,6 +25,8 @@ export default function HomePage() {
             <PhoneOffer />
             <BigBanner />
             <Footer />
+            </div>
+
         </>
     )
 }

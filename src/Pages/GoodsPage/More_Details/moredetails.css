@@ -84,7 +84,7 @@
 }
 .vote-right-button {
   background-color: #fff;
-  border: 1px solid #ef394e;
+  border: 1px solid #ef394e!important;
   padding: 5px;
   height: 40px;
   border-radius: 10px;

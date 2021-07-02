@@ -9,8 +9,8 @@ import ShopBasketPage from './Pages/ShopBasketPage/ShopBasketPage'
 export default function App() {
   return (
     <>
-    {/* <HomePage /> */}
-    {/* <GoodsPage /> */}
+    <HomePage />
+    <GoodsPage />
     <ShopBasketPage />
     </>
   )

@@ -11,7 +11,9 @@ export default function GoodsPage() {
         <Header />
         <MainDetails />
         <MoreDetails />
-        <Footer />
+        <div className='footer-in-goods-page'>
+        <Footer/>
+        </div>
     </>
     )
 }

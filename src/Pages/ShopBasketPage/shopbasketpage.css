@@ -1,0 +1,29 @@
+.shop-list-top-title {
+  font-size: 18px;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 20px;
+  padding: 0 20px 10px 0;
+  color: #ef394e !important;
+  position: relative;
+}
+.shop-list-top-title::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  right: 0px;
+  width: 115px;
+  height: 4px;
+  background-color: #ef394e;
+}
+.shop-basket-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ededed;
+  margin: 0 0;
+  background-color: #fff;
+  padding: 40px 0;
+}
+.shop-basket-empty img {
+  width: 300px;
+}
