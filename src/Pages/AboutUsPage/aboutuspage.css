@@ -1,0 +1,34 @@
+.contact-custom-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-custom-style li {
+  margin: 20px 0;
+}
+.contact-title {
+  font-size: 25px;
+  font-weight: 600;
+}
+.contact-social li {
+  display: inline;
+  margin: 0 30px;
+}
+.contact-social i {
+  font-size: 40px;
+  padding-top: 30px;
+}
+/* social icon hover */
+.contact-social .fa-instagram:hover {
+  color: #d411c4 !important;
+}
+.contact-social .fa-telegram-plane:hover {
+  color: #25becc !important;
+}
+.contact-social .fa-linkedin:hover {
+  color: #0041a8 !important;
+}
+.contact-social .fa-youtube:hover {
+  color: #e02525 !important;
+}

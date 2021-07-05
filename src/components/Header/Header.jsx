@@ -4,9 +4,9 @@ import Navbar from './Navbar/Navbar'
 export default function Header() {
     return (
         <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <header className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
           <Navbar />
-        </nav>
+        </header>
         </>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './phoneoffer.css'
 import { get } from '../../../Server/Axios'
+import {Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
@@ -18,13 +19,15 @@ export default function PhoneOffer() {
   const phones = phone ? phone.map((phones) => {
     return (
       <SwiperSlide>
-         <div class="card phone-card-custom-style">
-           <img src={phones.img} class="card-img-top phone-img" alt={phones.name}/>
-             <div class="card-body">
-                <h5 class="phone-card-title">{phones.name}</h5>
-                <p class="phone-card-text">{phones.price}تومان</p>
+      <Link to={`/goods/${phones.id}`}>
+         <div className="card phone-card-custom-style">
+           <img src={phones.img} className="card-img-top phone-img" alt={phones.name}/>
+             <div className="card-body">
+                <h5 className="phone-card-title">{phones.name}</h5>
+                <p className="phone-card-text">{phones.price}تومان</p>
             </div>
           </div>
+          </Link>
       </SwiperSlide>
     )
   }) : null;

@@ -1,6 +1,7 @@
 import React from 'react'
 import Search from '../Search/Search'
 import './navbar.css'
+import {Link} from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -65,11 +66,11 @@ export default function Navbar() {
 
     return (
         <>
-<a className="navbar-brand" href="#"><img src="image/logo.png" alt="logo" /></a>
+<Link to='/' className="navbar-brand" href="#"><img src="/image/logo.png" alt="logo" /></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <nav className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-2">
             <li className="nav-item">
               <a className="nav-link" href="#">سوپر مارکت </a>
@@ -88,10 +89,10 @@ export default function Navbar() {
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">تماس با ما</a>
+              <Link to='/contact' className="nav-link" href="#">تماس با ما</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link " href="#" tabindex="-1">درباره ما</a>
+              <Link to='/aboutus' className="nav-link " href="#" tabindex="-1">درباره ما</Link>
             </li>
           </ul>
           <Search />
@@ -106,26 +107,26 @@ export default function Navbar() {
         </DialogTitle>
         <DialogContent dividers>
         <form>
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputEmail1">نام کاربری</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
   </div>
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputPassword1">رمز ورود</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" />
+    <input type="password" className="form-control" id="exampleInputPassword1" />
   </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-    <label class="form-check-label" for="exampleCheck1">مرا به خاطر بسپار</label>
+  <div className="form-group form-check">
+    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+    <label className="form-check-label" for="exampleCheck1">مرا به خاطر بسپار</label>
   </div>
-  <button type="submit" class="btn btn-login w-100">ورود</button>
+  <button type="submit" className="btn btn-login w-100">ورود</button>
 </form>
         </DialogContent>
       </Dialog>
     </div>
         </div>
         </div>
-        </div>
+        </nav>
         
         </>
     )

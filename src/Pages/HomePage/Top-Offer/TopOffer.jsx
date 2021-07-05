@@ -26,16 +26,16 @@ export default function TopOffer() {
       
             <SwiperSlide>
             <div key={offer.id} class="card">
-              <img src={offer.img} class="card-img-top" alt={offer.name}/>
-                 <div class="card-body">
-                <h5 class="card-title">{offer.name}</h5>
-               <p class="card-text">{offer.body}</p>
+              <img src={offer.img} className="card-img-top" alt={offer.name}/>
+                 <div className="card-body">
+                <h5 className="card-title">{offer.name}</h5>
+               <p className="card-text">{offer.body}</p>
                         <div className="card-time">
                         <p className="card-offprice"><span className="card-off-tag">{offer.off}%</span><span className="old-price">{offer.old_price}</span></p>
                             <p className="card-price">{offer.new_price} تومان</p>
                       <p className="card-clock"><span className="off-time">{hours}:{minutes}:{seconds}</span><i class="far fa-clock"></i></p>
                             </div>
-                <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
+                <a href="#" className="btn btn-top-offer">افزودن به سبد خرید</a>
                  </div>
         </div>
               </SwiperSlide>

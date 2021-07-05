@@ -24,10 +24,10 @@ export default function SuperMarket() {
     return (
       <SwiperSlide>
       <div key={supermarket.id} class="card">
-            <img src={supermarket.img} class="card-img-top" alt={supermarket.name}/>
-      <div class="card-body">
-          <h5 class="card-title">{supermarket.name}</h5>
-          <p class="card-text">{supermarket.body} </p>
+            <img src={supermarket.img} className="card-img-top" alt={supermarket.name}/>
+      <div className="card-body">
+          <h5 className="card-title">{supermarket.name}</h5>
+          <p className="card-text">{supermarket.body} </p>
        <div className="card-time">
               <p className="card-offprice"><span className="card-off-tag">{supermarket.off}%</span><span className="old-price">{supermarket.old_price}</span></p>
                 <p className="card-price">{supermarket.new_price} تومان</p>

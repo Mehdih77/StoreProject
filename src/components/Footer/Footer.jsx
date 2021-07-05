@@ -6,10 +6,10 @@ import './footerstyle.css'
 export default function Footer() {
     return (
         <>
-        <section className='container-fluid footer'>
+        <footer className='container-fluid footer'>
         <TopFooter />
         <BottomFooter />
-        </section>
+        </footer>
         </>
         )
 }
