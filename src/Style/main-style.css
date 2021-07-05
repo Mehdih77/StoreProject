@@ -35,3 +35,30 @@ input:focus {
   font-style: "normal";
   font-weight: "normal";
 }
+
+/* Slider Custom Style */
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  left: 5px;
+  background-color: #fff;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 1.5px 0 4px 0 rgb(0 0 0 / 15%);
+  height: 70px;
+}
+.swiper-container-rtl .swiper-button-prev {
+  right: 1px;
+  border-radius: 8px 0 0 8px;
+}
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  font-size: 27px;
+}
+@media screen and (max-width: 510px) {
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    left: 48px;
+  }
+  .swiper-container-rtl .swiper-button-prev {
+    right: 46px;
+  }
+}

@@ -143,7 +143,7 @@ export default function MoreDetails() {
   <li class="media my-4">
     <img src="./image/user-2.png" class="mr-3" alt="user-img" />
     <div class="media-body">
-      <h5 class="mt-0 mb-1">مریم</h5>
+      <h5 class="mt-0 mb-1">حانیه</h5>
       واقعا همه چی عالیه و بنظرم رنگ سیاهش خیلی زیباست چون از ترکیب چند رنگه سبز بنفش نارنجی من 5600خریدم داخل فروش ویژه شنبه سفارش دادم سه شنبه رسید که عالیه در کل بخرید ارزش خرید بالایی داره    </div>
   </li>
   <li class="media">

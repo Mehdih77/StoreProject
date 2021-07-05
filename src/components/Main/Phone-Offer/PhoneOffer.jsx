@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './phoneoffer.css'
+import { get } from '../../../Server/Axios'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
@@ -7,6 +8,27 @@ import SwiperCore, { Navigation } from 'swiper/core';
 SwiperCore.use([Navigation]);
 
 export default function PhoneOffer() {
+
+  const [phone, setPhone] = useState('')
+
+  useEffect(() => {
+    get('/phone').then( response => { setPhone(response.data)})
+  }, [])
+
+  const phones = phone ? phone.map((phones) => {
+    return (
+      <SwiperSlide>
+         <div class="card phone-card-custom-style">
+           <img src={phones.img} class="card-img-top phone-img" alt={phones.name}/>
+             <div class="card-body">
+                <h5 class="phone-card-title">{phones.name}</h5>
+                <p class="phone-card-text">{phones.price}تومان</p>
+            </div>
+          </div>
+      </SwiperSlide>
+    )
+  }) : null;
+
     return (
         <>
     <section className="container phone-offer">
@@ -26,93 +48,7 @@ export default function PhoneOffer() {
     "spaceBetween": 50
   }
 }} className="mySwiper">
-  <SwiperSlide>
-  <div class="card phone-card-custom-style">
-  <img src="./image/phone1.jpg" class="card-img-top phone-img" alt="phone"/>
-  <div class="card-body">
-    <h5 class="phone-card-title">گوشی موبایل سامسونگ مدل Galaxy A51 SM-A515F/DSN دو سیم کارت ظرفیت 128گیگابایت
-</h5>
-    <p class="phone-card-text">5,760,000تومان</p>
-  </div>
-</div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div class="card phone-card-custom-style">
-  <img src="./image/phone2.jpg" class="card-img-top phone-img" alt="phone"/>
-  <div class="card-body">
-    <h5 class="phone-card-title">گوشی موبایل سامسونگ مدل Galaxy A51 SM-A515F/DSN دو سیم کارت ظرفیت 128گیگابایت
-</h5>
-    <p class="phone-card-text">5,760,000تومان</p>
-  </div>
-</div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div class="card phone-card-custom-style">
-  <img src="./image/phone3.jpg" class="card-img-top phone-img" alt="phone"/>
-  <div class="card-body">
-    <h5 class="phone-card-title">گوشی موبایل سامسونگ مدل Galaxy A51 SM-A515F/DSN دو سیم کارت ظرفیت 128گیگابایت
-</h5>
-    <p class="phone-card-text">5,760,000تومان</p>
-  </div>
-</div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div class="card phone-card-custom-style">
-  <img src="./image/phone4.jpg" class="card-img-top phone-img" alt="phone"/>
-  <div class="card-body">
-    <h5 class="phone-card-title">گوشی موبایل سامسونگ مدل Galaxy A51 SM-A515F/DSN دو سیم کارت ظرفیت 128گیگابایت
-</h5>
-    <p class="phone-card-text">5,760,000تومان</p>
-  </div>
-</div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div class="card phone-card-custom-style">
-  <img src="./image/phone5.jpg" class="card-img-top phone-img" alt="phone"/>
-  <div class="card-body">
-    <h5 class="phone-card-title">گوشی موبایل سامسونگ مدل Galaxy A51 SM-A515F/DSN دو سیم کارت ظرفیت 128گیگابایت
-</h5>
-    <p class="phone-card-text">5,760,000تومان</p>
-  </div>
-</div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div class="card phone-card-custom-style">
-  <img src="./image/phone6.jpg" class="card-img-top phone-img" alt="phone"/>
-  <div class="card-body">
-    <h5 class="phone-card-title">گوشی موبایل سامسونگ مدل Galaxy A51 SM-A515F/DSN دو سیم کارت ظرفیت 128گیگابایت
-</h5>
-    <p class="phone-card-text">5,760,000تومان</p>
-  </div>
-</div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div class="card phone-card-custom-style">
-  <img src="./image/phone1.jpg" class="card-img-top phone-img" alt="phone"/>
-  <div class="card-body">
-    <h5 class="phone-card-title">گوشی موبایل سامسونگ مدل Galaxy A51 SM-A515F/DSN دو سیم کارت ظرفیت 128گیگابایت
-</h5>
-    <p class="phone-card-text">5,760,000تومان</p>
-  </div>
-</div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div class="card phone-card-custom-style">
-  <img src="./image/phone2.jpg" class="card-img-top phone-img" alt="phone"/>
-  <div class="card-body">
-    <h5 class="phone-card-title">گوشی موبایل سامسونگ مدل Galaxy A51 SM-A515F/DSN دو سیم کارت ظرفیت 128گیگابایت
-</h5>
-    <p class="phone-card-text">5,760,000تومان</p>
-  </div>
-</div>
-</SwiperSlide>
+{phones}
   </Swiper>
         </div>
     </section>

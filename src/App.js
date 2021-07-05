@@ -10,8 +10,8 @@ export default function App() {
   return (
     <>
     <HomePage />
-    <GoodsPage />
-    <ShopBasketPage />
+    {/* <GoodsPage /> */}
+    {/* <ShopBasketPage /> */}
     </>
   )
 }

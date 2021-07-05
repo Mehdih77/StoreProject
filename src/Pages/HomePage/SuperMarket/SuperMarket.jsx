@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import './supermarket.css'
+import { get } from '../../../Server/Axios'
+import OfferTimer from '../../../components/OfferTimer'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
@@ -7,6 +9,37 @@ import SwiperCore, { Navigation } from 'swiper/core';
 SwiperCore.use([Navigation]);
 
 export default function SuperMarket() {
+
+  const [supermarket, setSupermarket] = useState('')
+  const {hours, minutes, seconds} = OfferTimer();
+
+  useEffect(() => {
+    get('/supermarket').then(
+      response => { setSupermarket(response.data)}
+    )
+  }, [])
+
+
+  const supermarkets = supermarket ? supermarket.map((supermarket) => {
+    return (
+      <SwiperSlide>
+      <div key={supermarket.id} class="card">
+            <img src={supermarket.img} class="card-img-top" alt={supermarket.name}/>
+      <div class="card-body">
+          <h5 class="card-title">{supermarket.name}</h5>
+          <p class="card-text">{supermarket.body} </p>
+       <div className="card-time">
+              <p className="card-offprice"><span className="card-off-tag">{supermarket.off}%</span><span className="old-price">{supermarket.old_price}</span></p>
+                <p className="card-price">{supermarket.new_price} تومان</p>
+                  <p className="card-clock"><span className="off-time">{hours}:{minutes}:{seconds}</span><i class="far fa-clock"></i></p>
+       </div>
+            <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
+        </div>
+      </div>
+</SwiperSlide>
+    )
+  }) : null;
+
     return (
         <section>
         <div className="container-fluid supermarket">
@@ -17,129 +50,23 @@ export default function SuperMarket() {
             </div>
             <div className="col-md-9">
             <Swiper slidesPerView={1} spaceBetween={15} navigation={true} breakpoints={{
-"640": {
-"slidesPerView": 1,
-"spaceBetween": 20
-},
-"768": {
-"slidesPerView": 2,
-"spaceBetween": 20
-},
-"1024": {
-"slidesPerView": 3,
-"spaceBetween": 10
-}
-}} className="mySwiper swiper-top-offer my-4 ml-2">
-<SwiperSlide><div class="card">
-<img src="./image/market-dogh.jpg" class="card-img-top" alt="..."/>
-<div class="card-body">
-<h5 class="card-title">دوغ بدون گاز با طعم نعناع عالیس     
-</h5>
-<p class="card-text">دوغ بدون گاز با طعم نعناع عالیس مقدار 1.5 لیتر بسته 6 عددی
-
-  </p>
-  <div className="card-time">
- <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
- <p className="card-price">25,000 تومان</p>
- <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
- </div>
-<a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
-</div>
-</div></SwiperSlide>
-<SwiperSlide><div class="card">
-<img src="./image/market-neskafe.jpg" class="card-img-top" alt="..."/>
-<div class="card-body">
-<h5 class="card-title"> قهوه فوری مخلوط 1 × 3 نسکافه بسته 20 عددی
- </h5>
-<p class="card-text">قهوه فوری مخلوط 1 × 3 نسکافه بسته 20 عددی
-</p>
-<div className="card-time">
- <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
- <p className="card-price">25,000 تومان</p>
- <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
- </div>
-<a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
-</div>
-</div></SwiperSlide>
-<SwiperSlide><div class="card">
-<img src="./image/market-peril.jpg" class="card-img-top" alt="..."/>
-<div class="card-body">
-<h5 class="card-title"> مایع جلادهنده ماشین ظرفشویی پریل 
- </h5>
-<p class="card-text">مایع جلادهنده ماشین ظرفشویی پریل مقدار 750 گرم
-</p>
-<div className="card-time">
- <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
- <p className="card-price">25,000 تومان</p>
- <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
- </div>
-<a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
-</div>
-</div></SwiperSlide>
-<SwiperSlide><div class="card">
-<img src="./image/market-mahi.jpg" class="card-img-top" alt="..."/>
-<div class="card-body">
-<h5 class="card-title">  کنسرو ماهی تون در روغن آلیش وزن 180 گرم
- </h5>
-<p class="card-text">کنسرو ماهی تون در روغن آلیش وزن 180 گرم   
-</p>
-<div className="card-time">
- <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
- <p className="card-price">25,000 تومان</p>
- <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
- </div>
-<a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
-</div>
-</div></SwiperSlide>
-<SwiperSlide><div class="card">
-<img src="./image/market-neskafe.jpg" class="card-img-top" alt="..."/>
-<div class="card-body">
-<h5 class="card-title"> قهوه فوری مخلوط 1 × 3 نسکافه بسته 20 عددی
- </h5>
-<p class="card-text">
-قهوه فوری مخلوط 1 × 3 نسکافه بسته 20 عددی
-  </p>    
-  <div className="card-time">
- <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
- <p className="card-price">25,000 تومان</p>
- <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
- </div>
-<a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
-</div>
-</div></SwiperSlide>
-<SwiperSlide><div class="card">
-<img src="./image/market-dogh.jpg" class="card-img-top" alt="..."/>
-<div class="card-body">
-<h5 class="card-title">دوغ بدون گاز با طعم نعناع عالیس 
-</h5>
-<p class="card-text">دوغ بدون گاز با طعم نعناع عالیس مقدار 1.5 لیتر بسته 6 عددی
-</p>
-<div className="card-time">
- <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
- <p className="card-price">25,000 تومان</p>
- <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
- </div>
-<a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
-</div>
-</div></SwiperSlide>
-<SwiperSlide><div class="card">
-<img src="./image/market-mahi.jpg" class="card-img-top" alt="..."/>
-<div class="card-body">
-<h5 class="card-title">کنسرو ماهی تون در روغن آلیش وزن 180 گرم
-  </h5>
-<p class="card-text"> کنسرو ماهی تون در روغن آلیش وزن 180 گرم
-</p>
-<div className="card-time">
- <p className="card-offprice"><span className="card-off-tag">15%</span><span className="old-price">30,000</span></p>
- <p className="card-price">25,000 تومان</p>
- <p className="card-clock"><span className="off-time">21:25:45</span><i class="far fa-clock"></i></p>
- </div>
-<a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
-</div>
-</div></SwiperSlide>
-</Swiper></div>
-            </div>
-        </div>
+                  "640": {          
+                     "slidesPerView": 1,
+                     "spaceBetween": 20
+                          },
+                  "768": {
+                       "slidesPerView": 2,
+                       "spaceBetween": 20
+                           },
+                   "1024": {
+                        "slidesPerView": 3,
+                        "spaceBetween": 10
+                             }   
+                       }} className="mySwiper swiper-top-offer my-4 ml-2">
+                              {supermarkets}
+             </Swiper></div>
+               </div>
+             </div>
         </div>
     </section>
     )
