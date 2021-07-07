@@ -84,18 +84,49 @@
 }
 .vote-right-button {
   background-color: #fff;
-  border: 1px solid #ef394e!important;
+  border: 1px solid #ef394e !important;
   padding: 5px;
   height: 40px;
   border-radius: 10px;
-  color: #ef394e !important;
-  font-size: 15px;
-  font-weight: 600;
 }
-.vote-right-button:focus {
-  background-color: #f5808d;
+.MuiButton-label {
+  color: #ef394e !important;
+  font-size: 16px;
+  font-weight: 800;
+}
+.vote-right-button:hover {
+  background-color: #f5808d !important;
   border: 1px solid #ef394e;
 }
+
+/* comment style */
+
+.MuiTypography-root{
+ font-size: 18px!important;
+ width: 400px;
+}
+.comment-vote-form{
+  display: flex;
+  flex-direction: column;
+}
+.comment-vote-form input{
+  margin: 10px 0;
+}
+.comment-button{
+  margin: 10px 0;
+  background-color: #ef394e;
+  color: #fff!important;
+}
+.comment-input-text:focus{
+  outline: none;
+}
+.remove-comment-button{
+  background-color: #fff;
+}
+.remove-comment-button i:hover{
+  color: #ef394e!important;
+}
+
 /* VOTE style LEFT */
 .vote-tab-left {
   margin: 10px 20px 0 0;

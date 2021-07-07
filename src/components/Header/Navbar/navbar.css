@@ -25,12 +25,14 @@
   border: none;
   font-size: 13px;
 }
+.dropdown-menu .dropdown-item:active {
+  background-color: unset;
+}
 .navbar-left i {
   font-size: 24px;
   margin-left: 15px;
 }
 .navbar-left i:hover {
-  color: #6e6e6e !important;
   transition: 0.15s linear;
   cursor: pointer;
 }
@@ -61,7 +63,9 @@
     margin: 20px 0 5px 0;
   }
 }
-
+.login-color{
+  color: green!important;
+}
 /* user login inputs */
 .customized-dialog-title-user-login p {
   text-align: center;

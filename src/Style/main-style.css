@@ -15,6 +15,10 @@ button {
   outline: none !important;
   border: none !important;
 }
+button:focus{
+  outline: none;
+  box-shadow: unset!important;
+}
 input:focus {
   outline: none !important;
   box-shadow: none !important;
@@ -61,4 +65,8 @@ input:focus {
   .swiper-container-rtl .swiper-button-prev {
     right: 46px;
   }
+}
+/* change style of gallery button of materialUI */
+.MuiButton-root:hover{
+  background-color:unset!important;
 }

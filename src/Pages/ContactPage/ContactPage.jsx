@@ -4,10 +4,10 @@ import Footer from '../../components/Footer/Footer'
 import './contactpage.css'
 import '../../Style/main-style.css'
 
-export default function ContactPage() {
+export default function ContactPage({cartItems}) {
     return (
         <>
-        <Header/>
+        <Header cartItems={cartItems} />
         <section>
                 <div className='container my-4'>
                     <div className='aboutus-custom-style'>

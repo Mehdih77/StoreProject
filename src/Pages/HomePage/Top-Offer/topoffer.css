@@ -15,7 +15,7 @@
   min-height: 580px;
   position: relative;
 }
-.card a {
+.card .btn-top-offer {
   position: absolute;
   color: #fff !important;
 }
@@ -39,9 +39,7 @@
 .card-time {
   text-align: left;
 }
-/* .card-offprice{
-    margin-top: 25px;
-} */
+
 .old-price {
   padding-left: 5px;
   text-decoration: line-through !important;
@@ -76,7 +74,7 @@
     min-height: 640px;
   }
   .btn-top-offer {
-    bottom: 50px;
+    bottom: 10px;
     left: 90px;
   }
 }

@@ -6,15 +6,15 @@ import Footer from '../../components/Footer/Footer'
 import '../../Style/main-style.css'
 import { useParams } from 'react-router-dom'
 
-export default function GoodsPage() {
+export default function GoodsPage({cartItems,onAdd}) {
 
     // Params came from App.js
     const {id} = useParams();
 
     return (
         <>
-        <Header />
-        <MainDetails id={id} />
+        <Header cartItems={cartItems} />
+        <MainDetails onAdd={onAdd} id={id} />
         <MoreDetails id={id} />
         <div className='footer-in-goods-page'>
         <Footer/>

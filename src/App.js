@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './Style/bootstrap-rtl.min.css'
 import HomePage from './Pages/HomePage/HomePage'
 import GoodsPage from './Pages/GoodsPage/GoodsPage'
@@ -12,25 +12,62 @@ import {
 } from "react-router-dom";
 
 
-
 export default function App() {
+
+
+  const [cartItems, setCartItems] = useState([])
+
+//   localStorage.setItem("shop",JSON.stringify(cartItems))
+
+//   useEffect(() => {
+//      localStorage.getItem("shop");
+//   }, [])
+
+    const onAdd = (items) => {
+        const exist = cartItems.find((m) => m.id === items.id);
+        if (exist) {
+            setCartItems(
+                cartItems.map((m) => 
+                    m.id === items.id ? {...exist , qty: exist.qty + 1} : m
+                )
+            )
+        } else {
+            setCartItems([...cartItems , {...items, qty: 1}]);
+        }
+    }
+
+
+    const onRemove = (items) => {
+        const exist = cartItems.find(m => m.id === items.id);
+        if(exist.qty === 1) {
+            setCartItems( cartItems.filter((x) => x.id !== items.id))
+        } else{
+            setCartItems(
+                cartItems.map((m) =>
+                    m.id === items.id ? {...exist , qty: exist.qty - 1} : m
+                )
+            )
+        }
+    }
+
+
   return (
     <>
     <Switch>
     <Route path='/' exact>
-        <HomePage />
+        <HomePage cartItems={cartItems} onAdd={onAdd} />
     </Route>
-    <Route path='/goods/:id'>
-       <GoodsPage />
+    <Route path='/goods/:slug/:id'>
+       <GoodsPage cartItems={cartItems} onAdd={onAdd} />
     </Route>
     <Route path='/shopbasket'>
-        <ShopBasketPage /> 
+        <ShopBasketPage cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} /> 
     </Route>
     <Route path='/aboutus'>
-        <AboutUsPage /> 
+        <AboutUsPage cartItems={cartItems} /> 
     </Route>
     <Route path='/contact'>
-        <ContactPage /> 
+        <ContactPage cartItems={cartItems} /> 
     </Route>
     </Switch>
     </>

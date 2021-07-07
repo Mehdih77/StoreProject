@@ -11,5 +11,5 @@ export function post(url, payload,  config ) {
 }
 
 export function del(url, config = {}) {
-    return axios.delete(url , config = {} )
+    return axios.delete(url , config)
 }

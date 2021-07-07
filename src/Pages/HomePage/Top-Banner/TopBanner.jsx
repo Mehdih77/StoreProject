@@ -13,10 +13,16 @@ export default function TopBanner() {
                 <div id="carouselExampleInterval" className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active" data-interval="4000">
-                            <img src="./image/1.jpg" className="w-100 d-block" alt="laptop" />
+                            <img src="./image/topbanner1.jpg" className="w-100 d-block" alt="laptop" />
                         </div>
                         <div className="carousel-item" data-interval="4000">
-                            <img src="./image/2.jpg" className="w-100 d-block" alt="camera" />
+                            <img src="./image/topbanner2.gif" className="w-100 d-block" alt="camera" />
+                        </div>
+                        <div className="carousel-item" data-interval="4000">
+                            <img src="./image/topbanner3.jpg" className="w-100 d-block" alt="camera" />
+                        </div>
+                        <div className="carousel-item" data-interval="4000">
+                            <img src="./image/topbanner4.jpg" className="w-100 d-block" alt="camera" />
                         </div>
                     </div>
                     <a className="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">

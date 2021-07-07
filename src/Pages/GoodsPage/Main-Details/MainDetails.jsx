@@ -53,7 +53,7 @@ const DialogContent = withStyles((theme) => ({
 
 
 
-export default function MainDetails({id}) {
+export default function MainDetails({id,onAdd}) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [open, setOpen] = React.useState(false);
     const [phone, setPhone] = useState('')
@@ -86,40 +86,36 @@ export default function MainDetails({id}) {
             <div className='col-6 col-md-3'>
                 <img className='img-fluid img-detail' src={phone.img} alt={phone.name} />
                 <div>
-      <Button className='gallery-button' onClick={handleClickOpen}>
-گالری تصاویر
+      <Button onClick={handleClickOpen}>
+            <p className='gallery-button'>گالری تصاویر</p>
       </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" className='customized-dialog-title-goodspage' onClose={handleClose}>
         </DialogTitle>
         <DialogContent dividers>
         <Swiper style={{'--swiper-navigation-color': '#fff','--swiper-pagination-color': '#fff'}} spaceBetween={10} navigation={true} thumbs={{ swiper: thumbsSwiper }} className="mySwiper2">
-  <SwiperSlide><img className='img-fluid' src="/image/phone-21.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-22.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-23.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-24.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-25.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-26.jpg" /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_1} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_2} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_3} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_4} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_5} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_6} alt={phone.name} /></SwiperSlide>
   </Swiper>
   <Swiper onSwiper={setThumbsSwiper} spaceBetween={10} slidesPerView={4} freeMode={true} watchSlidesVisibility={true} watchSlidesProgress={true} className="mySwiper">
-  <SwiperSlide><img className='img-fluid' src="/image/phone-21.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-22.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-23.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-24.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-25.jpg" /></SwiperSlide>
-  <SwiperSlide><img className='img-fluid' src="/image/phone-26.jpg" /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_1} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_2} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_3} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_4} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_5} alt={phone.name} /></SwiperSlide>
+  <SwiperSlide><img className='img-fluid' src={phone.img_6} alt={phone.name} /></SwiperSlide>
    </Swiper>
         </DialogContent>
       </Dialog>
     </div>
             </div>
-
-
-
-
             <div className='col-md-5'>
                 <h1 className='goods-name'> {phone.name} </h1>
-                <p className='goods-like'> <i class="far fa-thumbs-up"></i>۸۶٪ (۵۷۰ نفر) از خریداران، این کالا را پیشنهاد کرده‌اند.
+                <p className='goods-like'> <i className="far fa-thumbs-up"></i>۸۶٪ (۵۷۰ نفر) از خریداران، این کالا را پیشنهاد کرده‌اند.
   </p>
                 <ul className='goods-detail-summary'>
                 <p>ویژگی های محصول:</p>
@@ -138,7 +134,7 @@ export default function MainDetails({id}) {
                     <p className='post-free-text'>اولین سفارش کاربران جدید</p></p>
                     
                 </div>
-                <img className='post-free-img' src='/image/post-free.png' />
+                <img className='post-free-img' src='/image/post-free.png' alt='free-post' />
             </div>
             </div>
             <div className='col-md-3 goodspage-buy'>
@@ -190,7 +186,7 @@ export default function MainDetails({id}) {
                     <p className='goods-price-1'>قیمت فروشنده</p>
                     <p className='goods-price-2'>{phone.price} تومان</p>
                 </p>
-                <button className='shop-buy-button'>افزودن به سبد خرید</button>
+                <button onClick={() => onAdd(phone)} className='shop-buy-button'>افزودن به سبد خرید</button>
             </div>
            </div>
         </section>

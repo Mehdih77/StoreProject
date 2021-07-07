@@ -1,15 +1,82 @@
 import React, { useState , useEffect } from 'react'
 import './moredetails.css'
-import {get} from '../../../Server/Axios'
+import {get,post,del} from '../../../Server/Axios'
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import Loading from '../../../components/Loader/Loading';
+
+
 
 export default function MoreDetails({id}) {
 
   const [phone, setPhone] = useState('')
+  const [getComments, setGetComments] = useState([])
+  const [postComments, setPostComments] = useState({})
+  const [loading, setLoading] = useState(false)
+  // GET
+  const getUserComments = async () => {
+    await get('/comments').then( response => { setGetComments(response.data)})
+  }
+  //POST
+  const postUserComments = async () => {
+    const response = await post('/comments', postComments);
+    // if for updating the comments
+    if(response){
+      getUserComments();
+    }
+  }
+  //DELETE
+  const deleteUserComments = async (id) => {
+    const response = await del(`/comments/${id}`);
+    // if for updating the comments
+    if(response){
+      getUserComments()
+      setLoading(true);
+    }
+  }
+  function handleChangeComments(e) {
+    setPostComments({
+      ...postComments,
+      [e.target.name] : e.target.value
+    })
+  }
+
+  const allComments = getComments.map(comments => {
+    return (
+      <>
+      { loading ? <Loading /> : <li key={comments.id} className="media my-4">
+      <img src="/image/user-1.png" className="mr-3" alt="user-img" />
+      <div className="media-body">
+        <h5 className="mt-0 mb-1">{comments.name} </h5>
+        {comments.text}
+   </div>
+   <button className='remove-comment-button' onClick={() => deleteUserComments(`${comments.id}`)}><i className="fas fa-trash"></i></button>
+    </li>
+    }
+    </>
+    )
+  })
+
+
+
+  const [open, setOpen] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     get(`/phone/${id}`).then( response => {
         setPhone(response.data)
     })
+    getUserComments();
   }, [id])
 
     return (
@@ -85,7 +152,6 @@ export default function MoreDetails({id}) {
 
    </div>
  
- 
  </div>
 
   </div>
@@ -136,37 +202,59 @@ export default function MoreDetails({id}) {
               </div>
               <span className='progress-percent progress-percent-custom-6'>100%</span>
            </div>
-         <button className='w-100 my-3 vote-right-button'>افزودن دیدگـاه</button>
+         <div>
+      <Button className='w-100 my-3 vote-right-button' onClick={handleClickOpen}>
+      افزودن دیدگـاه      </Button>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <DialogTitle id="form-dialog-title"></DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            <form className='comment-vote-form' onSubmit={postUserComments}>
+            <input required autoComplete='off' className='comment-input-name' type='text' name='name' onChange={handleChangeComments} placeholder='نام خود را وارد کنید' />
+            <TextareaAutosize required className='comment-input-text' type='text' name='text' onChange={handleChangeComments}
+             aria-label="minimum height" rowsMin={3} placeholder='دیدگاه خود را بنویسید' />
+
+            <button className='comment-button' type='submit'>ارسال</button>
+            </form>
+          </DialogContentText>
+          
+        </DialogContent>
+        <DialogActions>
+          
+        </DialogActions>
+      </Dialog>
+    </div>
           </div>
           <div className='col-md-8 vote-tab-left'>
         <ul className="list-unstyled">
   <li className="media">
-    <img src="./image/user-1.png" className="mr-3" alt="user-img" />
+    <img src="/image/user-1.png" className="mr-3" alt="user-img" />
     <div className="media-body">
-      <h5 className="mt-0 mb-1">علیرضا</h5>
+      <h5 className="mt-0 mb-1">آقا</h5>
       عالیییییی اصلا هم سنگین نیست خیلی خوش دست هست تو پکیج هندزفری نبود گلس نازکی روش بود و گارد ژله ای
     </div>
   </li>
   <li className="media my-4">
-    <img src="./image/user-2.png" className="mr-3" alt="user-img" />
+    <img src="/image/user-2.png" className="mr-3" alt="user-img" />
     <div className="media-body">
-      <h5 className="mt-0 mb-1">حانیه</h5>
+      <h5 className="mt-0 mb-1">خانم</h5>
       واقعا همه چی عالیه و بنظرم رنگ سیاهش خیلی زیباست چون از ترکیب چند رنگه سبز بنفش نارنجی من 5600خریدم داخل فروش ویژه شنبه سفارش دادم سه شنبه رسید که عالیه در کل بخرید ارزش خرید بالایی داره    </div>
   </li>
   <li className="media">
-    <img src="./image/user-1.png" className="mr-3" alt="user-img" />
+    <img src="/image/user-1.png" className="mr-3" alt="user-img" />
     <div className="media-body">
       <h5 className="mt-0 mb-1">کاربر سایت</h5>
       این گوشی رو با گارانتی تسک میران و فروشنده مرکز تامین کالای دیجیتال ایران گرفتم، با توجه به تحقیقاتی که در مورد این گوشی داشتم نگرانی من بیشتر از پک گلوبال و رام گلوبال بود که خوشبختانه همونطور که میخواستم گلوبالش بدستم رسید هنوز فرصت تستش رو پیدا نکردم بعد از تست نظرات دقیق رو اعلام می کنم
     </div>
   </li>
   <li className="media my-4">
-    <img src="./image/user-2.png" className="mr-3" alt="user-img" />
+    <img src="/image/user-2.png" className="mr-3" alt="user-img" />
     <div className="media-body">
       <h5 className="mt-0 mb-1">کاربر مهمان</h5>
       من یه هفته س این گوشی رو خریدم . گوشی خیلی خوبیه . ظاهرش خوشگل و شیکه ، رابط کاربری ش هم اپدیت داد و ورژن ۱۲.۵ شد . سرعتش عالیه و مشکل خاصی ندیدم . در مورد اینکه بعضی از دوستان گفتن موقع استفاده از اسپیکر پشت گوشی لرزش داره درسته ، که اونم بخاطر اسپیکر بسیار قدرتمندی هست که داره در حدی که انگار یه اسپیکر بلوتوثی دارین استفاده میکنین که البته اون لرزش تو حداکثر ولوم اتفاق میفته . تو ولوم عادی چیزی حس نمیشه . در کل من که خیلی راضیم .
  </div>
   </li>
+  {allComments}
 </ul>
         </div>
       </div>

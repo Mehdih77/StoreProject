@@ -9,7 +9,7 @@ import SwiperCore, { Navigation } from 'swiper/core';
 SwiperCore.use([Navigation]);
 
 
-export default function TopOffer() {
+export default function TopOffer({onAdd}) {
 
   const [offer, setOffer] = useState('')
   const {hours ,minutes , seconds} = OfferTimer();
@@ -24,18 +24,18 @@ export default function TopOffer() {
   const offers = offer ? offer.map((offer) => {
     return (
       
-            <SwiperSlide>
-            <div key={offer.id} class="card">
+            <SwiperSlide  key={offer.id} >
+            <div className="card">
               <img src={offer.img} className="card-img-top" alt={offer.name}/>
                  <div className="card-body">
                 <h5 className="card-title">{offer.name}</h5>
                <p className="card-text">{offer.body}</p>
                         <div className="card-time">
                         <p className="card-offprice"><span className="card-off-tag">{offer.off}%</span><span className="old-price">{offer.old_price}</span></p>
-                            <p className="card-price">{offer.new_price} تومان</p>
-                      <p className="card-clock"><span className="off-time">{hours}:{minutes}:{seconds}</span><i class="far fa-clock"></i></p>
+                            <p className="card-price">{offer.price} تومان</p>
+                      <p className="card-clock"><span className="off-time">{hours}:{minutes}:{seconds}</span><i className="far fa-clock"></i></p>
                             </div>
-                <a href="#" className="btn btn-top-offer">افزودن به سبد خرید</a>
+                <button onClick={() => onAdd(offer)} className="btn btn-top-offer">افزودن به سبد خرید</button>
                  </div>
         </div>
               </SwiperSlide>
@@ -49,7 +49,7 @@ export default function TopOffer() {
             <div className="container">
                 <div className="row">
                 <div className="col-md-3">
-                    <img className="top-offer-right w-100 my-5" src="image/7.png" />
+                    <img className="top-offer-right w-100 my-5" src="image/7.png" alt='offers' />
                 </div>
                 <div className="col-md-9">
                 <Swiper slidesPerView={1} spaceBetween={15} navigation={true} breakpoints={{

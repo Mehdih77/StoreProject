@@ -1,16 +1,17 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Search from '../Search/Search'
 import './navbar.css'
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
-import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
+import { useAuthDispatch, useAuthState } from '../../../Server/Auth-Context/AuthContext';
+import { actionTypes } from '../../../Server/Auth-Context/reducer';
+import axios from 'axios';
 
 const styles = (theme) => ({
   root: {
@@ -45,17 +46,77 @@ const DialogContent = withStyles((theme) => ({
   },
 }))(MuiDialogContent);
 
-const DialogActions = withStyles((theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(1),
-  },
-}))(MuiDialogActions);
+export default function Navbar({cartItems}) {
 
-export default function Navbar() {
+  // Auth - state - reducer
+  const dispatch = useAuthDispatch();
+   const {username , password} = useAuthState();
+
+   // simple sistem for login
+  const adminLogin = {
+    username: 'admin',
+    password: '123'
+  }
 
   const [open, setOpen] = React.useState(false);
+  const [form, setForm] = useState({
+    username: '',
+    password: ''
+  })
 
+
+  function handleChangeForm(e) {
+    setForm({
+      ...form,
+      [e.target.name]:e.target.value
+    })
+  }
+
+  // button for login
+  function handleLogin(e) {
+    e.preventDefault();
+    dispatch({
+      type: actionTypes.LOGIN_REQUEST
+    })
+    Login(form);
+    
+  }
+
+  // For check username and password
+  const Login = (form) => {
+    if( form.username === adminLogin.username && form.password === adminLogin.password){
+        dispatch({
+          type: actionTypes.LOGIN_SUCCESS,
+          payload: {
+            username: form.username,
+            password: form.password
+          }
+        
+        })
+        localStorage.setItem("key", JSON.stringify(form))
+    } else{
+      alert('Wrong username Or password')
+    }
+  }
+
+  useEffect(() => {
+    const key = localStorage.getItem("key")
+    if(key){
+      setForm(key)
+    }
+  }, [])
+
+  // LOGOUT
+  const sendOut = () => {
+    return axios.post('/')
+  }
+  function LogOut() {
+    sendOut();
+    localStorage.clear("key")
+    dispatch({
+      type: actionTypes.LOGOUT
+    })
+  }
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -63,9 +124,18 @@ export default function Navbar() {
     setOpen(false);
   };
 
+  let className = ' ';
+  if(Login){
+    className += "login-color"
+  }
 
     return (
+      
         <>
+
+        {/* { Login ? <Redirect></Redirect> : null } */}
+
+
 <Link to='/' className="navbar-brand" href="#"><img src="/image/logo.png" alt="logo" /></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -92,37 +162,49 @@ export default function Navbar() {
               <Link to='/contact' className="nav-link" href="#">تماس با ما</Link>
             </li>
             <li className="nav-item">
-              <Link to='/aboutus' className="nav-link " href="#" tabindex="-1">درباره ما</Link>
+              <Link to='/aboutus' className="nav-link " href="#" tabIndex="-1">درباره ما</Link>
             </li>
           </ul>
           <Search />
           <div className="navbar-left d-flex ml-auto">
-        <div className="store-shop"><i class="fas fa-shopping-cart"><span className="qty-shop">3</span></i></div>
+        <Link to='/shopbasket' className="store-shop"><i className="fas fa-shopping-cart"><span className="qty-shop">{cartItems.length}</span></i></Link>
         <div className="line-user-shop">|</div>
-        <div className="user-icon"><i class="fas fa-user" onClick={handleClickOpen}></i>
+        <div className="user-icon"><i className={`fas fa-user ${className}`} onClick={handleClickOpen}></i>
         <div>
-      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+      { !Login ? <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" className='customized-dialog-title-user-login' onClose={handleClose}>
               <p>ورود به سایت</p>
         </DialogTitle>
         <DialogContent dividers>
-        <form>
+        <form onSubmit={handleLogin}>
   <div className="form-group">
-    <label for="exampleInputEmail1">نام کاربری</label>
-    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+    <label htmlFor="exampleInputEmail1">نام کاربری</label>
+    <input autoComplete='off' onChange={handleChangeForm} name='username' type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
   </div>
   <div className="form-group">
-    <label for="exampleInputPassword1">رمز ورود</label>
-    <input type="password" className="form-control" id="exampleInputPassword1" />
+    <label htmlFor="exampleInputPassword1">رمز ورود</label>
+    <input onChange={handleChangeForm} name='password' type="password" className="form-control" id="exampleInputPassword1" />
   </div>
   <div className="form-group form-check">
     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-    <label className="form-check-label" for="exampleCheck1">مرا به خاطر بسپار</label>
+    <label className="form-check-label" htmlFor="exampleCheck1">مرا به خاطر بسپار</label>
   </div>
   <button type="submit" className="btn btn-login w-100">ورود</button>
 </form>
         </DialogContent>
-      </Dialog>
+      </Dialog> 
+      :
+       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+        <DialogTitle id="customized-dialog-title" className='customized-dialog-title-user-login' onClose={handleClose}>
+              <p>خروج به سایت</p>
+        </DialogTitle>
+        <DialogContent dividers>
+        <form >
+  
+  <button onSubmit={LogOut} type="submit" className="btn btn-login w-100">خروج</button>
+</form>
+        </DialogContent>
+      </Dialog> }
     </div>
         </div>
         </div>

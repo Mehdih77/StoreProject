@@ -8,7 +8,7 @@ import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Navigation } from 'swiper/core';
 SwiperCore.use([Navigation]);
 
-export default function SuperMarket() {
+export default function SuperMarket({onAdd}) {
 
   const [supermarket, setSupermarket] = useState('')
   const {hours, minutes, seconds} = OfferTimer();
@@ -22,18 +22,18 @@ export default function SuperMarket() {
 
   const supermarkets = supermarket ? supermarket.map((supermarket) => {
     return (
-      <SwiperSlide>
-      <div key={supermarket.id} class="card">
+      <SwiperSlide key={supermarket.id}>
+      <div className="card">
             <img src={supermarket.img} className="card-img-top" alt={supermarket.name}/>
       <div className="card-body">
           <h5 className="card-title">{supermarket.name}</h5>
           <p className="card-text">{supermarket.body} </p>
        <div className="card-time">
               <p className="card-offprice"><span className="card-off-tag">{supermarket.off}%</span><span className="old-price">{supermarket.old_price}</span></p>
-                <p className="card-price">{supermarket.new_price} تومان</p>
-                  <p className="card-clock"><span className="off-time">{hours}:{minutes}:{seconds}</span><i class="far fa-clock"></i></p>
+                <p className="card-price">{supermarket.price} تومان</p>
+                  <p className="card-clock"><span className="off-time">{hours}:{minutes}:{seconds}</span><i className="far fa-clock"></i></p>
        </div>
-            <a href="#" class="btn btn-top-offer">افزودن به سبد خرید</a>
+            <button onClick={() => onAdd(supermarket)} className="btn btn-supermarket">افزودن به سبد خرید</button>
         </div>
       </div>
 </SwiperSlide>
@@ -46,7 +46,7 @@ export default function SuperMarket() {
         <div className="container">
             <div className="row">
             <div className="col-md-3">
-                <img className="top-offer-right w-100 my-5" src="image/supermarket.png" />
+                <img className="top-offer-right w-100 my-5" src="image/supermarket.png" alt='supermarket' />
             </div>
             <div className="col-md-9">
             <Swiper slidesPerView={1} spaceBetween={15} navigation={true} breakpoints={{

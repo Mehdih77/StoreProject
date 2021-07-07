@@ -13,11 +13,11 @@
     min-height: 580px;
     position: relative;
 }
-.card a{
+.card .btn-supermarket{
     position: absolute;
     color: #fff!important;
 }
-.btn-top-offer{
+.btn-supermarket{
  bottom: 8px;
  left: 60px;
  background-color: #d63e40;
@@ -72,7 +72,7 @@ font-weight: 700;
        min-height: 640px;
        margin-right: 45px;
    }
-   .btn-top-offer{
+   .btn-supermarket{
     bottom: 10px;
     left: 90px;
    }

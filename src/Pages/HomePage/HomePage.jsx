@@ -10,15 +10,15 @@ import BigBanner from './Big-Banner-bottom/BigBanner'
 import Footer from '../../components/Footer/Footer'
 import '../../Style/main-style.css'
 
-export default function HomePage() {
+export default function HomePage({cartItems,onAdd}) {
     return (
         <>
                     <div className='body-custom-back-color '>
-            <Header />
+            <Header cartItems={cartItems} />
             <TopBanner />
-            <TopOffer />
+            <TopOffer cartItems={cartItems} onAdd={onAdd} />
             <AdBanner />
-            <SuperMarket />
+            <SuperMarket cartItems={cartItems} onAdd={onAdd} />
             <AdBanner />
             <PhoneOffer />
             <GoodsSummary />
