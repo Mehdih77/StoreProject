@@ -8,7 +8,8 @@ import { useParams } from 'react-router-dom'
 
 export default function GoodsPage({cartItems,onAdd}) {
 
-    // Params came from App.js
+    // Params came from App.js ~ Use for better Nameing >
+    // slug is set( phone ) then after that id came...
     const {id} = useParams();
 
     return (

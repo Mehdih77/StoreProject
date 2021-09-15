@@ -1,119 +1,140 @@
 {
-  "offers": [
+  "products": [
     {
       "id": 1,
+      "category": "offers",
       "name": "کروسان",
       "body": "کروسان کاکائو پچ پچ بسته 6 عددی با طعم کاکائو",
       "old_price": "30000",
       "off": "15",
       "price": "25000",
-      "img": "/image/k.jpg"
+      "img": "/image/k.jpg",
+      "comments": []
     },
     {
       "id": 2,
+      "category": "offers",
       "name": "اسپری خوشبو کننده",
       "body": "اسپری خوشبو کننده بدن زنانه بیول مدل REMEMBER ME حجم 150 میلی لیتر",
       "old_price": "80000",
       "off": "13",
       "price": "70000",
-      "img": "/image/esperi.jpg"
+      "img": "/image/esperi.jpg",
+      "comments": []
     },
     {
       "id": 3,
+      "category": "offers",
       "name": "گوشی موبایل سامسونگ مدل Galaxy Z Fold2",
       "body": "گوشی موبایل سامسونگ مدل Galaxy Z Fold2 LTE SM-F916B تک سیم‌کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت",
       "old_price": "30500000",
       "off": "10",
       "price": "28000000",
-      "img": "/image/phone.jpg"
+      "img": "/image/phone.jpg",
+      "comments": []
     },
     {
       "id": 4,
+      "category": "offers",
       "name": "کفش پیاده روی زنانه",
       "body": "کفش پیاده روی زنانه نیترو مدل PT کد 8050",
       "old_price": "289000",
       "off": "18",
       "price": "235000",
-      "img": "/image/shoes.jpg"
+      "img": "/image/shoes.jpg",
+      "comments": []
     },
     {
       "id": 5,
+      "category": "offers",
       "name": "تیشرت مردانه",
       "body": "تیشرت مردانه کوتون مدل 1YAM12141LK-NAVY",
       "old_price": "130000",
       "off": "20",
       "price": "99000",
-      "img": "/image/tshirt.jpg"
+      "img": "/image/tshirt.jpg",
+      "comments": []
     },
     {
       "id": 6,
+      "category": "offers",
       "name": "کیف رودوشی",
       "body": "کیف رودوشی گوگانا مدل gog5080",
       "old_price": "200000",
       "off": "50",
       "price": "100000",
-      "img": "/image/bag.jpg"
-    }
-  ],
-  "supermarket": [
+      "img": "/image/bag.jpg",
+      "comments": []
+    },
     {
       "id": 7,
+      "category": "supermarket",
       "name": "دوغ بدون گاز با طعم نعناع عالیس",
       "body": "دوغ بدون گاز با طعم نعناع عالیس مقدار 1.5 لیتر بسته 6 عددی",
       "old_price": "60000",
       "off": "25",
       "price": "45000",
-      "img": "/image/market-dogh.jpg"
+      "img": "/image/market-dogh.jpg",
+      "comments": []
     },
     {
       "id": 8,
+      "category": "supermarket",
       "name": "قهوه فوری مخلوط 1 × 3 نسکافه بسته 20 عددی",
       "body": "قهوه فوری مخلوط 1 × 3 نسکافه بسته 20 عددی ",
       "old_price": "75000",
       "off": "35",
       "price": "55000",
-      "img": "/image/market-neskafe.jpg"
+      "img": "/image/market-neskafe.jpg",
+      "comments": []
     },
     {
       "id": 9,
+      "category": "supermarket",
       "name": "مایع جلادهنده ماشین ظرفشویی پریل",
       "body": "مایع جلادهنده ماشین ظرفشویی پریل مقدار 750 گرم",
       "old_price": "50000",
       "off": "5",
       "price": "47000",
-      "img": "/image/market-peril.jpg"
+      "img": "/image/market-peril.jpg",
+      "comments": []
     },
     {
       "id": 10,
+      "category": "supermarket",
       "name": "کنسرو ماهی تون در روغن آلیش وزن 180 گرم",
       "body": "کنسرو ماهی تون در روغن آلیش وزن 180 گرم",
       "old_price": "45000",
       "off": "17",
       "price": "35000",
-      "img": "/image/market-mahi.jpg"
+      "img": "/image/market-mahi.jpg",
+      "comments": []
     },
     {
       "id": 11,
+      "category": "supermarket",
       "name": "سس گوجه فرنگی بیژن",
       "body": "سس گوجه فرنگی بیژن - 400 گرم",
       "old_price": "12000",
       "off": "29",
       "price": "8500",
-      "img": "/image/sous.jpg"
+      "img": "/image/sous.jpg",
+      "comments": []
     },
     {
       "id": 12,
+      "category": "supermarket",
       "name": "مایع جرم گیر و تمیز کننده من",
       "body": "مایع جرم گیر و تمیز کننده من مدل A4 حجم 4000 میلی لیتر",
       "old_price": "29800",
       "off": "20",
       "price": "23900",
-      "img": "/image/clear.jpg"
-    }
-  ],
-  "phone": [
+      "img": "/image/clear.jpg",
+      "comments": []
+    },
     {
       "id": 13,
+      "category": "phone",
       "name": "گوشی موبایل سامسونگ مدل Galaxy A51 SM-A515F/DSN",
       "price": "5745000",
       "storage": "128 گیگابایت",
@@ -129,10 +150,12 @@
       "img_3": "/image/phone-13.jpg",
       "img_4": "/image/phone-14.jpg",
       "img_5": "/image/phone-15.jpg",
-      "img_6": "/image/phone-16.jpg"
+      "img_6": "/image/phone-16.jpg",
+      "comments": []
     },
     {
       "id": 14,
+      "category": "phone",
       "name": "گوشی موبایل شیائومی مدل POCO M3 M2010J19CG ",
       "price": "4155000",
       "storage": "128 گیگابایت",
@@ -148,10 +171,12 @@
       "img_3": "/image/phone-23.jpg",
       "img_4": "/image/phone-24.jpg",
       "img_5": "/image/phone-25.jpg",
-      "img_6": "/image/phone-26.jpg"
+      "img_6": "/image/phone-26.jpg",
+      "comments": []
     },
     {
       "id": 15,
+      "category": "phone",
       "name": "گوشی موبایل شیائومی مدل POCO X3 Pro M2102J20SG",
       "price": "6799000",
       "storage": "256 گیگابایت",
@@ -167,10 +192,12 @@
       "img_3": "/image/phone-33.jpg",
       "img_4": "/image/phone-34.jpg",
       "img_5": "/image/phone-35.jpg",
-      "img_6": "/image/phone-36.jpg"
+      "img_6": "/image/phone-36.jpg",
+      "comments": []
     },
     {
       "id": 16,
+      "category": "phone",
       "name": "گوشی موبایل شیائومی مدل POCO X3 M2007J20CG",
       "price": "5789000",
       "storage": "128 گیگابایت",
@@ -186,10 +213,12 @@
       "img_3": "/image/phone-43.jpg",
       "img_4": "/image/phone-44.jpg",
       "img_5": "/image/phone-45.jpg",
-      "img_6": "/image/phone-46.jpg"
+      "img_6": "/image/phone-46.jpg",
+      "comments": []
     },
     {
       "id": 17,
+      "category": "phone",
       "name": "گوشی موبایل اپل مدل iPhone 12 Pro Max A2412 ",
       "price": "38500000",
       "storage": "128 گیگابایت",
@@ -205,10 +234,12 @@
       "img_3": "/image/phone-53.jpg",
       "img_4": "/image/phone-54.jpg",
       "img_5": "/image/phone-55.jpg",
-      "img_6": "/image/phone-56.jpg"
+      "img_6": "/image/phone-56.jpg",
+      "comments": []
     },
     {
       "id": 18,
+      "category": "phone",
       "name": "گوشی موبایل سامسونگ مدل Galaxy A12 SM-A125F/DS ",
       "price": "3819000",
       "storage": "64 گیگابایت",
@@ -224,14 +255,8 @@
       "img_3": "/image/phone-63.jpg",
       "img_4": "/image/phone-64.jpg",
       "img_5": "/image/phone-65.jpg",
-      "img_6": "/image/phone-66.jpg"
-    }
-  ],
-  "comments": [
-    {
-      "name": "مهدی",
-      "text": "به بهههههههههههههههههههههههههههههههه",
-      "id": 1
+      "img_6": "/image/phone-66.jpg",
+      "comments": []
     }
   ]
 }
