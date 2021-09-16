@@ -1,10 +1,9 @@
-import React from 'react'
-import Header from '../../components/Header/Header'
-import MainDetails from './Main-Details/MainDetails'
-import MoreDetails from './More_Details/MoreDetails'
-import Footer from '../../components/Footer/Footer'
-import '../../Style/main-style.css'
-import { useParams } from 'react-router-dom'
+import MainDetails from './Main-Details/MainDetails';
+import MoreDetails from './More_Details/MoreDetails';
+import '../../Style/main-style.css';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { allProducts } from '../../redux/shopSlice';
 
 export default function GoodsPage() {
 
@@ -12,14 +11,18 @@ export default function GoodsPage() {
     // slug is set( phone ) then after that id came...
     const {id} = useParams();
 
+    
+
+    const getAllProducts = useSelector(allProducts);
+
+    const phone = getAllProducts.filter(p => p.id === id)
+
+    console.log(phone);
+
     return (
         <>
-        <Header/>
-        <MainDetails onAdd={onAdd} id={id} />
+        <MainDetails phone={phone} id={id} />
         <MoreDetails id={id} />
-        <div className='footer-in-goods-page'>
-        <Footer/>
-        </div>
     </>
     )
 }
