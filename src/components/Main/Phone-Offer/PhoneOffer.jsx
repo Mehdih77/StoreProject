@@ -13,7 +13,7 @@ export default function PhoneOffer() {
   const getAllProducts = useSelector(allProducts);
   const getPhones = getAllProducts.filter(p => p.category === 'phone');
 
-  const phones = getPhones ? getPhones.map((phones) => {
+  const phonesList = getPhones ? getPhones.map((phones) => {
     return (
       <SwiperSlide key={phones.id}>
        <Link to={`/goods/phone/${phones.id}`}>
@@ -48,7 +48,7 @@ export default function PhoneOffer() {
             "spaceBetween": 50
           }
         }} className="mySwiper">
-          {phones}
+          {phonesList}
         </Swiper>
         </div>
     </section>

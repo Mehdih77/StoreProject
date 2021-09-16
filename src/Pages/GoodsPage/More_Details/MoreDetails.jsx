@@ -10,7 +10,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Loading from '../../../components/Loader/Loading';
 
-export default function MoreDetails({id}) {
+export default function MoreDetails({getCurrentProducts}) {
 
     const [phone,
         setPhone] = useState('')
@@ -184,7 +184,7 @@ export default function MoreDetails({id}) {
            <div className='vota-tab-right-main'>
            <p> سهولت استفاده </p>
               <div className="progress">
-                   <div claclassNamess="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                   <div className="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <span className='progress-percent progress-percent-custom-5'>75%</span>
            </div>

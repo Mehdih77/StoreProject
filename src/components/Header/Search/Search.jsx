@@ -16,6 +16,7 @@ export default function Search() {
         if( f.name.toLowerCase().includes(input.toLowerCase())) {
             return f;
         }
+        return false;
     }).map(m => {
         return (
             <Link id='search-items' to={`/goods/phone/${m.id}`}>

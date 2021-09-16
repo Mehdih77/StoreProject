@@ -52,8 +52,7 @@ export default function ShopList({currentProducts}) {
                                 className='shop-list-qty-remove'>-</button>
                         </div>
                         <div className='shop-list-price'>
-                            <p>{items.price}
-                                تومان</p>
+                            <p>{items.price} تومان</p>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ export default function TopFooter() {
         </p>
     </div> 
 
-    <div className = 'container top-footer-icons' > 
+    <div className='container top-footer-icons' > 
         <div className='row top-footer-line-separotor my-3'>
         <p>
             <i className="fas fa-shipping-fast goods-icon"></i>

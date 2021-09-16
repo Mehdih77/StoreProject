@@ -12,9 +12,9 @@ export default function AboutUsPage() {
                    <div className='contact'>
                    <ul className='contact-social'>
                         <li> <a rel="noreferrer" href='https://www.instagram.com/frontend.plus/' target='_blank'><i className="fab fa-instagram"></i> </a> </li>
-                        <li> <a href='#'> <i className="fab fa-telegram-plane"></i></a> </li>
-                        <li> <a href='#'> <i className="fab fa-linkedin"></i></a> </li>
-                        <li> <a href='#'> <i className="fab fa-youtube"></i></a> </li>
+                        <li> <a href='#!'> <i className="fab fa-telegram-plane"></i></a> </li>
+                        <li> <a href='#!'> <i className="fab fa-linkedin"></i></a> </li>
+                        <li> <a href='#!'> <i className="fab fa-youtube"></i></a> </li>
                     </ul>
                     </div>
                     </div>

@@ -7,7 +7,7 @@ export default function Price() {
 
     const stateTotalPrice = useSelector(getTotalPrice);
 
-    //Calculate the Price of Items
+    //Calculate the Price of Items AND separate 3 by 3
     const totalPrice = stateTotalPrice && Number(stateTotalPrice.toFixed(3)).toLocaleString().split(/\s/).join(',');
     const calcOfferPrice = Number((stateTotalPrice > 500000 ? 50000 : 0).toFixed(3)).toLocaleString().split(/\s/).join(',');
     const calcFinalPrice = stateTotalPrice && (stateTotalPrice > 500000 ? Number((stateTotalPrice- 50000).toFixed(3)).toLocaleString().split(/\s/).join(',') : totalPrice);

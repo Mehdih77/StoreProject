@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Link to='/' className="navbar-brand" href="#"><img src="/image/logo.png" alt="logo" /></Link>
+      <Link to='/' className="navbar-brand"><img src="/image/logo.png" alt="logo" /></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -27,19 +27,19 @@ export default function Navbar() {
       <nav className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-2">
             <li className="nav-item">
-              <a className="nav-link" href="#">سوپر مارکت </a>
+              <a className="nav-link" href="#!">سوپر مارکت </a>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a className="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 تخفیف ها و پیشنهادات
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">لوازم الکترونیکی</a>
-                <a className="dropdown-item" href="#"> لوازم خانگی</a>
-                <a className="dropdown-item" href="#"> لوازم آرایشی</a>
-                <a className="dropdown-item" href="#"> پوشاک</a>
+                <a className="dropdown-item" href="#!">لوازم الکترونیکی</a>
+                <a className="dropdown-item" href="#!"> لوازم خانگی</a>
+                <a className="dropdown-item" href="#!"> لوازم آرایشی</a>
+                <a className="dropdown-item" href="#!"> پوشاک</a>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">دیگر محصولات</a>
+                <a className="dropdown-item" href="#!">دیگر محصولات</a>
               </div>
             </li>
             <li className="nav-item">

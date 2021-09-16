@@ -8,7 +8,7 @@ import PhoneOffer from '../../components/Main/Phone-Offer/PhoneOffer'
 import BigBanner from './Big-Banner-bottom/BigBanner'
 import '../../Style/main-style.css'
 import { useDispatch } from 'react-redux'
-import { calcTotal, fetchProducts } from '../../redux/shopSlice'
+import {fetchProducts } from '../../redux/shopSlice'
 
 export default function HomePage() {
 
@@ -16,8 +16,7 @@ export default function HomePage() {
 
     useEffect(() => {
         dispatch(fetchProducts());
-        // dispatch(calcTotal());
-    }, [])
+    }, [dispatch])
 
     return ( 
     <> 

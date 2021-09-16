@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, createSelector } from "@reduxjs/toolkit";
 import { get } from "../Server/Axios";
 
 export const fetchProducts = createAsyncThunk("shop/fetchProducts", async() => {
@@ -8,7 +8,8 @@ export const fetchProducts = createAsyncThunk("shop/fetchProducts", async() => {
 
 const initialState = {
     products: [],
-    currentProcuts: localStorage.getItem("shopBasketItems") ? JSON.parse(localStorage.getItem("shopBasketItems")) : [],
+    currentBasketProcuts: localStorage.getItem("shopBasketItems") ? JSON.parse(localStorage.getItem("shopBasketItems")) : [],
+    loadCurrentItem: [],
     totalPrice: '',
     totoalQty: '',
 }
@@ -18,29 +19,29 @@ const shopSlice = createSlice({
     initialState,
     reducers:{
         addToBasket(state,action) {
-            const exist = state.currentProcuts.findIndex(produc => produc.id === action.payload.id);
+            const exist = state.currentBasketProcuts.findIndex(produc => produc.id === action.payload.id);
 
             if (exist >= 0) {
-                state.currentProcuts[exist].qty += 1;
+                state.currentBasketProcuts[exist].qty += 1;
             } else {
-                state.currentProcuts.push({...action.payload, qty: 1})
+                state.currentBasketProcuts.push({...action.payload, qty: 1})
             }
 
-            localStorage.setItem("shopBasketItems", JSON.stringify(state.currentProcuts));
+            localStorage.setItem("shopBasketItems", JSON.stringify(state.currentBasketProcuts));
         },
         removeFromBasket(state,action) {
-            const exist = state.currentProcuts.findIndex(produc => produc.id === action.payload.id);
+            const exist = state.currentBasketProcuts.findIndex(produc => produc.id === action.payload.id);
 
-            if (state.currentProcuts[exist].qty === 1) {
-                state.currentProcuts = state.currentProcuts.filter(p => p.id !== action.payload.id);
+            if (state.currentBasketProcuts[exist].qty === 1) {
+                state.currentBasketProcuts = state.currentBasketProcuts.filter(p => p.id !== action.payload.id);
             } else {
-                state.currentProcuts[exist].qty -= 1;
+                state.currentBasketProcuts[exist].qty -= 1;
             }
 
-            localStorage.setItem("shopBasketItems", JSON.stringify(state.currentProcuts));
+            localStorage.setItem("shopBasketItems", JSON.stringify(state.currentBasketProcuts));
         },
         calcTotal(state,action) {
-            let {total, quantity} = state.currentProcuts.reduce((acc,current) => {
+            let {total, quantity} = state.currentBasketProcuts.reduce((acc,current) => {
                 const totalItemPrice = current.price * current.qty;
 
                 acc.total += totalItemPrice;
@@ -73,11 +74,15 @@ export default shopSlice.reducer;
 
 // useSelector
 export const allProducts = (state) => state.shop.products;
-export const getCurrentProducts = state => state.shop.currentProcuts;
-export const getTotalPrice = state => state.shop.totalPrice;
-export const getTotoalQty = state => state.shop.totoalQty;
+export const getCurrentProducts = (state) => state.shop.currentBasketProcuts;
+export const getLoadCurrentItem = (state) => state.shop.loadCurrentItem;
+export const getTotalPrice = (state) => state.shop.totalPrice;
+export const getTotoalQty = (state) => state.shop.totoalQty;
 
-// get Products By Filtering Category
-// export const getSuperMarkets = AllProducts.filter(s => s.category === 'supermarket');
-// export const getOffers = AllProducts.filter(o => o.category === 'offers');
-// export const getPhones = allProducts.filter(p => p.category === 'phone');
+// createSelector
+
+// export const getProductsById = createSelector(
+//     allProducts,
+//     (state,itemId) => itemId,
+//     (produc,itemId) => produc.filter(p => p.id === itemId )
+// )

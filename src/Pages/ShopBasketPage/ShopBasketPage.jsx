@@ -30,7 +30,7 @@ export default function ShopBasketPage() {
 
                 {currentProducts.length === 0 && <div className='container'>
                     <div className='row shop-basket-empty'>
-                        <img src='./image/shop-basket.png'/>
+                        <img src='./image/shop-basket.png' alt='shop basket'/>
                         <p>سبد خرید شما خالی است!</p>
                     </div>
                 </div>

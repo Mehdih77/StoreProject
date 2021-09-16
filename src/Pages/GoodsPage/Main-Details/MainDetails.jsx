@@ -13,9 +13,9 @@ import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
 import SwiperCore, {Navigation, Thumbs} from 'swiper/core';
-import {get} from "../../../Server/Axios";
-import { useDispatch, useSelector } from "react-redux";
-import { allProducts, fetchProducts } from "../../../redux/shopSlice";
+import { useDispatch} from "react-redux";
+import { addToBasket} from "../../../redux/shopSlice";
+import { get } from "../../../Server/Axios";
 SwiperCore.use([Navigation, Thumbs]);
 
 const styles = (theme) => ({
@@ -61,24 +61,32 @@ const DialogContent = withStyles((theme) => ({
     }
 }))(MuiDialogContent);
 
-export default function MainDetails({id, phone}) {
+export default function MainDetails({id}) {
+
+    // gallery modal
     const [thumbsSwiper,setThumbsSwiper] = useState(null);
     const [open,setOpen] = React.useState(false);
-    // const [phone,setPhone] = useState('');
-
-
-    // useEffect(() => {
-    //     get(`/phone/${id}`).then(response => {
-    //         setPhone(response.data)
-    //     })
-    // }, [id])
-
     const handleClickOpen = () => {
         setOpen(true);
     };
     const handleClose = () => {
         setOpen(false);
     };
+
+    const dispatch = useDispatch();
+    const hanldeAddItemToBasket = (items) => {
+        dispatch(addToBasket(items));
+    }
+
+    const [getCurrentProducts, setGetCurrentProducts] = useState();
+    const getProduct = () => {
+        return get(`/products/${id}`).then(res => setGetCurrentProducts(res.data));
+    }
+    useEffect(() => {
+        getProduct()
+    }, [])
+
+    const itemPrice = getCurrentProducts && Number((getCurrentProducts.price).toFixed(3)).toLocaleString().split(/\s/).join(',');
 
     return (
         <section className='container-fluid MainDetails-goodspage'>
@@ -101,7 +109,7 @@ export default function MainDetails({id, phone}) {
                         </ul>
                     </div>
                     <div className='col-6 col-md-3'>
-                        <img className='img-fluid img-detail' src={phone.img} alt={phone.name}/>
+                        <img className='img-fluid img-detail' src={getCurrentProducts?.img} alt={getCurrentProducts?.name}/>
                         <div>
                             <Button onClick={handleClickOpen}>
                                 <p className='gallery-button'>گالری تصاویر</p>
@@ -126,12 +134,12 @@ export default function MainDetails({id, phone}) {
                                         swiper: thumbsSwiper
                                     }}
                                         className="mySwiper2">
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_1} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_2} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_3} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_4} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_5} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_6} alt={phone.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_1} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_2} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_3} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_4} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_5} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_6} alt={getCurrentProducts?.name}/></SwiperSlide>
                                     </Swiper>
                                     <Swiper
                                         onSwiper={setThumbsSwiper}
@@ -141,12 +149,12 @@ export default function MainDetails({id, phone}) {
                                         watchSlidesVisibility={true}
                                         watchSlidesProgress={true}
                                         className="mySwiper">
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_1} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_2} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_3} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_4} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_5} alt={phone.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={phone.img_6} alt={phone.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_1} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_2} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_3} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_4} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_5} alt={getCurrentProducts?.name}/></SwiperSlide>
+                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_6} alt={getCurrentProducts?.name}/></SwiperSlide>
                                     </Swiper>
                                 </DialogContent>
                             </Dialog>
@@ -154,7 +162,7 @@ export default function MainDetails({id, phone}) {
                     </div>
                     <div className='col-md-5'>
                         <h1 className='goods-name'>
-                            {phone.name}
+                            {getCurrentProducts?.name}
                         </h1>
                         <p className='goods-like'>
                             <i className="far fa-thumbs-up"></i>۸۶٪ (۵۷۰ نفر) از خریداران، این کالا را پیشنهاد کرده‌اند.
@@ -162,31 +170,31 @@ export default function MainDetails({id, phone}) {
                         <ul className='goods-detail-summary'>
                             <p>ویژگی های محصول:</p>
                             <li>
-                                <i className="fas fa-circle"></i>حافظه داخلی: {phone.storage}</li>
+                                <i className="fas fa-circle"></i>حافظه داخلی: {getCurrentProducts?.storage}</li>
                             <li>
-                                <i className="fas fa-circle"></i>شبکه های ارتباطی: {phone.contact}
+                                <i className="fas fa-circle"></i>شبکه های ارتباطی: {getCurrentProducts?.contact}
                             </li>
                             <li>
-                                <i className="fas fa-circle"></i>دوربین‌های پشت گوشی: {phone.camera}</li>
+                                <i className="fas fa-circle"></i>دوربین‌های پشت گوشی: {getCurrentProducts?.camera}</li>
                             <li>
-                                <i className="fas fa-circle"></i>سیستم عامل: {phone.sistem}</li>
+                                <i className="fas fa-circle"></i>سیستم عامل: {getCurrentProducts?.sistem}</li>
                             <li>
-                                <i className="fas fa-circle"></i>توضیحات سیم کارت: {phone.simcart}</li>
+                                <i className="fas fa-circle"></i>توضیحات سیم کارت: {getCurrentProducts?.simcart}</li>
                         </ul>
 
                         <p className='goods-warning'>
                             <i className="fas fa-exclamation-circle"></i>هشدار سامانه همتا: حتما در زمان
                             تحویل دستگاه، به کمک کد فعال‌سازی چاپ شده روی جعبه یا کارت گارانتی، دستگاه را از
                             طریق #7777*، برای سیم‌کارت خود فعال‌سازی کنید. آموزش تصویری در آدرس اینترنتی
-                            hmti.ir/05</p>
+                            hmti.ir/05
+                        </p>
 
                         <div className='post-free'>
                             <div>
-                                <p className='post-free-title'>
+                                <div className='post-free-title'>
                                     <i className="fas fa-truck"></i>ارسال رایگان سفارش
                                     <p className='post-free-text'>اولین سفارش کاربران جدید</p>
-                                </p>
-
+                                </div>
                             </div>
                             <img className='post-free-img' src='/image/post-free.png' alt='free-post'/>
                         </div>
@@ -268,12 +276,11 @@ export default function MainDetails({id, phone}) {
                             <p>
                                 <i className="fas fa-shipping-fast"></i>موجود در انبار فروشنده</p>
                         </div>
-                        <p className='goods-price'>
+                        <div className='goods-price'>
                             <p className='goods-price-1'>قیمت فروشنده</p>
-                            <p className='goods-price-2'>{phone.price}
-                                تومان</p>
-                        </p>
-                        <button  className='shop-buy-button'>افزودن به سبد خرید</button>
+                            <p className='goods-price-2'>{itemPrice} تومان</p>
+                        </div>
+                        <button onClick={() => hanldeAddItemToBasket(getCurrentProducts)} className='shop-buy-button'>افزودن به سبد خرید</button>
                     </div>
                 </div>
             </section>
