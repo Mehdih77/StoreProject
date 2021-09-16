@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -15,7 +15,6 @@ import "swiper/components/thumbs/thumbs.min.css";
 import SwiperCore, {Navigation, Thumbs} from 'swiper/core';
 import { useDispatch} from "react-redux";
 import { addToBasket} from "../../../redux/shopSlice";
-import { get } from "../../../Server/Axios";
 SwiperCore.use([Navigation, Thumbs]);
 
 const styles = (theme) => ({
@@ -61,7 +60,7 @@ const DialogContent = withStyles((theme) => ({
     }
 }))(MuiDialogContent);
 
-export default function MainDetails({id}) {
+export default function MainDetails({getCurrentProducts}) {
 
     // gallery modal
     const [thumbsSwiper,setThumbsSwiper] = useState(null);
@@ -77,14 +76,6 @@ export default function MainDetails({id}) {
     const hanldeAddItemToBasket = (items) => {
         dispatch(addToBasket(items));
     }
-
-    const [getCurrentProducts, setGetCurrentProducts] = useState();
-    const getProduct = () => {
-        return get(`/products/${id}`).then(res => setGetCurrentProducts(res.data));
-    }
-    useEffect(() => {
-        getProduct()
-    }, [])
 
     const itemPrice = getCurrentProducts && Number((getCurrentProducts.price).toFixed(3)).toLocaleString().split(/\s/).join(',');
 
