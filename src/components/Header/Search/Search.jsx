@@ -12,11 +12,6 @@ export default function Search() {
     //const [search, setSearch] = useState('')
     const [input, setInput] = useState('')
 
-    // useEffect(() => {
-    //     get("/offers").then( response => setSearch(response.data) )
-    // }, [])
-
-    //console.log(input);
 
     const searching = Datas.phone.filter(f => {
         if(

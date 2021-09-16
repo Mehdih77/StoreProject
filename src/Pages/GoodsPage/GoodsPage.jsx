@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer'
 import '../../Style/main-style.css'
 import { useParams } from 'react-router-dom'
 
-export default function GoodsPage({cartItems,onAdd}) {
+export default function GoodsPage() {
 
     // Params came from App.js ~ Use for better Nameing >
     // slug is set( phone ) then after that id came...
@@ -14,7 +14,7 @@ export default function GoodsPage({cartItems,onAdd}) {
 
     return (
         <>
-        <Header cartItems={cartItems} />
+        <Header/>
         <MainDetails onAdd={onAdd} id={id} />
         <MoreDetails id={id} />
         <div className='footer-in-goods-page'>

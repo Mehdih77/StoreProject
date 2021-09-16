@@ -4,18 +4,14 @@ import './shopbasketpage.css'
 import ShopList from './ShopList/ShopList'
 import Price from './Price/Price'
 import ShopBasketBanners from './ShopBasketBanners/ShopBasketBanners'
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
 
-
-export default function ShopBasketPage({cartItems,onAdd,onRemove}) {
+export default function ShopBasketPage() {
 
     
 
     return (
         <>
         <div className='body-custom-back-color'>
-        <Header cartItems={cartItems} />
             <div className='container my-5'>
                      <div className='shop-list-top-title'>
                             سبد خرید
@@ -40,7 +36,6 @@ export default function ShopBasketPage({cartItems,onAdd,onRemove}) {
 
              <ShopBasketBanners />
 
-            <Footer />
 
         </div>    
         </>

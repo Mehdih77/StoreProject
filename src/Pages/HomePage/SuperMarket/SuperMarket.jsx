@@ -8,7 +8,7 @@ import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Navigation } from 'swiper/core';
 SwiperCore.use([Navigation]);
 
-export default function SuperMarket({onAdd}) {
+export default function SuperMarket() {
 
   const [supermarket, setSupermarket] = useState('')
   const {hours, minutes, seconds} = OfferTimer();

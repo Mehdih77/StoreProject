@@ -1,139 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import Search from '../Search/Search'
 import './navbar.css'
-import {Link, Redirect} from "react-router-dom";
-import { withStyles } from '@material-ui/core/styles';
-import Dialog from '@material-ui/core/Dialog';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import MuiDialogContent from '@material-ui/core/DialogContent';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import Typography from '@material-ui/core/Typography';
-import { useAuthDispatch, useAuthState } from '../../../Server/Auth-Context/AuthContext';
-import { actionTypes } from '../../../Server/Auth-Context/reducer';
-import axios from 'axios';
+import {Link} from "react-router-dom";
 
-const styles = (theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(2),
-  },
-  closeButton: {
-    position: 'absolute',
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-    color: theme.palette.grey[500],
-  },
-});
+export default function Navbar() {
 
-const DialogTitle = withStyles(styles)((props) => {
-  const { children, classes, onClose, ...other } = props;
-  return (
-    <MuiDialogTitle disableTypography className={classes.root} {...other}>
-      <Typography variant="h6">{children}</Typography>
-      {onClose ? (
-        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </MuiDialogTitle>
-  );
-});
-
-const DialogContent = withStyles((theme) => ({
-  root: {
-    padding: theme.spacing(2),
-  },
-}))(MuiDialogContent);
-
-export default function Navbar({cartItems}) {
-
-  // Auth - state - reducer
-  const dispatch = useAuthDispatch();
-   const {username , password} = useAuthState();
-
-   // simple sistem for login
-  const adminLogin = {
-    username: 'admin',
-    password: '123'
-  }
-
-  const [open, setOpen] = React.useState(false);
-  const [form, setForm] = useState({
-    username: '',
-    password: ''
-  })
-
-
-  function handleChangeForm(e) {
-    setForm({
-      ...form,
-      [e.target.name]:e.target.value
-    })
-  }
-
-  // button for login
-  function handleLogin(e) {
-    e.preventDefault();
-    dispatch({
-      type: actionTypes.LOGIN_REQUEST
-    })
-    Login(form);
-    
-  }
-
-  // For check username and password
-  const Login = (form) => {
-    if( form.username === adminLogin.username && form.password === adminLogin.password){
-        dispatch({
-          type: actionTypes.LOGIN_SUCCESS,
-          payload: {
-            username: form.username,
-            password: form.password
-          }
-        
-        })
-        localStorage.setItem("key", JSON.stringify(form))
-    } else{
-      alert('Wrong username Or password')
-    }
-  }
-
-  useEffect(() => {
-    const key = localStorage.getItem("key")
-    if(key){
-      setForm(key)
-    }
-  }, [])
-
-  // LOGOUT
-  const sendOut = () => {
-    return axios.post('/')
-  }
-  function LogOut() {
-    sendOut();
-    localStorage.clear("key")
-    dispatch({
-      type: actionTypes.LOGOUT
-    })
-  }
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  let className = ' ';
-  if(Login){
-    className += "login-color"
-  }
 
     return (
       
         <>
-
-        {/* { Login ? <Redirect></Redirect> : null } */}
 
 
 <Link to='/' className="navbar-brand" href="#"><img src="/image/logo.png" alt="logo" /></Link>
@@ -169,42 +44,9 @@ export default function Navbar({cartItems}) {
           <div className="navbar-left d-flex ml-auto">
         <Link to='/shopbasket' className="store-shop"><i className="fas fa-shopping-cart"><span className="qty-shop">{cartItems.length}</span></i></Link>
         <div className="line-user-shop">|</div>
-        <div className="user-icon"><i className={`fas fa-user ${className}`} onClick={handleClickOpen}></i>
+        <div className="user-icon"><i className="fas fa-user" ></i>
         <div>
-      { !Login ? <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <DialogTitle id="customized-dialog-title" className='customized-dialog-title-user-login' onClose={handleClose}>
-              <p>ورود به سایت</p>
-        </DialogTitle>
-        <DialogContent dividers>
-        <form onSubmit={handleLogin}>
-  <div className="form-group">
-    <label htmlFor="exampleInputEmail1">نام کاربری</label>
-    <input autoComplete='off' onChange={handleChangeForm} name='username' type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-  </div>
-  <div className="form-group">
-    <label htmlFor="exampleInputPassword1">رمز ورود</label>
-    <input onChange={handleChangeForm} name='password' type="password" className="form-control" id="exampleInputPassword1" />
-  </div>
-  <div className="form-group form-check">
-    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-    <label className="form-check-label" htmlFor="exampleCheck1">مرا به خاطر بسپار</label>
-  </div>
-  <button type="submit" className="btn btn-login w-100">ورود</button>
-</form>
-        </DialogContent>
-      </Dialog> 
-      :
-       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <DialogTitle id="customized-dialog-title" className='customized-dialog-title-user-login' onClose={handleClose}>
-              <p>خروج به سایت</p>
-        </DialogTitle>
-        <DialogContent dividers>
-        <form >
-  
-  <button onSubmit={LogOut} type="submit" className="btn btn-login w-100">خروج</button>
-</form>
-        </DialogContent>
-      </Dialog> }
+        
     </div>
         </div>
         </div>

@@ -1,13 +1,10 @@
 import React from 'react'
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
 import './aboutuspage.css'
 import '../../Style/main-style.css'
 
-export default function AboutUsPage({cartItems}) {
+export default function AboutUsPage() {
     return (
         <>
-        <Header cartItems={cartItems} />
             <section>
                 <div className='container my-4'>
                     <div className='row contact-custom-style'>
@@ -23,7 +20,6 @@ export default function AboutUsPage({cartItems}) {
                     </div>
                 </div>
             </section>
-        <Footer/>
         </>
     )
 }

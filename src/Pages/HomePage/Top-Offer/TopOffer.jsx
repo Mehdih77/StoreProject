@@ -9,7 +9,7 @@ import SwiperCore, { Navigation } from 'swiper/core';
 SwiperCore.use([Navigation]);
 
 
-export default function TopOffer({onAdd}) {
+export default function TopOffer() {
 
   const [offer, setOffer] = useState('')
   const {hours ,minutes , seconds} = OfferTimer();
