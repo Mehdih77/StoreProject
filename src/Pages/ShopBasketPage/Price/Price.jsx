@@ -8,17 +8,15 @@ export default function Price() {
     const stateTotalPrice = useSelector(getTotalPrice);
 
     //Calculate the Price of Items
-    const calcOfferPrice = stateTotalPrice > 500000 ? 50000 : 0;
-    const calcFinalPrice = stateTotalPrice - calcOfferPrice;
-
-
-    // Number(totalPrice.toFixed(3)).toLocaleString().split(/\s/).join(',')
-
+    const totalPrice = stateTotalPrice && Number(stateTotalPrice.toFixed(3)).toLocaleString().split(/\s/).join(',');
+    const calcOfferPrice = Number((stateTotalPrice > 500000 ? 50000 : 0).toFixed(3)).toLocaleString().split(/\s/).join(',');
+    const calcFinalPrice = stateTotalPrice && (stateTotalPrice > 500000 ? Number((stateTotalPrice- 50000).toFixed(3)).toLocaleString().split(/\s/).join(',') : totalPrice);
+    
     return (
         <div className='shop-price'>
             <div className='item-price d-flex justify-content-between'>
                 <p>قیمت کالاها</p>
-                <p>{stateTotalPrice} تومان</p>
+                <p>{totalPrice} تومان</p>
             </div>
             <div className='off-price d-flex justify-content-between'>
                 <p>تخفیف کالاها</p>
