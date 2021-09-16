@@ -8,16 +8,14 @@ import { addToBasket, allProducts } from '../../../redux/shopSlice';
 import { useDispatch, useSelector } from 'react-redux';
 SwiperCore.use([Navigation]);
 
-
 export default function TopOffer() {
 
   const {hours ,minutes , seconds} = OfferTimer();
  
-
   const getAllProducts = useSelector(allProducts);
   const dispatch = useDispatch();
 
-  const getOffers = getAllProducts.filter(s => s.category === 'supermarket')
+  const getOffers = getAllProducts.filter(s => s.category === 'offers')
 
   const hanldeAddItemToBasket = (items) => {
     dispatch(addToBasket(items));

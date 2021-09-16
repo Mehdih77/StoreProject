@@ -8,9 +8,9 @@ export const fetchProducts = createAsyncThunk("shop/fetchProducts", async() => {
 
 const initialState = {
     products: [],
-    currentProcuts: [],
-    totalPrice: "",
-    totoalQty: ""
+    currentProcuts: localStorage.getItem("shopBasketItems") ? JSON.parse(localStorage.getItem("shopBasketItems")) : [],
+    totalPrice: '',
+    totoalQty: '',
 }
 
 const shopSlice = createSlice({
@@ -26,7 +26,7 @@ const shopSlice = createSlice({
                 state.currentProcuts.push({...action.payload, qty: 1})
             }
 
-            localStorage.setItem("shopBasketItems", state.currentProcuts);
+            localStorage.setItem("shopBasketItems", JSON.stringify(state.currentProcuts));
         },
         removeFromBasket(state,action) {
             const exist = state.currentProcuts.findIndex(produc => produc.id === action.payload.id);
@@ -37,11 +37,11 @@ const shopSlice = createSlice({
                 state.currentProcuts[exist].qty -= 1;
             }
 
-            localStorage.setItem("shopBasketItems", state.currentProcuts);
+            localStorage.setItem("shopBasketItems", JSON.stringify(state.currentProcuts));
         },
         calcTotal(state,action) {
             let {total, quantity} = state.currentProcuts.reduce((acc,current) => {
-                const totalItemPrice = acc + current.price * current.qty;
+                const totalItemPrice = current.price * current.qty;
 
                 acc.total += totalItemPrice;
                 acc.quantity += current.qty;
@@ -51,7 +51,8 @@ const shopSlice = createSlice({
                 total: 0,
                 quantity: 0
             })
-            state.totalPrice = total.toFixed(3);
+            // total = parseFloat(total.toFixed(2));
+            state.totalPrice = total;
             state.totoalQty = quantity;
         },
     },
@@ -62,7 +63,6 @@ const shopSlice = createSlice({
     }
 })
 
-
 export const {
     addToBasket,
     removeFromBasket,
@@ -71,15 +71,13 @@ export const {
 
 export default shopSlice.reducer;
 
-
 // useSelector
+export const allProducts = (state) => state.shop.products;
 export const getCurrentProducts = state => state.shop.currentProcuts;
 export const getTotalPrice = state => state.shop.totalPrice;
 export const getTotoalQty = state => state.shop.totoalQty;
 
 // get Products By Filtering Category
-export const allProducts = (state) => state.shop.products;
-
 // export const getSuperMarkets = AllProducts.filter(s => s.category === 'supermarket');
 // export const getOffers = AllProducts.filter(o => o.category === 'offers');
 // export const getPhones = allProducts.filter(p => p.category === 'phone');
