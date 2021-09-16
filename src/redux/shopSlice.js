@@ -78,11 +78,8 @@ export const getTotalPrice = state => state.shop.totalPrice;
 export const getTotoalQty = state => state.shop.totoalQty;
 
 // get Products By Filtering Category
-const filterSuperMarket = state => state.shop.products;
-export const getSuperMarkets = filterSuperMarket.filter(s => s.category === 'supermarket');
+export const allProducts = (state) => state.shop.products;
 
-const filterOffers = state => state.shop.products;
-export const getOffers = filterOffers.filter(o => o.category === 'offers');
-
-const filterPhone = state => state.shop.products;
-export const getPhones = filterPhone.filter(p => p.category === 'phone');
+// export const getSuperMarkets = AllProducts.filter(s => s.category === 'supermarket');
+// export const getOffers = AllProducts.filter(o => o.category === 'offers');
+// export const getPhones = allProducts.filter(p => p.category === 'phone');

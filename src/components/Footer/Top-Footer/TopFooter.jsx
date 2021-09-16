@@ -1,5 +1,5 @@
-import React from 'react'
-import './topfooter.css'
+import React from 'react';
+import './topfooter.css';
 
 export default function TopFooter() {
     return ( 
@@ -10,8 +10,9 @@ export default function TopFooter() {
             تلفن پشتیبانی : 34567 - 012 | هفت روز هفته، 24 ساعت شبانه‌روز پاسخگوی شما هستیم.
         </p>
     </div> 
-    <div className = 'container top-footer-icons' > <div className='row top-footer-line-separotor my-3'>
 
+    <div className = 'container top-footer-icons' > 
+        <div className='row top-footer-line-separotor my-3'>
         <p>
             <i className="fas fa-shipping-fast goods-icon"></i>
             <span>امکان تحویل اکسپرس</span>

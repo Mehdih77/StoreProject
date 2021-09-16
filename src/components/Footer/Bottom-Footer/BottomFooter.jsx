@@ -1,5 +1,5 @@
-import React from 'react'
-import './bottomfooter.css'
+import React from 'react';
+import './bottomfooter.css';
 
 export default function BottomFooter() {
     return (

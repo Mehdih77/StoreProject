@@ -7,8 +7,8 @@ export default function Footer() {
     return (
         <>
         <footer className='container-fluid footer'>
-        <TopFooter />
-        <BottomFooter />
+           <TopFooter />
+          <BottomFooter />
         </footer>
         </>
         )

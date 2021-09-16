@@ -1,36 +1,32 @@
-import React, { useState , useEffect} from 'react'
-import './search.css'
-import {get} from '../../../Server/Axios'
-import Datas from '../../../data.json'
-import { Link } from '@material-ui/core'
+import React, {useState} from 'react';
+import './search.css';
+import { Link } from '@material-ui/core';
+import { useSelector } from 'react-redux';
 
 
 
 
 export default function Search() {
 
-    //const [search, setSearch] = useState('')
-    const [input, setInput] = useState('')
+    const [input, setInput] = useState('');
 
+    const filterNames = useSelector(state => state.shop.products);
 
-    const searching = Datas.phone.filter(f => {
-        if(
-            f.name.toLowerCase().includes(input.toLowerCase())
-        ){
+    const searching = filterNames.filter(f => {
+        if( f.name.toLowerCase().includes(input.toLowerCase())) {
             return f;
         }
     }).map(m => {
-        //console.log(m.id);
-     return <Link id='search-items' to={`/goods/phone/${m.id}`}>
-         <button className='search-items'>
-         <i className="fas fa-search-plus"></i>
-         {m.name}
-         </button>
-     </Link>
-    })
+        return (
+            <Link id='search-items' to={`/goods/phone/${m.id}`}>
+                <button className='search-items'>
+                <i className="fas fa-search-plus"></i>
+                 {m.name}
+                </button>
+            </Link>
+        )
+    });
     
-
-
     return (
         <>
         <form className="form-inline search-form my-2 my-lg-0">

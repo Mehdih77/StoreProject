@@ -1,22 +1,31 @@
-import React, {useEffect, useState} from 'react'
-import Search from '../Search/Search'
-import './navbar.css'
+import {useEffect} from 'react';
+import Search from '../Search/Search';
+import './navbar.css';
 import {Link} from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { calcTotal, getCurrentProducts, getTotoalQty } from '../../../redux/shopSlice';
 
 export default function Navbar() {
 
+  const dispatch = useDispatch();
+  const currentProducts = useSelector(getCurrentProducts);
+  const totoalQty = useSelector(getTotoalQty);
 
-    return (
-      
-        <>
+  useEffect(() => {
+    dispatch(calcTotal());
+  }, [currentProducts,dispatch])
 
+  return (
+    <>
+      <Link to='/' className="navbar-brand" href="#"><img src="/image/logo.png" alt="logo" /></Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+         </button>
 
-<Link to='/' className="navbar-brand" href="#"><img src="/image/logo.png" alt="logo" /></Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <nav className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-2">
+      <nav className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-2">
             <li className="nav-item">
               <a className="nav-link" href="#">سوپر مارکت </a>
             </li>
@@ -40,18 +49,18 @@ export default function Navbar() {
               <Link to='/aboutus' className="nav-link " href="#" tabIndex="-1">درباره ما</Link>
             </li>
           </ul>
-          <Search />
-          <div className="navbar-left d-flex ml-auto">
-        <Link to='/shopbasket' className="store-shop"><i className="fas fa-shopping-cart"><span className="qty-shop">{cartItems.length}</span></i></Link>
-        <div className="line-user-shop">|</div>
-        <div className="user-icon"><i className="fas fa-user" ></i>
-        <div>
-        
-    </div>
+        <Search />
+        <div className="navbar-left d-flex ml-auto">
+          <Link to='/shopbasket' className="store-shop">
+            <i className="fas fa-shopping-cart">
+              <span className="qty-shop">{totoalQty}</span>
+            </i>
+          </Link>
+            <div className="line-user-shop">|</div>
+             <div className="user-icon"><i className="fas fa-user" ></i>
+             </div>
         </div>
-        </div>
-        </nav>
-        
-        </>
+      </nav>
+    </>
     )
 }
