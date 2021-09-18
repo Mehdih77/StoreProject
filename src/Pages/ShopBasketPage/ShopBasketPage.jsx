@@ -14,7 +14,7 @@ export default function ShopBasketPage() {
     return (
         <> 
             <div className='body-custom-back-color'>
-                <div className='container my-5'>
+                <div className='container py-4'>
                     <div className='shop-list-top-title'>
                         سبد خرید
                     </div>

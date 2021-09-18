@@ -1,8 +1,195 @@
-.aboutus-custom-style {
-  text-align: center;
+/* contactus-form*/
+.contactPage-body {
+  background-color: #f5f5f5;
+  margin-top: -30px;
+  padding-bottom: 30px;
+  padding-top: 25px;
 }
-.aboutus-title{
-    font-size: 30px;
-    font-weight: 600;
-    color: #f3696c !important;
+.contactus-form {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+}
+.contactus-form label {
+  margin: 10px 0;
+}
+.contactus-form label p {
+  margin-bottom: 4px;
+  padding-right: 5px;
+  font-size: 14px;
+}
+.contactus-title-header {
+  padding-right: 30px;
+  padding-top: 10px;
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+}
+.contactus-title-header::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background-color: #ef394e;
+  bottom: -10px;
+  right: 30px;
+}
+.contactus-title-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+  margin-bottom: -10px;
+}
+.contactus-title-footer p {
+  font-size: 13px;
+  padding-top: 20px;
+}
+.contactus-title-footer button {
+  font-size: 14px;
+  width: 130px;
+  height: 43px;
+  margin-left: 30px;
+  margin-top: 8px;
+  border: 1px solid #0fabc6 !important;
+  color: #0fabc6 !important;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.contactus-title-footer button:hover {
+  background-color: #32d4ef;
+  color: #085967 !important;
+  transition: 0.2s linear;
+}
+/* inputs form */
+.contactus-inputs-title {
+  font-size: 13px;
+  padding-right: 30px;
+}
+.contactus-form input,
+.contactus-form select {
+  border: 1px solid #e0e0e2;
+  border-radius: 10px;
+  height: 40px;
+}
+.input-text-form {
+  height: 80px !important;
+}
+.contactus-form select {
+  color: #6f6f6f !important;
+}
+.contactus-submit-form-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.contactus-submit-form-btn button {
+  font-size: 15px;
+  background-color: #0fabc6;
+  color: #fff !important;
+  border: 1px solid #0fabc6;
+  border-radius: 10px;
+  padding: 13px 17px;
+}
+.contactus-submit-form-btn button:hover {
+  background-color: #0b8297;
+  transition: 0.2s linear;
+}
+
+/* contactus-holiday */
+.contactus-holiday {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+}
+.contactus-holiday-title {
+  padding-right: 30px;
+  padding-top: 10px;
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+}
+.contactus-holiday-title::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background-color: #ef394e;
+  bottom: -10px;
+  right: 30px;
+}
+.contactus-holiday-details {
+  font-size: 13px;
+  padding-top: 10px;
+  padding-right: 30px;
+}
+.contactus-holiday-dates-g {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactus-holiday-dates-d {
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border: 1px solid #e0e0e2;
+  border-radius: 10px;
+  padding: 6px;
+  margin: 7px 10px;
+}
+.contactus-holiday-dates-d p {
+  margin: 0px 0px;
+}
+.contactus-holiday-dates-d p:first-child {
+  font-size: 27px;
+  font-weight: 900;
+}
+.contactus-holiday-dates-d p:nth-child(2) {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: -12px;
+}
+.contactus-holiday-dates-d p:last-child {
+  margin-top: -10px;
+}
+
+/* contactus-details */
+
+.contactus-details{
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+}
+.contactus-details-title {
+  padding-right: 30px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+}
+.contactus-details-title::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background-color: #ef394e;
+  bottom: -10px;
+  right: 30px;
+}
+.contactus-details-address{
+  padding-right: 30px;
+
+}
+.contactus-details-addresses div p{
+  font-size: 13px;
+}
+.contactus-details-addresses div p:first-child{
+  color: #000!important;
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 5px;
 }

@@ -4,7 +4,7 @@ import './topbanner.css'
 export default function TopBanner() {
     return (
         <>
- <div className="container mt-3">
+ <div className="container pt-3">
         <img className="w-100 top-banner" src="./image/5.jpg" alt="banner" />
     </div>
     <section className="container">
