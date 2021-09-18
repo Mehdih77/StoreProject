@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './bottomfooter.css';
 
 export default function BottomFooter() {
@@ -11,8 +12,8 @@ export default function BottomFooter() {
                         <li> <a href='#!'> اتاق خبر </a> </li>
                         <li> <a href='#!'> نحوه فروش </a> </li>
                         <li> <a href='#!'>فرصت های شغلی </a> </li>
-                        <li> <a href='#!'>تماس با ما </a> </li>
-                        <li> <a href='#!'> درباره ما</a> </li>
+                        <li> <Link to='/contact'>تماس با ما </Link> </li>
+                        <li> <Link to='/aboutus'> درباره ما</Link> </li>
                     </ul>
                 </div>
                 <div className='col-6 col-md-3'>

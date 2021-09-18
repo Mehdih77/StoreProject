@@ -36,7 +36,7 @@ export default function ContactPage() {
                         <div className='col-12'> 
                             <label className='col-md-6 w-100'>
                                 <p>ایمیل</p>
-                                <input className='w-100' type="text" />
+                                <input className='w-100' type="email" />
                             </label>
                             <label className='col-md-6 w-100'>
                                 <p>تلفن تماس</p>
@@ -128,12 +128,21 @@ export default function ContactPage() {
                                 </div>
                             </div>
                             <div className='contactus-details-address-map col-md-6'>
-                             <img className='img-fluid' src="https://i.stack.imgur.com/yEshb.gif" alt="map address" />
+                             <img className='' src="https://i.stack.imgur.com/yEshb.gif" alt="map address" />
                             </div>
                             </div>
                         </div>
                         <hr />
-                        <div className='contactus-details-phones'></div>
+                        <div className='contactus-details-phones'>
+                            <p><i className="fas fa-phone"></i> تلفن تماس و فکس<span> ۶۱۹۳۰۰۰۰ - ۰۲۱</span></p>
+                            <p><i className="fas fa-envelope"></i> ایمیل سازمانی <span>mehdi.havaei77@gmail.com</span></p>
+                            <p><i className="far fa-clock"></i> پاسخگویی ۲۴ ساعته و ۷ روز هفته</p>
+                        </div>
+                        <hr />
+                        <div className='contactus-details-info'>
+                            <p><i className="fas fa-info-circle"></i>توجه داشته باشید که 300061930007 ، 300061930000 ، 1000619300 و 100061930000 تنها شماره‌هایی هستند که دیجی‌کالا از طریق آن برای کاربران و مشتریان خود پیامک (اس ام اس) ارسال می‌کند. بنابراین ارسال هرگونه پیامک تحت عنوان دیجی‌کالا، با هر شماره دیگری تخلف و سوء استفاده از نام دیجی‌کالا است. در صورت دریافت چنین پیامکی، لطفاً جهت پیگیری قانونی آن را به <strong>mehdi.havaei77@gmail.com</strong> اطلاع دهید.
+                            قابل ذکر است که این شماره‌ها تنها سامانه ارسال پیامک هستند و وضعیت پردازش سفارشات مشتریان، رویدادها، خدمات و سرویس‌های ویژه دیجی‌کالا را به اطلاع کاربران می‌رسانند. لطفاً توجه داشته باشید که امکان دریافت و رسیدگی به پیام‌های شما از طریق این شماره‌ها وجود ندارد.</p>
+                        </div>
                     </div>
                 </div>
             </section>
