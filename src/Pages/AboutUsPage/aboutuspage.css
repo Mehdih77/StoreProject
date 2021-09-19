@@ -1,34 +1,78 @@
-.contact-custom-style {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.aboutUs {
+  margin-top: -30px;
+  background-color: #f5f5f5;
 }
-.contact-custom-style li {
-  margin: 20px 0;
+/* aboutUs-header */
+.aboutUs-header {
+  background: linear-gradient(225deg, #d22c4e, #ee384e 41.68%, #ef5662);
 }
-.contact-title {
+.aboutUs-header-title {
+  margin-top: 50px;
+}
+@media screen and (max-width: 750px) {
+  .aboutUs-header-title {
+    margin-top: 10px;
+  }
+}
+.aboutUs-header-title p {
+  color: #fff !important;
+}
+.aboutUs-header-title p:nth-child(1) {
+  font-size: 45px;
+  font-weight: 900;
+}
+.aboutUs-header-title p:nth-child(2) {
   font-size: 25px;
   font-weight: 600;
 }
-.contact-social li {
-  display: inline;
-  margin: 0 30px;
+.aboutUs-header-title p:nth-child(3) {
+  font-size: 15px;
 }
-.contact-social i {
-  font-size: 40px;
-  padding-top: 30px;
+
+/* aboutUs-business */
+.aboutUs-business{
+  text-align: center;
 }
-/* social icon hover */
-.contact-social .fa-instagram:hover {
-  color: #d411c4 !important;
+.aboutUs-business-top-title{
+  color: #000!important;
+  font-weight: 800;
+  font-size: 25px;
 }
-.contact-social .fa-telegram-plane:hover {
-  color: #25becc !important;
+.aboutUs-business-bottom-title{
+  color: #000!important;
+  font-size: 15px;
 }
-.contact-social .fa-linkedin:hover {
-  color: #0041a8 !important;
+.aboutUs-business-topics{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.contact-social .fa-youtube:hover {
-  color: #e02525 !important;
+.aboutUs-business-topics i{
+  font-size: 28px;
+}
+.aboutUs-business-topics div:nth-child(2){
+  border-right: 1px solid #e0e0e2;
+  border-left: 1px solid #e0e0e2;
+  margin: 0 20px;
+  padding: 0 25px;
+}
+.aboutUs-business-topics-single p:nth-child(2){
+  color: #19bfd3!important;
+  font-weight: bolder;
+  font-size: 27px;
+  margin-bottom: 0px;
+}
+.aboutUs-business-topics-single p:nth-child(3){
+  color: #000!important;
+  font-weight: 700;
+  font-size: 20px;
+}
+.aboutUs-business-topics-single a{
+  color: #e6123d!important;
+  font-size: 15px;
+}
+.aboutUs-business-topics-single span{
+  color: #e6123d!important;
+  font-size: 13px;
+  vertical-align: -2px;
 }
