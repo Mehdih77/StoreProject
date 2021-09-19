@@ -10,42 +10,54 @@ export function useAuth() {
 function AuthProvider({children}) {
 
     const [curretnUSer, setCurretnUSer] = useState();
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     function signUp(email,password) {
-
+        return auth.createUserWithEmailAndPassword(email,password);
     }
 
     function logIn(email,password) {
-
+        return auth.signInWithEmailAndPassword(email,password);
     }
 
     function logOut() {
-
+        return auth.signOut();
     }
 
     function resetPassword(email) {
-
+        return auth.sendPasswordResetEmail(email);
     }
 
     function updateEmail(email) {
-
+        return curretnUSer.updateEmail(email);
     }
 
     function updatePassword(password) {
-
+        return curretnUSer.updatePassword(password);
     }
 
-
     useEffect(() => {
-        
-    }, [])
+        const unsubscribe = auth.onAuthStateChange( user => {
+            setCurretnUSer(user);
+            setLoading(false);
+        });
 
-    const value = {};
+        return unsubscribe;
+    }, []);
+
+    const value = {
+        curretnUSer,
+        signUp,
+        logIn,
+        logOut,
+        resetPassword,
+        updateEmail,
+        updatePassword
+    };
 
     return (
         <AuthContext.Provider value={value}>
-            {children}
+            {!loading && children}
         </AuthContext.Provider>
     )
 }
