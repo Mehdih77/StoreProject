@@ -101,6 +101,217 @@ export default function AboutUsPage() {
                     <p>یک زمین به اندازه یک سرزمین</p>
                     <p>دیجی‌کالا در زمینه انبارداری، در خاورمیانه حرفی برای گفتن دارد. این انبارها با مساحتی معادل ۹۵ هزار مترمربع، می‌توانند «۶ میلیون کالا» را در خود جای دهند و روزانه «۸۵۰ هزار کالا» را پردازش کنند. پراکندگی این انبارها در تمام استان‌های ایران باعث شده تا همه به صورت برابر امکان استفاده از دیجی‌کالا را داشته باشند. افتتاح مراکز جدید پردازش سفارش، دیجی‌کالا را به یکی از ظرفیت‌های بزرگ پردازش سفارش کالا در خاورمیانه تبدیل کرده است.</p>
                 </div>
+                <div className='container-fluid aboutUs-brands my-4'>
+                    <div className="container aboutUs-brands-container">
+                        <div className='aboutUs-brands-container-top'>
+                            <div>
+                            <svg width="120" height="44" viewBox="0 0 120 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M59.9997 44C37.2375 44 15.7336 33.747 1.31844 16.294C-0.836737 13.6835 -0.281232 9.76972 2.48455 7.82596L12.1404 1.04412C14.6036 -0.688303 17.9448 -0.211207 19.9066 2.07722C29.903 13.7407 44.534 20.5661 59.9997 20.5661C75.4662 20.5661 90.0972 13.7407 100.093 2.07722C102.055 -0.211207 105.396 -0.688303 107.86 1.04412L117.515 7.82596C120.281 9.76972 120.837 13.6835 118.681 16.294C104.267 33.747 82.7618 44 59.9997 44Z" fill="#EF4056"/>
+                                </svg>
+                            </div>
+                            <p>اولین آجر برای صنعت تجارت الکترونیک</p>
+                            <p>با تغییر به مدل کسب‌وکار بازارگاه، اولین آجر را برای ساختن اکوسیستم تجارت الکترونیک در ایران گذاشتیم. افزودن محصولات و خدمات جدید و نوآوری در الگوهای کسب‌وکار، اینجا همیشه اولویت است. نوآوری‌هایی مانند فروش آنلاین مواد غذایی، محصولات تندمصرف، کتاب و محتوای دیجیتال. همچنین خدمات پرداخت الکترونیک، تبلیغات دیجیتال، خدمات ابری و خریدوفروش در بستر شبکه اجتماعی را راه انداختیم تا زنجیره ارزشمان را کامل کنیم.</p>
+                        </div>
+                        <div className="aboutUs-brands-container-bottom">
+                            <div className="row">
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="url(#paint0_linear)"/>
+                                        <path d="M18.3955 35.8141C17.749 35.0429 17.9156 33.8865 18.7454 33.3122L21.6421 31.3085C22.3811 30.7966 23.3834 30.9376 23.972 31.6137C26.9709 35.0597 31.3602 37.0763 35.9999 37.0763C40.6399 37.0763 45.0292 35.0597 48.0278 31.6137C48.6164 30.9376 49.6187 30.7966 50.358 31.3085L53.2544 33.3122C54.0844 33.8865 54.2511 35.0429 53.6043 35.8141C49.28 40.9707 42.8286 44 35.9999 44C29.1713 44 22.7201 40.9707 18.3955 35.8141Z" fill="white"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear" x1="36" y1="-36" x2="-36" y2="36" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#D22C4E"/>
+                                        <stop offset="0.41677" stop-color="#EE384E"/>
+                                        <stop offset="1" stop-color="#EF5662"/>
+                                        </linearGradient>
+                                        </defs>
+                                        </svg>
+                                    </div>
+                                    <p>دیجی‌کالا</p>
+                                    <p>مارکت‌ پلیس</p>
+                                </div>
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 23.3744V46.6336H25.4978C32.0278 46.6336 37.4015 41.3245 37.2857 34.795C37.1738 28.4783 32.0005 23.3744 25.6575 23.3744H17ZM25.5165 44.0054H19.6282V26.0026H25.6604C30.6677 26.0026 34.7335 30.1129 34.6608 35.137C34.5891 40.0798 30.4597 44.0054 25.5165 44.0054Z" fill="black"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M54.9115 44.9896C56.3725 43.752 57.1443 41.9386 57.1443 39.7465C57.1443 37.5166 56.2419 35.828 54.4634 34.7267C53.0102 33.8272 50.9548 33.3059 47.9952 33.0864C42.6028 32.5877 42.6024 30.3023 42.6024 29.5505C42.6024 27.1767 44.6764 25.6426 47.8861 25.6426C51.1394 25.6426 53.5931 27.323 53.5931 29.5505H56.2357C56.2357 25.8167 52.6458 23 47.8861 23C43.2193 23 39.9602 25.6938 39.9602 29.5505C39.9602 31.3921 40.7421 32.9262 42.2227 33.9879C43.5201 34.9175 45.3846 35.5004 47.7651 35.719L47.7886 35.7214C53.9828 36.1781 54.5022 38.0388 54.5022 39.7465C54.5022 40.8708 54.5022 44.2938 48.2587 44.2938C44.3631 44.2938 41.6426 42.2839 41.6426 39.4065H39C39 43.7692 42.8936 46.9359 48.2587 46.9359C51.1494 46.9359 53.3879 46.2812 54.9115 44.9896Z" fill="black"/>
+                                        </svg>
+
+                                    </div>
+                                    <p>دیجی استایل</p>
+                                    <p>فروشگاه آنلاین مد و پوشاک</p>
+                                </div>
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="#FF6200"/>
+                                        <g clip-path="url(#clip0)">
+                                        <path d="M28.1791 23.6849C28.6692 23.6849 29.0426 24.1449 28.9375 24.6402L28.4124 26.9637C28.3308 27.3176 28.0157 27.5771 27.654 27.5771H24.5385C24.0484 27.5771 23.675 27.1171 23.78 26.6217L24.2934 24.2982C24.3751 23.9444 24.6902 23.6849 25.0519 23.6849H28.1791ZM23.7333 30.2426C23.3716 30.2426 23.0566 30.5021 22.9749 30.8677L20.1044 44.9857C20.1044 45.0093 20.0927 45.0211 20.0927 45.0329C20.0344 45.2452 19.9644 45.5283 19.906 45.8585C19.836 46.2006 19.7427 46.5426 19.6143 46.8729C19.486 47.2031 19.3226 47.4862 19.1242 47.7221C18.9259 47.958 18.6575 48.0759 18.3308 48.0759C18.0507 48.0759 17.7707 48.0759 17.4906 48.0641C17.4323 48.0641 17.3739 48.0641 17.3039 48.0523C16.9189 48.0287 16.5921 48.3 16.5105 48.6656L16.0321 50.942C15.9387 51.402 16.2538 51.8266 16.7088 51.8737C16.8022 51.8855 16.8955 51.8973 16.9889 51.9091C17.3739 51.9563 17.7473 51.9799 18.1207 51.9799C19.1709 51.9799 20.0577 51.8737 20.7578 51.6496C21.458 51.4255 22.0531 51.0953 22.5431 50.6471C23.0215 50.1989 23.4066 49.6328 23.6983 48.9487C23.99 48.2646 24.2234 47.4626 24.4218 46.5544L27.5956 31.1862C27.7007 30.7026 27.3273 30.2426 26.8372 30.2426H23.7333ZM33.1732 35.963C32.9165 36.4111 32.7065 36.8711 32.5315 37.3665H39.9994C39.9994 36.0927 39.7543 34.6184 38.4825 34.0169C36.5455 33.1559 34.1651 34.0287 33.1732 35.963ZM49.4043 26.4684C49.8944 24.2746 52.0997 21.0193 52.7532 20.0758C52.8348 19.9696 52.9982 19.9932 53.0332 20.1229C53.3483 21.1373 54.2934 24.4161 53.99 26.4684C53.7567 27.5889 53.7217 27.9899 53.4649 29.3226L52.6015 33.5097C51.948 36.8947 50.6762 43.7237 50.3261 44.7381C49.4743 47.2739 46.8839 48.2764 44.4451 48.241C41.3413 48.1703 36.0554 48.2882 35.0752 48.2646C33.9317 48.2646 32.8932 48.1113 31.9597 47.7928C27.4439 46.4011 26.7438 40.7869 28.1791 36.7886C29.8944 31.5282 34.6201 28.9688 39.8127 30.5965C42.9165 31.5282 44.5735 34.4061 44.5151 37.6614C44.4101 38.4044 44.7368 40.3387 43.5933 40.3623H32.0414C31.703 42.9453 32.9282 44.797 35.7637 44.7263C36.1137 44.7263 40.9095 44.7027 44.6201 44.6909C45.2853 44.5611 45.7637 44.1247 46.032 43.4407C46.1254 43.1812 47.3739 36.4819 47.9924 33.4389L46.2071 33.4861C45.717 33.4979 45.4603 32.9082 45.787 32.5543L48.9025 29.1221C49.1826 27.754 49.2176 27.3884 49.4043 26.4684ZM53.2899 33.5805L55.2736 33.5923C55.8337 33.5923 56.1837 32.9789 55.9037 32.4954L54.1417 29.4052L53.2899 33.5805Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect width="40" height="31.8519" fill="white" transform="translate(16 20)"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                    </div>
+                                    <p>دیجی‌کالا جت</p>
+                                    <p>کالاهای تند مصرف</p>
+                                </div>
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="#28367F"/>
+                                        <g clip-path="url(#clip0)">
+                                        <path d="M21.8333 21.8028C21.8333 19.2423 23.8947 17.1666 26.4375 17.1666H45.5625C48.1053 17.1666 50.1667 19.2423 50.1667 21.8028V39.5682C50.1667 40.7978 49.6816 41.977 48.8182 42.8465L39.2556 52.4754C37.4576 54.2859 34.5424 54.2859 32.7444 52.4754L23.1819 42.8465C22.3184 41.977 21.8333 40.7978 21.8333 39.5682V21.8028Z" fill="#FFCE00"/>
+                                        <path d="M28.4049 29.7869C28.0857 29.4663 28.0857 28.9465 28.4049 28.626L29.5607 27.465C29.8799 27.1445 30.3974 27.1445 30.7166 27.465L31.8724 28.626C32.1916 28.9465 32.1916 29.4663 31.8724 29.7869L30.7166 30.9478C30.3974 31.2684 29.8799 31.2684 29.5607 30.9478L28.4049 29.7869Z" fill="#28367F"/>
+                                        <path d="M40.392 29.7869C40.0729 29.4663 40.0729 28.9465 40.392 28.626L41.5479 27.465C41.8671 27.1445 42.3846 27.1445 42.7037 27.465L43.8596 28.626C44.1788 28.9465 44.1788 29.4663 43.8596 29.7869L42.7037 30.9478C42.3846 31.2684 41.8671 31.2684 41.5479 30.9478L40.392 29.7869Z" fill="#28367F"/>
+                                        <path d="M27.6505 35.1244L29.4218 33.385C29.6226 33.1878 29.9405 33.1784 30.1612 33.3528C36.203 38.1283 43.864 36.3025 43.864 36.3025C37.3028 41.3435 30.2493 38.4045 27.6356 35.8588C27.4281 35.6566 27.4438 35.3274 27.6505 35.1244Z" fill="url(#paint0_linear)"/>
+                                        <path d="M44.3495 35.1244L42.5782 33.385C42.3774 33.1878 42.0595 33.1784 41.8388 33.3528C35.7971 38.1283 28.136 36.3025 28.136 36.3025C34.6972 41.3435 41.7507 38.4045 44.3644 35.8588C44.572 35.6566 44.5562 35.3274 44.3495 35.1244Z" fill="url(#paint1_linear)"/>
+                                        </g>
+                                        <defs>
+                                        <linearGradient id="paint0_linear" x1="27.5592" y1="39.0236" x2="44.1844" y2="39.0236" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#28367F"/>
+                                        <stop offset="1" stop-color="#008DEB"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear" x1="44.4408" y1="39.0236" x2="27.8156" y2="39.0236" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#28367F"/>
+                                        <stop offset="1" stop-color="#008DEB"/>
+                                        </linearGradient>
+                                        <clipPath id="clip0">
+                                        <rect width="28.3333" height="36.6667" fill="white" transform="translate(21.8333 17.1666)"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                    </div>
+                                    <p>پیندو</p>
+                                    <p>ثبت آگهی و ارائه خدمات</p>
+                                </div>
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="#2899D5"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1195 26.4709C13.9092 26.1801 13.5402 26 13.1577 26C13.0507 26 12.9445 26.0141 12.8432 26.0413C12.3451 26.1632 12 26.5638 12 27.0168V44.9879C12 45.546 12.5163 46 13.1501 46C13.7849 46 14.3002 45.546 14.3002 44.9879V30.9903V30.4819L14.6004 30.8956L16.434 33.4217C16.6463 33.7116 17.0086 33.8851 17.4025 33.8851C17.6118 33.8851 17.8193 33.8344 18.0019 33.7388C18.2734 33.5924 18.4646 33.3523 18.5287 33.0793C18.5889 32.8195 18.5334 32.5531 18.3709 32.3289L14.1195 26.4709Z" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.9093 26.0431C25.8022 26.0141 25.6951 26 25.5871 26C25.2028 26 24.8337 26.1801 24.6244 26.47L16.7104 37.3736C16.5489 37.5978 16.4925 37.8642 16.5536 38.1241C16.6167 38.397 16.8089 38.6372 17.0795 38.7826C17.263 38.8801 17.4724 38.9326 17.6837 38.9326C18.0766 38.9326 18.438 38.7572 18.6492 38.4655L24.1425 30.8946L24.4427 30.481V30.9894V44.9879C24.4427 45.546 24.959 46 25.5928 46C26.2276 46 26.7429 45.546 26.7429 44.9879V27.0159C26.7429 26.5647 26.4007 26.1642 25.9093 26.0431Z" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.3478 26.6603C38.1864 26.2654 37.7498 26 37.261 26C37.1386 26 37.0152 26.0168 36.8956 26.0503C36.5966 26.1416 36.3499 26.3436 36.2236 26.6053C36.1097 26.84 36.1012 27.1008 36.199 27.3401L39.9718 36.5997L40.061 36.8205H39.8189H34.5105H34.2722L34.3567 36.6025L36.4448 31.19C36.5378 30.9497 36.5236 30.6899 36.4059 30.458C36.2739 30.1991 36.0224 30.0007 35.7158 29.9141C35.5982 29.8806 35.4767 29.8629 35.3552 29.8629C34.8692 29.8629 34.4383 30.1386 34.2817 30.5483L28.8593 44.6757C28.7663 44.916 28.7805 45.1768 28.8992 45.4086C29.0321 45.6675 29.2817 45.865 29.5845 45.9497C29.6984 45.9832 29.817 46 29.9413 46C30.433 46 30.8667 45.7253 31.0224 45.3164L33.4645 38.9344L33.5044 38.8301H33.6183H40.769H40.8801L40.9218 38.9316L43.532 45.336C43.6933 45.7337 44.1252 46 44.6064 46C44.7269 46 44.8503 45.9823 44.9841 45.946C45.2831 45.8547 45.5299 45.6526 45.6561 45.3919C45.77 45.1563 45.7785 44.8946 45.6808 44.6571L38.3478 26.6603Z" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M58.0006 29.4377C58.218 29.6579 58.5319 29.7845 58.8619 29.7845C59.1247 29.7845 59.3828 29.7019 59.588 29.5533C59.8281 29.3808 59.9728 29.1368 59.9964 28.8661C60.0191 28.6028 59.9227 28.3468 59.7241 28.1468C57.6224 26.0248 54.1403 26 53.9928 26C48.4969 26 46.9171 29.6414 46.849 31.5662L46.8499 37.2681C46.8499 37.814 47.3595 38.2581 47.9864 38.2581C48.6142 38.2581 49.1238 37.814 49.1238 37.2681L49.1228 31.6047C49.1408 31.2267 49.4244 27.9799 53.9909 27.9799C54.0165 27.9799 56.5928 28.0193 58.0006 29.4377Z" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M47.1133 39.8804C46.9346 40.0698 46.841 40.3109 46.8495 40.5604C46.9176 42.5153 48.4984 46 53.9933 46C54.1398 46 57.6219 45.9756 59.7236 43.8116C59.9014 43.6259 59.9997 43.3904 59.9997 43.1503V37.9799C59.9997 37.4218 59.4891 36.9678 58.8614 36.9678H52.0447C51.4179 36.9678 50.9074 37.4218 50.9074 37.9799C50.9074 38.538 51.4179 38.992 52.0447 38.992H57.5604H57.724V39.1543V42.6663V42.7441L57.6626 42.7929C56.216 43.9439 54.015 43.9758 53.9933 43.9758C49.424 43.9758 49.1403 40.869 49.1233 40.4901C49.0978 39.9554 48.5693 39.5192 47.9453 39.5192C47.6248 39.5295 47.3204 39.6609 47.1133 39.8804Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <p>دیجی‌کالا مگ</p>
+                                    <p>مجله آنلاین فناوری و سبک زندگی</p>
+                                </div>
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="#52B9C7"/>
+                                        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="16" y="33" width="39" height="18">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 33.4231H54.7133V50.52H16V33.4231Z" fill="white"/>
+                                        </mask>
+                                        <g mask="url(#mask0)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.2506 50.52L26.2509 47.4605C23.1885 47.6614 21.927 47.2331 20.3066 45.6555C18.98 44.3636 18.1713 42.2234 19.1855 39.9376C19.8917 38.3461 21.4843 37.0317 23.5951 36.6135C25.2676 36.2823 29.2823 36.489 31.2103 36.489H50.7845C51.9189 36.489 53.4329 36.6832 54.1767 36.0722C55.0488 35.3562 54.7894 34.1702 53.892 33.6767C53.213 33.3032 51.221 33.4526 50.3022 33.4526L26.8712 33.454C24.1806 33.454 22.4379 33.3481 20.3149 34.5497C14.6658 37.7472 13.6457 47.2427 22.87 50.1158C24.3117 50.5648 24.7221 50.4625 26.2506 50.52Z" fill="white"/>
+                                        </g>
+                                        <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="17" y="16" width="19" height="16">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7622 16.2247H35.9008V31.9075H17.7622V16.2247Z" fill="white"/>
+                                        </mask>
+                                        <g mask="url(#mask1)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.8798 31.8604L35.9008 29.0698L32.038 29.0583C32.4782 28.1502 32.981 27.8669 33.4389 26.3756C36.0203 17.9711 24.7658 12.4028 19.3504 19.4028C16.3412 23.2927 17.9829 28.2927 21.1544 30.4361C23.264 31.8615 24.7872 31.8779 27.739 31.8779C29.3346 31.8779 34.7463 31.955 35.8798 31.8604ZM25.3165 18.9792C28.2976 18.6358 30.7048 20.8412 31.004 23.3624C31.3569 26.3381 29.1381 28.6954 26.488 29.0008C23.4236 29.3541 21.0364 27.148 20.7331 24.5662C20.3804 21.5639 22.64 19.2873 25.3165 18.9792Z" fill="white"/>
+                                        </g>
+                                        <mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="38" y="16" width="19" height="16">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.1529 16.2974H56.2818V31.9186H38.1529V16.2974Z" fill="white"/>
+                                        </mask>
+                                        <g mask="url(#mask2)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M42.0647 29.0586L38.161 29.1024L38.1529 31.9186H46.2525C49.0921 31.9186 50.9126 31.8911 52.8933 30.49C56.6801 27.8107 57.3045 22.8797 54.7091 19.4289C50.6669 14.0554 41.4568 15.8334 40.3425 22.9559C39.9714 25.3289 40.8877 27.7732 42.0647 29.0586ZM43.1199 25.0466C42.4791 21.9783 44.7037 19.5538 47.1706 19.086C50.3099 18.4905 52.8295 20.6592 53.2662 23.0932C53.8165 26.1592 51.6799 28.5217 49.1381 28.9923C46.0519 29.5635 43.6195 27.4399 43.1199 25.0466Z" fill="white"/>
+                                        </g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.2544 45.872L26.2551 43.0007C25.6876 43.1216 24.9655 43.1212 24.5937 42.7884C24.2014 42.4376 24.0559 41.9616 24.4878 41.5387C25.1953 40.8459 26.9072 41.1126 28.0283 41.1126C30.0002 41.1126 50.8927 41.1958 51.797 41.0861C51.9928 40.578 52.7755 38.5522 52.784 38.1641C45.4321 38.147 38.0802 38.1367 30.728 38.1219C27.4089 38.1151 23.2478 37.8798 21.8274 40.2576C21.0555 41.5495 21.445 43.3374 22.2574 44.3192C22.6368 44.7778 23.1873 45.2457 23.8251 45.5176C24.9132 45.9814 25.2693 45.6767 26.2544 45.872Z" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M30.9722 47.4975L30.9476 50.5148C37.47 50.4307 43.2381 50.5114 49.8202 50.5114C51.5653 50.5114 54.8513 51.0424 54.7812 48.9406C54.7492 47.9842 53.8891 47.4892 52.9107 47.4739L30.9722 47.4975Z" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M31.0005 43.0237L31.006 45.7938L52.7839 45.6037L51.9312 43.2145C51.7356 42.8212 51.9374 43.0464 51.6522 42.8842L31.0005 43.0237Z" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M28.6517 51.5694L28.7105 51.8182C28.7777 52.0101 30.2084 54.355 30.7582 55.1925L30.7865 52.8204L30.8181 48.9525L30.8616 46.7674L30.8545 43.2182L30.8607 42.4519L26.3709 42.4474L26.3716 43.1885L26.3656 52.8285L26.3714 55.1667L26.5771 54.9361C26.8081 54.575 27.0216 54.2002 27.2476 53.8031C27.6019 53.1815 27.9679 52.5384 28.5032 51.78L28.6517 51.5694ZM30.9805 55.8456L30.7824 55.6245C30.5778 55.3966 28.9943 52.8193 28.5826 52.0656C28.1123 52.7476 27.7755 53.3391 27.4492 53.9123C27.2216 54.3119 27.0064 54.6896 26.7614 55.0696L26.1422 55.7649L26.1353 52.8287L26.1413 43.1885L26.1406 42.2227L31.0929 42.2272L31.0848 43.2188L31.0919 46.7694L31.0484 48.9557L30.9805 55.8456Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <p>فیدیبو</p>
+                                    <p>فروشگاه کتاب و محتوای دیجیتال</p>
+                                </div>
+                            </div>
+                            <hr className='aboutUs-hr' />
+                            <div className="row pb-5">
+                                <div className="col-6 col-md-2 aboutUs-brands-container-bottom-kemda">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="white"/>
+                                        <path d="M39.9412 43.8459C42.9958 47.3054 46.1231 51.954 47.3049 53.8459C37.214 58.1703 25.7594 54.6567 21.1231 50.6027C16.4867 46.5486 11.0322 35.7378 19.214 24.1162C25.7594 14.8189 37.0322 15.3775 41.8503 16.8189C40.9776 19.8459 37.3049 25.6477 35.5776 28.1702C35.3752 28.4658 34.9591 28.7063 34.4773 28.8979C33.0715 29.457 31.9091 30.6571 31.9091 32.17V32.7648H30.5455C29.1818 32.7648 28.9675 32.0766 28.214 31.1432C27.2247 29.9178 25.9091 29.7919 25.0909 29.7919C24.2727 29.7919 21 30.3324 21 33.8459C21 36.8189 23.4545 37.6297 25.0909 37.6297C26.3182 37.6297 26.3315 35.7378 25.0909 35.7378C23.4545 35.7378 22.9091 34.775 22.9091 33.8459C22.9091 32.9169 23.4545 31.6838 25.0909 31.6838C26.7273 31.6838 27.2727 32.7648 27.8182 33.3054C28.3636 33.8459 28.9091 34.6567 30.2727 34.6567H31.9091V35.2589C31.9091 36.6263 32.9462 37.6577 34.214 38.1702C34.719 38.3744 36.1231 39.5216 39.9412 43.8459Z" fill="url(#paint0_linear)"/>
+                                        <path d="M38.3049 29.5216C39.614 27.1432 43.7594 21.3234 45.6685 18.7108C48.8503 20.3324 55.4867 25.6297 56.5776 33.8459C57.6685 42.0621 54.4867 48.0802 52.7594 50.0621C49.1231 47.1793 41.3594 40.8729 39.3958 38.7108C36.9412 36.0081 36.6685 32.4946 38.3049 29.5216Z" fill="url(#paint1_linear)"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear" x1="35.9001" y1="16" x2="35.9001" y2="55.829" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#00E991"/>
+                                        <stop offset="1" stop-color="#00DDC5"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear" x1="35.9001" y1="16" x2="35.9001" y2="55.829" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#00E991"/>
+                                        <stop offset="1" stop-color="#00DDC5"/>
+                                        </linearGradient>
+                                        </defs>
+                                        </svg>
+                                    </div>
+                                    <p>کمدا</p>
+                                    <p>معامله مبتنی بر شبکه اجتماعی</p>
+                                </div>
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="#0040FF"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M47.1111 26.7408C47.1111 22.6498 43.7947 19.3334 39.7037 19.3334H24.8889V21.8025C24.8889 25.8935 28.2053 29.2099 32.2963 29.2099H47.1111V26.7408ZM47.1112 34.1482V31.6791H32.2964L32.0187 31.6842C28.0564 31.8302 24.889 35.0884 24.889 39.0865V52.6667H27.3581L27.6358 52.6616C31.5981 52.5156 34.7655 49.2573 34.7655 45.2593V41.5556H39.7038L39.9815 41.5505C43.9438 41.4044 47.1112 38.1462 47.1112 34.1482Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <p>دیجی پی</p>
+                                    <p>پرداخت الکترونیک هوشمند</p>
+                                </div>
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="#093B60"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.9 21C36.8279 21 37.58 21.7522 37.58 22.68V30.66C37.58 31.5878 36.8279 32.34 35.9 32.34C34.9722 32.34 34.22 31.5878 34.22 30.66V22.68C34.22 21.7522 34.9722 21 35.9 21ZM24.0424 25.6671C23.3725 25.0251 22.3091 25.0477 21.6671 25.7176C21.0251 26.3875 21.0477 27.451 21.7176 28.0929L30.5319 36.54L21.7176 44.9871C21.0477 45.629 21.0251 46.6925 21.6671 47.3624C22.3091 48.0323 23.3725 48.0549 24.0424 47.4129L34.1224 37.7529C34.4531 37.4361 34.64 36.998 34.64 36.54C34.64 36.082 34.4531 35.6439 34.1224 35.3271L24.0424 25.6671ZM43.88 34.86C42.9522 34.86 42.2 35.6122 42.2 36.54C42.2 37.4678 42.9522 38.22 43.88 38.22H53.12C54.0479 38.22 54.8 37.4678 54.8 36.54C54.8 35.6122 54.0479 34.86 53.12 34.86H43.88ZM48.0079 26.1121C48.664 26.7681 48.664 27.8319 48.0079 28.4879L41.708 34.7879C41.0519 35.444 39.9882 35.444 39.3321 34.7879C38.676 34.1319 38.676 33.0681 39.3321 32.4121L45.6321 26.1121C46.2882 25.456 47.3519 25.456 48.0079 26.1121ZM48.0079 45.0121C48.664 45.6681 48.664 46.7319 48.0079 47.3879C47.3519 48.044 46.2882 48.044 45.6321 47.3879L39.3321 41.0879C38.676 40.4319 38.676 39.3681 39.3321 38.7121C39.9882 38.056 41.0519 38.056 41.708 38.7121L48.0079 45.0121ZM37.58 42.84C37.58 41.9122 36.8279 41.16 35.9 41.16C34.9722 41.16 34.22 41.9122 34.22 42.84V50.82C34.22 51.7478 34.9722 52.5 35.9 52.5C36.8279 52.5 37.58 51.7478 37.58 50.82V42.84Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <p>دیجی نکست</p>
+                                    <p>مرکز نوآوری دیجی کالا</p>
+                                </div>
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="72" height="72" rx="16" fill="#F7BE00"/>
+                                        <path d="M35.7752 50.4935L34.6002 49.3187C34.2824 49.001 34.2824 48.4915 34.6002 48.1738L41.8601 40.9151H25.3499C24.9002 40.9151 24.5405 40.5554 24.5405 40.1059V38.4455C24.5405 37.996 24.9002 37.6364 25.3499 37.6364H45.7329C46.2664 37.6364 46.8 37.8521 47.1177 38.2777C47.6273 38.955 47.5434 39.8661 46.9738 40.4356L36.9202 50.4935C36.6025 50.8052 36.0929 50.8052 35.7752 50.4935Z" fill="#12284C"/>
+                                        <path d="M35.7752 21.5065L34.6002 22.6813C34.2824 22.999 34.2824 23.5085 34.6002 23.8262L41.8601 31.0849H25.3499C24.9002 31.0849 24.5405 31.4445 24.5405 31.8941V33.5544C24.5405 34.004 24.9002 34.3636 25.3499 34.3636H45.7329C46.2664 34.3636 46.8 34.1478 47.1177 33.7223C47.6273 33.0449 47.5434 32.1338 46.9738 31.5644L36.9202 21.5065C36.6025 21.1948 36.0929 21.1948 35.7752 21.5065Z" fill="#12284C"/>
+                                        </svg>
+                                    </div>
+                                    <p>دیجی اکسپرس</p>
+                                    <p>شبکه هوشمند لجستیکی</p>
+                                </div>
+                                <div className="col-6 col-md-2">
+                                    <div>
+                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="72" height="72" rx="16" fill="white"/>
+                                        <path d="M19.8585 18C18.8333 18 18 18.8332 18 19.8581L18.006 52.1479C18.012 53.1728 18.8393 54 19.8704 54H40.7031C48.047 54 54 48.048 54 40.7053V31.2947C54 23.952 48.047 18 40.7031 18H19.8585Z" fill="#F7BE00"/>
+                                        <path d="M35.7752 50.4935L34.6002 49.3187C34.2824 49.001 34.2824 48.4915 34.6002 48.1738L41.8601 40.9151H25.3499C24.9003 40.9151 24.5406 40.5554 24.5406 40.1059V38.4455C24.5406 37.996 24.9003 37.6364 25.3499 37.6364H45.7329C46.2664 37.6364 46.8 37.8521 47.1177 38.2777C47.6273 38.955 47.5434 39.8661 46.9739 40.4356L36.9202 50.4935C36.6025 50.8052 36.0929 50.8052 35.7752 50.4935Z" fill="white"/>
+                                        <path d="M35.7752 21.5065L34.6002 22.6813C34.2824 22.999 34.2824 23.5085 34.6002 23.8262L41.8601 31.0849H25.3499C24.9003 31.0849 24.5406 31.4445 24.5406 31.8941V33.5544C24.5406 34.004 24.9003 34.3636 25.3499 34.3636H45.7329C46.2664 34.3636 46.8 34.1478 47.1177 33.7223C47.6273 33.0449 47.5434 32.1338 46.9739 31.5644L36.9202 21.5065C36.6025 21.1948 36.0929 21.1948 35.7752 21.5065Z" fill="white"/>
+                                        <rect x="6" y="6" width="60" height="60" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use href="#image0" transform="translate(-0.540458 -0.337426) scale(0.0163156)"/>
+                                        </pattern>
+                                        <image id="image0" width="128" height="128" href="data:image/png;base64,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"/>
+                                        </defs>
+                                        </svg>
+                                    </div>
+                                    <p>اسمارتک</p>
+                                    <p>راهکارهای تکنولوژی محور بازاریابی</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </>
     )

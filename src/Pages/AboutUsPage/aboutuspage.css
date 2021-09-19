@@ -235,7 +235,6 @@
   align-items: center;
   text-align: center;
   border-radius: 15px;
-  padding-bottom: 20px;
 }
 .aboutUs-store p {
   color: #fff !important;
@@ -249,4 +248,57 @@
 .aboutUs-store p:last-child {
   font-size: 15px;
   line-height: 26px;
+}
+
+/* aboutUs-brands */
+.aboutUs-brands {
+  background: linear-gradient(336.57deg, #000 14.31%, #284059 84.08%);
+}
+.aboutUs-brands-container-top {
+  text-align: center;
+}
+.aboutUs-brands-container-top div {
+  padding: 50px 0 30px 0;
+}
+.aboutUs-brands-container-top p {
+  color: #fff !important;
+}
+.aboutUs-brands-container-top p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.aboutUs-brands-container-top p:nth-child(3) {
+  font-size: 15px;
+  width: 60%;
+  margin: 0 auto;
+}
+.aboutUs-brands-container-bottom {
+  margin: 80px 0;
+  text-align: center;
+}
+.aboutUs-brands-container-bottom div div {
+  cursor: pointer;
+}
+.aboutUs-brands-container-bottom div div:hover {
+  font-weight: 800;
+  font-size: 16px;
+}
+.aboutUs-brands-container-bottom div p{
+  color: #fff !important;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.aboutUs-brands-container-bottom-kemda{
+  margin-right: 80px!important;
+}
+@media screen and (max-width:755px) {
+  .aboutUs-brands-container-bottom-kemda{
+    margin-right: 0px!important;
+  }
+}
+
+/* hr Tag */
+.aboutUs-hr {
+  background-color: rgba(255, 255, 255, 0.2);
 }
