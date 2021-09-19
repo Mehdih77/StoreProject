@@ -1,14 +1,14 @@
-.login-wrapper {
+.sign-up-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
 }
-.form-wrapper {
+.form-wrapper{
   width: 500px;
 }
-.digikala-img {
+.digikala-img{
   width: 180px;
 }
 .form-btn {
@@ -49,18 +49,11 @@
   width: 100%;
   border-radius: 10px;
 }
-.forgot-password {
-  margin: 15px 0;
-  font-size: 13px;
-  color: #ef394e !important;
-}
-.forgot-password:hover {
-  font-weight: bolder;
-}
-.create-account {
+
+.a-login {
   font-size: 13px;
 }
-.create-account:hover {
+.a-login:hover {
   font-weight: bolder;
 }
 .social-wrapper {

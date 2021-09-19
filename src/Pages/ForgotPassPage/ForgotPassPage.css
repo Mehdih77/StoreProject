@@ -1,4 +1,4 @@
-.login-wrapper {
+.forgotpass-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@
 .form-style h1 {
   font-size: 24px;
   margin-top: 20px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 .form-style input {
   background-color: #eee;
@@ -49,33 +49,9 @@
   width: 100%;
   border-radius: 10px;
 }
-.forgot-password {
-  margin: 15px 0;
-  font-size: 13px;
-  color: #ef394e !important;
+.back-to-login {
+  font-size: 14px;
 }
-.forgot-password:hover {
+.back-to-login:hover {
   font-weight: bolder;
-}
-.create-account {
-  font-size: 13px;
-}
-.create-account:hover {
-  font-weight: bolder;
-}
-.social-wrapper {
-  margin: 20px 0;
-}
-.social-wrapper a {
-  border: 1px solid #ef394e;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0px 5px;
-  height: 40px;
-  width: 40px;
-}
-.social-wrapper a:hover {
-  background-color: rgba(0, 0, 0, 0.116);
 }
