@@ -195,3 +195,58 @@
     padding: 5px;
   }
 }
+
+/* aboutUs-wlcbazzar */
+.aboutUs-wlcbazzar-text {
+  margin-top: 40px;
+  padding-right: 50px;
+}
+.aboutUs-wlcbazzar-text p:first-child {
+  color: #000 !important;
+  font-size: 30px;
+  font-weight: 900;
+}
+.aboutUs-wlcbazzar-text p:nth-child(2) {
+  font-size: 17px;
+}
+.aboutUs-wlcbazzar-text button {
+  background-color: transparent;
+  border: 1px solid #d22c4e !important;
+  color: #d22c4e !important;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.aboutUs-wlcbazzar-text button:hover {
+  background-color: #d22c4d;
+  color: #fff !important;
+  transition: 0.2s linear;
+}
+
+/* aboutUs-store */
+.aboutUs-store {
+  background: url(./AboutUs-Images/aboutus-6.png),
+    linear-gradient(113.36deg, #0fabc6 1.59%, #004753 65.08%);
+  min-height: 532px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  padding-bottom: 20px;
+}
+.aboutUs-store p {
+  color: #fff !important;
+  width: 50%;
+}
+.aboutUs-store p:first-child {
+  color: #fff !important;
+  font-size: 25px;
+  font-weight: 800;
+}
+.aboutUs-store p:last-child {
+  font-size: 15px;
+  line-height: 26px;
+}

@@ -17,7 +17,7 @@ export default function GoodsPage() {
     }
     useEffect(() => {
         getProduct();
-    }, [])
+    }, [getProduct])
 
     return (
         <>
