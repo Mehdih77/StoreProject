@@ -1,6 +1,5 @@
 import React from 'react';
 import './contactpage.css';
-import '../../Style/main-style.css';
 
 export default function ContactPage() {
     return (

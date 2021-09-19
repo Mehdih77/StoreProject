@@ -1,0 +1,73 @@
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.form-btn {
+  border-bottom: 20px;
+  background-color: #ef394e;
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 12px 45px;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.form-btn:active {
+  background-color: #e3122a;
+}
+.form-style {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+.form-style h1 {
+  font-size: 40px;
+}
+.form-style input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 10px;
+}
+.forgot-password {
+  margin: 15px 0;
+  font-size: 13px;
+  color: #ef394e !important;
+}
+.forgot-password:hover {
+  font-weight: bolder;
+}
+.create-account {
+  font-size: 13px;
+}
+.create-account:hover {
+  font-weight: bolder;
+}
+.social-wrapper {
+  margin: 20px 0;
+}
+.social-wrapper a {
+  border: 1px solid #ef394e;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
+  height: 40px;
+  width: 40px;
+}
+.social-wrapper a:hover {
+  background-color: rgba(0, 0, 0, 0.116);
+}

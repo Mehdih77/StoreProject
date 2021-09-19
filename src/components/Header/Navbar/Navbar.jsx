@@ -57,8 +57,7 @@ export default function Navbar() {
             </i>
           </Link>
             <div className="line-user-shop">|</div>
-             <div className="user-icon"><i className="fas fa-user" ></i>
-             </div>
+             <Link to='/login'><div className="user-icon"><i className="fas fa-user" ></i></div></Link>
         </div>
       </nav>
     </>
