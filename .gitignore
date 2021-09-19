@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /Start
+/Server/Firebase.js
 
 # testing
 /coverage
