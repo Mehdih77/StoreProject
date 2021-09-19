@@ -30,49 +30,168 @@
 }
 
 /* aboutUs-business */
-.aboutUs-business{
+.aboutUs-business {
   text-align: center;
 }
-.aboutUs-business-top-title{
-  color: #000!important;
+.aboutUs-business-top-title {
+  color: #000 !important;
   font-weight: 800;
   font-size: 25px;
 }
-.aboutUs-business-bottom-title{
-  color: #000!important;
+.aboutUs-business-bottom-title {
+  color: #000 !important;
   font-size: 15px;
 }
-.aboutUs-business-topics{
+.aboutUs-business-topics {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.aboutUs-business-topics i{
+.aboutUs-business-topics i {
   font-size: 28px;
 }
-.aboutUs-business-topics div:nth-child(2){
+.aboutUs-business-topics div:nth-child(2) {
   border-right: 1px solid #e0e0e2;
   border-left: 1px solid #e0e0e2;
   margin: 0 20px;
   padding: 0 25px;
 }
-.aboutUs-business-topics-single p:nth-child(2){
-  color: #19bfd3!important;
+.aboutUs-business-topics-single p:nth-child(2) {
+  color: #19bfd3 !important;
   font-weight: bolder;
   font-size: 27px;
   margin-bottom: 0px;
 }
-.aboutUs-business-topics-single p:nth-child(3){
-  color: #000!important;
+.aboutUs-business-topics-single p:nth-child(3) {
+  color: #000 !important;
   font-weight: 700;
   font-size: 20px;
 }
-.aboutUs-business-topics-single a{
-  color: #e6123d!important;
+.aboutUs-business-topics-single a {
+  color: #e6123d !important;
   font-size: 15px;
 }
-.aboutUs-business-topics-single span{
-  color: #e6123d!important;
+.aboutUs-business-topics-single span {
+  color: #e6123d !important;
   font-size: 13px;
   vertical-align: -2px;
+}
+
+/* aboutUs-goals */
+.aboutUs-goals p {
+  color: #fff !important;
+}
+.aboutUs-goals div {
+  margin: 0 5px;
+}
+.aboutUs-goals-top-right {
+  width: 40%;
+  height: 240px;
+  background-image: url(./AboutUs-Images/aboutus-2.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #3f494a;
+  border-radius: 0 25px 0 0;
+}
+.aboutUs-goals-top-right div {
+  width: 80%;
+  margin-top: 80px;
+  padding-right: 10px;
+}
+.aboutUs-goals-top-right div p:first-child {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.aboutUs-goals-top-right div p:last-child {
+  font-size: 13px;
+}
+.aboutUs-goals-top-left {
+  width: 55%;
+  height: 240px;
+  background-image: url(./AboutUs-Images/aboutus-3.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-color: #ef4056;
+  margin-right: -30px;
+  border-radius: 25px 0 0 0;
+}
+.aboutUs-goals-top-left div {
+  float: left;
+  width: 50%;
+  margin-top: 50px;
+  padding-left: 10px;
+}
+.aboutUs-goals-top-left div p:first-child {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.aboutUs-goals-top-left div p:last-child {
+  font-size: 13px;
+}
+@media screen and (max-width: 975px) {
+  .aboutUs-goals-top-right {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px !important;
+  }
+  .aboutUs-goals-top-left {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px !important;
+  }
+  .aboutUs-goals-top-left div p:last-child {
+    font-size: 12px;
+  }
+}
+.aboutUs-goals-bottom {
+  width: 96%;
+  margin-top: 10px !important;
+  padding-right: 10px;
+  background: url(./AboutUs-Images/aboutus-4.png),
+    linear-gradient(90deg, #19bed2 30.48%, #03788c 97.08%);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border-radius: 0 0 25px 25px;
+}
+.aboutUs-goals-bottom-title {
+  padding-right: 10px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.aboutUs-goals-bottom-subjects {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 15px;
+}
+.aboutUs-goals-bottom-subjects div {
+  border-left: 1px solid hsla(0, 0%, 100%, 0.2);
+  padding: 0 10px;
+}
+.aboutUs-goals-bottom-subjects div:last-child {
+  border-left: none;
+}
+.aboutUs-goals-bottom-subjects p:first-child {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.aboutUs-goals-bottom-subjects p:last-child {
+  font-size: 11px;
+}
+@media screen and (max-width: 975px) {
+  .aboutUs-goals-bottom {
+    border-radius: 5px;
+    background: linear-gradient(90deg, #19bed2 30.48%, #03788c 97.08%);
+  }
+  .aboutUs-goals-bottom-title {
+    margin-top: 20px;
+  }
+  .aboutUs-goals-bottom-subjects div {
+    padding: 5px;
+  }
 }
