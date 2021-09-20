@@ -25,7 +25,7 @@ export default function SignupPage() {
       setLoading(true);
       await signUp(emailRef.current.value, passwordRef.current.value);
       history.push('/login');
-    } catch (error) {
+    } catch {
       setError('خطا در ساخت حساب کاربری');
     }
     setLoading(false);
