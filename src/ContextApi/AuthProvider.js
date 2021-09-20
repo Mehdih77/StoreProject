@@ -37,7 +37,7 @@ function AuthProvider({children}) {
     }
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChange( user => {
+        const unsubscribe = auth.onAuthStateChanged( user => {
             setCurretnUSer(user);
             setLoading(false);
         });

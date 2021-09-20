@@ -79,3 +79,17 @@
 .social-wrapper a:hover {
   background-color: rgba(0, 0, 0, 0.116);
 }
+.error-alert{
+  margin-top: 20px;
+  background-color: #e61a32;
+  color: #fff!important;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+.error-alert i{
+  color: #fff!important;
+  float: right;
+  padding-top: 1px;
+  font-size: 26px;
+}
