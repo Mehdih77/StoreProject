@@ -1,15 +1,28 @@
 import {useEffect} from 'react';
 import Search from '../Search/Search';
 import './navbar.css';
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { calcTotal, getCurrentProducts, getTotoalQty } from '../../../redux/shopSlice';
+import { useAuth } from '../../../ContextApi/AuthProvider';
 
 export default function Navbar() {
 
   const dispatch = useDispatch();
   const currentProducts = useSelector(getCurrentProducts);
   const totoalQty = useSelector(getTotoalQty);
+  const history = useHistory()
+  const {curretnUser,logOut} = useAuth();
+
+  async function hanldeLogOut(e) {
+    e.preventDefault();
+    try {
+      await logOut();
+      history.push('/')
+    } catch {
+      alert('خطا در خروج از حساب کاربری!');
+    }
+  }
 
   useEffect(() => {
     dispatch(calcTotal());
@@ -57,7 +70,9 @@ export default function Navbar() {
             </i>
           </Link>
             <div className="line-user-shop">|</div>
-             <Link to='/login'><div className="user-icon"><i className="fas fa-user" ></i></div></Link>
+             <Link to='/login'><div className="user-icon"><i className={curretnUser ? "fas fa-user login-color" : "fas fa-user"} ></i></div></Link>
+            {curretnUser && <div className="line-user-shop">|</div>}
+             <div onClick={hanldeLogOut} className="user-icon"><i className={curretnUser ? "fas fa-power-off" : ""} ></i></div>
         </div>
       </nav>
     </>

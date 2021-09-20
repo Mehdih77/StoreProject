@@ -9,7 +9,8 @@ export function useAuth() {
 
 function AuthProvider({children}) {
 
-    const [curretnUSer, setCurretnUSer] = useState();
+    const userAuth = JSON.parse(localStorage.getItem('userAuth')) ? JSON.parse(localStorage.getItem('userAuth')) : ``;
+    const [curretnUser, setCurretnUser] = useState(userAuth);
     const [loading, setLoading] = useState(true);
 
     function signUp(email,password) {
@@ -29,24 +30,25 @@ function AuthProvider({children}) {
     }
 
     function updateEmail(email) {
-        return curretnUSer.updateEmail(email);
+        return curretnUser.updateEmail(email);
     }
 
     function updatePassword(password) {
-        return curretnUSer.updatePassword(password);
+        return curretnUser.updatePassword(password);
     }
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged( user => {
-            setCurretnUSer(user);
+            setCurretnUser(user);
             setLoading(false);
+            localStorage.setItem('userAuth', JSON.stringify(user));
         });
 
         return unsubscribe;
     }, []);
 
     const value = {
-        curretnUSer,
+        curretnUser,
         signUp,
         logIn,
         logOut,
