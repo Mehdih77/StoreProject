@@ -45,12 +45,12 @@ export default function MoreDetails({getCurrentProducts, id}) {
     setCommentText(e.target.value)
   }
 
-  const allComments = getCommentById.map(comments => {
+  const allComments = curretnUser && getCommentById.map(comments => {
     return (
       <li key={comments.id} className="media my-4">
         <img src="/image/user-1.png" className="mr-3" alt="user-img"/>
         <div className="media-body">
-          <h5 className="mt-0 mb-1">{curretnUser.email}</h5>
+          <h5 className="mt-0 mb-1">{curretnUser && curretnUser.email}</h5>
           {comments.commentText}
         </div>
         <button
