@@ -6,11 +6,19 @@
 }
 .navbar .btn {
   position: absolute;
-  top: -3px;
-  left: 0;
+  right: 0;
+  top: 2px;
 }
 input[type="search"] {
-  width: 550px !important;
+  width: 750px !important;
+  height: 45px;
+  background-color: #f0f0f1;
+}
+input[type="search"]:focus {
+  background-color: #f0f0f1;
+}
+input[type="search"]:enabled {
+  padding-right: 50px;
 }
 @media screen and (max-width: 900px) {
   input[type="search"] {
@@ -40,7 +48,7 @@ button[type="submit"]:active {
 }
 ul.search-list-bottom {
   position: absolute;
-  top: 37px;
+  top: 43px;
   background-color: #fff;
   border: 1px solid #ced4da;
   z-index: 3;
@@ -54,7 +62,7 @@ ul.search-list-bottom {
   margin-right: -25px;
   background-color: #fff;
 }
-.search-items i{
+.search-items i {
   padding-left: 10px;
 }
 .search-list-bottom .search-items::after {

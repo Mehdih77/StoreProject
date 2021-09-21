@@ -30,15 +30,30 @@ export default function Navbar() {
 
   return (
     <>
-      <Link to='/' className="navbar-brand"><img src="/image/logo.png" alt="logo" /></Link>
+      <Link to='/' className="navbar-brand d-md-none"><img src="/image/home.svg" alt="logo" /></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
          </button>
 
-      <nav className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-2">
+      <nav className="collapse navbar-collapse caustom-navbar" id="navbarSupportedContent">
+      <div className="navbar-top">
+        <Link to='/' className="navbar-logo d-none d-md-block"><img src="/image/home.svg" alt="logo" /></Link>
+        <div className='navbar-search'>
+          <Search />
+        </div>
+      <div className="navbar-left d-flex ml-auto">
+          <Link to='/login'><button className="user-login-btn"><i className="fas fa-user"></i>ورود به حساب کاربری </button></Link>
+          <div className="line-user-shop">|</div>
+          <Link to='/shopbasket' className="store-shop">
+            <i className="fas fa-shopping-cart">
+              <span className="qty-shop">{totoalQty}</span>
+            </i>
+          </Link>
+        </div>
+      </div>
+        <ul className="navbar-nav navbar-bottom mr-2">
             <li className="nav-item">
               <a className="nav-link" href="#!">سوپر مارکت </a>
             </li>
@@ -62,18 +77,7 @@ export default function Navbar() {
               <Link to='/aboutus' className="nav-link " href="#" tabIndex="-1">درباره ما</Link>
             </li>
           </ul>
-        <Search />
-        <div className="navbar-left d-flex ml-auto">
-          <Link to='/shopbasket' className="store-shop">
-            <i className="fas fa-shopping-cart">
-              <span className="qty-shop">{totoalQty}</span>
-            </i>
-          </Link>
-            <div className="line-user-shop">|</div>
-             <Link to='/login'><div className="user-icon"><i className={curretnUser ? "fas fa-user login-color" : "fas fa-user"} ></i></div></Link>
-            {curretnUser && <div className="line-user-shop">|</div>}
-             <div onClick={hanldeLogOut} className="user-icon"><i className={curretnUser ? "fas fa-power-off" : ""} ></i></div>
-        </div>
+        
       </nav>
     </>
     )
