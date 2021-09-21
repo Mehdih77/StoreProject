@@ -1,6 +1,7 @@
 import './Style/bootstrap-rtl.min.css';
 import HomePage from './Pages/HomePage/HomePage';
-import GoodsPage from './Pages/GoodsPage/GoodsPage';
+import PhoneGoodsPage from './Pages/PhoneGoodsPage/PhoneGoodsPage';
+import LaptopGoodsPage from './Pages/LaptopGoodsPage/LaptopGoodsPage';
 import ShopBasketPage from './Pages/ShopBasketPage/ShopBasketPage';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import ContactPage from './Pages/ContactPage/ContactPage';
@@ -29,8 +30,11 @@ export default function App() {
             <Route path='/' exact>
                 <HomePage/>
             </Route>
-            <Route exact path='/goods/:slug/:id'>
-                <GoodsPage/>
+            <Route exact path='/goods/phone/:id'>
+                <PhoneGoodsPage/>
+            </Route>
+            <Route exact path='/goods/laptop/:id'>
+                <LaptopGoodsPage/>
             </Route>
             <Route exact path='/shopbasket'>
                 <ShopBasketPage/>

@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { get } from '../../Server/Axios';
 
-export default function GoodsPage() {
+export default function LaptopGoodsPage() {
 
     // Params came from App.js ~ Use for better Nameing >
     // slug is set( phone ) then after that id came...

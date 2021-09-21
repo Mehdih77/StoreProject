@@ -9,6 +9,7 @@ import BigBanner from './Big-Banner-bottom/BigBanner'
 import '../../Style/main-style.css'
 import { useDispatch } from 'react-redux'
 import {fetchProducts } from '../../redux/shopSlice'
+import LaptopOffer from '../../components/Main/Laptop-Offer/LaptopOffer'
 
 export default function HomePage() {
 
@@ -28,7 +29,7 @@ export default function HomePage() {
         <AdBanner/>
         <PhoneOffer/>
         <GoodsSummary/>
-        <PhoneOffer/>
+        <LaptopOffer/>
         <BigBanner/>
     </div> 
     </>

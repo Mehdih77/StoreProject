@@ -362,6 +362,54 @@
       "img_5": "/image/phone-115.jpg",
       "img_6": "/image/phone-116.jpg",
       "comments": []
+    },
+    {
+      "id": 23,
+      "category": "laptop",
+      "name": "لپ تاپ 15 اینچی ایسوس مدل VivoBook R521JA-BQ083",
+      "price": 13990000,
+      "img": "/image/laptop1.jpg",
+      "comments": []
+    },
+    {
+      "id": 24,
+      "category": "laptop",
+      "name": "لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K",
+      "price": 103000000,
+      "img": "/image/laptop2.jpg",
+      "comments": []
+    },
+    {
+      "id": 25,
+      "category": "laptop",
+      "name": "لپ تاپ 15.6 اینچی لنوو مدل IdeaPad 3 - ZA - NB",
+      "price": 18700000,
+      "img": "/image/laptop3.jpg",
+      "comments": []
+    },
+    {
+      "id": 26,
+      "category": "laptop",
+      "name": "لپ تاپ 14 اینچی هوآوی مدل Matebook D14",
+      "price": 24499000,
+      "img": "/image/laptop4.jpg",
+      "comments": []
+    },
+    {
+      "id": 27,
+      "category": "laptop",
+      "name": "لپ تاپ 15.6 اینچی اچ‌پی مدل Pavilion 15-dk1056wm",
+      "price": 25900000,
+      "img": "/image/laptop5.jpg",
+      "comments": []
+    },
+    {
+      "id": 28,
+      "category": "laptop",
+      "name": "لپ تاپ 14 اینچی ایسوس مدل ZenBook 14 UX482EG-KA151T",
+      "price": 46800000,
+      "img": "/image/laptop6.jpg",
+      "comments": []
     }
   ],
   "comments": [

@@ -1,15 +1,15 @@
-.phone-offer {
+.laptop-offer {
   border-radius: 15px;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
   background-color: #fff;
 }
-.phone-offer-top-title {
+.laptop-offer-top-title {
   font-size: 22px;
   margin: 20px;
   position: relative;
   padding-right: 20px;
 }
-.phone-offer-top-title::after {
+.laptop-offer-top-title::after {
   content: "";
   min-width: 1105px;
   height: 1px;
@@ -19,24 +19,24 @@
   right: 0;
   left: 0;
 }
-.phone-card-custom-style {
+.laptop-card-custom-style {
   min-height: 430px;
   border: none;
   margin: 10px;
   position: relative;
 }
-.phone-card-custom-style:hover {
+.laptop-card-custom-style:hover {
   transform: scale(1.02);
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 }
-.phone-img {
+.laptop-img {
   margin-top: 20px;
 }
-.phone-card-title {
+.laptop-card-title {
   font-size: 16px;
   line-height: 25px;
 }
-.phone-card-text {
+.laptop-card-text {
   position: absolute;
   bottom: 5px;
   padding-left: 10px;
@@ -46,18 +46,18 @@
 }
 
 @media screen and (max-width: 768px) {
-  .phone-card-custom-style {
+  .laptop-card-custom-style {
     width: 16rem;
     margin-right: 75px;
     min-height: 490px;
   }
-  .phone-offer-top-title::after {
+  .laptop-offer-top-title::after {
     min-width: 440px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .phone-offer-top-title::after {
+  .laptop-offer-top-title::after {
     min-width: 680px;
   }
 }
