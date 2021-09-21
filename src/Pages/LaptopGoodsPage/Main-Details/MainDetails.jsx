@@ -129,8 +129,6 @@ export default function MainDetails({getCurrentProducts}) {
                                         <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_2} alt={getCurrentProducts?.name}/></SwiperSlide>
                                         <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_3} alt={getCurrentProducts?.name}/></SwiperSlide>
                                         <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_4} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_5} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_6} alt={getCurrentProducts?.name}/></SwiperSlide>
                                     </Swiper>
                                     <Swiper
                                         onSwiper={setThumbsSwiper}
@@ -144,8 +142,6 @@ export default function MainDetails({getCurrentProducts}) {
                                         <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_2} alt={getCurrentProducts?.name}/></SwiperSlide>
                                         <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_3} alt={getCurrentProducts?.name}/></SwiperSlide>
                                         <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_4} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_5} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_6} alt={getCurrentProducts?.name}/></SwiperSlide>
                                     </Swiper>
                                 </DialogContent>
                             </Dialog>
@@ -156,7 +152,7 @@ export default function MainDetails({getCurrentProducts}) {
                             {getCurrentProducts?.name}
                         </h1>
                         <p className='goods-like'>
-                            <i className="far fa-thumbs-up"></i>۸۶٪ (۵۷۰ نفر) از خریداران، این کالا را پیشنهاد کرده‌اند.
+                            <i className="far fa-thumbs-up"></i>۸۹٪ (۴۷۴ نفر) از خریداران، این کالا را پیشنهاد کرده‌اند.
                         </p>
                         <ul className='goods-detail-summary'>
                             <p>ویژگی های کالا:</p>

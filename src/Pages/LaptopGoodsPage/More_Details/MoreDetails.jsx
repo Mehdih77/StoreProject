@@ -102,35 +102,55 @@ export default function MoreDetails({getCurrentProducts, id}) {
             <ul>
               <li className='goods-detail-tap-body-table-list'>
                 <p className='goods-detail-tap-body-table-list-title'>ابعاد</p>
-                <p className='goods-detail-tap-body-table-list-text'>165.3x76.8x9.4 میلی‌متر</p>
+                <p className='goods-detail-tap-body-table-list-text'>324x222x17.3</p>
               </li>
               <li className='goods-detail-tap-body-table-list'>
-                <p className='goods-detail-tap-body-table-list-title'>توضیحات سیم کارت</p>
-                <p className='goods-detail-tap-body-table-list-text'>سایز نانو (8.8 × 12.3 میلی‌متر) </p>
+                <p className='goods-detail-tap-body-table-list-title'>سایر توضیحات حافظه داخلی</p>
+                <p className='goods-detail-tap-body-table-list-text'>1TB M.2 NVMe PCIe 3.0 SSD</p>
               </li>
               <li className='goods-detail-tap-body-table-list'>
                 <p className='goods-detail-tap-body-table-list-title'>وزن</p>
-                <p className='goods-detail-tap-body-table-list-text'>215 گرم </p>
+                <p className='goods-detail-tap-body-table-list-text'>1.62 کیلوگرم </p>
               </li>
               <li className='goods-detail-tap-body-table-list'>
-                <p className='goods-detail-tap-body-table-list-title'>ساختار بدنه</p>
-                <p className='goods-detail-tap-body-table-list-text'>قاب پشت از جنس پلاستیک </p>
+                <p className='goods-detail-tap-body-table-list-title'>نوع حافظه داخلی</p>
+                <p className='goods-detail-tap-body-table-list-text'>SSD</p>
               </li>
               <li className='goods-detail-tap-body-table-list'>
-                <p className='goods-detail-tap-body-table-list-title'>ویژگی‌های خاص</p>
-                <p className='goods-detail-tap-body-table-list-text'> مجهز به حس‌گر اثرانگشت , مناسب عکاسی , مناسب عکاسی سلفی , مناسب بازی , دارای بدنه مقاوم</p>
+                <p className='goods-detail-tap-body-table-list-title'>طبقه‌بندی</p>
+                <p className='goods-detail-tap-body-table-list-text'>کاربری مالتی‌مدیا , کاربری عمومی , باریک و سبک , با صفحه‌نمایش لمسی </p>
               </li>
               <li className='goods-detail-tap-body-table-list'>
-                <p className='goods-detail-tap-body-table-list-title'>تعداد سیم کارت</p>
-                <p className='goods-detail-tap-body-table-list-text'>دو سیم کارت </p>
+                <p className='goods-detail-tap-body-table-list-title'>توضیحات شبکه بی سیم Wi-Fi</p>
+                <p className='goods-detail-tap-body-table-list-text'>Wi-Fi 6(802.11ax)+Bluetooth 5.0 (Dual band) 2x2</p>
               </li>
               <li className='goods-detail-tap-body-table-list'>
-                <p className='goods-detail-tap-body-table-list-title'>زمان معرفی</p>
-                <p className='goods-detail-tap-body-table-list-text'> 22 مارس 2021</p>
+                <p className='goods-detail-tap-body-table-list-title'>ظرفیت حافظه داخلی</p>
+                <p className='goods-detail-tap-body-table-list-text'> یک ترابایت </p>
               </li>
               <li className='goods-detail-tap-body-table-list'>
-                <p className='goods-detail-tap-body-table-list-title'>شیار مجزا برای کارت حافظه</p>
-                <p className='goods-detail-tap-body-table-list-text'>ندارد </p>
+                <p className='goods-detail-tap-body-table-list-title'>درایو نوری</p>
+                <p className='goods-detail-tap-body-table-list-text'>بدون درایو نوری </p>
+              </li>
+              <li className='goods-detail-tap-body-table-list'>
+                <p className='goods-detail-tap-body-table-list-title'>سیستم عامل</p>
+                <p className='goods-detail-tap-body-table-list-text'>Microsoft Windows 10</p>
+              </li>
+              <li className='goods-detail-tap-body-table-list'>
+                <p className='goods-detail-tap-body-table-list-title'>دقت صفحه نمایش</p>
+                <p className='goods-detail-tap-body-table-list-text'>Full HD| 1920 x1080</p>
+              </li>
+              <li className='goods-detail-tap-body-table-list'>
+                <p className='goods-detail-tap-body-table-list-title'>حافظه اختصاصی پردازنده گرافیکی</p>
+                <p className='goods-detail-tap-body-table-list-text'>دو گیگابایت</p>
+              </li>
+              <li className='goods-detail-tap-body-table-list'>
+                <p className='goods-detail-tap-body-table-list-title'>مشخصات حافظه داخلی</p>
+                <p className='goods-detail-tap-body-table-list-text'>1 ترابایت حافظه از نوع SSD (درایو حالت جامد) (Solid State Drive)</p>
+              </li>
+              <li className='goods-detail-tap-body-table-list'>
+                <p className='goods-detail-tap-body-table-list-title'>محدوده سرعت پردازنده</p>
+                <p className='goods-detail-tap-body-table-list-text'>2.8 گیگاهرتز و بیشتر</p>
               </li>
             </ul>
           </div>
