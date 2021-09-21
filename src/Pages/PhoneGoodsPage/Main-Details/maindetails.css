@@ -99,14 +99,14 @@
 }
 
 .customized-dialog-title-goodspage {
-  padding-bottom: 48px!important;
+  padding-bottom: 48px !important;
 }
-.gallery-button{
-  border: 1px solid #dfdfdf!important;
-  margin: 20px 70px 20px 0!important;
-  background-color: #ef394e!important;
-  color: white!important;
-  padding: 5px 15px!important;
+.gallery-button {
+  border: 1px solid #dfdfdf !important;
+  margin: 20px 70px 20px 0 !important;
+  background-color: #ef394e !important;
+  color: white !important;
+  padding: 5px 15px !important;
 }
 
 /* goods NAME and DETAILS */
@@ -134,6 +134,7 @@
 }
 .goods-detail-summary i {
   font-size: 9px;
+  padding-top: 13px;
   padding-left: 5px;
   color: #ccc !important;
 }
@@ -370,4 +371,3 @@
   font-size: 14px;
   font-weight: 600;
 }
-

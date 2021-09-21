@@ -7,8 +7,8 @@ import { get } from '../../Server/Axios';
 
 export default function LaptopGoodsPage() {
 
-    // Params came from App.js ~ Use for better Nameing >
-    // slug is set( phone ) then after that id came...
+    // Params came from App.js ~ Use for better Nameing
+    // slug is set(laptop) then after that id came...
     const {id} = useParams();
 
     const [getCurrentProducts, setGetCurrentProducts] = useState();

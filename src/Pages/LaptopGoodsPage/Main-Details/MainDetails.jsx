@@ -159,25 +159,23 @@ export default function MainDetails({getCurrentProducts}) {
                             <i className="far fa-thumbs-up"></i>۸۶٪ (۵۷۰ نفر) از خریداران، این کالا را پیشنهاد کرده‌اند.
                         </p>
                         <ul className='goods-detail-summary'>
-                            <p>ویژگی های محصول:</p>
+                            <p>ویژگی های کالا:</p>
                             <li>
-                                <i className="fas fa-circle"></i>حافظه داخلی: {getCurrentProducts?.storage}</li>
+                                <i className="fas fa-circle"></i>اندازه صفحه نمایش: {getCurrentProducts?.screenSize}</li>
                             <li>
-                                <i className="fas fa-circle"></i>شبکه های ارتباطی: {getCurrentProducts?.contact}
+                                <i className="fas fa-circle"></i>سری پردازنده: {getCurrentProducts?.processor}
                             </li>
                             <li>
-                                <i className="fas fa-circle"></i>دوربین‌های پشت گوشی: {getCurrentProducts?.camera}</li>
+                                <i className="fas fa-circle"></i>ظرفیت حافظه RAM: {getCurrentProducts?.ramSize}</li>
                             <li>
-                                <i className="fas fa-circle"></i>سیستم عامل: {getCurrentProducts?.sistem}</li>
+                                <i className="fas fa-circle"></i>نوع حافظه RAM: {getCurrentProducts?.ramType}</li>
                             <li>
-                                <i className="fas fa-circle"></i>توضیحات سیم کارت: {getCurrentProducts?.simcart}</li>
+                                <i className="fas fa-circle"></i>سازنده پردازنده گرافیکی: {getCurrentProducts?.graphic}</li>
                         </ul>
 
                         <p className='goods-warning'>
-                            <i className="fas fa-exclamation-circle"></i>هشدار سامانه همتا: حتما در زمان
-                            تحویل دستگاه، به کمک کد فعال‌سازی چاپ شده روی جعبه یا کارت گارانتی، دستگاه را از
-                            طریق #7777*، برای سیم‌کارت خود فعال‌سازی کنید. آموزش تصویری در آدرس اینترنتی
-                            hmti.ir/05
+                            <i className="fas fa-exclamation-circle"></i>
+                            امکان برگشت کالا در گروه لپ تاپ با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمپ کالا باز نشده باشد.
                         </p>
 
                         <div className='post-free'>
@@ -197,9 +195,9 @@ export default function MainDetails({getCurrentProducts}) {
                                 <p className='shop-rating-name'>
                                     <i className="fas fa-store shop-rating-icon"></i>آنلاین شاپ</p>
                                 <div>
-                                    <p className='shop-rating-top-total-percent'>92.7%</p>
+                                    <p className='shop-rating-top-total-percent'>95.9%</p>
                                     <p className='shop-rating-top-title'>رضایت خریداران از کیفیت کالا</p>
-                                    <p className='shop-rating-total'>از مجموع 20 نفر</p>
+                                    <p className='shop-rating-total'>از مجموع 35 نفر</p>
                                     <div className="progress shop-rating-progress">
                                         <div
                                             className="progress-bar"
@@ -233,16 +231,16 @@ export default function MainDetails({getCurrentProducts}) {
                                         <p className='shop-rating-total-percent'>عملکرد کلی فروشنده</p>
                                         <div className='shop-rating-percent'>
                                             <div>
-                                                <p className='shop-rating-percent-1'>100%</p>
+                                                <p className='shop-rating-percent-1'>99.6%</p>
                                                 <p className='shop-rating-percent-2'>تامین به موقع</p>
                                             </div>
                                             <div>
-                                                <p className='shop-rating-percent-1'>98%</p>
+                                                <p className='shop-rating-percent-1'>100%</p>
                                                 <p className='shop-rating-percent-2'>تعهد ارسال
                                                 </p>
                                             </div>
                                             <div>
-                                                <p className='shop-rating-percent-1'>99.9%</p>
+                                                <p className='shop-rating-percent-1'>99.7%</p>
                                                 <p className='shop-rating-percent-2'>
                                                     بدون ثبت مرجوعی
                                                 </p>
@@ -255,13 +253,13 @@ export default function MainDetails({getCurrentProducts}) {
                                 <i className="fas fa-store"></i>آنلاین شاپ</p>
                             <p className='shop-like'>
                                 <span>100%
-                                </span>رضایت خریداران | عملکرد
-                                <span>عالی</span>
+                                </span> رضایت خریداران | عملکرد
+                                <span> عالی</span>
                             </p>
                         </div>
                         <div className='shop-guaranty'>
                             <p>
-                                <i className="fas fa-award"></i>گارانتی 18 ماهه آنلاین شاپ</p>
+                                <i className="fas fa-award"></i>گارانتی 24 ماهه آنلاین شاپ</p>
                         </div>
                         <div className='shop-post'>
                             <p>
