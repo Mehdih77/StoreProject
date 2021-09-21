@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import './moredetails.css'
-import {get, post, del} from '../../../Server/Axios'
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -8,42 +7,55 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Loading from '../../../components/Loader/Loading';
+import { useDispatch } from 'react-redux';
+import { deleteComment, getCommentByProductId, getComments, postComment } from '../../../redux/commentSlice';
+import { useSelector } from 'react-redux';
+import { useAuth } from '../../../ContextApi/AuthProvider';
+import { useHistory, useLocation } from 'react-router';
 
-export default function MoreDetails({getCurrentProducts}) {
+export default function MoreDetails({getCurrentProducts, id}) {
 
-  //todo: get Comments & CRUD comments
+    const {curretnUser} = useAuth();
+    const [commentText,setCommentText] = useState();
 
-    const [getComments,setGetComments] = useState([])
-    const [postComments,setPostComments] = useState({})
-    const [loading,setLoading] = useState(false)
+    const dispatch = useDispatch();
 
-    // GET const getUserComments = async () => {   await get('/comments').then(
-    // response => { setGetComments(response.data)}) } //POST const postUserComments
-    // = async () => {   const response = await post('/comments', postComments);
-    // // if for updating the comments   if(response){     getUserComments();   } }
-    // //DELETE const deleteUserComments = async (id) => {   const response = await
-    // del(`/comments/${id}`);   // if for updating the comments   if(response){
-    // getUserComments()     setLoading(true);   } }
-    function handleChangeComments(e) {
-        setPostComments({
-            ...postComments,
-            [e.target.name]: e.target.value
-        })
+    const location = useLocation();
+    const history = useHistory();
+
+    const handleNewComment = (e) => {
+      e.preventDefault();
+      dispatch(postComment({
+        productId: id,
+        commentText
+      }))
     }
 
-    const allComments = getComments.map(comments => {
+    const handleDeleteComment = (id) => {
+      dispatch(deleteComment(id))
+    }
+
+    useEffect(() => {
+      dispatch(getComments());
+    }, [dispatch])
+    
+    const getCommentById = useSelector(state => getCommentByProductId(state,id));
+   
+    function handleChangeComments(e) {
+      setCommentText(e.target.value)
+    }
+
+    const allComments = getCommentById.map(comments => {
         return ( <> {
-            loading
-                ? <Loading/>
-                : <li key={comments.id} className="media my-4">
+                <li key={comments.id} className="media my-4">
                         <img src="/image/user-1.png" className="mr-3" alt="user-img"/>
                         <div className="media-body">
-                            <h5 className="mt-0 mb-1">{comments.name}
-                            </h5>
-                            {comments.text}
+                            <h5 className="mt-0 mb-1">{curretnUser.email}</h5>
+                            {comments.commentText}
                         </div>
                         <button
                             className='remove-comment-button'
+                            onClick={() => handleDeleteComment(comments.id)}
                             >
                             <i className="fas fa-trash"></i>
                         </button>
@@ -60,12 +72,6 @@ export default function MoreDetails({getCurrentProducts}) {
     setOpen(false);
   };
 
-  // useEffect(() => {
-  //   get(`/phone / $ {id}`).then( response => {
-  //       setPhone(response.data)
-  //   })
-  //   getUserComments();
-  // }, [id])
 
   return (
     <section className='container'>
@@ -187,8 +193,7 @@ export default function MoreDetails({getCurrentProducts}) {
           <DialogTitle id="form-dialog-title"></DialogTitle>
           <DialogContent>
             <DialogContentText>
-              <form className='comment-vote-form'>
-                <input required autoComplete='off' className='comment-input-name' type='text' name='name' onChange={handleChangeComments} placeholder='نام خود را وارد کنید' />
+              <form onSubmit={handleNewComment} className='comment-vote-form'>
                 <TextareaAutosize required className='comment-input-text' type='text' name='text' onChange={handleChangeComments}
                 aria-label="minimum height" rowsMin={3} placeholder='دیدگاه خود را بنویسید' />
                 <button className='comment-button' type='submit'>ارسال</button>
@@ -228,7 +233,7 @@ export default function MoreDetails({getCurrentProducts}) {
                 من یه هفته س این گوشی رو خریدم . گوشی خیلی خوبیه . ظاهرش خوشگل و شیکه ، رابط کاربری ش هم اپدیت داد و ورژن ۱۲.۵ شد . سرعتش عالیه و مشکل خاصی ندیدم . در مورد اینکه بعضی از دوستان گفتن موقع استفاده از اسپیکر پشت گوشی لرزش داره درسته ، که اونم بخاطر اسپیکر بسیار قدرتمندی هست که داره در حدی که انگار یه اسپیکر بلوتوثی دارین استفاده میکنین که البته اون لرزش تو حداکثر ولوم اتفاق میفته . تو ولوم عادی چیزی حس نمیشه . در کل من که خیلی راضیم .
               </div>
             </li>
-            {/* {allComments} */}
+            {allComments}
           </ul>
         </div>
       </div>

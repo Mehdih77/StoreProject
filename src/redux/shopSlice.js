@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, createSelector } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { get } from "../Server/Axios";
 
 export const fetchProducts = createAsyncThunk("shop/fetchProducts", async() => {
@@ -9,7 +9,6 @@ export const fetchProducts = createAsyncThunk("shop/fetchProducts", async() => {
 const initialState = {
     products: [],
     currentBasketProcuts: localStorage.getItem("shopBasketItems") ? JSON.parse(localStorage.getItem("shopBasketItems")) : [],
-    loadCurrentItem: [],
     totalPrice: '',
     totoalQty: '',
 }
@@ -52,7 +51,6 @@ const shopSlice = createSlice({
                 total: 0,
                 quantity: 0
             })
-            // total = parseFloat(total.toFixed(2));
             state.totalPrice = total;
             state.totoalQty = quantity;
         },
@@ -75,14 +73,5 @@ export default shopSlice.reducer;
 // useSelector
 export const allProducts = (state) => state.shop.products;
 export const getCurrentProducts = (state) => state.shop.currentBasketProcuts;
-export const getLoadCurrentItem = (state) => state.shop.loadCurrentItem;
 export const getTotalPrice = (state) => state.shop.totalPrice;
 export const getTotoalQty = (state) => state.shop.totoalQty;
-
-// createSelector
-
-// export const getProductsById = createSelector(
-//     allProducts,
-//     (state,itemId) => itemId,
-//     (produc,itemId) => produc.filter(p => p.id === itemId )
-// )

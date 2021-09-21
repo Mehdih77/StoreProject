@@ -12,16 +12,17 @@ export default function GoodsPage() {
     const {id} = useParams();
 
     const [getCurrentProducts, setGetCurrentProducts] = useState();
+    
     const getProduct = () => {
         return get(`/products/${id}`).then(res => setGetCurrentProducts(res.data));
     }
     useEffect(() => {
         getProduct();
-    }, [getProduct])
+    }, [])
 
     return (
         <>
-            <MainDetails getCurrentProducts={getCurrentProducts} id={id} />
+            <MainDetails getCurrentProducts={getCurrentProducts} />
             <MoreDetails getCurrentProducts={getCurrentProducts} id={id} />
         </>
     )
