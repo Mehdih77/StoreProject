@@ -49,7 +49,7 @@ export default function SignupPage() {
           <input type="password" ref={passwordRef} placeholder='رمز عبور' required />
           <input type="password" ref={passwordConfirmRef} placeholder='تکرار رمز عبور' required />
           <button type='submit' disabled={loading} className='form-btn'>ساخت حساب کاربری</button>
-          <Link to='/login'><a className='a-login'>حساب کاربری دارید؟ ورود به حساب کاربری</a></Link>
+          <Link to='/login'><a href='/login' className='a-login'>حساب کاربری دارید؟ ورود به حساب کاربری</a></Link>
         </form>
       </div>
       </div>

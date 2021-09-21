@@ -42,8 +42,8 @@ export default function LoginPage() {
           <input type="email" ref={emailRef} placeholder='ایمیل' required/>
           <input type="password" ref={passwordRef} placeholder='رمز عبور' required/>
           <button disabled={loading} type='submit' className='form-btn'>ورود به آنلاین شاپ</button>
-          <Link to='/signup'><a className='create-account'>حساب کاربری ندارید؟ ساخت حساب کاربری</a></Link>
-          <Link to='/forgotpass'><a className='forgot-password' href="#!">رمز عبور خود را فراموش کرده اید؟</a></Link>
+          <Link to='/signup'><a href='/signup' className='create-account'>حساب کاربری ندارید؟ ساخت حساب کاربری</a></Link>
+          <Link to='/forgotpass'><a className='forgot-password' href="/forgotpass">رمز عبور خود را فراموش کرده اید؟</a></Link>
         </form>
       </div>
     </div>

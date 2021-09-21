@@ -11,6 +11,7 @@ SwiperCore.use([Navigation]);
 export default function PhoneOffer() {
 
   const getAllProducts = useSelector(allProducts);
+  
   const getPhones = getAllProducts.filter(p => p.category === 'phone');
 
   const phonesList = getPhones ? getPhones.map((phones) => {

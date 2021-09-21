@@ -39,7 +39,7 @@ export default function ForgotPassPage() {
                     <input type="email" ref={emailRef} placeholder=' ایمیل خود را وارد کنید'/>
                     <button disabled={loading} type='submit' className='form-btn'>بازیابی رمز عبور</button>
                     <Link to='/login'>
-                        <a className='back-to-login'>بازگشت به صفحه ورود</a>
+                        <a href='/login' className='back-to-login'>بازگشت به صفحه ورود</a>
                     </Link>
                 </form>
             </div>
