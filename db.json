@@ -259,5 +259,16 @@
       "comments": []
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "productId": "13",
+      "commentText": "ddd",
+      "id": 2
+    },
+    {
+      "productId": "12",
+      "commentText": "nice",
+      "id": 3
+    }
+  ]
 }

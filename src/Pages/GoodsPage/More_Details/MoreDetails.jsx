@@ -1,66 +1,64 @@
 import React, {useState, useEffect} from 'react'
 import './moredetails.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteComment, getCommentByProductId, getComments, postComment } from '../../../redux/commentSlice';
+import { useAuth } from '../../../ContextApi/AuthProvider';
+import { useHistory } from 'react-router';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
-import Loading from '../../../components/Loader/Loading';
-import { useDispatch } from 'react-redux';
-import { deleteComment, getCommentByProductId, getComments, postComment } from '../../../redux/commentSlice';
-import { useSelector } from 'react-redux';
-import { useAuth } from '../../../ContextApi/AuthProvider';
-import { useHistory, useLocation } from 'react-router';
+// import Loading from '../../../components/Loader/Loading';
 
 export default function MoreDetails({getCurrentProducts, id}) {
 
-    const {curretnUser} = useAuth();
-    const [commentText,setCommentText] = useState();
+  const {curretnUser} = useAuth();
+  const [commentText,setCommentText] = useState();
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const location = useLocation();
-    const history = useHistory();
+  const history = useHistory();
 
-    const handleNewComment = (e) => {
-      e.preventDefault();
-      dispatch(postComment({
-        productId: id,
-        commentText
-      }))
-    }
+  const handleNewComment = (e) => {
+    e.preventDefault();
+    dispatch(postComment({
+      productId: id,
+      commentText
+    }))
+    history.go();
+  }
 
-    const handleDeleteComment = (id) => {
-      dispatch(deleteComment(id))
-    }
+  const handleDeleteComment = (id) => {
+    dispatch(deleteComment(id))
+    history.go();
+  }
 
-    useEffect(() => {
-      dispatch(getComments());
-    }, [dispatch])
+  useEffect(() => {
+    dispatch(getComments());
+  }, [dispatch])
     
-    const getCommentById = useSelector(state => getCommentByProductId(state,id));
+  const getCommentById = useSelector(state => getCommentByProductId(state,id));
    
-    function handleChangeComments(e) {
-      setCommentText(e.target.value)
-    }
+  function handleChangeComments(e) {
+    setCommentText(e.target.value)
+  }
 
-    const allComments = getCommentById.map(comments => {
-        return ( <> {
-                <li key={comments.id} className="media my-4">
-                        <img src="/image/user-1.png" className="mr-3" alt="user-img"/>
-                        <div className="media-body">
-                            <h5 className="mt-0 mb-1">{curretnUser.email}</h5>
-                            {comments.commentText}
-                        </div>
-                        <button
-                            className='remove-comment-button'
-                            onClick={() => handleDeleteComment(comments.id)}
-                            >
-                            <i className="fas fa-trash"></i>
-                        </button>
-                    </li>
-        } </>
+  const allComments = getCommentById.map(comments => {
+    return (
+      <li key={comments.id} className="media my-4">
+        <img src="/image/user-1.png" className="mr-3" alt="user-img"/>
+        <div className="media-body">
+          <h5 className="mt-0 mb-1">{curretnUser.email}</h5>
+          {comments.commentText}
+        </div>
+        <button
+          className='remove-comment-button'
+          onClick={() => handleDeleteComment(comments.id)}>
+          <i className="fas fa-trash"></i>
+        </button>
+      </li>  
     )
   })
 
@@ -71,7 +69,6 @@ export default function MoreDetails({getCurrentProducts, id}) {
   const handleClose = () => {
     setOpen(false);
   };
-
 
   return (
     <section className='container'>

@@ -4,15 +4,15 @@ import {del, get, post} from '../Server/Axios';
 export const getComments = createAsyncThunk("comment/getComments", async() => {
     const getData = await get('/comments');
     return await getData.data;
-})
+});
 
 export const postComment = createAsyncThunk("comment/postComment", async(commentData) => {
     return await post("/comments", commentData);
-})
+});
 
-export const deleteComment = createAsyncThunk("comment/postComment", async(id) => {
+export const deleteComment = createAsyncThunk("comment/deleteComment", async(id) => {
     return await del(`/comments/${id}`);
-})
+});
 
 const commentAdapter = createEntityAdapter();
 
@@ -31,6 +31,7 @@ const commentSlice = createSlice({
             commentAdapter.upsertMany(state,action.payload);
         },
         [postComment.fulfilled]: commentAdapter.addOne,
+        [deleteComment.fulfilled]: commentAdapter.removeOne,
     }
 })
 
