@@ -28,11 +28,22 @@
   width: 120px;
 }
 .user-login-btn {
+  position: relative;
   padding: 10px;
   background-color: transparent;
   border: 1px solid #e0e0e2 !important;
   border-radius: 10px;
   font-size: 13px;
+  margin-left: 35px;
+}
+.user-login-btn::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 32px;
+  background-color: #c3c3c3;
+  top: 4px;
+  left: -15px;
 }
 .user-login-btn:hover {
   font-weight: 800;
@@ -42,16 +53,12 @@
   vertical-align: -5px;
   font-size: 19px !important;
 }
+.navbar-left {
+  display: flex;
+}
 .navbar-left i {
   font-size: 26px;
   margin-left: 15px;
-}
-.line-user-shop {
-  font-size: 27px;
-  line-height: 36px;
-  padding-left: 15px;
-  padding-right: 10px;
-  color: #c3c3c3 !important;
 }
 .fa-shopping-cart {
   position: relative;
@@ -71,28 +78,27 @@
   padding: 2px 4px;
   line-height: 14px;
 }
-@media screen and (max-width: 992px) {
-  .navbar-top {
-    display: flex;
-    flex-direction: column;
-  }
-  .navbar-left {
-    width: 100%;
-    align-items: center;
-    margin: 20px 0 5px 0;
-  }
-  .user-login-btn {
-    width: 300px;
-  }
-}
 .user-profile-btn {
   position: relative;
   background-color: transparent;
   margin-left: -20px;
-  margin-top: -2px;
+  margin-top: -4px;
 }
 
 /* Navbar-Sub-Menu */
+.user-profile-btn {
+  position: relative;
+  margin-left: 25px;
+}
+.user-profile-btn::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 25px;
+  background-color: #c3c3c3;
+  top: 9px;
+  left: 1px;
+}
 .user-profile-btn .open-sub-menu-hover:hover i {
   color: #949494 !important;
   border-radius: 20px;
@@ -211,7 +217,6 @@
   position: relative;
   padding: 12px 20px;
 }
-
 .user-profile-sub-menu-bottom-my-order::after {
   content: "";
   position: absolute;
@@ -252,6 +257,72 @@
 }
 .user-profile-sub-menu-bottom .user-profile-sub-menu-bottom-logout:hover {
   border-radius: 0 0 10px 10px;
+}
+
+@media screen and (max-width: 975px) {
+  .navbar-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-left {
+    width: 100%;
+    align-items: center;
+    margin: 20px 0 5px 0;
+  }
+  .user-login-btn {
+    width: 250px;
+  }
+  .user-profile-btn::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 25px;
+    background-color: #c3c3c3;
+    top: 2px;
+    right: -5px;
+    margin-right: 10px;
+  }
+  .user-profile-sub-menu {
+    top: -24px;
+    right: 90px;
+    width: 200px;
+    z-index: 9;
+    height: 100px;
+  }
+  .user-profile-sub-menu-bottom-logout {
+    display: flex;
+    margin-top: -25px;
+    padding: 12px 20px;
+    position: relative;
+  }
+  .user-profile-sub-menu-bottom-logout::before {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 1px;
+    top: 0px;
+    right: 12px;
+    background: #f0f0f1;
+  }
+  .user-profile-sub-menu-top-info1 {
+    height: 63px !important;
+  }
+  .user-profile-sub-menu-bottom-prize,
+  .user-profile-sub-menu-bottom-my-order,
+  .user-profile-sub-menu-top-digiclub,
+  .user-profile-sub-menu-top-active-money,
+  .user-profile-sub-menu-img::after {
+    display: none;
+  }
+  .user-profile-btn {
+    order: 1;
+    padding-right: 20px;
+    margin-top: 4px;
+  }
+  .line-user-shop {
+    position: absolute;
+    right: 85px;
+  }
 }
 
 /* Navbar-Bottom */

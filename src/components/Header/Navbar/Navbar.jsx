@@ -77,14 +77,15 @@ export default function Navbar() {
               <div className='user-profile-sub-menu-bottom-prize'>
                 <a href="#!"><i className="fas fa-award"></i>جوایز دیجی کلاب</a>
               </div>
-              <div className='user-profile-sub-menu-bottom-logout'>
+              <div onClick={hanldeLogOut} className='user-profile-sub-menu-bottom-logout'>
                 <a href="#!"><i className="fas fa-sign-out-alt"></i>خروج از حساب کاربری</a>
               </div>
             </div>
           </div>
           </button> 
-          : <Link to='/login'><button className="user-login-btn"><i className="fas fa-user"></i>ورود به حساب کاربری </button></Link>}
-          <div className="line-user-shop">|</div>
+          : 
+          <Link to='/login'><button className="user-login-btn"><i className="fas fa-user"></i>ورود به حساب کاربری </button></Link>
+          }
           <Link to='/shopbasket' className="store-shop">
             <i className="fas fa-shopping-cart">
               <span className="qty-shop">{totoalQty}</span>
