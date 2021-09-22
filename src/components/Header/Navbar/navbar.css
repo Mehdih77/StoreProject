@@ -10,6 +10,7 @@
   justify-content: flex-start;
   margin-top: 10px;
 }
+/* Navbar-Top */
 .navbar-top {
   width: 85%;
   display: flex;
@@ -42,7 +43,7 @@
   font-size: 19px !important;
 }
 .navbar-left i {
-  font-size: 27px;
+  font-size: 26px;
   margin-left: 15px;
 }
 .line-user-shop {
@@ -56,15 +57,18 @@
   position: relative;
   padding-top: 5px;
 }
+.fa-shopping-cart:hover {
+  color: #949494 !important;
+}
 .qty-shop {
   background-color: #f3696c;
   color: white !important;
   position: absolute;
-  top: -5px;
+  top: -4px;
   left: 20px;
   border-radius: 40%;
   font-size: 15px;
-  padding: 3px 5px;
+  padding: 2px 4px;
   line-height: 14px;
 }
 @media screen and (max-width: 992px) {
@@ -84,14 +88,29 @@
 .user-profile-btn {
   position: relative;
   background-color: transparent;
-  margin-left: -15px;
+  margin-left: -20px;
   margin-top: -2px;
+}
+
+/* Navbar-Sub-Menu */
+.user-profile-btn .open-sub-menu-hover:hover i {
+  color: #949494 !important;
+  border-radius: 20px;
+}
+.user-profile-btn .fa-user {
+  font-size: 23px;
+  padding-left: 7px;
+}
+.fa-angle-profile-bottom {
+  transform: rotate(90deg);
+  font-size: 17px !important;
+  margin-right: -10px;
 }
 .user-profile-sub-menu {
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 45px;
+  top: 47px;
   right: -130px;
   width: 200px;
   background-color: rgb(255, 255, 255);
@@ -102,10 +121,11 @@
   display: flex;
   font-size: 11px;
   margin-bottom: 20px;
-  height: 122px!important;
+  height: 125px !important;
 }
 .user-profile-sub-menu-top-info1:hover {
   background-color: #f0f0f1;
+  border-radius: 10px 10px 0 0;
 }
 .user-profile-sub-menu-img img {
   width: 40px;
@@ -120,14 +140,14 @@
   position: absolute;
   width: 2px;
   height: 54px;
-  top: 25%;
+  top: 20%;
   right: 14%;
   background-color: #c0c2c5;
 }
 .user-profile-sub-menu-top-info1 div p {
   font-size: 14px;
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 13px;
   margin-right: -32px;
   margin-bottom: 0px;
 }
@@ -173,28 +193,68 @@
 .user-profile-sub-menu-top-digiclub::after {
   content: "";
   position: absolute;
-  width: 160px;
-  height: 2px;
+  width: 172px;
+  height: 1px;
   background: #f0f0f1;
-  right: -3px;
+  right: -14px;
   bottom: -13px;
 }
 .user-profile-sub-menu-top-digiclub span {
   float: left;
 }
-.user-profile-btn:focus {
-  background-color: rgba(231, 209, 231, 0.507);
-  border-radius: 20px;
+.user-profile-sub-menu-bottom {
+  font-size: 13px;
 }
-.user-profile-btn .fa-user {
-  font-size: 23px;
-  padding-right: 5px;
-}
-.fa-angle-profile-bottom {
-  transform: rotate(90deg);
-  font-size: 17px !important;
+.user-profile-sub-menu-bottom-my-order {
+  display: flex;
+  margin-top: -22px;
+  position: relative;
+  padding: 12px 20px;
 }
 
+.user-profile-sub-menu-bottom-my-order::after {
+  content: "";
+  position: absolute;
+  width: 172px;
+  height: 1px;
+  background: #f0f0f1;
+  right: 13px;
+  bottom: 0px;
+}
+.user-profile-sub-menu-bottom-prize {
+  display: flex;
+  margin-top: -1px;
+  position: relative;
+  padding: 12px 20px;
+}
+.user-profile-sub-menu-bottom-prize::after {
+  content: "";
+  position: absolute;
+  width: 172px;
+  height: 1px;
+  background: #f0f0f1;
+  right: 13px;
+  bottom: 0;
+}
+.user-profile-sub-menu-bottom-logout {
+  display: flex;
+  margin-top: -1px;
+  padding: 12px 20px;
+}
+.user-profile-sub-menu-bottom-logout i,
+.user-profile-sub-menu-bottom-my-order i,
+.user-profile-sub-menu-bottom-prize i {
+  font-size: 18px;
+  vertical-align: -3px;
+}
+.user-profile-sub-menu-bottom div:hover {
+  background-color: #f0f0f1;
+}
+.user-profile-sub-menu-bottom .user-profile-sub-menu-bottom-logout:hover {
+  border-radius: 0 0 10px 10px;
+}
+
+/* Navbar-Bottom */
 .navbar-bottom {
   width: 90%;
   margin-top: 20px;

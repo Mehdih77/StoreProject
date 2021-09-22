@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import Search from '../Search/Search';
 import './navbar.css';
 import {Link, useHistory} from "react-router-dom";
@@ -28,6 +28,11 @@ export default function Navbar() {
     dispatch(calcTotal());
   }, [currentProducts,dispatch])
 
+  const [openSubMenu, setOpenSubMenu] = useState(false)
+  const handleOpenCloseSubMenu = (e) => {
+    setOpenSubMenu(!openSubMenu);
+  }
+
   return (
     <>
       <Link to='/' className="navbar-brand d-md-none"><img src="/image/home.svg" alt="logo" /></Link>
@@ -46,8 +51,10 @@ export default function Navbar() {
       <div className="navbar-left d-flex ml-auto">
           {curretnUser ? 
           <button className="user-profile-btn">
+          <div onClick={handleOpenCloseSubMenu} className='open-sub-menu-hover'>
           <i className="fas fa-user"></i><i className="fas fa-angle-profile-bottom fa-angle-right"></i>
-          <div className='user-profile-sub-menu'>
+          </div>
+          <div className={openSubMenu ? "user-profile-sub-menu d-block" : "user-profile-sub-menu d-none"}>
             <div className='user-profile-sub-menu-top'>
               <Link>
               <div className='user-profile-sub-menu-top-info1'>
@@ -58,20 +65,20 @@ export default function Navbar() {
                   <p>{curretnUser.email}</p>
                   <a href='#!'>مشاهده حساب کاربری <i className="fas fa-angle-left"></i></a>
                   <div className='user-profile-sub-menu-top-active-money'>فعالسازی کیف پول</div>
-                  <div className='user-profile-sub-menu-top-digiclub'> دیجی کلاب <span>291 امتیاز</span> </div>
+                  <div className='user-profile-sub-menu-top-digiclub'> دیجی کلاب <span><strong>291</strong> امتیاز</span> </div>
                 </div>
               </div>
               </Link>
             </div>
             <div className='user-profile-sub-menu-bottom'>
-              <div>
-                <a href="#!">سفارش های من</a>
+              <div className='user-profile-sub-menu-bottom-my-order'>
+                <a href="#!"><i className="fas fa-file-invoice"></i>سفارش های من</a>
               </div>
-              <div>
-                <a href="#!">جوایز دیجی کلاب</a>
+              <div className='user-profile-sub-menu-bottom-prize'>
+                <a href="#!"><i className="fas fa-award"></i>جوایز دیجی کلاب</a>
               </div>
-              <div>
-                <a href="#!">خروج از حساب کاربری</a>
+              <div className='user-profile-sub-menu-bottom-logout'>
+                <a href="#!"><i className="fas fa-sign-out-alt"></i>خروج از حساب کاربری</a>
               </div>
             </div>
           </div>
