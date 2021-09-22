@@ -77,10 +77,124 @@
     align-items: center;
     margin: 20px 0 5px 0;
   }
-  .user-login-btn{
-    width: 300px ;
+  .user-login-btn {
+    width: 300px;
   }
 }
+.user-profile-btn {
+  position: relative;
+  background-color: transparent;
+  margin-left: -15px;
+  margin-top: -2px;
+}
+.user-profile-sub-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 45px;
+  right: -130px;
+  width: 200px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 8px 0 rgb(0 0 0 / 30%);
+  border-radius: 10px;
+}
+.user-profile-sub-menu-top-info1 {
+  display: flex;
+  font-size: 11px;
+  margin-bottom: 20px;
+  height: 122px!important;
+}
+.user-profile-sub-menu-top-info1:hover {
+  background-color: #f0f0f1;
+}
+.user-profile-sub-menu-img img {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  position: relative;
+  border: 1px solid #c0c2c5;
+  border-radius: 50%;
+}
+.user-profile-sub-menu-img::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 54px;
+  top: 25%;
+  right: 14%;
+  background-color: #c0c2c5;
+}
+.user-profile-sub-menu-top-info1 div p {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-right: -32px;
+  margin-bottom: 0px;
+}
+.user-profile-sub-menu-top-info1 div a {
+  color: #19bfd3 !important;
+}
+.fa-angle-left {
+  color: #19bfd3 !important;
+  font-size: 11px !important;
+  padding-right: 2px;
+  vertical-align: -2px;
+}
+.user-profile-sub-menu-top-active-money {
+  margin-top: 15px;
+  margin-right: -43px;
+  position: relative;
+}
+.user-profile-sub-menu-top-active-money::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c0c2c5;
+  right: 8px;
+  top: 35%;
+}
+.user-profile-sub-menu-top-digiclub {
+  margin-top: 15px;
+  margin-right: -32px;
+  position: relative;
+}
+.user-profile-sub-menu-top-digiclub::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c0c2c5;
+  right: -3px;
+  top: 35%;
+}
+.user-profile-sub-menu-top-digiclub::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 2px;
+  background: #f0f0f1;
+  right: -3px;
+  bottom: -13px;
+}
+.user-profile-sub-menu-top-digiclub span {
+  float: left;
+}
+.user-profile-btn:focus {
+  background-color: rgba(231, 209, 231, 0.507);
+  border-radius: 20px;
+}
+.user-profile-btn .fa-user {
+  font-size: 23px;
+  padding-right: 5px;
+}
+.fa-angle-profile-bottom {
+  transform: rotate(90deg);
+  font-size: 17px !important;
+}
+
 .navbar-bottom {
   width: 90%;
   margin-top: 20px;

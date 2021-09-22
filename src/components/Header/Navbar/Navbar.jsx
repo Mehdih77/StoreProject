@@ -44,7 +44,39 @@ export default function Navbar() {
           <Search />
         </div>
       <div className="navbar-left d-flex ml-auto">
-          <Link to='/login'><button className="user-login-btn"><i className="fas fa-user"></i>ورود به حساب کاربری </button></Link>
+          {curretnUser ? 
+          <button className="user-profile-btn">
+          <i className="fas fa-user"></i><i className="fas fa-angle-profile-bottom fa-angle-right"></i>
+          <div className='user-profile-sub-menu'>
+            <div className='user-profile-sub-menu-top'>
+              <Link>
+              <div className='user-profile-sub-menu-top-info1'>
+                <div className='user-profile-sub-menu-img'>
+                  <img src="/image/user-profile-img.png" alt="userphoto" />
+                </div>
+                <div>
+                  <p>{curretnUser.email}</p>
+                  <a href='#!'>مشاهده حساب کاربری <i className="fas fa-angle-left"></i></a>
+                  <div className='user-profile-sub-menu-top-active-money'>فعالسازی کیف پول</div>
+                  <div className='user-profile-sub-menu-top-digiclub'> دیجی کلاب <span>291 امتیاز</span> </div>
+                </div>
+              </div>
+              </Link>
+            </div>
+            <div className='user-profile-sub-menu-bottom'>
+              <div>
+                <a href="#!">سفارش های من</a>
+              </div>
+              <div>
+                <a href="#!">جوایز دیجی کلاب</a>
+              </div>
+              <div>
+                <a href="#!">خروج از حساب کاربری</a>
+              </div>
+            </div>
+          </div>
+          </button> 
+          : <Link to='/login'><button className="user-login-btn"><i className="fas fa-user"></i>ورود به حساب کاربری </button></Link>}
           <div className="line-user-shop">|</div>
           <Link to='/shopbasket' className="store-shop">
             <i className="fas fa-shopping-cart">
