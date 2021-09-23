@@ -329,6 +329,7 @@
   margin-top: 20px;
   font-size: 13px;
   font-weight: lighter;
+  margin-bottom: -5px;
 }
 
 .navbar-bottom i {
@@ -407,6 +408,97 @@
   color: #949494 !important;
   padding-left: 15px;
 }
+
+.navbar-bottom .nav-item:nth-child(1) a {
+  padding-right: 20px;
+  width: 120px;
+}
+/* off-order-submenu-left */
+.off-order-submenu-left img {
+  height: 400px;
+}
+
+/* all-goods-submenu */
+.all-goods-submenu {
+  width: 1450px !important;
+  box-shadow: 0 10px 10px 0 rgb(0 0 0 / 15%);
+  padding: 15px;
+}
+.all-goods-submenu a {
+  display: block;
+  width: 100% !important;
+}
+.total-goods-title {
+  position: relative;
+  padding: 0;
+  margin-top: -10px;
+}
+.total-goods-title i {
+  font-size: 14px;
+}
+.total-goods-title a {
+  padding: 13px 0;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.total-goods-title a:hover {
+  background-color: #eeeeee49;
+  border: 1px solid #eeeeee;
+}
+.total-goods-title a:hover i {
+  color: #f3696c !important;
+}
+.total-goods-title::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 104%;
+  background-color: #eeeeee;
+  top: -4px;
+  left: 0;
+}
+/* total-goods-details */
+.total-goods-details-header {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.total-goods-details-header i {
+  color: unset !important;
+  padding-right: 6px;
+  vertical-align: -2px;
+  font-size: 12px !important;
+}
+.total-goods-details a {
+  margin-bottom: 13px;
+  margin-right: 5px;
+}
+.total-goods-details div :not(a:first-child) {
+  margin-right: -14px !important;
+}
+.total-goods-details div a:first-child {
+  font-size: 14px !important;
+  font-weight: 800;
+  color: rgb(29, 29, 29) !important;
+  border-right: 2px solid #ef5661;
+  padding-right: 8px !important;
+}
+.total-goods-details div a:first-child:hover {
+  color: #f3696c !important;
+}
+#active-all-goods-sub-menu{
+  display: block!important;
+}
+.total-goods, .total-goods-bb{
+  display: none!important;
+}
+.digital-goods-hover {
+  display: block!important;
+}
+
+/* navbar bottom style for all*/
+.navbar-bottom a:hover {
+  color: #f3696c !important;
+}
 @media screen and (max-width: 750px) {
   .fa-percentage {
     padding-right: 0;
@@ -427,15 +519,8 @@
     border-right: 2px solid #ef5661;
     padding-right: 7px;
   }
-}
-.navbar-bottom .nav-item:nth-child(1) a {
-  padding-right: 20px;
-  width: 120px;
-}
-/* off-order-submenu-left */
-.off-order-submenu-left img {
-  height: 400px;
-}
-.navbar-bottom a:hover {
-  color: #f3696c !important;
+  /* FOR all-goods-submenu*/
+  .all-goods-submenu {
+    width: 350px !important;
+  }
 }

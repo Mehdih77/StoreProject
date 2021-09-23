@@ -34,6 +34,25 @@ export default function Navbar() {
     setOpenSubMenu(!openSubMenu);
   }
 
+  const xx = (e) => {
+    const w = document.querySelector(".total-goods");
+    const p = document.querySelector(".total-goods-bb");
+    if (e.target.classList.contains("digital-goods")) {
+      w.classList.add("digital-goods-hover")
+    } 
+    else {
+      w.classList.remove("digital-goods-hover");
+      w.removeAttribute('id')
+    }
+    if(e.target.classList.contains('digital-cars')) {
+      w.classList.remove("digital-goods-hover");
+      p.classList.add("digital-goods-hover")
+      w.removeAttribute('id')
+    } else {
+      p.classList.remove('digital-goods-hover')
+    }
+  }
+
   return (
     <>
       <Link to='/' className="navbar-brand d-md-none"><img src="/image/home.svg" alt="logo" /></Link>
@@ -98,13 +117,248 @@ export default function Navbar() {
               <a className="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i className="fas fa-bars"></i>دسته بندی کالاها
               </a>
-              <div className="dropdown-menu all-goods-submenu container" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#!">لوازم الکترونیکی</a>
-                <a className="dropdown-item" href="#!"> لوازم خانگی</a>
-                <a className="dropdown-item" href="#!"> لوازم آرایشی</a>
-                <a className="dropdown-item" href="#!"> پوشاک</a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#!">دیگر محصولات</a>
+              <div className="dropdown-menu all-goods-submenu container-fluid" aria-labelledby="navbarDropdown">
+                <div className="row">
+                  <div onMouseMove={xx} className="col-md-2 total-goods-title">
+                    <a className='digital-goods' href="#!"><i className="fas fa-laptop"></i>کالای دیجیتال</a>
+                    <a className='digital-cars' href="#!"><i className="fas fa-tools"></i>خودرو، ابزار و تجهیزات صنعتی</a>
+                    <a href="#!"><i className="fas fa-tshirt"></i>مد و پوشاک</a>
+                    <a href="#!"><i className="fas fa-baby"></i>اسباب بازی، کودک و نوزاد</a>
+                    <a href="#!"><i className="fas fa-apple-alt"></i>کالاهای سوپرمارکتی</a>
+                    <a href="#!"><i className="fas fa-heartbeat"></i>زیبایی وسلامت</a>
+                    <a href="#!"><i className="fas fa-utensils"></i>خانه و آشپزخانه</a>
+                    <a href="#!"><i className="fas fa-book"></i>کتاب، لوازم التحریر و هنر</a>
+                    <a href="#!"><i className="fas fa-futbol"></i>ورزش و سفر</a>
+                    <a href="#!"><i className="fas fa-tractor"></i>محصولات بومی و محلی</a>
+                  </div>
+                  <div className="col-md-10 total-goods d-none d-md-block" id='active-all-goods-sub-menu'>
+                      <div className="row">
+                        <a className="total-goods-details-header" href="#!">همه دسته بندی کالاهای دیجیتال<i className="fas fa-angle-left"></i></a>
+                        <div className="col-md-3 total-goods-details">
+                          <div>
+                            <a href="#!">لوازم جانبی گوشی</a>
+                            <a href="#!">کیف و کاور گوشی</a>
+                            <a href="#!">پاور بانک(شارژر همراه)</a>
+                            <a href="#!">پایه و نگهدارنده گوشی</a>
+                          </div>
+                          <div>
+                            <a href="#!">گوشی موبایل</a>
+                            <a href="#!">سامسونگ</a>
+                            <a href="#!">هوآوی</a>
+                            <a href="#!">اپل</a>
+                            <a href="#!">شیائومی</a>
+                            <a href="#!">آنر</a>
+                            <a href="#!">نوکیا</a>
+                          </div>
+                          <div>
+                            <a href="#!">واقعیت مجازی</a>
+                          </div>
+                          <div>
+                            <a href="#!">مچ بند و ساعت هوشمند</a>
+                          </div>
+                        </div>
+                        <div className="col-md-3 total-goods-details">
+                          <div>
+                            <a href="#!">هدفون، هدست، هندزفری</a>
+                          </div>
+                          <div>
+                            <a href="#!">اسپیکر بلوتوث و با سیم</a>
+                          </div>
+                          <div>
+                            <a href="#!">هارد، فلش و SSD</a>
+                          </div>
+                          <div>
+                            <a href="#!">دوربین</a>
+                            <a href="#!">دوربین عکاسی دیجیتال</a>
+                            <a href="#!">دوربین ورزشی و فیلم برداری</a>
+                            <a href="#!">دوربین چاپ سریع</a>
+                          </div>
+                          <div>
+                            <a href="#!">لوازم جانبی دوربین</a>
+                            <a href="#!">لنز</a>
+                            <a href="#!">کیف</a>
+                            <a href="#!">کارت حافظه</a>
+                            <a href="#!">کاغذ چاپ عکاس</a>
+                          </div>
+                          <div>
+                            <a href="#!">دوربین دوچشمی و شکاری</a>
+                          </div>
+                        </div>
+                        <div className="col-md-3 total-goods-details">
+                          <div>
+                            <a href="#!">تلسکوپ</a>
+                          </div>
+                          <div>
+                            <a href="#!">پلی استیشن، ایکس باکس و بازی</a>
+                          </div>
+                          <div>
+                            <a href="#!">کامپیوتر و تجهیزات جانبی</a>
+                            <a href="#!">تجهیزات مخصوص بازی</a>
+                            <a href="#!">مانتیور</a>
+                            <a href="#!">کیس های اسمبل شده</a>
+                            <a href="#!">قطعات داخلی کامپیوتر</a>
+                            <a href="#!">ماوس</a>
+                            <a href="#!">کیبورد</a>
+                          </div>
+                          <div>
+                            <a href="#!">لپ تاپ</a>
+                          </div>
+                          <div>
+                            <a href="#!">لوازم جانبی لپ تاپ</a>
+                            <a href="#!">کیف، کوله، کاور</a>
+                            <a href="#!">کابل صدا، AUX، HDMI</a>
+                          </div>
+                        </div>
+                        <div className="col-md-3 total-goods-details">
+                          <div>
+                            <a href="#!">تبلت</a>
+                          </div>
+                          <div>
+                            <a href="#!">شارژر تبلت و موبایل</a>
+                          </div>
+                          <div>
+                            <a href="#!">کیف، کاور، لوازم جانبی تبلت</a>
+                          </div>
+                          <div>
+                            <a href="#!">باتری</a>
+                          </div>
+                          <div>
+                            <a href="#!">دوربین های تحت شبکه</a>
+                          </div>
+                          <div>
+                            <a href="#!">مودم و تجهیزات شبکه</a>
+                          </div>
+                          <div>
+                            <a href="#!">ماشین های اداری</a>
+                            <a href="#!">تلفن، بی سیم و سانترال</a>
+                            <a href="#!">فکس</a>
+                            <a href="#!">پرینتر</a>
+                            <a href="#!">لوازم جانبی اداری</a>
+                          </div>
+                          <div>
+                            <a href="#!">کتابخوان و فیدیبوک</a>
+                          </div>
+                          <div>
+                            <a href="#!">کارت هدیه خرید از دیجی کالا</a>
+                          </div>
+                        </div>  
+                      </div>
+                  </div>
+
+                  <div className="col-md-10 total-goods-bb d-none d-md-block">
+                      <div className="row">
+                        <a className="total-goods-details-header" href="#!">همه دسته بندی کالاهای ccccccc<i className="fas fa-angle-left"></i></a>
+                        <div className="col-md-3 total-goods-details">
+                          <div>
+                            <a href="#!">لوازم جانبی گوشی</a>
+                            <a href="#!">کیف و کاور گوشی</a>
+                            <a href="#!">پاور بانک(شارژر همراه)</a>
+                            <a href="#!">پایه و نگهدارنده گوشی</a>
+                          </div>
+                          <div>
+                            <a href="#!">گوشی موبایل</a>
+                            <a href="#!">سامسونگ</a>
+                            <a href="#!">هوآوی</a>
+                            <a href="#!">اپل</a>
+                            <a href="#!">شیائومی</a>
+                            <a href="#!">آنر</a>
+                            <a href="#!">نوکیا</a>
+                          </div>
+                          <div>
+                            <a href="#!">واقعیت مجازی</a>
+                          </div>
+                          <div>
+                            <a href="#!">مچ بند و ساعت هوشمند</a>
+                          </div>
+                        </div>
+                        <div className="col-md-3 total-goods-details">
+                          <div>
+                            <a href="#!">هدفون، هدست، هندزفری</a>
+                          </div>
+                          <div>
+                            <a href="#!">اسپیکر بلوتوث و با سیم</a>
+                          </div>
+                          <div>
+                            <a href="#!">هارد، فلش و SSD</a>
+                          </div>
+                          <div>
+                            <a href="#!">دوربین</a>
+                            <a href="#!">دوربین عکاسی دیجیتال</a>
+                            <a href="#!">دوربین ورزشی و فیلم برداری</a>
+                            <a href="#!">دوربین چاپ سریع</a>
+                          </div>
+                          <div>
+                            <a href="#!">لوازم جانبی دوربین</a>
+                            <a href="#!">لنز</a>
+                            <a href="#!">کیف</a>
+                            <a href="#!">کارت حافظه</a>
+                            <a href="#!">کاغذ چاپ عکاس</a>
+                          </div>
+                          <div>
+                            <a href="#!">دوربین دوچشمی و شکاری</a>
+                          </div>
+                        </div>
+                        <div className="col-md-3 total-goods-details">
+                          <div>
+                            <a href="#!">تلسکوپ</a>
+                          </div>
+                          <div>
+                            <a href="#!">پلی استیشن، ایکس باکس و بازی</a>
+                          </div>
+                          <div>
+                            <a href="#!">کامپیوتر و تجهیزات جانبی</a>
+                            <a href="#!">تجهیزات مخصوص بازی</a>
+                            <a href="#!">مانتیور</a>
+                            <a href="#!">کیس های اسمبل شده</a>
+                            <a href="#!">قطعات داخلی کامپیوتر</a>
+                            <a href="#!">ماوس</a>
+                            <a href="#!">کیبورد</a>
+                          </div>
+                          <div>
+                            <a href="#!">لپ تاپ</a>
+                          </div>
+                          <div>
+                            <a href="#!">لوازم جانبی لپ تاپ</a>
+                            <a href="#!">کیف، کوله، کاور</a>
+                            <a href="#!">کابل صدا، AUX، HDMI</a>
+                          </div>
+                        </div>
+                        <div className="col-md-3 total-goods-details">
+                          <div>
+                            <a href="#!">تبلت</a>
+                          </div>
+                          <div>
+                            <a href="#!">شارژر تبلت و موبایل</a>
+                          </div>
+                          <div>
+                            <a href="#!">کیف، کاور، لوازم جانبی تبلت</a>
+                          </div>
+                          <div>
+                            <a href="#!">باتری</a>
+                          </div>
+                          <div>
+                            <a href="#!">دوربین های تحت شبکه</a>
+                          </div>
+                          <div>
+                            <a href="#!">مودم و تجهیزات شبکه</a>
+                          </div>
+                          <div>
+                            <a href="#!">ماشین های اداری</a>
+                            <a href="#!">تلفن، بی سیم و سانترال</a>
+                            <a href="#!">فکس</a>
+                            <a href="#!">پرینتر</a>
+                            <a href="#!">لوازم جانبی اداری</a>
+                          </div>
+                          <div>
+                            <a href="#!">کتابخوان و فیدیبوک</a>
+                          </div>
+                          <div>
+                            <a href="#!">کارت هدیه خرید از دیجی کالا</a>
+                          </div>
+                        </div>  
+                      </div>
+                  </div>
+                </div>
               </div>
             </li>
           <li className="nav-item dropdown">
