@@ -17,7 +17,7 @@ export default function PhoneOffer() {
   const phonesList = getPhones ? getPhones.map((phones) => {
     return (
       <SwiperSlide key={phones.id}>
-       <Link to={`/phones/phone/${phones.id}`}>
+       <Link to={`/phones/${phones.id}`}>
           <div className="card phone-card-custom-style">
            <img src={phones.img} className="card-img-top phone-img" alt={phones.name}/>
              <div className="card-body">
@@ -34,7 +34,7 @@ export default function PhoneOffer() {
         <>
     <section className="container phone-offer">
         <div className="row">
-        <h4 className="phone-offer-top-title">پرفروش ترین گوشی های موبایل</h4>
+        <h4 className="phone-offer-top-title"><Link to='/phones' href='/allphons'>پرفروش ترین گوشی های موبایل</Link></h4>
         <Swiper slidesPerView={1} spaceBetween={10} navigation={true} breakpoints={{
           "640": {
             "slidesPerView": 2,

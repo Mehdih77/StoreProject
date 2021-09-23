@@ -9,6 +9,9 @@
   position: relative;
   padding-right: 20px;
 }
+.phone-offer-top-title:hover {
+  font-weight: 600;
+}
 .phone-offer-top-title::after {
   content: "";
   min-width: 1105px;

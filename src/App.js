@@ -31,7 +31,10 @@ export default function App() {
             <Route path='/' exact>
                 <HomePage/>
             </Route>
-            <Route exact path='/phones/phone/:id'>
+            <Route exact path='/phones'>
+                <PhonePage />
+            </Route>
+            <Route exact path='/phones/:id'>
                 <PhoneGoodsPage/>
             </Route>
             <Route exact path='/goods/laptop/:id'>
@@ -45,9 +48,6 @@ export default function App() {
             </Route>
             <Route exact path='/contact'>
                 <ContactPage/>
-            </Route>
-            <Route>
-                <PhonePage exact path='/phones' />
             </Route>
         </Layout>
       </Switch> 

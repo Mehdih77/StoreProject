@@ -123,7 +123,7 @@ export default function Navbar() {
                             <a href="#!">پایه و نگهدارنده گوشی</a>
                           </div>
                           <div>
-                            <a href="#!">گوشی موبایل</a>
+                            <a href="/phones">گوشی موبایل</a>
                             <a href="#!">سامسونگ</a>
                             <a href="#!">هوآوی</a>
                             <a href="#!">اپل</a>
