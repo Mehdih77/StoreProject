@@ -485,15 +485,6 @@
 .total-goods-details div a:first-child:hover {
   color: #f3696c !important;
 }
-#active-all-goods-sub-menu{
-  display: block!important;
-}
-.total-goods, .total-goods-bb{
-  display: none!important;
-}
-.digital-goods-hover {
-  display: block!important;
-}
 
 /* navbar bottom style for all*/
 .navbar-bottom a:hover {
