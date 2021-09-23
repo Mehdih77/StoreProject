@@ -1,16 +1,17 @@
 import './Style/bootstrap-rtl.min.css';
+import './Style/main-style.css';
 import HomePage from './Pages/HomePage/HomePage';
 import PhoneGoodsPage from './Pages/PhoneGoodsPage/PhoneGoodsPage';
 import LaptopGoodsPage from './Pages/LaptopGoodsPage/LaptopGoodsPage';
 import ShopBasketPage from './Pages/ShopBasketPage/ShopBasketPage';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import ContactPage from './Pages/ContactPage/ContactPage';
-import './Style/main-style.css';
 import {Switch, Route} from "react-router-dom";
 import Layout from './Layout/Layout';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import SignupPage from './Pages/SignupPage/SignupPage';
 import ForgotPassPage from './Pages/ForgotPassPage/ForgotPassPage';
+import PhonePage from './Pages/PhonePage/PhonePage';
 
 export default function App() {
 
@@ -30,7 +31,7 @@ export default function App() {
             <Route path='/' exact>
                 <HomePage/>
             </Route>
-            <Route exact path='/goods/phone/:id'>
+            <Route exact path='/phones/phone/:id'>
                 <PhoneGoodsPage/>
             </Route>
             <Route exact path='/goods/laptop/:id'>
@@ -44,6 +45,9 @@ export default function App() {
             </Route>
             <Route exact path='/contact'>
                 <ContactPage/>
+            </Route>
+            <Route>
+                <PhonePage exact path='/phones' />
             </Route>
         </Layout>
       </Switch> 

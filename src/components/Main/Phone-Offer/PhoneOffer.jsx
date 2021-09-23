@@ -17,7 +17,7 @@ export default function PhoneOffer() {
   const phonesList = getPhones ? getPhones.map((phones) => {
     return (
       <SwiperSlide key={phones.id}>
-       <Link to={`/goods/phone/${phones.id}`}>
+       <Link to={`/phones/phone/${phones.id}`}>
           <div className="card phone-card-custom-style">
            <img src={phones.img} className="card-img-top phone-img" alt={phones.name}/>
              <div className="card-body">
