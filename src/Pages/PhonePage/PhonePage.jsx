@@ -17,21 +17,23 @@ export default function PhonePage() {
 
     return (
         <>
-        <div className='container my-4'>
-            <div className="row">
-                <div className='col-md-3'>
-                    <Filters />
-                </div>
-                <div className='col-md-9'>
-                     <PhoneItems /> 
+        <section className='phone-page'>
+            <div className='container-fluid my-4'>
+                <div className="row">
+                    <div className='col-md-2'>
+                        <Filters />
+                    </div>
+                    <div className='col-md-10'>
+                        <PhoneItems /> 
+                    </div>
                 </div>
             </div>
-        </div>
-        <div className="container phone-page-banners my-3">
-            <div className="row">
-                <Banner />
+            <div className="container phone-page-banners my-3">
+                <div className="row">
+                    <Banner />
+                </div>
             </div>
-        </div>
+        </section>
         </>
     )
 }

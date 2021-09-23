@@ -101,7 +101,7 @@ export default function Navbar() {
               <div className="dropdown-menu all-goods-submenu container-fluid" aria-labelledby="navbarDropdown">
                 <div className="row">
                   <div className="col-md-2 total-goods-title">
-                    <a href="#!"><i className="fas fa-laptop"></i>کالای دیجیتال</a>
+                    <a href="/phones"><i className="fas fa-laptop"></i>کالای دیجیتال</a>
                     <a href="#!"><i className="fas fa-tools"></i>خودرو، ابزار و تجهیزات صنعتی</a>
                     <a href="#!"><i className="fas fa-tshirt"></i>مد و پوشاک</a>
                     <a href="#!"><i className="fas fa-baby"></i>اسباب بازی، کودک و نوزاد</a>

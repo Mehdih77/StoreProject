@@ -1,0 +1,146 @@
+/* phone-items-breadcrumb */
+.phone-items-breadcrumb {
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-right: -12px;
+}
+.phone-items-breadcrumb a:hover {
+  font-weight: 600;
+}
+
+/* phone-items-filters */
+.phone-items-filters {
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  border-bottom: 0;
+  padding: 16px 6px 0px 0;
+  display: flex;
+  align-items: baseline;
+  font-size: 13px;
+}
+.phone-items-filters p {
+  padding-left: 10px;
+}
+.phone-items-filters p i {
+  color: #cecece !important;
+  padding-left: 10px;
+  padding-right: 5px;
+  vertical-align: -3px;
+  font-size: 16px;
+}
+.phone-items-filters button {
+  background-color: transparent;
+  padding: 3px 6px;
+  margin: 0 3px;
+  border-radius: 10px;
+}
+.phone-items-filters button:focus {
+  background-color: #00bfd6 !important;
+  color: #fff !important;
+}
+.phone-items-filters button:hover {
+  background-color: #ece9e9;
+}
+
+/* phone-card */
+.phone-card {
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+}
+.phone-card:hover {
+  box-shadow: 0 2px 17px 0 rgb(0 0 0 / 9%);
+  z-index: 11;
+  transform: scale(1.006);
+  transition: all 0.1s ease-in-out;
+}
+.phone-card img {
+  padding: 20px;
+}
+.phone-card-name {
+  font-size: 16px;
+  height: 35px;
+}
+.phone-card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.phone-card-info i.fa-star {
+  color: #fac74b !important;
+  padding-right: 3px;
+}
+.phone-card-info span {
+  color: #c0c2c5 !important;
+  font-size: 10px;
+  padding-left: 2px;
+}
+.phone-card-info i.fa-archive {
+  color: #0fabc6 !important;
+  padding-left: 4px;
+}
+.phone-card-price {
+  text-align: left;
+  font-weight: 700;
+  color: #000 !important;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+.phone-card-price span {
+  font-weight: 300;
+  padding-right: 4px;
+  letter-spacing: 0;
+}
+.phone-card-bottom {
+  visibility: hidden;
+  font-size: 14px;
+  margin-bottom: -10px;
+  position: relative;
+}
+.phone-card:hover .phone-card-bottom {
+  visibility: visible;
+}
+.phone-card-bottom::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -5px;
+  width: 104%;
+  height: 1px;
+  background-color: #ebebeb;
+}
+.phone-card-bottom span {
+  font-weight: 600;
+}
+.phone-card-bottom i {
+  padding-left: 7px;
+}
+@media screen and (max-width: 860px) {
+  .phone-items-filters {
+    font-size: 11px;
+  }
+  .phone-items-filters button {
+    margin: 0;
+  }
+  .phone-card img {
+    padding: 3px;
+  }
+  .phone-card-name {
+    font-size: 12px;
+    height: 40px;
+  }
+  .phone-card-price {
+    font-size: 14px;
+  }
+  .phone-card-bottom {
+    font-size: 11px;
+    margin-bottom: -10px;
+  }
+  .phone-card-info {
+    font-size: 12px;
+    flex-direction: column;
+  }
+  .phone-card-info p:last-child {
+    text-align: left;
+  }
+}
