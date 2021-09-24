@@ -140,6 +140,102 @@ export default function Filter() {
                 فقط کالاهای موجود در انبار آنلاین شاپ
             </ToggleButton>
         </div>
+        <Accordion title='شبکه های ارتباطی'>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='5G' />
+                    <span>5G</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='4G' />
+                    <span>4G</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='3G' />
+                    <span>3G</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='2G' />
+                    <span>2G</span>
+                </div>
+            </label>
+        </Accordion>
+        <Accordion title='حافظه داخلی'>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='512G' />
+                    <span>512 گیگابایت</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='256G' />
+                    <span>256 گیگابایت</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='128G' />
+                    <span>128 گیگابایت</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='64G' />
+                    <span>64 گیگابایت</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='32G' />
+                    <span>32 گیگابایت</span>
+                </div>
+            </label>
+        </Accordion>
+        <Accordion title='رنگ ها'>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Black' />
+                    <span>مشکی</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='White' />
+                    <span>سفید</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Blue' />
+                    <span>آبی</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Red' />
+                    <span>قرمز</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Green' />
+                    <span>سبز</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Orange' />
+                    <span>نارنجی</span>
+                </div>
+            </label>
+        </Accordion>
     </section> 
     </>
     )
