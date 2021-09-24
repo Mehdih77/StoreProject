@@ -40,3 +40,19 @@
   border: none;
   border-radius: 10px;
 }
+/* phone-page-toggle */
+.phone-page-toggle {
+  display: flex;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 12px 12px 0 hsl(0deg 0% 71% / 11%);
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.phone-page-toggle span {
+  padding-right: 20px;
+}
+.digiplus {
+  width: 90px;
+}
