@@ -1,5 +1,6 @@
 import {useEffect, useState, useRef} from 'react';
 import './Filters.css';
+import Accordion from '../../../HOC/Accordion/Accordion';
 
 export default function Filter() {
 
@@ -23,6 +24,24 @@ export default function Filter() {
                 <input type="search" placeholder='نام محصول یا برند مورد نظر را  بنویسید ...' />
             </div>
         </div>
+        <Accordion title='برند'>
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                        سامسونگ
+                    </div>
+                    <p>Samsung</p>
+                </label>
+        </Accordion>
+        <Accordion title='برند'>
+            <label>
+                <div>
+                    <input type="checkbox" />
+                    سامسونگ
+                </div>
+                <p>Samsung</p>
+            </label>
+        </Accordion>
     </section> 
     </>
     )
