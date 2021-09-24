@@ -2,6 +2,7 @@ import {useEffect, useState, useRef} from 'react';
 import './Filters.css';
 import Accordion from '../../../HOC/Accordion/Accordion';
 import ToggleButton from '../../../HOC/Input/ToggleButton/ToggleButton';
+import CheckBox from '../../../HOC/Input/CheckBox/CheckBox';
 
 export default function Filter() {
 
@@ -26,21 +27,88 @@ export default function Filter() {
             </div>
         </div>
         <Accordion title='برند'>
-                <label>
-                    <div>
-                        <input type="checkbox" />
-                        سامسونگ
-                    </div>
-                    <p>Samsung</p>
-                </label>
-        </Accordion>
-        <Accordion title='برند'>
-            <label>
+            <label className='accordion-checkbox-label'>
                 <div>
-                    <input type="checkbox" />
-                    سامسونگ
+                    <CheckBox id='Samsung' />
+                    <span>سامسونگ</span>
                 </div>
                 <p>Samsung</p>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Xiaomi' />
+                    <span>شیائومی</span>
+                </div>
+                <p>Xiaomi</p>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Apple' />
+                    <span>شیائومی</span>
+                </div>
+                <p>Apple</p>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Nokia' />
+                    <span>نوکیا</span>
+                </div>
+                <p>Nokia</p>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Motorola' />
+                    <span>موتورولا</span>
+                </div>
+                <p>Motorola</p>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Honor' />
+                    <span>آنر</span>
+                </div>
+                <p>Honor</p>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='LG' />
+                    <span>ال جی</span>
+                </div>
+                <p>LG</p>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='HTC' />
+                    <span>اچ تی سی</span>
+                </div>
+                <p>HTC</p>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Google' />
+                    <span>گوگل</span>
+                </div>
+                <p>Google</p>
+            </label>
+        </Accordion>
+        <Accordion title='فروشنده'>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='DigiKala' />
+                    <span>دیجی کالا</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='OfficialSeller' />
+                    <span>فروشنده رسمی</span>
+                </div>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='TopSeller' />
+                    <span>فروشنده برگزیده</span>
+                </div>
             </label>
         </Accordion>
         <div className='phone-page-toggle my-2'>
@@ -48,8 +116,12 @@ export default function Filter() {
                فقط کالاهای <img className='digiplus' src="/image/digiplus.svg" alt="digiplus digikala digi" /> 
             </ToggleButton>
         </div>
-        <div className='phone-page-toggle my-2'>
-            <ToggleButton id='sendByCustomer'>
+        <div className='phone-page-toggle sendBySeller my-2'>
+            <div>
+                <i className="fas fa-user-tie"></i>
+                <p>با خرید از کالاهایی با امکان ارسال توسط فروشنده سفارش خود را زودتر تحویل بگیرید</p>
+            </div>
+            <ToggleButton id='sendBySeller'>
                 امکان ارسال توسط فروشنده
             </ToggleButton>
         </div>

@@ -5,7 +5,6 @@
 .phone-page-post-free {
   background-color: #fff;
 }
-
 /* phone-page-search-input */
 .phone-page-search-input {
   margin: 20px 0;
@@ -40,6 +39,27 @@
   border: none;
   border-radius: 10px;
 }
+/* accordion */
+.accordion-checkbox-label {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  padding: 10px;
+  font-size: 14px;
+  margin: -4px 0;
+}
+.accordion-checkbox-label:first-child {
+  border-top: 1px solid #e0e0e2;
+}
+
+.accordion-checkbox-label p {
+  color: #a6a6a6 !important;
+}
+.accordion-checkbox-label:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
 /* phone-page-toggle */
 .phone-page-toggle {
   display: flex;
@@ -55,4 +75,31 @@
 }
 .digiplus {
   width: 90px;
+}
+.sendBySeller {
+  display: flex;
+  flex-direction: column;
+}
+.sendBySeller div:first-child {
+  display: flex;
+  flex-direction: row;
+}
+.sendBySeller p {
+  font-size: 14px;
+  position: relative;
+}
+.sendBySeller p::after {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 1px;
+  background-color: #e0e0e2;
+  bottom: -10px;
+  right: -40px;
+}
+.sendBySeller div i {
+  color: #d86b00 !important;
+  padding-left: 15px;
+  padding-top: 2px;
+  font-size: 18px;
 }
