@@ -28,7 +28,7 @@ export default function PhoneItems() {
 
     return ( 
         <>
-        <div className="container">
+        <div className="container phone-items-phone-page">
             <div className='phone-items-breadcrumb'>
                 <a href="/">فروشگاه اینترنتی آنلاین شاپ </a>
                 / <a href="#!">کالای دیجیتال </a>

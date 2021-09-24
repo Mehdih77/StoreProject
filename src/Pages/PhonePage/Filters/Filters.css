@@ -1,4 +1,43 @@
-.accordind-body{
-    height: 100px;
-    visibility: hidden;
+.phone-page-filter {
+  padding-right: 50px;
+}
+/* phone-page-post-free */
+.phone-page-post-free {
+  background-color: #fff;
+}
+
+/* phone-page-search-input */
+.phone-page-search-input {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid;
+  box-shadow: 0 12px 12px 0 hsl(0deg 0% 71% / 11%);
+  border: 1px solid #dedede;
+  border-radius: 10px;
+}
+.phone-page-search-input p {
+  margin-bottom: -10px;
+  font-size: 15px;
+  padding-right: 10px;
+}
+.phone-page-search-input div {
+  position: relative;
+}
+.phone-page-search-input div i {
+  position: absolute;
+  top: 15%;
+  right: 4%;
+}
+.phone-page-search-input div i:hover {
+  color: #f45052 !important;
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+.phone-page-search-input input {
+  margin-top: -10px;
+  width: 100% !important;
+  font-size: 12px;
+  border: none;
+  border-radius: 10px;
 }
