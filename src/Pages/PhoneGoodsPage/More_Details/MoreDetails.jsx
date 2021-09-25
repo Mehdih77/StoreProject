@@ -14,7 +14,7 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 export default function MoreDetails({getCurrentProducts, id}) {
 
-  const {curretnUser} = useAuth();
+  const {currentUser} = useAuth();
   const [commentText,setCommentText] = useState();
 
   const dispatch = useDispatch();
@@ -45,12 +45,12 @@ export default function MoreDetails({getCurrentProducts, id}) {
     setCommentText(e.target.value)
   }
 
-  const allComments = curretnUser && getCommentById.map(comments => {
+  const allComments = currentUser && getCommentById.map(comments => {
     return (
       <li key={comments.id} className="media my-4">
         <img src="/image/user-1.png" className="mr-3" alt="user-img"/>
         <div className="media-body">
-          <h5 className="mt-0 mb-1">{curretnUser && curretnUser.email}</h5>
+          <h5 className="mt-0 mb-1">{currentUser && currentUser.email}</h5>
           {comments.commentText}
         </div>
         <button

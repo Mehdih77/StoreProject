@@ -12,7 +12,7 @@ export default function Navbar() {
   const currentProducts = useSelector(getCurrentProducts);
   const totoalQty = useSelector(getTotoalQty);
   const history = useHistory()
-  const {curretnUser,logOut} = useAuth();
+  const {currentUser,logOut} = useAuth();
 
   // logout
   async function hanldeLogOut(e) {
@@ -49,7 +49,7 @@ export default function Navbar() {
           <Search />
         </div>
       <div className="navbar-left d-flex ml-auto">
-          {curretnUser ? 
+          {currentUser ? 
           <button className="user-profile-btn">
           <div onClick={handleOpenCloseSubMenu} className='open-sub-menu-hover'>
           <i className="fas fa-user"></i><i className="fas fa-angle-profile-bottom fa-angle-right"></i>
@@ -62,7 +62,7 @@ export default function Navbar() {
                   <img src="/image/user-profile-img.png" alt="userphoto" />
                 </div>
                 <div>
-                  <p>{curretnUser.email}</p>
+                  <p>{currentUser.email}</p>
                   <a href='#!'>مشاهده حساب کاربری <i className="fas fa-angle-left"></i></a>
                   <div className='user-profile-sub-menu-top-active-money'>فعالسازی کیف پول</div>
                   <div className='user-profile-sub-menu-top-digiclub'> دیجی کلاب <span><strong>291</strong> امتیاز</span> </div>

@@ -10,7 +10,7 @@ export function useAuth() {
 function AuthProvider({children}) {
 
     const userAuth = JSON.parse(localStorage.getItem('userAuth')) ? JSON.parse(localStorage.getItem('userAuth')) : ``;
-    const [curretnUser, setCurretnUser] = useState(userAuth);
+    const [currentUser, setCurrentUser] = useState(userAuth);
     const [loading, setLoading] = useState(true);
 
     function signUp(email,password) {
@@ -30,16 +30,16 @@ function AuthProvider({children}) {
     }
 
     function updateEmail(email) {
-        return curretnUser.updateEmail(email);
+        return currentUser.updateEmail(email);
     }
 
     function updatePassword(password) {
-        return curretnUser.updatePassword(password);
+        return currentUser.updatePassword(password);
     }
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged( user => {
-            setCurretnUser(user);
+            setCurrentUser(user);
             setLoading(false);
             localStorage.setItem('userAuth', JSON.stringify(user));
         });
@@ -48,7 +48,7 @@ function AuthProvider({children}) {
     }, []);
 
     const value = {
-        curretnUser,
+        currentUser,
         signUp,
         logIn,
         logOut,
