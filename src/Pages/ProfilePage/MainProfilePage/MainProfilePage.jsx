@@ -7,6 +7,7 @@ export default function MainProfilePage() {
     const {currentUser} = useAuth();
 
     return (
+        <>
         <div className='container-fluid'>
             <div className="row p-1">
                 <div className="col-md-6">
@@ -72,8 +73,10 @@ export default function MainProfilePage() {
                                     <img className='img-fluid' src="/image/laptop2.jpg" alt="favorite-list-img" />
                                 </div>
                                 <div className='favorite-list-body-col-detail'>
-                                    <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
-                                    <p>103,000,000 تومان</p>
+                                    <Link>
+                                        <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
+                                        <p>103,000,000 تومان</p>
+                                    </Link>
                                 </div>
                                 <button><i className="far fa-trash-alt"></i></button>
                             </div>
@@ -84,8 +87,10 @@ export default function MainProfilePage() {
                                     <img className='img-fluid' src="/image/laptop2.jpg" alt="favorite-list-img" />
                                 </div>
                                 <div className='favorite-list-body-col-detail'>
-                                    <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
-                                    <p>103,000,000 تومان</p>
+                                    <Link>
+                                        <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
+                                        <p>103,000,000 تومان</p>
+                                    </Link>
                                 </div>
                                 <button><i className="far fa-trash-alt"></i></button>
                             </div>
@@ -96,8 +101,10 @@ export default function MainProfilePage() {
                                     <img className='img-fluid' src="/image/laptop2.jpg" alt="favorite-list-img" />
                                 </div>
                                 <div className='favorite-list-body-col-detail'>
-                                    <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
-                                    <p>103,000,000 تومان</p>
+                                    <Link>
+                                        <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
+                                        <p>103,000,000 تومان</p>
+                                    </Link>
                                 </div>
                                 <button><i className="far fa-trash-alt"></i></button>
                             </div>
@@ -108,7 +115,76 @@ export default function MainProfilePage() {
                         </div>
                     </div></div>
             </div>
-            
         </div>
+        <h5 className='tabel-orders-title'>آخرین سفارش ها</h5>
+        <div className="container-fluid tabel-orders my-3">
+            <div className="row tabel-orders-header">
+                <div className="col-1">#</div>
+                <div className="col-2">شماره سفارش</div>
+                <div className="col-2">تاریخ ثبت سفارش</div>
+                <div className="col-2">مبلغ قابل پرداخت</div>
+                <div className="col-2">مبلغ کل</div>
+                <div className="col-2">عملیات پرداخت</div>
+                <div className="col-1">جزییات</div>
+            </div>
+            <div className="row tabel-orders-body">
+                    <div className="col-1">۱</div>
+                    <div className="col-2">DKC-123456789</div>
+                    <div className="col-2">۴ اردیبهشت ۱۴۰۰</div>
+                    <div className="col-2">۰</div>
+                    <div className="col-2">۸۳,۵۰۰ تومان</div>
+                    <div className="col-2 payment-status-fail">پرداخت ناموفق</div>
+                    <div className="col-1"><i className='fas fa-chevron-down icon-more-detail'></i></div>
+                </div>
+            <div className="row tabel-orders-body">
+                <div className="col-1">۲</div>
+                <div className="col-2">DKC-987654321</div>
+                <div className="col-2">۲۶ دی ۱۳۹۹</div>
+                <div className="col-2">۰</div>
+                <div className="col-2">۲۵۹,۹۸۰ تومان</div>
+                <div className="col-2 payment-status-ok">پرداخت موفق</div>
+                <div className="col-1"><i className='fas fa-chevron-down icon-more-detail'></i></div>
+            </div>
+            <div className="row tabel-orders-body">
+                <div className="col-1">۳</div>
+                <div className="col-2">DKC-135798642</div>
+                <div className="col-2">۱ آذر ۱۳۹۹</div>
+                <div className="col-2">۰</div>
+                <div className="col-2">۳۰,۵۹۹,۰۰۰ تومان</div>
+                <div className="col-2 payment-status-ok">پرداخت موفق</div>
+                <div className="col-1"><i className='fas fa-chevron-down icon-more-detail'></i></div>
+            </div>
+            <div className="row tabel-orders-body">
+                <div className="col-1">۴</div>
+                <div className="col-2">DKC-246813578</div>
+                <div className="col-2">۱۶ آبان ۱۳۹۹</div>
+                <div className="col-2">۰</div>
+                <div className="col-2">۳۱۰,۰۰۰ تومان</div>
+                <div className="col-2 payment-status-fail">پرداخت ناموفق</div>
+                <div className="col-1"><i className='fas fa-chevron-down icon-more-detail'></i></div>
+            </div>
+            <div className="row tabel-orders-body">
+                <div className="col-1">۵</div>
+                <div className="col-2">DKC-156784356</div>
+                <div className="col-2">۱۳ آبان ۱۳۹۹</div>
+                <div className="col-2">۰</div>
+                <div className="col-2">۵۹,۱۳۲,۰۰۰ تومان</div>
+                <div className="col-2 payment-status-ok">پرداخت موفق</div>
+                <div className="col-1"><i className='fas fa-chevron-down icon-more-detail'></i></div>
+            </div>
+            <div className="row tabel-orders-body">
+                <div className="col-1">۶</div>
+                <div className="col-2">DKC-135567849</div>
+                <div className="col-2">۱۳ آبان ۱۳۹۹</div>
+                <div className="col-2">۰</div>
+                <div className="col-2">۵۵,۶۱۹,۵۰۰ تومان</div>
+                <div className="col-2 payment-status-cancel">لغو شده</div>
+                <div className="col-1"><i className='fas fa-chevron-down icon-more-detail'></i></div>
+            </div>
+            <Link to='/shopbasket' href="/shopbasket" className='row tabel-orders-bottom'>
+                    مشاهده لیست سفارش‌ها
+                </Link>
+        </div>
+        </>
     )
 }
