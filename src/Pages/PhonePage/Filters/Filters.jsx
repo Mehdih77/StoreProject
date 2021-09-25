@@ -1,4 +1,3 @@
-import {useEffect, useState, useRef} from 'react';
 import './Filters.css';
 import Accordion from '../../../HOC/Accordion/Accordion';
 import ToggleButton from '../../../HOC/Input/ToggleButton/ToggleButton';
@@ -201,39 +200,66 @@ export default function Filter() {
         <Accordion title='رنگ ها'>
             <label className='accordion-checkbox-label'>
                 <div>
-                    <CheckBox id='Black' />
+                    <CheckBox id='Black'/>
                     <span>مشکی</span>
                 </div>
+                <span className='accordion-color black'></span>
             </label>
             <label className='accordion-checkbox-label'>
                 <div>
                     <CheckBox id='White' />
                     <span>سفید</span>
                 </div>
+                <span className='accordion-color white'></span>
             </label>
             <label className='accordion-checkbox-label'>
                 <div>
                     <CheckBox id='Blue' />
                     <span>آبی</span>
                 </div>
+                <span className='accordion-color blue'></span>
             </label>
             <label className='accordion-checkbox-label'>
                 <div>
                     <CheckBox id='Red' />
                     <span>قرمز</span>
                 </div>
+                <span className='accordion-color red'></span>
             </label>
             <label className='accordion-checkbox-label'>
                 <div>
                     <CheckBox id='Green' />
                     <span>سبز</span>
                 </div>
+                <span className='accordion-color green'></span>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Cyan' />
+                    <span>فیروزه ای</span>
+                </div>
+                <span className='accordion-color cyan'></span>
             </label>
             <label className='accordion-checkbox-label'>
                 <div>
                     <CheckBox id='Orange' />
                     <span>نارنجی</span>
                 </div>
+                <span className='accordion-color orange'></span>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Purple' />
+                    <span>بنفش</span>
+                </div>
+                <span className='accordion-color purple'></span>
+            </label>
+            <label className='accordion-checkbox-label'>
+                <div>
+                    <CheckBox id='Gold' />
+                    <span>طلایی</span>
+                </div>
+                <span className='accordion-color gold'></span>
             </label>
         </Accordion>
     </section> 

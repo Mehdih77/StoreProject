@@ -19,8 +19,8 @@ export default function Accordion({title, children}) {
     }
 
     return (
-        <div className="accordion_section my-3">
-            <div className="accordion" onClick={handleToggleAccordion}>
+        <div onClick={handleToggleAccordion} className="accordion_section my-3">
+            <div className="accordion">
                 <p className='accordion_title'>{title}</p>
                 <i className={`fas fa-chevron-down ${iconRotate}`}></i>
             </div>
