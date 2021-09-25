@@ -36,7 +36,7 @@ export default function NavProfilePage() {
         </div>
         <div className='nav-profile-page-bottom'>
           <div className='nav-profile-page-bottom-my-order'>
-            <Link href="#!"><i className="fas fa-file-invoice"></i>سفارش های من</Link>
+            <Link to='/shopbasket' href="/shopbasket"><i className="fas fa-file-invoice"></i>سفارش های من</Link>
           </div>
           <div>
             <a href="#!"><i className="far fa-heart"></i>لیست ها</a>

@@ -61,7 +61,52 @@ export default function MainProfilePage() {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6">لیست آخرین علاقه‌مندی‌ها</div>
+                <div className="col-md-6">
+                <div className='favorite-list-header'>
+                        <span>لیست آخرین علاقه‌مندی‌ها</span>
+                    </div>
+                    <div className='favorite-list-body'>
+                        <div className='favorite-list-body-row'>
+                            <div className='favorite-list-body-col'>
+                                <div className='favorite-list-body-col-img'>
+                                    <img className='img-fluid' src="/image/laptop2.jpg" alt="favorite-list-img" />
+                                </div>
+                                <div className='favorite-list-body-col-detail'>
+                                    <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
+                                    <p>103,000,000 تومان</p>
+                                </div>
+                                <button><i className="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <div className='favorite-list-body-row'>
+                            <div className='favorite-list-body-col'>
+                                <div className='favorite-list-body-col-img'>
+                                    <img className='img-fluid' src="/image/laptop2.jpg" alt="favorite-list-img" />
+                                </div>
+                                <div className='favorite-list-body-col-detail'>
+                                    <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
+                                    <p>103,000,000 تومان</p>
+                                </div>
+                                <button><i className="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>  
+                        <div className='favorite-list-body-row'>
+                            <div className='favorite-list-body-col'>
+                                <div className='favorite-list-body-col-img'>
+                                    <img className='img-fluid' src="/image/laptop2.jpg" alt="favorite-list-img" />
+                                </div>
+                                <div className='favorite-list-body-col-detail'>
+                                    <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
+                                    <p>103,000,000 تومان</p>
+                                </div>
+                                <button><i className="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>  
+                        
+                        <div className='favorite-list-body-bottom'>
+                            <Link><i className="fas fa-pencil-alt"></i>مشاهده و ویرایش لیست مورد علاقه</Link>
+                        </div>
+                    </div></div>
             </div>
             
         </div>

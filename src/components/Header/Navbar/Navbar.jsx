@@ -275,7 +275,7 @@ export default function Navbar() {
               <Link to='/aboutus' className="nav-link " href="#" tabIndex="-1">درباره ما</Link>
             </li>
           <li className="nav-item">
-              <Link to='/' className="nav-link " href="#" tabIndex="-1"><i className="far fa-check-circle"></i>دیجی کالای من</Link>
+              <Link to='/profile' className="nav-link " href="#" tabIndex="-1"><i className="far fa-check-circle"></i>دیجی کالای من</Link>
             </li>
           <li className="nav-item">
               <Link to='/' className="nav-link " href="#" tabIndex="-1"><i className="fas fa-plus-circle"></i>دیجی پلاس</Link>

@@ -1,18 +1,22 @@
-/* secret-info */
-.secret-info-header {
+.secret-info-header,
+.favorite-list-header {
   margin: 10px 0;
 }
-.secret-info-body {
+.secret-info-body,
+.favorite-list-body {
   background-color: #fff;
   border: 1px solid #dedede;
   width: 100%;
+  position: relative;
+  height: 340px;
 }
-.secret-info-body-row {
+.secret-info-body-row,
+.favorite-list-body-row {
   border-bottom: 1px solid #dedede;
   display: flex;
 }
 .secret-info-body-row div {
-  padding: 10px 25px;
+  padding: 14px 25px;
 }
 .secret-info-body-row div:first-child {
   width: 50%;
@@ -34,17 +38,71 @@
   color: #bababa !important;
   font-weight: 400 !important;
 }
-
-.secret-info-body-bottom {
+/* Bottom part*/
+.secret-info-body-bottom,
+.favorite-list-body-bottom {
+  position: absolute;
   text-align: center;
-  padding: 10px 0;
-  font-size: 14px;
+  padding: 21px 0;
+  font-size: 13px;
+  border-top: 1px solid #f1f1f1;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-.secret-info-body-bottom a {
+.secret-info-body-bottom a,
+.favorite-list-body-bottom a {
   color: #1ca2bd !important;
   border-bottom: dashed 1px #1ca2bd;
 }
-.secret-info-body-bottom i {
+.secret-info-body-bottom i,
+.favorite-list-body-bottom i {
   color: #1ca2bd !important;
   padding-left: 5px;
+}
+
+/* favorite-list part*/
+.favorite-list-body {
+  width: 130%;
+}
+.favorite-list-body-col {
+  display: flex;
+  font-size: 13px;
+  padding-top: 10px;
+}
+.favorite-list-body-col-img {
+  flex: 0 0 15%;
+  max-width: 15%;
+  display: flex;
+  justify-content: center;
+}
+.favorite-list-body-col-img img {
+  max-width: 80%;
+  max-height: 80%;
+}
+.favorite-list-body-col-detail {
+  flex: 0 0 73%;
+  max-width: 73%;
+  margin-top: 4px;
+  margin-right: 7px;
+}
+.favorite-list-body-col-detail p:last-child {
+  margin-top: -20px;
+  color: #fb3449 !important;
+}
+.favorite-list-body-col button {
+  font-size: 17px;
+  flex: 0 0 10%;
+  max-width: 10%;
+  height: 30px;
+  margin-top: 20px;
+  background-color: transparent;
+}
+.favorite-list-body-col button:active i {
+  color: #fb3449 !important;
+}
+@media screen and (max-width: 860px) {
+  .favorite-list-body {
+    width: 100%;
+  }
 }
