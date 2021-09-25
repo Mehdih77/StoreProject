@@ -1,0 +1,118 @@
+/* NavProfilePage */
+.nav-profile-page {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ededed;
+  border-radius: 10px;
+}
+/* NavProfilePage TOP */
+.nav-profile-page-top-info {
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.nav-profile-page-top-info::after {
+  content: "";
+  position: absolute;
+  width: 92%;
+  height: 1px;
+  background-color: #ededed;
+  bottom: -10%;
+  right: 4%;
+}
+.nav-profile-page-img {
+  position: relative;
+}
+.nav-profile-page-img img {
+  width: 55px;
+  height: 55px;
+  margin: 10px;
+  border: 1px solid #c0c2c5;
+  border-radius: 50%;
+}
+.nav-profile-page-img::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 62px;
+  bottom: 5%;
+  right: 45%;
+  background-color: #c0c2c5;
+}
+.nav-profile-page-top-info div p:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 13px;
+  margin-bottom: 0px;
+}
+.nav-profile-page-number {
+  font-size: 14px;
+  color: #81858b !important;
+  margin-bottom: 10px;
+}
+.nav-profile-page-top-active-money {
+  margin-top: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.nav-profile-page-top-active-money::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c0c2c5;
+  right: -44px;
+  top: 35%;
+}
+.nav-profile-page-top-digiclub {
+  margin-top: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.nav-profile-page-top-digiclub::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c0c2c5;
+  right: -44px;
+  top: 35%;
+}
+.nav-profile-page-top-digiclub span {
+  padding-right: 30px;
+}
+
+/* NavProfilePage BOTTOM */
+.nav-profile-page-bottom {
+  font-size: 16px;
+}
+.nav-profile-page-bottom div {
+  padding: 12px 20px;
+}
+.nav-profile-page-bottom div i {
+  font-size: 19px;
+  vertical-align: -3px;
+  padding-left: 10px;
+}
+.nav-profile-page-bottom div:not(last-child):hover a,
+.nav-profile-page-bottom div:not(last-child):hover i {
+  color: #0fabc6!important;
+}
+.nav-profile-page-bottom-my-order {
+  margin-top: -28px;
+}
+
+.nav-profile-page-bottom div:hover {
+  background-color: #f0f0f13b;
+  cursor: pointer;
+}
+.nav-profile-page-bottom-logout:hover {
+  border-radius: 0 0 10px 10px;
+  color: #b2001a !important;
+}
+.nav-profile-page-bottom-logout:hover a,
+.nav-profile-page-bottom-logout:hover i {
+  color: #b2001a !important;
+}

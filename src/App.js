@@ -12,6 +12,7 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import SignupPage from './Pages/SignupPage/SignupPage';
 import ForgotPassPage from './Pages/ForgotPassPage/ForgotPassPage';
 import PhonePage from './Pages/PhonePage/PhonePage';
+import ProfilePage from './Pages/ProfilePage/ProfilePage';
 
 export default function App() {
 
@@ -30,6 +31,9 @@ export default function App() {
         <Layout>
             <Route path='/' exact>
                 <HomePage/>
+            </Route>
+            <Route path='/profile' exact>
+                <ProfilePage/>
             </Route>
             <Route exact path='/phones'>
                 <PhonePage />

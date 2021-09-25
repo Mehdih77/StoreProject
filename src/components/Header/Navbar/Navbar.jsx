@@ -56,7 +56,7 @@ export default function Navbar() {
           </div>
           <div className={openSubMenu ? "user-profile-sub-menu d-block" : "user-profile-sub-menu d-none"}>
             <div className='user-profile-sub-menu-top'>
-              <Link>
+              <Link to='/profile'>
               <div className='user-profile-sub-menu-top-info1'>
                 <div className='user-profile-sub-menu-img'>
                   <img src="/image/user-profile-img.png" alt="userphoto" />
