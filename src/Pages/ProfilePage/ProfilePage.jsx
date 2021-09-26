@@ -7,7 +7,7 @@ export default function ProfilePage() {
         <section className='ProfilePage'>
             <div className="container">
                 <div className="row">
-                    <aside className="NavProfilePage col-md-3 mt-3">
+                    <aside className="col-md-3 mt-3">
                         <NavProfilePage/>
                     </aside>
                     <div className="col-md-9 mt-3">

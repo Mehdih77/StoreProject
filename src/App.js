@@ -13,6 +13,7 @@ import SignupPage from './Pages/SignupPage/SignupPage';
 import ForgotPassPage from './Pages/ForgotPassPage/ForgotPassPage';
 import PhonePage from './Pages/PhonePage/PhonePage';
 import ProfilePage from './Pages/ProfilePage/ProfilePage';
+import FavoriteList from './Pages/FavoriteList/FavoriteList';
 
 export default function App() {
 
@@ -34,6 +35,9 @@ export default function App() {
             </Route>
             <Route path='/profile' exact>
                 <ProfilePage/>
+            </Route>
+            <Route path='/profile/favorite' exact>
+                <FavoriteList/>
             </Route>
             <Route exact path='/phones'>
                 <PhonePage />

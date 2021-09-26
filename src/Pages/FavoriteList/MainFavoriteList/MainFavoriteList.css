@@ -1,0 +1,75 @@
+.MainFavoriteList {
+  background-color: #fff;
+  width: 120%;
+}
+/* Tabs */
+.favoritelist-nav-tabs li a {
+  border: none !important;
+  font-size: 15px;
+}
+.activeTab {
+  border-bottom: 3px solid #ef394e !important;
+}
+.activeTab a {
+  color: #ef394e !important;
+}
+/* Tab Content */
+.MainFavoriteList .tab-content div {
+  padding: 10px;
+}
+.favoritelist-detail {
+  display: flex;
+  position: relative;
+  margin-bottom: -18px;
+}
+.favoritelist-detail::after {
+  content: "";
+  position: absolute;
+  bottom: 14%;
+  width: 95%;
+  height: 1px;
+  background-color: #dfdfdf;
+}
+.favoritelist-detail img {
+  width: 30%;
+  height: 90%;
+}
+.favoritelist-detail div {
+  margin-top: -10px;
+  font-size: 14px;
+}
+.favoritelist-detail-name {
+  display: flex;
+}
+.favoritelist-detail-name button {
+  background-color: transparent;
+  height: 30px;
+  margin-left: -20px;
+  font-size: 16px;
+}
+.favoritelist-detail-name button:active i {
+  color: #fb3449 !important;
+}
+.favoritelist-detail-price {
+  margin-top: -20px !important;
+  margin-bottom: -37px;
+  font-weight: 700;
+}
+.favoritelist-detail-link {
+  font-size: 13px;
+  margin-right: 20px;
+  color: #12b4cd !important;
+}
+.favoritelist-detail-link i {
+  font-size: 9px;
+  margin-right: 4px;
+  color: #12b4cd !important;
+  transform: rotate(90deg);
+  vertical-align: -1px;
+}
+
+@media screen and (max-width: 950px) {
+  .MainFavoriteList {
+    width: 100%;
+  }
+}

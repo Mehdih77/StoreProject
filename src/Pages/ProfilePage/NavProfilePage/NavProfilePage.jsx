@@ -39,7 +39,7 @@ export default function NavProfilePage() {
             <Link to='/shopbasket' href="/shopbasket"><i className="fas fa-file-invoice"></i>سفارش های من</Link>
           </div>
           <div>
-            <a href="#!"><i className="far fa-heart"></i>لیست ها</a>
+            <Link to='/profile/favorite' href="/profile/favorite"><i className="far fa-heart"></i>لیست ها</Link>
           </div>
           <div>
             <a href="#!"><i className="far fa-comment"></i>نظرات</a>
@@ -57,7 +57,7 @@ export default function NavProfilePage() {
             <a href="#!"><i className="far fa-clock"></i>بازدید های اخیر</a>
           </div>
           <div>
-            <a href="#!"><i className="far fa-user"></i>اطلاعات حساب</a>
+            <Link to='/profile' href="/profile"><i className="far fa-user"></i>اطلاعات حساب</Link>
           </div>
           <div onClick={hanldeLogOut} className='nav-profile-page-bottom-logout'>
             <Link href='/' to="/"><i className="fas fa-sign-out-alt"></i>خروج</Link>

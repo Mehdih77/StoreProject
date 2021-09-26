@@ -8,7 +8,7 @@ export default function MainProfilePage() {
 
     return (
         <>
-        <div className='container-fluid'>
+        <section>
             <div className="row p-1">
                 <div className="col-md-6">
                     <div className='secret-info-header'>
@@ -111,13 +111,13 @@ export default function MainProfilePage() {
                         </div>  
                         
                         <div className='favorite-list-body-bottom'>
-                            <Link><i className="fas fa-pencil-alt"></i>مشاهده و ویرایش لیست مورد علاقه</Link>
+                            <Link to='/profile/favorite' href='/profile/favorite'><i className="fas fa-pencil-alt"></i>مشاهده و ویرایش لیست مورد علاقه</Link>
                         </div>
                     </div></div>
             </div>
-        </div>
+        </section>
         <h5 className='tabel-orders-title'>آخرین سفارش ها</h5>
-        <div className="container-fluid tabel-orders my-3">
+        <div className="container tabel-orders my-3">
             <div className="row tabel-orders-header">
                 <div className="col-1">#</div>
                 <div className="col-2">شماره سفارش</div>
