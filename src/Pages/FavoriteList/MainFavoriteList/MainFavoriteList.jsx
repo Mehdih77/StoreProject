@@ -66,8 +66,8 @@ export default function MainFavoriteList() {
                 aria-labelledby="home-tab">
                 <div className="row">
 
-                    <div className='empty-favoritelist'>
-                        <img src="/image/empty-favoritelist.svg" alt="empty-favoritelist" />
+                    <div className='empty-list'>
+                        <img src="/image/empty-favoritelist.svg" alt="empty-list" />
                         <p>لیست علاقه‌مندی‌های شما خالی است.</p>
                     </div>
 
@@ -163,133 +163,10 @@ export default function MainFavoriteList() {
                 id="contact"
                 role="tabpanel"
                 aria-labelledby="contact-tab">
-                <p className='vote-tap-title'>امتیاز و دیدگاه کاربران
-                </p>
-                <p className='vote-tap-name'></p>
-                <div className='vote-tab-body row'>
-                    <div className='col-md-3 vote-tab-right mb-4'>
-                        <div className='vota-tab-right-main'>
-                            <p>کیفیت ساخت</p>
-                            <div className="progress">
-                                <div
-                                    className="progress-bar w-75"
-                                    role="progressbar"
-                                    aria-valuenow="75"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                            <span className='progress-percent progress-percent-custom-1'>75%</span>
-                        </div>
-                        <div className='vota-tab-right-main'>
-                            <p>
-                                ارزش خرید به نسبت قیمت</p>
-                            <div className="progress">
-                                <div
-                                    className="progress-bar w-50"
-                                    role="progressbar"
-                                    aria-valuenow="75"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                            <span className='progress-percent progress-percent-custom-2'>50%</span>
-                        </div>
-                        <div className='vota-tab-right-main'>
-                            <p>
-                                نوآوری</p>
-                            <div className="progress">
-                                <div
-                                    className="progress-bar w-25"
-                                    role="progressbar"
-                                    aria-valuenow="75"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                            <span className='progress-percent progress-percent-custom-3'>25%</span>
-                        </div>
-                        <div className='vota-tab-right-main'>
-                            <p>
-                                امکانات و قابلیت ها</p>
-                            <div className="progress">
-                                <div
-                                    className="progress-bar w-50"
-                                    role="progressbar"
-                                    aria-valuenow="75"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                            <span className='progress-percent progress-percent-custom-4'>50%</span>
-                        </div>
-                        <div className='vota-tab-right-main'>
-                            <p>
-                                سهولت استفاده
-                            </p>
-                            <div className="progress">
-                                <div
-                                    className="progress-bar w-75"
-                                    role="progressbar"
-                                    aria-valuenow="75"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                            <span className='progress-percent progress-percent-custom-5'>75%</span>
-                        </div>
-                        <div className='vota-tab-right-main'>
-                            <p>
-                                طراحی و ظاهر</p>
-                            <div className="progress">
-                                <div
-                                    className="progress-bar w-100"
-                                    role="progressbar"
-                                    aria-valuenow="75"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                            <span className='progress-percent progress-percent-custom-6'>100%</span>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div className='col-md-8 vote-tab-left'>
-                        <ul className="list-unstyled">
-                            <li className="media">
-                                <img src="/image/user-1.png" className="mr-3" alt="user-img"/>
-                                <div className="media-body">
-                                    <h5 className="mt-0 mb-1">آقا</h5>
-                                    عالیییییی اصلا هم سنگین نیست خیلی خوش دست هست تو پکیج هندزفری نبود گلس نازکی روش
-                                    بود و گارد ژله ای
-                                </div>
-                            </li>
-                            <li className="media my-4">
-                                <img src="/image/user-2.png" className="mr-3" alt="user-img"/>
-                                <div className="media-body">
-                                    <h5 className="mt-0 mb-1">خانم</h5>
-                                    واقعا همه چی عالیه و بنظرم رنگ سیاهش خیلی زیباست چون از ترکیب چند رنگه سبز بنفش
-                                    نارنجی من 5600خریدم داخل فروش ویژه شنبه سفارش دادم سه شنبه رسید که عالیه در کل
-                                    بخرید ارزش خرید بالایی داره
-                                </div>
-                            </li>
-                            <li className="media">
-                                <img src="/image/user-1.png" className="mr-3" alt="user-img"/>
-                                <div className="media-body">
-                                    <h5 className="mt-0 mb-1">کاربر سایت</h5>
-                                    این گوشی رو با گارانتی تسک میران و فروشنده مرکز تامین کالای دیجیتال ایران گرفتم،
-                                    با توجه به تحقیقاتی که در مورد این گوشی داشتم نگرانی من بیشتر از پک گلوبال و رام
-                                    گلوبال بود که خوشبختانه همونطور که میخواستم گلوبالش بدستم رسید هنوز فرصت تستش رو
-                                    پیدا نکردم بعد از تست نظرات دقیق رو اعلام می کنم
-                                </div>
-                            </li>
-                            <li className="media my-4">
-                                <img src="/image/user-2.png" className="mr-3" alt="user-img"/>
-                                <div className="media-body">
-                                    <h5 className="mt-0 mb-1">کاربر مهمان</h5>
-                                    من یه هفته س این گوشی رو خریدم . گوشی خیلی خوبیه . ظاهرش خوشگل و شیکه ، رابط
-                                    کاربری ش هم اپدیت داد و ورژن ۱۲.۵ شد . سرعتش عالیه و مشکل خاصی ندیدم . در مورد
-                                    اینکه بعضی از دوستان گفتن موقع استفاده از اسپیکر پشت گوشی لرزش داره درسته ، که
-                                    اونم بخاطر اسپیکر بسیار قدرتمندی هست که داره در حدی که انگار یه اسپیکر بلوتوثی
-                                    دارین استفاده میکنین که البته اون لرزش تو حداکثر ولوم اتفاق میفته . تو ولوم عادی
-                                    چیزی حس نمیشه . در کل من که خیلی راضیم .
-                                </div>
-                            </li>
-                        </ul>
+                <div className="row">
+                    <div className='empty-list'>
+                        <img src="/image/empty-noticeslist-detail.svg" alt="emptylist" />
+                        <p>کالایی جهت اطلاع‌رسانی وجود ندارد.</p>
                     </div>
                 </div>
             </div>
