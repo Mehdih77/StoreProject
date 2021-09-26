@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { removeFavorite, selectAllFavorite } from '../../../redux/favoriteSlice';
 import './MainFavoriteList.css';
 
 export default function MainFavoriteList() {
@@ -21,6 +23,13 @@ export default function MainFavoriteList() {
         setActiveTabA(false);
         setActiveTabB(false);
         setActiveTabC(true);
+    }
+
+    const allFavoriteItem = useSelector(selectAllFavorite);
+    const dispatch = useDispatch();
+
+    const handleRemoveFavorite = (id) => {
+        dispatch(removeFavorite(id))
     }
 
     return (
@@ -65,57 +74,27 @@ export default function MainFavoriteList() {
                 role="tabpanel"
                 aria-labelledby="home-tab">
                 <div className="row">
-
-                    <div className='empty-list'>
+                    {allFavoriteItem.length > 0 ? allFavoriteItem.map(item => (
+                        <div className='col-md-6 favoritelist-detail'>
+                            <img className='img-fluid' src={item.img} alt="favorite digikala" />
+                            <div>
+                                <div>
+                                    <div className='favoritelist-detail-name'>
+                                        <p>{item.name}</p>
+                                        <button onClick={() => handleRemoveFavorite(item.id)}><i className="far fa-trash-alt"></i></button>
+                                    </div>
+                                    <div className='favoritelist-detail-price'>
+                                        <p>{item.price} تومان</p>
+                                    </div>
+                                </div>
+                            <Link to={`/phones/${item.id}`} className='favoritelist-detail-link'>مشاهده محصول<i className='fas fa-chevron-down'></i></Link>
+                            </div>
+                        </div>
+                    )) 
+                    : <div className='empty-list'>
                         <img src="/image/empty-favoritelist.svg" alt="empty-list" />
                         <p>لیست علاقه‌مندی‌های شما خالی است.</p>
-                    </div>
-
-                {/* <div className='col-md-6 favoritelist-detail'>
-                    <img className='img-fluid' src="/image/laptop1.jpg" alt="favorite digikala" />
-                    <div>
-                        <div>
-                            <div className='favoritelist-detail-name'>
-                                <p>لپ تاپ 15 اینچی ایسوس مدل VivoBook R521JA-BQ083</p>
-                                <button><i className="far fa-trash-alt"></i></button>
-                            </div>
-                            <div className='favoritelist-detail-price'>
-                                <p>13,990,000 تومان</p>
-                            </div>
-                        </div>
-                        <Link className='favoritelist-detail-link'>مشاهده محصول<i className='fas fa-chevron-down'></i></Link>
-                    </div>
-                </div>
-                <div className='col-md-6 favoritelist-detail'>
-                    <img className='img-fluid' src="/image/laptop1.jpg" alt="favorite digikala" />
-                    <div>
-                        <div>
-                            <div className='favoritelist-detail-name'>
-                                <p>لپ تاپ 15 اینچی ایسوس مدل VivoBook R521JA-BQ083</p>
-                                <button><i className="far fa-trash-alt"></i></button>
-                            </div>
-                            <div className='favoritelist-detail-price'>
-                                <p>13,990,000 تومان</p>
-                            </div>
-                        </div>
-                        <Link className='favoritelist-detail-link'>مشاهده محصول<i className='fas fa-chevron-down favoritelist-detail-icon'></i></Link>
-                    </div>
-                </div>
-                <div className='col-md-6 favoritelist-detail'>
-                    <img className='img-fluid' src="/image/laptop1.jpg" alt="favorite digikala" />
-                    <div>
-                        <div>
-                            <div className='favoritelist-detail-name'>
-                                <p>لپ تاپ 15 اینچی ایسوس مدل VivoBook R521JA-BQ083</p>
-                                <button><i className="far fa-trash-alt"></i></button>
-                            </div>
-                            <div className='favoritelist-detail-price'>
-                                <p>13,990,000 تومان</p>
-                            </div>
-                        </div>
-                        <Link className='favoritelist-detail-link'>مشاهده محصول<i className='fas fa-chevron-down favoritelist-detail-icon'></i></Link>
-                    </div>
-                </div> */}
+                    </div>}
                 </div>
             </div>
             <div

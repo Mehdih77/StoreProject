@@ -474,11 +474,6 @@
   ],
   "comments": [
     {
-      "productId": "13",
-      "commentText": "ddd",
-      "id": 2
-    },
-    {
       "productId": "12",
       "commentText": "nice",
       "id": 3
@@ -492,6 +487,11 @@
       "productId": "24",
       "commentText": "helloooooo",
       "id": 5
+    },
+    {
+      "productId": "16",
+      "commentText": "iphone",
+      "id": 6
     }
   ]
 }

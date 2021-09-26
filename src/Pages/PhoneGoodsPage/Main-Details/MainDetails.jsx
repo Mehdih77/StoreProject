@@ -13,8 +13,9 @@ import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
 import SwiperCore, {Navigation, Thumbs} from 'swiper/core';
-import { useDispatch} from "react-redux";
-import { addToBasket} from "../../../redux/shopSlice";
+import { useDispatch , useSelector } from "react-redux";
+import { addToBasket } from "../../../redux/shopSlice";
+import { addFavorite, removeFavorite, selectAllFavorite, selectAllFavoriteIds } from "../../../redux/favoriteSlice";
 SwiperCore.use([Navigation, Thumbs]);
 
 const styles = (theme) => ({
@@ -60,7 +61,7 @@ const DialogContent = withStyles((theme) => ({
     }
 }))(MuiDialogContent);
 
-export default function MainDetails({getCurrentProducts}) {
+export default function MainDetails({getCurrentProducts,id}) {
 
     // gallery modal
     const [thumbsSwiper,setThumbsSwiper] = useState(null);
@@ -73,8 +74,13 @@ export default function MainDetails({getCurrentProducts}) {
     };
 
     const dispatch = useDispatch();
+    // const fff = useSelector(selectAllFavorite)
     const hanldeAddItemToBasket = (items) => {
         dispatch(addToBasket(items));
+    }
+
+    const handleAddToFavorite = () => {
+        dispatch(addFavorite(getCurrentProducts))
     }
 
     const itemPrice = getCurrentProducts && Number((getCurrentProducts.price).toFixed(3)).toLocaleString().split(/\s/).join(',');
@@ -86,7 +92,7 @@ export default function MainDetails({getCurrentProducts}) {
                     <div className='col-6 col-md-1 goodspage-icons'>
                         <ul>
                             <li>
-                                <i title='افزودن به علاقه مندی ها' className="far fa-heart"></i>
+                                <i onClick={handleAddToFavorite}  title='افزودن به علاقه مندی ها' className="far fa-heart"></i>
                             </li>
                             <li>
                                 <i title='اشتراک گذاری' className="fas fa-share-alt"></i>

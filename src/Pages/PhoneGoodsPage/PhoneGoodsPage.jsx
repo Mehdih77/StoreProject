@@ -22,7 +22,7 @@ export default function PhoneGoodsPage() {
 
     return (
         <>
-            <MainDetails getCurrentProducts={getCurrentProducts} />
+            <MainDetails getCurrentProducts={getCurrentProducts} id={id} />
             <MoreDetails getCurrentProducts={getCurrentProducts} id={id} />
         </>
     )
