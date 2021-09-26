@@ -65,7 +65,13 @@ export default function MainFavoriteList() {
                 role="tabpanel"
                 aria-labelledby="home-tab">
                 <div className="row">
-                <div className='col-md-6 favoritelist-detail'>
+
+                    <div className='empty-favoritelist'>
+                        <img src="/image/empty-favoritelist.svg" alt="empty-favoritelist" />
+                        <p>لیست علاقه‌مندی‌های شما خالی است.</p>
+                    </div>
+
+                {/* <div className='col-md-6 favoritelist-detail'>
                     <img className='img-fluid' src="/image/laptop1.jpg" alt="favorite digikala" />
                     <div>
                         <div>
@@ -109,7 +115,7 @@ export default function MainFavoriteList() {
                         </div>
                         <Link className='favoritelist-detail-link'>مشاهده محصول<i className='fas fa-chevron-down favoritelist-detail-icon'></i></Link>
                     </div>
-                </div>
+                </div> */}
                 </div>
             </div>
             <div
@@ -117,58 +123,39 @@ export default function MainFavoriteList() {
                 id="profile"
                 role="tabpanel"
                 aria-labelledby="profile-tab">
-                <p className='goods-detail-tap-title'>نقد و بررسی اجمالی</p>
-                <p className='goods-detail-tap-name'></p>
-                <div className='row goods-detail-tap-body mt-4'>
-                    <div className='col-md-3'>
-                        <p className='goods-detail-tap-body-title'>مشخصات کلی</p>
-                    </div>
-                    <div className='col-md-8'>
-                        <div className='goods-detail-tap-body-table'>
-                            <ul>
-                                <li className='goods-detail-tap-body-table-list'>
-                                    <p className='goods-detail-tap-body-table-list-title'>ابعاد</p>
-                                    <p className='goods-detail-tap-body-table-list-text'>165.3x76.8x9.4 میلی‌متر</p>
-                                </li>
-                                <li className='goods-detail-tap-body-table-list'>
-                                    <p className='goods-detail-tap-body-table-list-title'>توضیحات سیم کارت</p>
-                                    <p className='goods-detail-tap-body-table-list-text'>سایز نانو (8.8 × 12.3 میلی‌متر)
-                                    </p>
-                                </li>
-                                <li className='goods-detail-tap-body-table-list'>
-                                    <p className='goods-detail-tap-body-table-list-title'>وزن</p>
-                                    <p className='goods-detail-tap-body-table-list-text'>215 گرم
-                                    </p>
-                                </li>
-                                <li className='goods-detail-tap-body-table-list'>
-                                    <p className='goods-detail-tap-body-table-list-title'>ساختار بدنه</p>
-                                    <p className='goods-detail-tap-body-table-list-text'>قاب پشت از جنس پلاستیک
-                                    </p>
-                                </li>
-                                <li className='goods-detail-tap-body-table-list'>
-                                    <p className='goods-detail-tap-body-table-list-title'>ویژگی‌های خاص</p>
-                                    <p className='goods-detail-tap-body-table-list-text'>
-                                        مجهز به حس‌گر اثرانگشت , مناسب عکاسی , مناسب عکاسی سلفی , مناسب بازی , دارای
-                                        بدنه مقاوم</p>
-                                </li>
-                                <li className='goods-detail-tap-body-table-list'>
-                                    <p className='goods-detail-tap-body-table-list-title'>تعداد سیم کارت</p>
-                                    <p className='goods-detail-tap-body-table-list-text'>دو سیم کارت
-                                    </p>
-                                </li>
-                                <li className='goods-detail-tap-body-table-list'>
-                                    <p className='goods-detail-tap-body-table-list-title'>زمان معرفی</p>
-                                    <p className='goods-detail-tap-body-table-list-text'>
-                                        22 مارس 2021</p>
-                                </li>
-                                <li className='goods-detail-tap-body-table-list'>
-                                    <p className='goods-detail-tap-body-table-list-title'>شیار مجزا برای کارت حافظه</p>
-                                    <p className='goods-detail-tap-body-table-list-text'>ندارد
-                                    </p>
-                                </li>
-                            </ul>
+                <div className='generallist-detail-top'>
+                    <p>اینجا می‌توانید مجموعه‌ای از محصولات را با هر کسی به اشتراک بگذارید.</p>
+                    <button>
+                        <span>+</span>
+                        لیست جدید
+                    </button>
+                </div>
+                <div className='generallist-detail-middle'>
+                    <img className='img-fluid mt-3' src="/image/generallist-middle.png" alt="generallist idea list" />
+                    <p>هنوز هیچ لیستی نساخته‌اید!</p>
+                    <h5>برای شروع میتوانید از این ایده‌ها استفاده کنید:</h5>
+                </div>
+                <div className="generallist-detail-bottom">
+                        <div className="generallist-detail-bottom-content">
+                            <img className='img-fluid' src="/image/generallist-bottom-1.svg" alt="generallist-detail-bottom-content" />
+                            <p>پیشنهاد به دوستان</p>
+                            <span>کالا‌های مورد‌ نظرتان را به دوستان پیشنهاد کنید. </span>
                         </div>
-                    </div>
+                        <div className="generallist-detail-bottom-content">
+                            <img className='img-fluid' src="/image/generallist-bottom-2.svg" alt="generallist-detail-bottom-content" />
+                            <p>خرید روزانه</p>
+                            <span>خریدهای روزانه و مورد نیاز خانه را یکجا ثبت کنید.</span>
+                        </div>
+                        <div className="generallist-detail-bottom-content">
+                            <img className='img-fluid' src="/image/generallist-bottom-3.svg" alt="generallist-detail-bottom-content" />
+                            <p>هدیه ها</p>
+                            <span>برای هدیه خریدن، از قبل ایده هایتان را جمع کنید.</span>
+                        </div>
+                        <div className="generallist-detail-bottom-content">
+                            <img className='img-fluid' src="/image/generallist-bottom-4.svg" alt="generallist-detail-bottom-content" />
+                            <p>آرزو ها</p>
+                            <span>کالاهایی که دوست دارید در آینده داشته باشید.</span>
+                        </div>
                 </div>
             </div>
             <div

@@ -17,6 +17,7 @@
 .MainFavoriteList .tab-content div {
   padding: 10px;
 }
+/* --------------------------- favoritelist --------------------------- */
 .favoritelist-detail {
   display: flex;
   position: relative;
@@ -67,9 +68,92 @@
   transform: rotate(90deg);
   vertical-align: -1px;
 }
+.empty-favoritelist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 470px;
+}
+.empty-favoritelist p {
+  color: #000 !important;
+  font-size: 17px;
+  padding-top: 5px;
+}
+
+/* --------------------------- generallist --------------------------- */
+.generallist-detail-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 13px;
+}
+.generallist-detail-top button {
+  background-color: #ef394e;
+  color: #fff !important;
+  padding: 7px 20px;
+  border-radius: 10px;
+}
+.generallist-detail-top button span {
+  color: #fff !important;
+  padding-left: 5px;
+}
+.generallist-detail-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.generallist-detail-middle img {
+  width: 160px;
+}
+.generallist-detail-middle p {
+  color: #000 !important;
+  font-size: 16px;
+  padding-top: 5px;
+}
+.generallist-detail-middle h5 {
+  color: #81858b !important;
+  font-size: 13px;
+  padding-top: 25px;
+  margin-bottom: 0px;
+}
+.generallist-detail-bottom {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.generallist-detail-bottom-content {
+  background-color: rgba(70, 150, 227, 0.05);
+  padding: 20px 40px !important;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+}
+.generallist-detail-bottom-content p {
+  color: #000 !important;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.generallist-detail-bottom-content span {
+  color: #81858b !important;
+}
 
 @media screen and (max-width: 950px) {
   .MainFavoriteList {
     width: 100%;
+  }
+  .generallist-detail-bottom-content {
+    background-color: rgba(70, 150, 227, 0.05);
+    padding: 10px !important;
+    width: 45%;
+    margin: 10px 0;
   }
 }
