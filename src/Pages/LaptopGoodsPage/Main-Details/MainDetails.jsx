@@ -15,6 +15,8 @@ import "swiper/components/thumbs/thumbs.min.css";
 import SwiperCore, {Navigation, Thumbs} from 'swiper/core';
 import { useDispatch} from "react-redux";
 import { addToBasket} from "../../../redux/shopSlice";
+import { useSelector } from "react-redux";
+import { addFavorite, removeFavorite, selectAllFavorite } from "../../../redux/favoriteSlice";
 SwiperCore.use([Navigation, Thumbs]);
 
 const styles = (theme) => ({
@@ -77,6 +79,17 @@ export default function MainDetails({getCurrentProducts}) {
         dispatch(addToBasket(items));
     }
 
+    const allFavorite = useSelector(selectAllFavorite)
+    // add & remove favorite item 
+    const exist = getCurrentProducts && allFavorite.findIndex(item => item.id === getCurrentProducts.id);
+    const handleFavorite = () => {
+        if (exist >= 0) {
+            dispatch(removeFavorite(getCurrentProducts.id))
+        } else {
+            dispatch(addFavorite(getCurrentProducts))
+        }
+    }
+
     const itemPrice = getCurrentProducts && Number((getCurrentProducts.price).toFixed(3)).toLocaleString().split(/\s/).join(',');
 
     return (
@@ -86,7 +99,9 @@ export default function MainDetails({getCurrentProducts}) {
                     <div className='col-6 col-md-1 goodspage-icons'>
                         <ul>
                             <li>
-                                <i title='افزودن به علاقه مندی ها' className="far fa-heart"></i>
+                                {exist >= 0 ? <i onClick={handleFavorite} class="fas fa-heart active-favorite"></i>
+                                : <i onClick={handleFavorite} title='افزودن به علاقه مندی ها' className="far fa-heart"></i>
+                                }
                             </li>
                             <li>
                                 <i title='اشتراک گذاری' className="fas fa-share-alt"></i>

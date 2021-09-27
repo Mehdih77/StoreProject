@@ -13,9 +13,9 @@ import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
 import SwiperCore, {Navigation, Thumbs} from 'swiper/core';
-import { useDispatch , useSelector } from "react-redux";
+import { useDispatch, useSelector  } from "react-redux";
 import { addToBasket } from "../../../redux/shopSlice";
-import { addFavorite, removeFavorite, selectAllFavorite, selectAllFavoriteIds } from "../../../redux/favoriteSlice";
+import { addFavorite, removeFavorite, selectAllFavorite} from "../../../redux/favoriteSlice";
 SwiperCore.use([Navigation, Thumbs]);
 
 const styles = (theme) => ({
@@ -74,13 +74,19 @@ export default function MainDetails({getCurrentProducts,id}) {
     };
 
     const dispatch = useDispatch();
-    // const fff = useSelector(selectAllFavorite)
     const hanldeAddItemToBasket = (items) => {
         dispatch(addToBasket(items));
     }
-
-    const handleAddToFavorite = () => {
-        dispatch(addFavorite(getCurrentProducts))
+    
+    const allFavorite = useSelector(selectAllFavorite)
+    // add & remove favorite item 
+    const exist = getCurrentProducts && allFavorite.findIndex(item => item.id === getCurrentProducts.id);
+    const handleFavorite = () => {
+        if (exist >= 0) {
+            dispatch(removeFavorite(getCurrentProducts.id))
+        } else {
+            dispatch(addFavorite(getCurrentProducts))
+        }
     }
 
     const itemPrice = getCurrentProducts && Number((getCurrentProducts.price).toFixed(3)).toLocaleString().split(/\s/).join(',');
@@ -92,7 +98,9 @@ export default function MainDetails({getCurrentProducts,id}) {
                     <div className='col-6 col-md-1 goodspage-icons'>
                         <ul>
                             <li>
-                                <i onClick={handleAddToFavorite}  title='افزودن به علاقه مندی ها' className="far fa-heart"></i>
+                                {exist >= 0 ? <i onClick={handleFavorite} class="fas fa-heart active-favorite"></i>
+                                : <i onClick={handleFavorite} title='افزودن به علاقه مندی ها' className="far fa-heart"></i>
+                                }
                             </li>
                             <li>
                                 <i title='اشتراک گذاری' className="fas fa-share-alt"></i>

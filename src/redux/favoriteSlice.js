@@ -1,23 +1,20 @@
-import {createSlice, createEntityAdapter} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
-const favoriteAdapter = createEntityAdapter();
-
-const initialState = favoriteAdapter.getInitialState();
-
-export const {
-    selectAll: selectAllFavorite,
-    selectIds: selectAllFavoriteIds
-} = favoriteAdapter.getSelectors(state => state.favorite);
+const initialState = {
+    favoriteItems : localStorage.getItem("favoriteList") ? JSON.parse(localStorage.getItem("favoriteList")) : []
+};
 
 const favoriteSlice = createSlice({
     name:'favorite',
     initialState,
     reducers: {
         addFavorite(state,action) {
-            favoriteAdapter.addOne(state,action)
+            state.favoriteItems.push(action.payload)
+            localStorage.setItem("favoriteList", JSON.stringify(state.favoriteItems))
         },
         removeFavorite(state,action) {
-            favoriteAdapter.removeOne(state,action)
+            state.favoriteItems = state.favoriteItems.filter(f => f.id !== action.payload)
+            localStorage.setItem("favoriteList", JSON.stringify(state.favoriteItems))
         }
     }
 });
@@ -28,3 +25,6 @@ export const {
 } = favoriteSlice.actions;
 
 export default favoriteSlice.reducer;
+
+// useSelector
+export const selectAllFavorite = (state) => state.favorite.favoriteItems;

@@ -12,6 +12,9 @@
 .goodspage-icons .fa-heart:hover {
   color: #ef394e !important;
 }
+.goodspage-icons .active-favorite{
+  color: #ef394e!important;
+} 
 .goodspage-icons .fa-share-alt:hover {
   color: #019bc2 !important;
 }

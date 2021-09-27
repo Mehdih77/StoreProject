@@ -1,10 +1,19 @@
+import { useDispatch,useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../../ContextApi/AuthProvider';
+import { removeFavorite, selectAllFavorite } from '../../../redux/favoriteSlice';
 import './MainProfilePage.css';
 
 export default function MainProfilePage() {
 
     const {currentUser} = useAuth();
+
+    const allFavoriteItem = useSelector(selectAllFavorite);
+    const dispatch = useDispatch();
+
+    const handleRemoveFavorite = (id) => {
+        dispatch(removeFavorite(id))
+    }
 
     return (
         <>
@@ -67,49 +76,20 @@ export default function MainProfilePage() {
                         <span>لیست آخرین علاقه‌مندی‌ها</span>
                     </div>
                     <div className='favorite-list-body'>
-                        <div className='favorite-list-body-row'>
+                        {allFavoriteItem.length > 0 ? allFavoriteItem.map(item => (<div className='favorite-list-body-row'>
                             <div className='favorite-list-body-col'>
                                 <div className='favorite-list-body-col-img'>
-                                    <img className='img-fluid' src="/image/laptop2.jpg" alt="favorite-list-img" />
+                                    <img className='img-fluid' src={item.img} alt="favorite-list-img" />
                                 </div>
                                 <div className='favorite-list-body-col-detail'>
                                     <Link>
-                                        <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
-                                        <p>103,000,000 تومان</p>
+                                        <p>{item.name}</p>
+                                        <p>{item.price} تومان</p>
                                     </Link>
                                 </div>
-                                <button><i className="far fa-trash-alt"></i></button>
+                                <button onClick={() => handleRemoveFavorite(item.id)}><i className="far fa-trash-alt"></i></button>
                             </div>
-                        </div>
-                        <div className='favorite-list-body-row'>
-                            <div className='favorite-list-body-col'>
-                                <div className='favorite-list-body-col-img'>
-                                    <img className='img-fluid' src="/image/laptop2.jpg" alt="favorite-list-img" />
-                                </div>
-                                <div className='favorite-list-body-col-detail'>
-                                    <Link>
-                                        <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
-                                        <p>103,000,000 تومان</p>
-                                    </Link>
-                                </div>
-                                <button><i className="far fa-trash-alt"></i></button>
-                            </div>
-                        </div>  
-                        <div className='favorite-list-body-row'>
-                            <div className='favorite-list-body-col'>
-                                <div className='favorite-list-body-col-img'>
-                                    <img className='img-fluid' src="/image/laptop2.jpg" alt="favorite-list-img" />
-                                </div>
-                                <div className='favorite-list-body-col-detail'>
-                                    <Link>
-                                        <p>لپ تاپ 15.6 اينچی دل مدل Alienware M15 R3 GAMING - CTO - K</p>
-                                        <p>103,000,000 تومان</p>
-                                    </Link>
-                                </div>
-                                <button><i className="far fa-trash-alt"></i></button>
-                            </div>
-                        </div>  
-                        
+                        </div>)) : ""} 
                         <div className='favorite-list-body-bottom'>
                             <Link to='/profile/favorite' href='/profile/favorite'><i className="fas fa-pencil-alt"></i>مشاهده و ویرایش لیست مورد علاقه</Link>
                         </div>
