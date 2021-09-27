@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Loading from '../../components/Loader/Loading';
 import { useAuth } from '../../ContextApi/AuthProvider';
 import './ForgotPassPage.css';
 
@@ -27,6 +28,9 @@ export default function ForgotPassPage() {
 
     return (
         <div className="forgotpass-wrapper">
+            {loading && <div className='modal-loading'>
+                <Loading/>
+            </div>}
             <div className="form-wrapper">
                 <form onSubmit={handleResetPassword} className='form-style'>
                     <Link to='/'><img
@@ -38,8 +42,8 @@ export default function ForgotPassPage() {
                     {message && <p className='message-alert'><i className="fas fa-check-circle"></i>{message}</p>}
                     <input type="email" ref={emailRef} placeholder=' ایمیل خود را وارد کنید'/>
                     <button disabled={loading} type='submit' className='form-btn'>بازیابی رمز عبور</button>
-                    <Link to='/login'>
-                        <a href='/login' className='back-to-login'>بازگشت به صفحه ورود</a>
+                    <Link to='/login' href='/login' className='back-to-login'>
+                        بازگشت به صفحه ورود
                     </Link>
                 </form>
             </div>

@@ -67,7 +67,7 @@ export default function MainProfilePage() {
                             </div>
                         </div>
                         <div className='secret-info-body-bottom'>
-                            <Link><i className="fas fa-pencil-alt"></i>ویرایش اطلاعات شخصی</Link>
+                            <Link to='/profile'><i className="fas fa-pencil-alt"></i>ویرایش اطلاعات شخصی</Link>
                         </div>
                     </div>
                 </div>
@@ -76,20 +76,22 @@ export default function MainProfilePage() {
                         <span>لیست آخرین علاقه‌مندی‌ها</span>
                     </div>
                     <div className='favorite-list-body'>
-                        {allFavoriteItem.length > 0 ? allFavoriteItem.slice(0,3).map(item => (<div className='favorite-list-body-row'>
-                            <div className='favorite-list-body-col'>
-                                <div className='favorite-list-body-col-img'>
-                                    <img className='img-fluid' src={item.img} alt="favorite-list-img" />
+                        {allFavoriteItem.length > 0 ? allFavoriteItem.slice(0,3).map(item => (
+                            <div key={item.id} className='favorite-list-body-row'>
+                                <div className='favorite-list-body-col'>
+                                    <div className='favorite-list-body-col-img'>
+                                        <img className='img-fluid' src={item.img} alt="favorite-list-img" />
+                                    </div>
+                                    <div className='favorite-list-body-col-detail'>
+                                        <Link to={`/phones/${item.id}`}>
+                                            <p>{item.name}</p>
+                                            <p>{item.price} تومان</p>
+                                        </Link>
+                                    </div>
+                                    <button onClick={() => handleRemoveFavorite(item.id)}><i className="far fa-trash-alt"></i></button>
                                 </div>
-                                <div className='favorite-list-body-col-detail'>
-                                    <Link>
-                                        <p>{item.name}</p>
-                                        <p>{item.price} تومان</p>
-                                    </Link>
-                                </div>
-                                <button onClick={() => handleRemoveFavorite(item.id)}><i className="far fa-trash-alt"></i></button>
-                            </div>
-                        </div>)) : ""} 
+                            </div>)) 
+                        : ""} 
                         <div className='favorite-list-body-bottom'>
                             <Link to='/profile/favorite' href='/profile/favorite'><i className="fas fa-pencil-alt"></i>مشاهده و ویرایش لیست مورد علاقه</Link>
                         </div>
@@ -163,7 +165,7 @@ export default function MainProfilePage() {
             </div>
             <Link to='/shopbasket' href="/shopbasket" className='row tabel-orders-bottom'>
                     مشاهده لیست سفارش‌ها
-                </Link>
+            </Link>
         </div>
         </>
     )

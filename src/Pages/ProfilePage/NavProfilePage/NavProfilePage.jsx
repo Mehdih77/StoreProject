@@ -21,14 +21,14 @@ export default function NavProfilePage() {
 
   return (
     <>
-      <Link><img className='img-fluid img-invite-friends mb-2' src="/image/invite-friends.jpg" alt="prodile invite-friends" /></Link>
+      <Link to='/profile'><img className='img-fluid img-invite-friends mb-2' src="/image/invite-friends.jpg" alt="prodile invite-friends" /></Link>
       <div className='nav-profile-page'>
         <div className='nav-profile-page-top-info'>
           <div className='nav-profile-page-img'>
             <img src="/image/user-profile-img.png" alt="userphoto" />
           </div>
           <div>
-            <p>{currentUser.email}</p>
+            <p>{currentUser && currentUser.email}</p>
             <p className='nav-profile-page-number' href='#!'>80*****0937</p>
             <div className='nav-profile-page-top-active-money'>فعالسازی کیف پول</div>
             <div className='nav-profile-page-top-digiclub'> دیجی کلاب <span><strong>291</strong> امتیاز</span> </div>

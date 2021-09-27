@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import Loading from '../../components/Loader/Loading';
 import { useAuth } from '../../ContextApi/AuthProvider';
 import './LoginPage.css';
 
@@ -28,6 +29,9 @@ export default function LoginPage() {
 
   return (
     <div className="login-wrapper">
+      {loading && <div className='modal-loading'>
+        <Loading/>
+      </div>}
       <div className="form-wrapper">
         <form onSubmit={handleLogIn} className='form-style'>
         <Link to='/'><img className='digikala-img' src="image/home.svg" alt="home digikala onlineshop" /></Link>
@@ -42,8 +46,8 @@ export default function LoginPage() {
           <input type="email" ref={emailRef} placeholder='ایمیل' required/>
           <input type="password" ref={passwordRef} placeholder='رمز عبور' required/>
           <button disabled={loading} type='submit' className='form-btn'>ورود به آنلاین شاپ</button>
-          <Link to='/signup'><a href='/signup' className='create-account'>حساب کاربری ندارید؟ ساخت حساب کاربری</a></Link>
-          <Link to='/forgotpass'><a className='forgot-password' href="/forgotpass">رمز عبور خود را فراموش کرده اید؟</a></Link>
+          <Link to='/signup' href='/signup' className='create-account'>حساب کاربری ندارید؟ ساخت حساب کاربری</Link>
+          <Link to='/forgotpass' className='forgot-password' href="/forgotpass">رمز عبور خود را فراموش کرده اید؟</Link>
         </form>
       </div>
     </div>

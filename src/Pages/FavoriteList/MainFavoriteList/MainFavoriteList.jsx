@@ -59,8 +59,6 @@ export default function MainFavoriteList() {
     // General List
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
-    // const [newTitle, setNewTitle] = useState('');
-    // const [newText, setNewText] = useState('');
     const allGeneralList = useSelector(selectAllGeneralList)
 
     const handleAddNewList = () => {
@@ -135,7 +133,7 @@ export default function MainFavoriteList() {
                 aria-labelledby="home-tab">
                 <div className="row">
                     {allFavoriteItem.length > 0 ? allFavoriteItem.map(item => (
-                        <div className='col-md-6 favoritelist-detail'>
+                        <div key={item.id} className='col-md-6 favoritelist-detail'>
                             <div className='favoritelist-detail-img'>
                                 <img className='img-fluid' src={item.img} alt="favorite digikala" />
                             </div>
@@ -263,9 +261,6 @@ export default function MainFavoriteList() {
                         </div>
                 </div>
                  </>}
-                
-
-               
             </div>
             <div
                 className="tab-pane fade"
@@ -274,7 +269,7 @@ export default function MainFavoriteList() {
                 aria-labelledby="contact-tab">
                 <div className="row">
                 {allNoticeItem.length > 0 ? allNoticeItem.map(item => (
-                        <div className='col-md-6 noticeslist-detail'>
+                        <div key={item.id} className='col-md-6 noticeslist-detail'>
                             <div className='noticeslist-detail-img'>
                                 <img className='img-fluid' src={item.img} alt="notice digikala" />
                             </div>
