@@ -1,5 +1,5 @@
 import './Style/bootstrap-rtl.min.css';
-import './Style/main-style.css';
+// import './Style/main-style.css';
 import HomePage from './Pages/HomePage/HomePage';
 import PhoneGoodsPage from './Pages/PhoneGoodsPage/PhoneGoodsPage';
 import LaptopGoodsPage from './Pages/LaptopGoodsPage/LaptopGoodsPage';

@@ -15,9 +15,9 @@ button {
   outline: none !important;
   border: none !important;
 }
-button:focus{
+button:focus {
   outline: none;
-  box-shadow: unset!important;
+  box-shadow: unset !important;
 }
 input:focus {
   outline: none !important;
@@ -67,6 +67,11 @@ input:focus {
   }
 }
 /* change style of gallery button of materialUI */
-.MuiButton-root:hover{
-  background-color:unset!important;
+.MuiButton-root:hover {
+  background-color: unset !important;
+}
+
+.Toastify__toast-theme--colored div, .Toastify__close-button svg, .Toastify__toast-icon svg {
+  color: #fff !important;
+  fill: #fff!important;
 }
