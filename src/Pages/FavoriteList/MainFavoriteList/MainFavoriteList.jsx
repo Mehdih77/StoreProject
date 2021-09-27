@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import { Modal } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeFavorite, selectAllFavorite } from '../../../redux/favoriteSlice';
+import { addList, selectAllGeneralList } from '../../../redux/generalListSlice';
 import { removeNotice, selectAllNotice } from '../../../redux/noticeSlice';
 import './MainFavoriteList.css';
 
@@ -38,6 +41,25 @@ export default function MainFavoriteList() {
     // remove Notice items
     const handleRemoveNotice = (id) => {
         dispatch(removeNotice(id))
+    }
+
+    // Modal
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    // General List
+    const [title, setTitle] = useState('');
+    const [text, setText] = useState('');
+    const allGeneralList = useSelector(selectAllGeneralList)
+
+    const handleAddNewList = () => {
+        dispatch(addList({
+            title,
+            text,
+            id: (Math.random() * 100000).toFixed(3)
+        }))
+        setShow(false);
     }
 
     return (
@@ -114,17 +136,53 @@ export default function MainFavoriteList() {
                 aria-labelledby="profile-tab">
                 <div className='generallist-detail-top'>
                     <p>اینجا می‌توانید مجموعه‌ای از محصولات را با هر کسی به اشتراک بگذارید.</p>
-                    <button>
+                    <button onClick={handleShow}>
                         <span>+</span>
                         لیست جدید
                     </button>
+                    <Modal centered show={show} onHide={handleClose}>
+                        <div className='modal-top'>
+                            <p>ساختن لیست</p>
+                            <button onClick={handleClose}>x</button>
+                        </div>
+                        <div className='modal-middle'>
+                            <label>عنوان لیست <span>*</span></label>
+                            <input onChange={(e) => setTitle(e.target.value)} type="text" />
+                            <label>توضیحات</label>
+                            <Form.Control
+                                onChange={(e) => setText(e.target.value)}
+                                as="textarea"
+                                className='modal-input'
+                                style={{ height: '100px', width: "95%"}}
+                                />
+                        </div>
+                        <div className='modal-bottom'>
+                            <button onClick={handleClose}>انصراف</button>
+                            <button onClick={handleAddNewList}>افزودن</button>
+                        </div>
+                    </Modal>
                 </div>
-                <div className='generallist-detail-middle'>
+                {allGeneralList.length > 0 ? 
+                    allGeneralList.map(item => (
+                        <div className='generallist-detail-lists'>
+                    <div className='generallist-detail-lists-content'>
+                        <h5>{item.title}</h5>
+                        <p>{item.text}</p>
+                    </div>
+                    <div className='generallist-detail-lists-btns'>
+                        <button><i className="far fa-edit"></i>ویرایش</button>
+                        <button><i className="fas fa-share-alt"></i>به اشتراک گذاری</button>
+                    </div>
+                </div>
+                    ))
+                 :
+                 <>
+                    <div className='generallist-detail-middle'>
                     <img className='img-fluid mt-3' src="/image/generallist-middle.png" alt="generallist idea list" />
                     <p>هنوز هیچ لیستی نساخته‌اید!</p>
                     <h5>برای شروع میتوانید از این ایده‌ها استفاده کنید:</h5>
                 </div>
-                <div className="generallist-detail-bottom">
+                    <div className="generallist-detail-bottom">
                         <div className="generallist-detail-bottom-content">
                             <img className='img-fluid' src="/image/generallist-bottom-1.svg" alt="generallist-detail-bottom-content" />
                             <p>پیشنهاد به دوستان</p>
@@ -146,9 +204,13 @@ export default function MainFavoriteList() {
                             <span>کالاهایی که دوست دارید در آینده داشته باشید.</span>
                         </div>
                 </div>
+                 </>}
+                
+
+               
             </div>
             <div
-                className="tab-pane fade noticeslist-detail"
+                className="tab-pane fade"
                 id="contact"
                 role="tabpanel"
                 aria-labelledby="contact-tab">

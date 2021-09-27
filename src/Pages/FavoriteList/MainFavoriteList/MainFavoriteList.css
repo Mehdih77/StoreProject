@@ -73,6 +73,9 @@
 }
 
 /* --------------------------- generallist --------------------------- */
+.generallist-detail {
+  min-height: 400px;
+}
 .generallist-detail-top {
   display: flex;
   justify-content: space-between;
@@ -134,6 +137,128 @@
 }
 .generallist-detail-bottom-content span {
   color: #81858b !important;
+}
+/* MODAL */
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 15px 20px 0px 20px;
+  font-size: 16px;
+  color: #000 !important;
+  border-bottom: 1px solid #dee2e6;
+}
+.modal-top p {
+  color: #424750 !important;
+}
+.modal-top button {
+  color: #000 !important;
+  background-color: transparent;
+  font-size: 20px;
+  height: 10px;
+}
+.modal-middle {
+  margin: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 15px;
+}
+.modal-middle span {
+  color: #ef394e !important;
+  font-size: 12px;
+}
+.modal-middle label {
+  color: #424750 !important;
+}
+.modal-middle label:nth-child(3) {
+  margin-top: 20px;
+}
+.modal-middle input {
+  width: 95%;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 12px 8px;
+}
+.modal-middle input:enabled {
+  padding-right: 10px;
+}
+.modal-input {
+  border-radius: 8px !important;
+}
+.modal-input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #ef394e !important;
+}
+.modal-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0 20px 20px;
+}
+.modal-bottom button {
+  padding: 7px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: transparent;
+}
+.modal-bottom button:nth-child(1) {
+  margin-left: 10px;
+  border: 1px solid #81858b !important;
+  color: #81858b !important;
+}
+.modal-bottom button:nth-child(2) {
+  background-color: #ef394e;
+  color: #fff !important;
+}
+.generallist-detail-lists {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid #dfdfdf;
+}
+.generallist-detail-lists-content {
+  width: 80%;
+}
+.generallist-detail-lists-content h5 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.generallist-detail-lists-content p {
+  font-size: 13px;
+}
+.generallist-detail-lists-btns {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  font-size: 13px;
+}
+.generallist-detail-lists-btns button {
+  padding: 8px;
+  border-radius: 10px;
+}
+.generallist-detail-lists-btns button:nth-child(1) {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #ef394e;
+  color: #fff !important;
+}
+.generallist-detail-lists-btns button:nth-child(1) i {
+  color: #fff !important;
+  padding-left: 7px;
+  vertical-align: -1px;
+}
+.generallist-detail-lists-btns button:nth-child(2) {
+  margin-bottom: 20px;
+  border: 1px solid #ef394e !important;
+  background-color: transparent;
+  color: #ef394e !important;
+}
+.generallist-detail-lists-btns button:nth-child(2) i {
+  color: #ef394e !important;
+  padding-left: 7px;
+  vertical-align: -1px;
 }
 
 /* ------------------------------- noitce list ------------------------------ */
