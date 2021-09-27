@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeFavorite, selectAllFavorite } from '../../../redux/favoriteSlice';
+import { removeNotice, selectAllNotice } from '../../../redux/noticeSlice';
 import './MainFavoriteList.css';
 
 export default function MainFavoriteList() {
@@ -26,10 +27,17 @@ export default function MainFavoriteList() {
     }
 
     const allFavoriteItem = useSelector(selectAllFavorite);
+    const allNoticeItem = useSelector(selectAllNotice);
     const dispatch = useDispatch();
 
+    // remove Favorite items
     const handleRemoveFavorite = (id) => {
         dispatch(removeFavorite(id))
+    }
+
+    // remove Notice items
+    const handleRemoveNotice = (id) => {
+        dispatch(removeNotice(id))
     }
 
     return (
@@ -69,7 +77,7 @@ export default function MainFavoriteList() {
         </ul>
         <div className="tab-content" id="myTabContent">
             <div
-                className="tab-pane fade show active favoritelist-tab-pane"
+                className="tab-pane fade show active"
                 id="home"
                 role="tabpanel"
                 aria-labelledby="home-tab">
@@ -145,10 +153,29 @@ export default function MainFavoriteList() {
                 role="tabpanel"
                 aria-labelledby="contact-tab">
                 <div className="row">
-                    <div className='empty-list'>
+                {allNoticeItem.length > 0 ? allNoticeItem.map(item => (
+                        <div className='col-md-6 noticeslist-detail'>
+                            <div className='noticeslist-detail-img'>
+                                <img className='img-fluid' src={item.img} alt="notice digikala" />
+                            </div>
+                            <div className='noticeslist-detail-content'>
+                                <div>
+                                    <div className='noticeslist-detail-name'>
+                                        <Link to={`/phones/${item.id}`}>{item.name}</Link>
+                                        <button onClick={() => handleRemoveNotice(item.id)}><i className="far fa-trash-alt"></i></button>
+                                    </div>
+                                </div>
+                                <div className='noticeslist-detail-alarm'>
+                                    <p><i className="far fa-bell"></i> شگفت‌انگیز شدن</p>
+                                </div>
+                            </div>
+                        </div>
+                    )) 
+                    : <div className='empty-list'>
                         <img src="/image/empty-noticeslist-detail.svg" alt="emptylist" />
                         <p>کالایی جهت اطلاع‌رسانی وجود ندارد.</p>
-                    </div>
+                    </div>}
+                    
                 </div>
             </div>
         </div>

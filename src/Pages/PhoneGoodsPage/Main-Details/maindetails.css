@@ -12,15 +12,18 @@
 .goodspage-icons .fa-heart:hover {
   color: #ef394e !important;
 }
-.goodspage-icons .active-favorite{
-  color: #ef394e!important;
-} 
+.goodspage-icons .active-favorite {
+  color: #ef394e !important;
+}
 .goodspage-icons .fa-share-alt:hover {
   color: #019bc2 !important;
 }
 .goodspage-icons .fa-bell:hover {
   color: #f0ed3c !important;
   animation: ring 7s ease-in-out;
+}
+.goodspage-icons .active-notice {
+  color: #f0ed3c !important;
 }
 .goodspage-icons .fa-chart-bar:hover {
   color: #6bb927 !important;

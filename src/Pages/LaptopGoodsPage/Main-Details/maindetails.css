@@ -22,6 +22,9 @@
   color: #f0ed3c !important;
   animation: ring 7s ease-in-out;
 }
+.goodspage-icons .active-notice {
+  color: #f0ed3c !important;
+}
 .goodspage-icons .fa-chart-bar:hover {
   color: #6bb927 !important;
 }

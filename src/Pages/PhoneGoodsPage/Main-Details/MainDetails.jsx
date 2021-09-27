@@ -16,6 +16,7 @@ import SwiperCore, {Navigation, Thumbs} from 'swiper/core';
 import { useDispatch, useSelector  } from "react-redux";
 import { addToBasket } from "../../../redux/shopSlice";
 import { addFavorite, removeFavorite, selectAllFavorite} from "../../../redux/favoriteSlice";
+import { addNotice, removeNotice, selectAllNotice } from "../../../redux/noticeSlice";
 SwiperCore.use([Navigation, Thumbs]);
 
 const styles = (theme) => ({
@@ -78,14 +79,24 @@ export default function MainDetails({getCurrentProducts,id}) {
         dispatch(addToBasket(items));
     }
     
-    const allFavorite = useSelector(selectAllFavorite)
+    const allFavorite = useSelector(selectAllFavorite);
+    const allNotice = useSelector(selectAllNotice)
     // add & remove favorite item 
-    const exist = getCurrentProducts && allFavorite.findIndex(item => item.id === getCurrentProducts.id);
+    const existFavorite = getCurrentProducts && allFavorite.findIndex(item => item.id === getCurrentProducts.id);
     const handleFavorite = () => {
-        if (exist >= 0) {
+        if (existFavorite >= 0) {
             dispatch(removeFavorite(getCurrentProducts.id))
         } else {
             dispatch(addFavorite(getCurrentProducts))
+        }
+    }
+    // add & remove notice item 
+    const existNotice = getCurrentProducts && allNotice.findIndex(item => item.id === getCurrentProducts.id);
+    const handleNotice = () => {
+        if (existNotice >= 0) {
+            dispatch(removeNotice(getCurrentProducts.id))
+        } else {
+            dispatch(addNotice(getCurrentProducts))
         }
     }
 
@@ -98,7 +109,7 @@ export default function MainDetails({getCurrentProducts,id}) {
                     <div className='col-6 col-md-1 goodspage-icons'>
                         <ul>
                             <li>
-                                {exist >= 0 ? <i onClick={handleFavorite} class="fas fa-heart active-favorite"></i>
+                                {existFavorite >= 0 ? <i onClick={handleFavorite} title='حذف از علاقه مندی ها' class="fas fa-heart active-favorite"></i>
                                 : <i onClick={handleFavorite} title='افزودن به علاقه مندی ها' className="far fa-heart"></i>
                                 }
                             </li>
@@ -106,7 +117,9 @@ export default function MainDetails({getCurrentProducts,id}) {
                                 <i title='اشتراک گذاری' className="fas fa-share-alt"></i>
                             </li>
                             <li>
-                                <i title='اطلاع رسانی' className="far fa-bell"></i>
+                                {existNotice >= 0 ? <i onClick={handleNotice} title='حذف از اطلاع رسانی' class="fas fa-bell active-notice"></i>
+                                : <i onClick={handleNotice} title='افزودن به اطلاع رسانی' className="far fa-bell"></i>
+                                }
                             </li>
                             <li>
                                 <i title='نمودار قیمت' className="far fa-chart-bar"></i>

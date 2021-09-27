@@ -30,13 +30,13 @@
   height: 1px;
   background-color: #dfdfdf;
 }
-.favoritelist-detail-img{
+.favoritelist-detail-img {
   width: 25%;
 }
-.favoritelist-detail-content{
+.favoritelist-detail-content {
   width: 75%;
 }
-.favoritelist-detail div{
+.favoritelist-detail div {
   margin-top: -10px;
   font-size: 14px;
 }
@@ -134,6 +134,51 @@
 }
 .generallist-detail-bottom-content span {
   color: #81858b !important;
+}
+
+/* ------------------------------- noitce list ------------------------------ */
+.noticeslist-detail {
+  display: flex;
+  position: relative;
+}
+.noticeslist-detail::after {
+  content: "";
+  position: absolute;
+  bottom: 8%;
+  width: 95%;
+  height: 1px;
+  background-color: #dfdfdf;
+}
+.noticeslist-detail-img {
+  width: 25%;
+}
+.noticeslist-detail-content {
+  width: 75%;
+}
+.noticeslist-detail div {
+  margin-top: -3px;
+  font-size: 14px;
+}
+.noticeslist-detail-name {
+  display: flex;
+  justify-content: space-between;
+}
+.noticeslist-detail-name button {
+  background-color: transparent;
+  height: 30px;
+  margin-left: -20px;
+  font-size: 16px;
+}
+.noticeslist-detail-name button:active i {
+  color: #fb3449 !important;
+}
+.noticeslist-detail-alarm {
+  margin-top: -15px !important;
+  margin-right: 10px;
+  margin-bottom: -10px;
+}
+.noticeslist-detail-alarm i {
+  padding-left: 5px;
 }
 
 /* --------------------------- Empty list --------------------------- */
