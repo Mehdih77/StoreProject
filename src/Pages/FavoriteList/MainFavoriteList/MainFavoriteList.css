@@ -138,7 +138,57 @@
 .generallist-detail-bottom-content span {
   color: #81858b !important;
 }
-/* MODAL */
+/* list */
+.generallist-detail-lists {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid #dfdfdf;
+}
+.generallist-detail-lists-content {
+  width: 80%;
+}
+.generallist-detail-lists-content h5 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.generallist-detail-lists-content p {
+  font-size: 13px;
+}
+.generallist-detail-lists-btns {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  font-size: 13px;
+}
+.generallist-detail-lists-btns button {
+  padding: 8px;
+  border-radius: 10px;
+}
+.generallist-detail-lists-btns button:nth-child(1) {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #ef394e;
+  color: #fff !important;
+}
+.generallist-detail-lists-btns button:nth-child(1) i {
+  color: #fff !important;
+  padding-left: 7px;
+  vertical-align: -1px;
+}
+.generallist-detail-lists-btns button:nth-child(2) {
+  margin-bottom: 20px;
+  border: 1px solid #ef394e !important;
+  background-color: transparent;
+  color: #ef394e !important;
+}
+.generallist-detail-lists-btns button:nth-child(2) i {
+  color: #ef394e !important;
+  padding-left: 7px;
+  vertical-align: -1px;
+}
+/* ---------------------------------- MODAL --------------------------------- */
 .modal-top {
   display: flex;
   justify-content: space-between;
@@ -196,69 +246,32 @@
   justify-content: flex-end;
   margin: 20px 0 20px 20px;
 }
-.modal-bottom button {
+.modal-bottom button,
+.editing-modal-bottom button {
   padding: 7px 15px;
   border-radius: 8px;
   font-size: 14px;
   background-color: transparent;
 }
-.modal-bottom button:nth-child(1) {
+.modal-bottom button:nth-child(1),
+.editing-modal-bottom div:nth-child(2) button:first-child {
   margin-left: 10px;
   border: 1px solid #81858b !important;
   color: #81858b !important;
 }
-.modal-bottom button:nth-child(2) {
+.modal-bottom button:nth-child(2),
+.editing-modal-bottom div:nth-child(2) button:last-child {
   background-color: #ef394e;
   color: #fff !important;
 }
-.generallist-detail-lists {
-  width: 100%;
+/* EDITING MODAL */
+.editing-modal-bottom {
   display: flex;
-  align-items: baseline;
-  border-bottom: 1px solid #dfdfdf;
+  justify-content: space-between;
+  margin: 20px;
 }
-.generallist-detail-lists-content {
-  width: 80%;
-}
-.generallist-detail-lists-content h5 {
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.generallist-detail-lists-content p {
-  font-size: 13px;
-}
-.generallist-detail-lists-btns {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  font-size: 13px;
-}
-.generallist-detail-lists-btns button {
-  padding: 8px;
-  border-radius: 10px;
-}
-.generallist-detail-lists-btns button:nth-child(1) {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  background-color: #ef394e;
-  color: #fff !important;
-}
-.generallist-detail-lists-btns button:nth-child(1) i {
-  color: #fff !important;
-  padding-left: 7px;
-  vertical-align: -1px;
-}
-.generallist-detail-lists-btns button:nth-child(2) {
-  margin-bottom: 20px;
-  border: 1px solid #ef394e !important;
-  background-color: transparent;
-  color: #ef394e !important;
-}
-.generallist-detail-lists-btns button:nth-child(2) i {
-  color: #ef394e !important;
-  padding-left: 7px;
-  vertical-align: -1px;
+.editing-modal-bottom div:nth-child(1) button i {
+  padding-left: 5px;
 }
 
 /* ------------------------------- noitce list ------------------------------ */

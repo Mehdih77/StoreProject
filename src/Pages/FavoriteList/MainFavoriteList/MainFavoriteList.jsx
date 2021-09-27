@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeFavorite, selectAllFavorite } from '../../../redux/favoriteSlice';
-import { addList, selectAllGeneralList } from '../../../redux/generalListSlice';
+import { addList, removeList, selectAllGeneralList } from '../../../redux/generalListSlice';
 import { removeNotice, selectAllNotice } from '../../../redux/noticeSlice';
 import './MainFavoriteList.css';
 
@@ -43,10 +43,14 @@ export default function MainFavoriteList() {
         dispatch(removeNotice(id))
     }
 
-    // Modal
+    // add new List Modal
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    // edit List Modal
+    const [editing, setEditind] = useState(false);
+    const handleCloseEditing = () => setEditind(false);
+    const handleShowEditing = () => setEditind(true);
 
     // General List
     const [title, setTitle] = useState('');
@@ -59,6 +63,11 @@ export default function MainFavoriteList() {
             text,
             id: (Math.random() * 100000).toFixed(3)
         }))
+        setShow(false);
+    }
+
+    const handleRemoveList = (id) => {
+        dispatch(removeList(id))
         setShow(false);
     }
 
@@ -164,13 +173,39 @@ export default function MainFavoriteList() {
                 </div>
                 {allGeneralList.length > 0 ? 
                     allGeneralList.map(item => (
-                        <div className='generallist-detail-lists'>
+                        <div key={item.id} className='generallist-detail-lists'>
                     <div className='generallist-detail-lists-content'>
                         <h5>{item.title}</h5>
                         <p>{item.text}</p>
                     </div>
                     <div className='generallist-detail-lists-btns'>
-                        <button><i className="far fa-edit"></i>ویرایش</button>
+                        <button onClick={handleShowEditing}><i className="far fa-edit"></i>ویرایش</button>
+                        <Modal centered show={editing} onHide={handleCloseEditing}>
+                        <div className='modal-top'>
+                            <p>ویرایش لیست</p>
+                            <button onClick={handleCloseEditing}>x</button>
+                        </div>
+                        <div className='modal-middle'>
+                            <label>عنوان لیست <span>*</span></label>
+                            <input onChange={(e) => setTitle(e.target.value)} type="text" />
+                            <label>توضیحات</label>
+                            <Form.Control
+                                onChange={(e) => setText(e.target.value)}
+                                as="textarea"
+                                className='modal-input'
+                                style={{ height: '100px', width: "95%"}}
+                                />
+                        </div>
+                        <div className='editing-modal-bottom'>
+                            <div>
+                                <button onClick={() => handleRemoveList(item.id)}><i class="far fa-trash-alt"></i>پاک کردن لیست</button>
+                            </div>
+                            <div>
+                                <button onClick={handleCloseEditing}>انصراف</button>
+                                <button onClick={handleAddNewList}>ویرایش</button>
+                            </div>
+                        </div>
+                    </Modal>
                         <button><i className="fas fa-share-alt"></i>به اشتراک گذاری</button>
                     </div>
                 </div>
