@@ -21,26 +21,28 @@
 .favoritelist-detail {
   display: flex;
   position: relative;
-  margin-bottom: -18px;
 }
 .favoritelist-detail::after {
   content: "";
   position: absolute;
-  bottom: 14%;
+  bottom: 8%;
   width: 95%;
   height: 1px;
   background-color: #dfdfdf;
 }
-.favoritelist-detail img {
-  width: 30%;
-  height: 80%;
+.favoritelist-detail-img{
+  width: 25%;
 }
-.favoritelist-detail div {
+.favoritelist-detail-content{
+  width: 75%;
+}
+.favoritelist-detail div{
   margin-top: -10px;
   font-size: 14px;
 }
 .favoritelist-detail-name {
   display: flex;
+  justify-content: space-between;
 }
 .favoritelist-detail-name button {
   background-color: transparent;
@@ -52,8 +54,9 @@
   color: #fb3449 !important;
 }
 .favoritelist-detail-price {
-  margin-top: -20px !important;
-  margin-bottom: -37px;
+  margin-top: -30px !important;
+  margin-right: 10px;
+  margin-bottom: -27px;
   font-weight: 700;
 }
 .favoritelist-detail-link {

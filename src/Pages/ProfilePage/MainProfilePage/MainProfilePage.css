@@ -67,7 +67,7 @@
 .favorite-list-body-col {
   display: flex;
   font-size: 13px;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 .favorite-list-body-col-img {
   flex: 0 0 15%;
@@ -82,8 +82,8 @@
 .favorite-list-body-col-detail {
   flex: 0 0 73%;
   max-width: 73%;
-  margin-top: 4px;
-  margin-right: 7px;
+  margin-top: 9px;
+  margin-right: 8px;
 }
 .favorite-list-body-col-detail p:last-child {
   margin-top: -20px;

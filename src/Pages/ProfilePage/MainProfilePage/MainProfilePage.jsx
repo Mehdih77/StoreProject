@@ -76,7 +76,7 @@ export default function MainProfilePage() {
                         <span>لیست آخرین علاقه‌مندی‌ها</span>
                     </div>
                     <div className='favorite-list-body'>
-                        {allFavoriteItem.length > 0 ? allFavoriteItem.map(item => (<div className='favorite-list-body-row'>
+                        {allFavoriteItem.length > 0 ? allFavoriteItem.slice(0,3).map(item => (<div className='favorite-list-body-row'>
                             <div className='favorite-list-body-col'>
                                 <div className='favorite-list-body-col-img'>
                                     <img className='img-fluid' src={item.img} alt="favorite-list-img" />
