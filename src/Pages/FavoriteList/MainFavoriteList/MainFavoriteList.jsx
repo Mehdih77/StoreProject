@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeFavorite, selectAllFavorite } from '../../../redux/favoriteSlice';
-import { addList, removeList, selectAllGeneralList } from '../../../redux/generalListSlice';
+import { addList, removeList, updateList, selectAllGeneralList } from '../../../redux/generalListSlice';
 import { removeNotice, selectAllNotice } from '../../../redux/noticeSlice';
 import './MainFavoriteList.css';
 
@@ -49,26 +49,47 @@ export default function MainFavoriteList() {
     const handleShow = () => setShow(true);
     // edit List Modal
     const [editing, setEditind] = useState(false);
+    const [editingValue, setEditingValue] = useState({});
     const handleCloseEditing = () => setEditind(false);
-    const handleShowEditing = () => setEditind(true);
+    const handleShowEditing = (item) => {
+        setEditind(true);
+        setEditingValue(item)
+    };
 
     // General List
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
+    // const [newTitle, setNewTitle] = useState('');
+    // const [newText, setNewText] = useState('');
     const allGeneralList = useSelector(selectAllGeneralList)
 
     const handleAddNewList = () => {
+        setShow(false);
         dispatch(addList({
             title,
             text,
-            id: (Math.random() * 100000).toFixed(3)
+            id: Math.random()
         }))
-        setShow(false);
     }
 
     const handleRemoveList = (id) => {
-        dispatch(removeList(id))
         setShow(false);
+        dispatch(removeList(id))
+    }
+
+    const changeNewValue = (e) => {
+        setEditingValue({
+            ...editingValue,
+            [e.target.name] : e.target.value
+        })
+    }
+
+    const handleUpdateList = (id) => {
+        setEditind(false);
+        dispatch(updateList({
+            id,
+            changes: editingValue
+        }))
     }
 
     return (
@@ -179,7 +200,7 @@ export default function MainFavoriteList() {
                         <p>{item.text}</p>
                     </div>
                     <div className='generallist-detail-lists-btns'>
-                        <button onClick={handleShowEditing}><i className="far fa-edit"></i>ویرایش</button>
+                        <button onClick={() => handleShowEditing(item)}><i className="far fa-edit"></i>ویرایش</button>
                         <Modal centered show={editing} onHide={handleCloseEditing}>
                         <div className='modal-top'>
                             <p>ویرایش لیست</p>
@@ -187,10 +208,12 @@ export default function MainFavoriteList() {
                         </div>
                         <div className='modal-middle'>
                             <label>عنوان لیست <span>*</span></label>
-                            <input onChange={(e) => setTitle(e.target.value)} type="text" />
+                            <input value={editingValue.title} name='title' onChange={changeNewValue} type="text" />
                             <label>توضیحات</label>
                             <Form.Control
-                                onChange={(e) => setText(e.target.value)}
+                                onChange={changeNewValue}
+                                value={editingValue.text}
+                                name='text'
                                 as="textarea"
                                 className='modal-input'
                                 style={{ height: '100px', width: "95%"}}
@@ -202,7 +225,7 @@ export default function MainFavoriteList() {
                             </div>
                             <div>
                                 <button onClick={handleCloseEditing}>انصراف</button>
-                                <button onClick={handleAddNewList}>ویرایش</button>
+                                <button onClick={() => handleUpdateList(item.id)}>ویرایش</button>
                             </div>
                         </div>
                     </Modal>
