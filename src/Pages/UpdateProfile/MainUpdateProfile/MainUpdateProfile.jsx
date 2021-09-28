@@ -2,6 +2,8 @@ import { useState, useRef } from 'react';
 import { useHistory } from 'react-router';
 import './MainUpdateProfile.css';
 import { useAuth } from '../../../ContextApi/AuthProvider';
+import Loading from '../../../components/Loader/Loading';
+import { toast } from 'react-toastify';
 
 export default function MainUpdateProfile() {
 
@@ -31,6 +33,16 @@ export default function MainUpdateProfile() {
 
         Promise.all(promises).then( () => {
             history.push('/profile/update-profile');
+            toast.success('اطلاعات شما بروز رسانی شد', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         }).catch(() => {
             setError("خطا در بروز رسانی!");
         }).finally(() => {
@@ -41,6 +53,9 @@ export default function MainUpdateProfile() {
 
     return (
         <form onSubmit={handleUpdateProfile} autoComplete='off' className='MainUpdateProfile col-12'>
+            {loading && <div className='modal-update-loading'>
+                <div><Loading/></div>
+            </div>}
             <h3>بروز رسانی اطلاعات حساب</h3>
             {error && <span>{error}</span>}
             <label className='update-profile-email'>ایمیل</label>

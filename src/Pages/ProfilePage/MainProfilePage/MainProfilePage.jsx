@@ -67,7 +67,7 @@ export default function MainProfilePage() {
                             </div>
                         </div>
                         <div className='secret-info-body-bottom'>
-                            <Link to='/profile'><i className="fas fa-pencil-alt"></i>ویرایش اطلاعات شخصی</Link>
+                            <Link to='/profile/update-profile'><i className="fas fa-pencil-alt"></i>ویرایش اطلاعات شخصی</Link>
                         </div>
                     </div>
                 </div>

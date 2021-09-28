@@ -49,3 +49,17 @@
   color: #fff !important;
   border-radius: 10px;
 }
+
+.modal-update-loading {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+.modal-update-loading div {
+  position: absolute;
+  top: 10%;
+  right: 40%;
+}
