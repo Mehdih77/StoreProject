@@ -10,6 +10,8 @@
 body {
   background-color: #fff !important;
   font-family: Sahel;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 button {
   outline: none !important;
@@ -78,10 +80,41 @@ input:focus {
   color: #fff !important;
   fill: #fff !important;
   font-size: 16px;
-  /* display: flex; */
-  /* align-items: baseline; */
 }
 .Toastify__close-button svg {
   vertical-align: 10px;
   margin-left: 7px;
+}
+@media screen and (max-width: 760px) {
+  .Toastify__toast-theme--colored {
+    width: 70%;
+    margin-top: 75px;
+    margin-bottom: -60px!important;
+  }
+}
+@media screen and (min-width: 761px) and (max-width: 991px) {
+  .Toastify__toast-theme--colored {
+    width: 100%;
+    margin-top: 65px;
+    margin-bottom: -50px!important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .Toastify__toast-theme--colored {
+    width: 100%;
+    margin-top: 135px;
+    margin-bottom: -120px!important;
+  }
+}
+
+/* Responsive For Mobile Devices */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 }

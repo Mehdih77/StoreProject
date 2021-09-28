@@ -12,13 +12,17 @@
 .goodspage-icons .fa-heart:hover {
   color: #ef394e !important;
 }
-.goodspage-icons .active-favorite{
-  color: #ef394e!important;
-} 
+.goodspage-icons .active-favorite {
+  color: #ef394e !important;
+}
 .goodspage-icons .fa-share-alt:hover {
   color: #019bc2 !important;
 }
 .goodspage-icons .fa-bell:hover {
+  color: #f0ed3c !important;
+  animation: ring 7s ease-in-out;
+}
+.goodspage-icons .fa-bell:active {
   color: #f0ed3c !important;
   animation: ring 7s ease-in-out;
 }
@@ -103,16 +107,21 @@
     transform: rotate(0);
   }
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .goodspage-icons {
+    z-index: 3;
+  }
+}
 
 .customized-dialog-title-goodspage {
-  padding-bottom: 48px!important;
+  padding-bottom: 48px !important;
 }
-.gallery-button{
-  border: 1px solid #dfdfdf!important;
-  margin: 20px 70px 20px 0!important;
-  background-color: #ef394e!important;
-  color: white!important;
-  padding: 5px 15px!important;
+.gallery-button {
+  border: 1px solid #dfdfdf !important;
+  margin: 20px 70px 20px 0 !important;
+  background-color: #ef394e !important;
+  color: white !important;
+  padding: 5px 15px !important;
 }
 
 /* goods NAME and DETAILS */
@@ -229,10 +238,26 @@
   border: 1px solid #e4e4e4;
   padding: 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 410px) {
   .shop-rating {
     top: 0px;
-    right: 142px;
+    right: 66px;
+    width: 250px;
+    height: 375px;
+  }
+}
+@media screen and (min-width: 411px) and (max-width: 510px) {
+  .shop-rating {
+    top: 0px;
+    right: 120px;
+    width: 250px;
+    height: 375px;
+  }
+}
+@media screen and (min-width: 511px) and (max-width: 768px) {
+  .shop-rating {
+    top: 0px;
+    right: 170px;
     width: 300px;
     height: 375px;
   }
@@ -377,4 +402,3 @@
   font-size: 14px;
   font-weight: 600;
 }
-
