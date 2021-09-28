@@ -45,19 +45,23 @@ input:focus {
 /* Slider Custom Style */
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  left: 5px;
   background-color: #fff;
   border-radius: 0 8px 8px 0;
   box-shadow: 1.5px 0 4px 0 rgb(0 0 0 / 15%);
-  height: 70px;
+  height: 70px !important;
 }
 .swiper-container-rtl .swiper-button-prev {
-  right: 1px;
+  right: 2px !important;
   border-radius: 8px 0 0 8px;
 }
 .swiper-button-prev:after,
 .swiper-container-rtl .swiper-button-next:after {
-  font-size: 27px;
+  font-size: 27px !important;
+}
+@media screen and (max-width: 360px) {
+  .swiper-slide .card {
+    margin-right: -15px;
+  }
 }
 @media screen and (max-width: 510px) {
   .swiper-button-prev,

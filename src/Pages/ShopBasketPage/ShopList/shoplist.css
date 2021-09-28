@@ -1,4 +1,3 @@
-
 .shop-list-card {
   width: 100%;
   min-height: 200px;
@@ -49,12 +48,22 @@
 .shop-list-qty-remove {
   color: #ef394e !important;
 }
-.shop-list-price{
+.shop-list-price {
   text-align: left;
   margin: -50px 0 20px 30px;
   font-weight: 700;
   font-size: 19px;
 }
-
-
-
+@media screen and (max-width: 300px) {
+  .shop-list-price {
+    margin: -50px 0 20px 2px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 301px) and (max-width: 350px) {
+  .shop-list-price {
+    margin: -50px 0 20px 15px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}

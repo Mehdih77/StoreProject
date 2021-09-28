@@ -38,6 +38,32 @@
   color: #bababa !important;
   font-weight: 400 !important;
 }
+@media screen and (max-width: 300px) {
+  .secret-info-body-col p {
+    font-size: 15px !important;
+  }
+  .secret-info-body,
+  .favorite-list-body {
+    height: 400px;
+  }
+  .secret-info-body-bottom,
+  .favorite-list-body-bottom {
+    border-top: none!important;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 360px) {
+  .secret-info-body-col p {
+    font-size: 15px !important;
+  }
+  .secret-info-body,
+  .favorite-list-body {
+    height: 370px;
+  }
+  .secret-info-body-bottom,
+  .favorite-list-body-bottom {
+    border-top: none!important;
+  }
+}
 /* Bottom part*/
 .secret-info-body-bottom,
 .favorite-list-body-bottom {
@@ -168,7 +194,32 @@
   background-color: #eeeeee;
   border-radius: 0 0 10px 10px;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 335px) {
+  .tabel-orders-body div {
+    margin-right: -4px !important;
+  }
+  .tabel-orders {
+    font-size: 12px;
+    margin-right: -15px;
+  }
+}
+@media screen and (min-width: 336px) and (max-width: 374px) {
+  .tabel-orders-body div {
+    margin-right: -1px !important;
+  }
+  .tabel-orders {
+    font-size: 12px;
+    margin-right: -15px;
+  }
+}
+@media screen and (min-width: 374px) and (max-width: 403px) {
+  .tabel-orders {
+    font-size: 12px;
+    margin-right: -15px;
+  }
+}
+
+@media screen and (min-width: 404px) and (max-width: 760px) {
   .tabel-orders {
     font-size: 12px;
     margin-right: 0px;
