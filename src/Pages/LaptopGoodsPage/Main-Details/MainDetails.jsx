@@ -1,4 +1,11 @@
 import React, {useState} from "react";
+import './maindetails.css';
+import { useDispatch} from "react-redux";
+import { addToBasket} from "../../../redux/shopSlice";
+import { useSelector } from "react-redux";
+import { addFavorite, removeFavorite, selectAllFavorite } from "../../../redux/favoriteSlice";
+import { addNotice, removeNotice, selectAllNotice } from "../../../redux/noticeSlice";
+import { toast } from 'react-toastify';
 import {withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -7,17 +14,11 @@ import MuiDialogContent from '@material-ui/core/DialogContent';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
-import './maindetails.css';
 import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
 import SwiperCore, {Navigation, Thumbs} from 'swiper/core';
-import { useDispatch} from "react-redux";
-import { addToBasket} from "../../../redux/shopSlice";
-import { useSelector } from "react-redux";
-import { addFavorite, removeFavorite, selectAllFavorite } from "../../../redux/favoriteSlice";
-import { addNotice, removeNotice, selectAllNotice } from "../../../redux/noticeSlice";
 SwiperCore.use([Navigation, Thumbs]);
 
 const styles = (theme) => ({
@@ -86,18 +87,58 @@ export default function MainDetails({getCurrentProducts}) {
     const existFavorite = getCurrentProducts && allFavorite.findIndex(item => item.id === getCurrentProducts.id);
     const handleFavorite = () => {
         if (existFavorite >= 0) {
-            dispatch(removeFavorite(getCurrentProducts.id))
+            dispatch(removeFavorite(getCurrentProducts.id));
+            toast.error('از علاقه مندی ها حذف شد', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         } else {
-            dispatch(addFavorite(getCurrentProducts))
+            dispatch(addFavorite(getCurrentProducts));
+            toast.success('به علاقه مندی ها افزوده شد', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         }
     }
     // add & remove notice item 
     const existNotice = getCurrentProducts && allNotice.findIndex(item => item.id === getCurrentProducts.id);
     const handleNotice = () => {
         if (existNotice >= 0) {
-            dispatch(removeNotice(getCurrentProducts.id))
+            dispatch(removeNotice(getCurrentProducts.id));
+            toast.error('از اطلاع رسانی ها حذف شد', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         } else {
-            dispatch(addNotice(getCurrentProducts))
+            dispatch(addNotice(getCurrentProducts));
+            toast.warning('به اطلاع رسانی ها افزوده شد', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         }
     }
     

@@ -1,0 +1,51 @@
+.MainUpdateProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding: 20px;
+}
+.MainUpdateProfile h3 {
+  font-size: 20px;
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: 10px;
+}
+.MainUpdateProfile span {
+  font-size: 16px;
+  background-color: #e61a32;
+  padding: 5px 10px;
+  color: #fff !important;
+  border-radius: 10px;
+}
+.MainUpdateProfile input {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+}
+.MainUpdateProfile input:enabled {
+  font-size: 16px;
+}
+.MainUpdateProfile label {
+  font-size: 16px;
+}
+.MainUpdateProfile .update-profile-email {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+.MainUpdateProfile .update-profile-password {
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+.MainUpdateProfile .update-profile-password2 {
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+.MainUpdateProfile button {
+  margin: 20px 0 10px 0;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #e61a32;
+  padding: 10px;
+  color: #fff !important;
+  border-radius: 10px;
+}

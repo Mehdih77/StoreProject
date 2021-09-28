@@ -1,5 +1,5 @@
 import './Style/bootstrap-rtl.min.css';
-// import './Style/main-style.css';
+import './Style/main-style.css';
 import HomePage from './Pages/HomePage/HomePage';
 import PhoneGoodsPage from './Pages/PhoneGoodsPage/PhoneGoodsPage';
 import LaptopGoodsPage from './Pages/LaptopGoodsPage/LaptopGoodsPage';
@@ -14,6 +14,7 @@ import ForgotPassPage from './Pages/ForgotPassPage/ForgotPassPage';
 import PhonePage from './Pages/PhonePage/PhonePage';
 import ProfilePage from './Pages/ProfilePage/ProfilePage';
 import FavoriteList from './Pages/FavoriteList/FavoriteList';
+import UpdateProfile from './Pages/UpdateProfile/UpdateProfile';
 
 export default function App() {
 
@@ -38,6 +39,9 @@ export default function App() {
             </Route>
             <Route path='/profile/favorite' exact>
                 <FavoriteList/>
+            </Route>
+            <Route path='/profile/update-profile' exact>
+                <UpdateProfile/>
             </Route>
             <Route exact path='/phones'>
                 <PhonePage />

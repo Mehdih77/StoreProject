@@ -29,7 +29,7 @@ export default function NavProfilePage() {
           </div>
           <div>
             <p>{currentUser && currentUser.email}</p>
-            <p className='nav-profile-page-number' href='#!'>80*****0937</p>
+            <p className='nav-profile-page-number'>80*****0937</p>
             <div className='nav-profile-page-top-active-money'>فعالسازی کیف پول</div>
             <div className='nav-profile-page-top-digiclub'> دیجی کلاب <span><strong>291</strong> امتیاز</span> </div>
           </div>
@@ -57,7 +57,7 @@ export default function NavProfilePage() {
             <a href="#!"><i className="far fa-clock"></i>بازدید های اخیر</a>
           </div>
           <div>
-            <Link to='/profile' href="/profile"><i className="far fa-user"></i>اطلاعات حساب</Link>
+            <Link to='/profile/update-profile' href="/profile"><i className="far fa-user"></i>اطلاعات حساب</Link>
           </div>
           <div onClick={hanldeLogOut} className='nav-profile-page-bottom-logout'>
             <Link href='/' to="/"><i className="fas fa-sign-out-alt"></i>خروج</Link>
