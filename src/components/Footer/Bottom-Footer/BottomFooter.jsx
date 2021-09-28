@@ -38,14 +38,18 @@ export default function BottomFooter() {
                 <h5 className='bottom-footer-title'> با ما همراه باشید</h5>
                    <div className='bottom-footer-contact'>
                    <ul className='bottom-footer-social'>
-                        <li> <a href='#!'><i className="fab fa-instagram"></i> </a> </li>
-                        <li> <a href='#!'> <i className="fab fa-telegram-plane"></i></a> </li>
-                        <li> <a href='#!'> <i className="fab fa-linkedin"></i></a> </li>
-                        <li> <a href='#!'> <i className="fab fa-youtube"></i></a> </li>
+                        <div>
+                            <li> <a href='#!'><i className="fab fa-instagram"></i> </a> </li>
+                            <li> <a href='#!'> <i className="fab fa-telegram-plane"></i></a> </li>
+                        </div>
+                        <div>
+                            <li> <a href='#!'> <i className="fab fa-linkedin"></i></a> </li>
+                            <li> <a href='#!'> <i className="fab fa-youtube"></i></a> </li>
+                        </div>
                     </ul>
                     <h5 className='input-news-title d-none d-md-block'>از جدیدترین تخفیف‌ها باخبر شوید</h5>
                     <div className='input-news d-none d-md-flex'>
-                        <input type='email' placeholder='ایمیل خود را وارد کنید' name='email' />
+                        <input autoComplete='off' type='email' placeholder='ایمیل خود را وارد کنید' name='email' />
                         <button type='submit'>ثبت</button>
                     </div>
                    </div>

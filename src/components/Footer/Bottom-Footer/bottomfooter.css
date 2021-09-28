@@ -3,7 +3,6 @@
   padding-right: 38px;
   padding-bottom: 5px;
   font-weight: 700;
-  /* border-bottom: 1px solid #dfdfdf; */
 }
 .bottom-footer-list {
   font-size: 15px;
@@ -16,9 +15,19 @@
   padding-right: 4px;
   transition: 0.2s linear;
 }
+.bottom-footer-list a:active {
+  font-weight: 600;
+  padding-right: 4px;
+  transition: 0.2s linear;
+}
 
+.bottom-footer-social {
+  display: flex;
+}
+.bottom-footer-social div {
+  display: flex;
+}
 .bottom-footer-social li {
-  display: inline-block;
   font-size: 23px;
 }
 .bottom-footer-social li:nth-child(even) {
@@ -28,16 +37,20 @@
   color: #c2c2c2 !important;
 }
 /* social icon hover */
-.bottom-footer-social .fa-instagram:hover {
+.bottom-footer-social .fa-instagram:hover,
+.bottom-footer-social .fa-instagram:active {
   color: #d411c4 !important;
 }
-.bottom-footer-social .fa-telegram-plane:hover {
+.bottom-footer-social .fa-telegram-plane:hover,
+.bottom-footer-social .fa-telegram-plane:active {
   color: #25becc !important;
 }
-.bottom-footer-social .fa-linkedin:hover {
+.bottom-footer-social .fa-linkedin:hover,
+.bottom-footer-social .fa-linkedin:active {
   color: #0041a8 !important;
 }
-.bottom-footer-social .fa-youtube:hover {
+.bottom-footer-social .fa-youtube:hover,
+.bottom-footer-social .fa-youtube:active {
   color: #e02525 !important;
 }
 .input-news-title {
@@ -85,8 +98,15 @@
   .input-news-title {
     white-space: normal;
   }
+  .bottom-footer-social {
+    display: flex;
+    flex-direction: column;
+  }
   .bottom-footer-social li {
-    font-size: 35px;
-    padding-left: 16px;
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  .bottom-footer-social li:nth-child(even) {
+    padding: 0px;
   }
 }
