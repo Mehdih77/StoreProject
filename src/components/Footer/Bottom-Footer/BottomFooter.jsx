@@ -40,11 +40,11 @@ export default function BottomFooter() {
                    <ul className='bottom-footer-social'>
                         <div>
                             <li> <a href='#!'><i className="fab fa-instagram"></i> </a> </li>
-                            <li> <a href='#!'> <i className="fab fa-telegram-plane"></i></a> </li>
+                            <li> <a href='#!'><i className="fab fa-telegram-plane"></i></a></li>
                         </div>
                         <div>
-                            <li> <a href='#!'> <i className="fab fa-linkedin"></i></a> </li>
-                            <li> <a href='#!'> <i className="fab fa-youtube"></i></a> </li>
+                            <li> <a href='#!'><i className="fab fa-linkedin"></i></a></li>
+                            <li> <a href='#!'><i className="fab fa-youtube"></i></a></li>
                         </div>
                     </ul>
                     <h5 className='input-news-title d-none d-md-block'>از جدیدترین تخفیف‌ها باخبر شوید</h5>
