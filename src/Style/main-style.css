@@ -89,21 +89,21 @@ input:focus {
   .Toastify__toast-theme--colored {
     width: 70%;
     margin-top: 75px;
-    margin-bottom: -60px!important;
+    margin-bottom: -60px !important;
   }
 }
 @media screen and (min-width: 761px) and (max-width: 991px) {
   .Toastify__toast-theme--colored {
     width: 100%;
     margin-top: 65px;
-    margin-bottom: -50px!important;
+    margin-bottom: -50px !important;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .Toastify__toast-theme--colored {
     width: 100%;
     margin-top: 135px;
-    margin-bottom: -120px!important;
+    margin-bottom: -120px !important;
   }
 }
 
