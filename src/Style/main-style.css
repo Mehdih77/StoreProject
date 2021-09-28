@@ -71,7 +71,17 @@ input:focus {
   background-color: unset !important;
 }
 
-.Toastify__toast-theme--colored div, .Toastify__close-button svg, .Toastify__toast-icon svg {
+/* change style of React-Toastify */
+.Toastify__toast-theme--colored div,
+.Toastify__close-button svg,
+.Toastify__toast-icon svg {
   color: #fff !important;
-  fill: #fff!important;
+  fill: #fff !important;
+  font-size: 16px;
+  /* display: flex; */
+  /* align-items: baseline; */
+}
+.Toastify__close-button svg {
+  vertical-align: 10px;
+  margin-left: 7px;
 }

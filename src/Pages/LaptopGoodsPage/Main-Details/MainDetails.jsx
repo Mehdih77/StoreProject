@@ -79,6 +79,16 @@ export default function MainDetails({getCurrentProducts}) {
     const dispatch = useDispatch();
     const hanldeAddItemToBasket = (items) => {
         dispatch(addToBasket(items));
+        toast.success(`${getCurrentProducts?.name} .به سبد خرید افزوده شد`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
     }
 
     const allFavorite = useSelector(selectAllFavorite);
