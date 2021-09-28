@@ -27,7 +27,7 @@ export default function ContactPage() {
                                     <option value="">استعلام گارانتی</option>
                                 </select>
                             </label>
-                            <label className='col-md-6 w-100'>
+                            <label className='col-md-6'>
                                 <p>نام و نام خانوادگی</p>
                                 <input className='w-100' type="text" />
                             </label>

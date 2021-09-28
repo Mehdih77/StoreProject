@@ -38,6 +38,7 @@
 .contactus-title-footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-right: 30px;
   margin-bottom: -10px;
 }
@@ -56,11 +57,13 @@
   border-radius: 10px;
   background-color: transparent;
 }
-.contactus-title-footer button:hover {
+.contactus-title-footer button:hover,
+.contactus-title-footer button:active {
   background-color: #32d4ef;
   color: #085967 !important;
   transition: 0.2s linear;
 }
+
 /* inputs form */
 .contactus-inputs-title {
   font-size: 13px;
@@ -97,6 +100,19 @@
   transition: 0.2s linear;
 }
 
+.contactus-form select {
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+.contactus-form select option {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /* contactus-holiday */
 .contactus-holiday {
   background-color: #fff;
@@ -129,6 +145,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .contactus-holiday-dates-d {
   width: 100px;
@@ -156,7 +173,6 @@
 }
 
 /* contactus-details */
-
 .contactus-details {
   background-color: #fff;
   padding: 10px;
@@ -192,7 +208,7 @@
   font-size: 17px;
   margin-bottom: 5px;
 }
-.contactus-details-address-map img{
+.contactus-details-address-map img {
   width: 100%;
   height: 370px;
 }
@@ -220,11 +236,11 @@
 .contactus-details-phones span {
   font-weight: 600;
 }
-.contactus-details-info{
+.contactus-details-info {
   padding-right: 30px;
   font-size: 13px;
 }
-.contactus-details-info i{
+.contactus-details-info i {
   font-size: 20px;
   padding-left: 7px;
 }

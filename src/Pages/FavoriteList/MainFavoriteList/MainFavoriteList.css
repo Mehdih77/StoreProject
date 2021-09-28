@@ -152,9 +152,11 @@
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 20px;
+  word-break: break-all;
 }
 .generallist-detail-lists-content p {
   font-size: 13px;
+  word-break: break-all;
 }
 .generallist-detail-lists-btns {
   display: flex;
@@ -187,6 +189,30 @@
   color: #ef394e !important;
   padding-left: 7px;
   vertical-align: -1px;
+}
+@media screen and (max-width: 300px) {
+  .generallist-detail-lists {
+    flex-direction: column;
+  }
+  .generallist-detail-lists-btns {
+    margin-top: -30px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+  }
+  .generallist-detail-lists-btns button:nth-child(1) {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 410px) {
+  .generallist-detail-lists-content {
+    width: 70%;
+  }
+  .generallist-detail-lists-btns {
+    width: 30%;
+    font-size: 13px;
+  }
 }
 /* ---------------------------------- MODAL --------------------------------- */
 .modal-top {
