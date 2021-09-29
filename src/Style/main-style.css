@@ -43,6 +43,10 @@ input:focus {
 }
 
 /* Slider Custom Style */
+.swiper-slide {
+  display: flex;
+  justify-content: space-around;
+}
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
   background-color: #fff;
@@ -58,20 +62,12 @@ input:focus {
 .swiper-container-rtl .swiper-button-next:after {
   font-size: 27px !important;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 767px) {
   .swiper-slide .card {
     margin-right: -15px;
   }
 }
-@media screen and (max-width: 510px) {
-  .swiper-button-prev,
-  .swiper-container-rtl .swiper-button-next {
-    left: 48px;
-  }
-  .swiper-container-rtl .swiper-button-prev {
-    right: 46px;
-  }
-}
+
 /* change style of gallery button of materialUI */
 .MuiButton-root:hover {
   background-color: unset !important;

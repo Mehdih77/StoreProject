@@ -43,7 +43,7 @@ export default function Filter() {
             <label className='accordion-checkbox-label'>
                 <div>
                     <CheckBox id='Apple' />
-                    <span>شیائومی</span>
+                    <span>اپل</span>
                 </div>
                 <p>Apple</p>
             </label>

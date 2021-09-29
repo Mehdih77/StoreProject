@@ -1,79 +1,78 @@
-.supermarket{
-    background-color: #6BB927;
+.supermarket {
+  background-color: #6bb927;
 }
-.swiper-top-offer .card-title{
-    font-size: 16px;
-    font-weight: 800;
+.swiper-top-offer .card-title {
+  font-size: 16px;
+  font-weight: 800;
 }
-.swiper-top-offer .card-text{
-    font-size: 14px;
+.swiper-top-offer .card-text {
+  font-size: 14px;
 }
-.card{
-    width: 13rem;
-    min-height: 580px;
-    position: relative;
+.card {
+  width: 13rem;
+  min-height: 580px;
+  position: relative;
 }
-.card .btn-supermarket{
-    position: absolute;
-    color: #fff!important;
+.btn-supermarket {
+  position: absolute;
+  color: #fff !important;
+  bottom: 8px;
+  left: 60px;
+  background-color: #d63e40;
+  font-size: 14px;
 }
-.btn-supermarket{
- bottom: 8px;
- left: 60px;
- background-color: #d63e40;
- font-size: 14px;
-}
-
 
 /* price & time style */
-
-.card-time{
-    position: absolute;
-    bottom: 15px;
-    left: 30px;
+.card-time {
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+}
+.card-offprice,
+.card-price,
+.card-time {
+  text-align: left;
+}
+.old-price {
+  padding-left: 5px;
+  text-decoration: line-through !important;
+  color: #7e7e7e !important;
+  font-size: 17px;
+}
+.card-off-tag {
+  background-color: #f45052;
+  color: #fff !important;
+  border-radius: 20px;
+  padding: 4px 6px 1px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.card-price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: -15px;
+}
+.card-clock {
+  margin: 0px 0 40px 0;
+  font-size: 15px;
+}
+.off-time {
+  padding-left: 5px;
 }
 
-.card-offprice,.card-price,.card-time{
-   text-align: left;
+@media screen and (max-width: 310px) {
+  .btn-supermarket {
+    left: 50px;
+  }
 }
-
-.old-price{
-   padding-left: 5px;
-   text-decoration: line-through!important;
-   color: #7e7e7e!important;
-   font-size: 17px;
-}
-.card-off-tag{
-background-color: #f45052;
-color: #fff!important;
-border-radius: 20px;
-padding: 4px 6px 1px;
-font-size: 15px;
-font-weight: 700;
-
-}
-.card-price{
-   font-size: 18px;
-   font-weight: 700;
-   margin-top: -15px;
-}
-.card-clock{
-   margin: 0px 0 40px 0;
-   font-size: 15px;
-}
-.off-time{
-   padding-left: 5px;
-}
-
-
-@media screen and (max-width: 768px) {
-   .card{
-       width: 16rem;
-       min-height: 640px;
-       margin-right: 45px;
-   }
-   .btn-supermarket{
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .card {
+    width: 16rem;
+    min-height: 640px;
+    margin-right: 45px;
+  }
+  .btn-supermarket {
     bottom: 10px;
     left: 90px;
-   }
+  }
 }

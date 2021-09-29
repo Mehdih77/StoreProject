@@ -15,31 +15,25 @@
   min-height: 580px;
   position: relative;
 }
-.card .btn-top-offer {
+.btn-top-offer {
   position: absolute;
   color: #fff !important;
-}
-.btn-top-offer {
   bottom: 8px;
   left: 60px;
   background-color: #d63e40;
   font-size: 14px;
 }
-
 /* price & time style */
-
 .card-time {
   position: absolute;
   bottom: 15px;
   left: 30px;
 }
-
 .card-offprice,
 .card-price,
 .card-time {
   text-align: left;
 }
-
 .old-price {
   padding-left: 5px;
   text-decoration: line-through !important;
@@ -66,8 +60,12 @@
 .off-time {
   padding-left: 5px;
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 310px) {
+  .btn-top-offer {
+    left: 50px;
+  }
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
   .card {
     width: 16rem;
     margin-right: 45px;

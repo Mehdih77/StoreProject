@@ -7,7 +7,7 @@ export default function OfferTimer() {
   let interval = useRef();
 
   function startTimer() {
-    const countDownTimer = new Date('Sep 29 2021  00:00:00').getTime();
+    const countDownTimer = new Date('Nov 29 2021  00:00:00').getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
