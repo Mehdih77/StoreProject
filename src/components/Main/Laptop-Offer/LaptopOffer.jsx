@@ -17,7 +17,7 @@ export default function LaptopOffer() {
   const laptopsList = getLaptops ? getLaptops.map((laptops) => {
     return (
       <SwiperSlide key={laptops.id}>
-       <Link to={`/goods/laptop/${laptops.id}`}>
+       <Link to={`/laptops/${laptops.id}`}>
           <div className="card laptop-card-custom-style">
            <img src={laptops.img} className="card-img-top laptop-img" alt={laptops.name}/>
              <div className="card-body">

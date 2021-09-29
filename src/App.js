@@ -49,7 +49,7 @@ export default function App() {
             <Route exact path='/phones/:id'>
                 <PhoneGoodsPage/>
             </Route>
-            <Route exact path='/goods/laptop/:id'>
+            <Route exact path='/laptops/:id'>
                 <LaptopGoodsPage/>
             </Route>
             <Route exact path='/shopbasket'>

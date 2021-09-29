@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import './search.css';
-import { Link } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
-
-
 
 export default function Search() {
 
@@ -19,7 +16,7 @@ export default function Search() {
         return false;
     }).map(m => {
         return (
-            <Link id='search-items' to={`/goods/phone/${m.id}`}>
+            <Link id='search-items' href={`/${m.category+"s"}/${m.id}`} to={`/${m.category+"s"}/${m.id}`}>
                 <button className='search-items'>
                 <i className="fas fa-search-plus"></i>
                  {m.name}
