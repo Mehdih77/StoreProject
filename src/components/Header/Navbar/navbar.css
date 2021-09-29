@@ -283,24 +283,38 @@
   }
   .user-profile-sub-menu {
     top: -24px;
-    right: 90px;
-    width: 200px;
+    right: 70px;
+    width: 160px;
     z-index: 9;
-    height: 100px;
+    height: 75px;
+  }
+  .user-profile-sub-menu-img img {
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+  }
+  .user-profile-sub-menu-top-info1 div p {
+    font-size: 12px;
+    margin-top: 9px;
+  }
+  .user-profile-sub-menu-top-info1 {
+    font-size: 9px;
+    margin-bottom: 8px;
   }
   .user-profile-sub-menu-bottom-logout {
     display: flex;
-    margin-top: -25px;
-    padding: 12px 20px;
+    margin-top: -30px;
+    padding: 10px 15px;
     position: relative;
+    font-size: 10px;
   }
   .user-profile-sub-menu-bottom-logout::before {
     content: "";
     position: absolute;
-    width: 170px;
+    width: 145px;
     height: 1px;
-    top: 0px;
-    right: 12px;
+    top: 3px;
+    right: 7px;
     background: #f0f0f1;
   }
   .user-profile-sub-menu-top-info1 {
@@ -331,7 +345,6 @@
   font-weight: lighter;
   margin-bottom: -5px;
 }
-
 .navbar-bottom i {
   padding-left: 6px;
   vertical-align: -2px;
@@ -490,12 +503,12 @@
 .navbar-bottom a:hover {
   color: #f3696c !important;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .fa-percentage {
     padding-right: 0;
   }
   .off-order-submenu {
-    width: 350px;
+    width: 224px;
   }
   .off-order-submenu-middle a:nth-child(1) {
     margin-top: 5px;
@@ -512,6 +525,42 @@
   }
   /* FOR all-goods-submenu*/
   .all-goods-submenu {
-    width: 350px !important;
+    width: 240px !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 930px) {
+  .all-goods-submenu {
+    width: 750px !important;
+    font-size: 10px;
+  }
+  .total-goods-details a {
+    margin-bottom: 9px;
+  }
+  .total-goods-details-header ~ div:nth-child(3) {
+    margin-right: -20px;
+  }
+  .total-goods-details-header ~ div:nth-child(4) {
+    margin-right: -20px;
+  }
+  .total-goods-details-header ~ div:nth-child(5) {
+    margin-right: -10px;
+  }
+}
+@media screen and (min-width: 930px) and (max-width: 1480px) {
+  .all-goods-submenu {
+    width: 900px !important;
+    font-size: 11px;
+  }
+  .total-goods-details a {
+    margin-bottom: 9px;
+  }
+  .total-goods-details-header ~ div:nth-child(3) {
+    margin-right: -20px;
+  }
+  .total-goods-details-header ~ div:nth-child(4) {
+    margin-right: -20px;
+  }
+  .total-goods-details-header ~ div:nth-child(5) {
+    margin-right: -10px;
   }
 }

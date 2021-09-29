@@ -25,6 +25,11 @@ input[type="search"]:enabled {
     width: 100% !important;
   }
 }
+@media screen and (min-width: 976px) and (max-width: 1120px) {
+  input[type="search"] {
+    width: 650px !important;
+  }
+}
 input[type="search"]:focus {
   outline: none;
   box-shadow: unset;
