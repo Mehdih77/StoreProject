@@ -10,6 +10,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import { Link } from 'react-router-dom';
 // import Loading from '../../../components/Loader/Loading';
 
 export default function MoreDetails({getCurrentProducts, id}) {
@@ -210,11 +211,15 @@ export default function MoreDetails({getCurrentProducts, id}) {
           <DialogTitle id="form-dialog-title"></DialogTitle>
           <DialogContent>
             <DialogContentText>
-              <form onSubmit={handleNewComment} className='comment-vote-form'>
+            {currentUser?.email ? <form onSubmit={handleNewComment} className='comment-vote-form'>
                 <TextareaAutosize required className='comment-input-text' type='text' name='text' onChange={handleChangeComments}
                 aria-label="minimum height" rowsMin={3} placeholder='دیدگاه خود را بنویسید' />
                 <button className='comment-button' type='submit'>ارسال</button>
-              </form>
+              </form> 
+              : <div className='error-login-first'>
+                <p>ابتدا باید وارد حساب کاربری خود شوید</p>
+                <button><Link to='/login'>ورود به حساب کاربری</Link></button>
+              </div>}
             </DialogContentText>
           </DialogContent>
         </Dialog>

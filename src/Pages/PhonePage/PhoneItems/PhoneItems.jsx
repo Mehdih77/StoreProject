@@ -19,12 +19,12 @@ export default function PhoneItems() {
                 <img className='img-fluid' src={phone.img} alt={phone.eng_name} />
                 <p className='phone-card-name'>{phone.name}</p>
                 <div className='phone-card-info'>
-                    <p><i class="fas fa-archive"></i>موجود در انبار</p>
-                    <p><span>(1401)</span>4.3<i class="fas fa-star"></i></p>
+                    <p><i className="fas fa-archive"></i>موجود در انبار</p>
+                    <p><span>(1401)</span>4.3<i className="fas fa-star"></i></p>
                 </div>
                 <p className='phone-card-price'>{price}<span>تومان</span></p>
                 <div className='phone-card-bottom'>
-                    <p><i class="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
+                    <p><i className="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
                 </div>
             </Link>
             </div>
@@ -32,7 +32,7 @@ export default function PhoneItems() {
     });
 
 
-    const handleSortPhone = (value) => {
+    const handleSortPhone = (value = "asc-name") => {
         switch (value) {
             case "asc-name":
                 const an = getPhones.sort((a,b) => {
@@ -48,12 +48,12 @@ export default function PhoneItems() {
                             <img className='img-fluid' src={phone.img} alt={phone.eng_name} />
                             <p className='phone-card-name'>{phone.name}</p>
                             <div className='phone-card-info'>
-                                <p><i class="fas fa-archive"></i>موجود در انبار</p>
-                                <p><span>(1401)</span>4.3<i class="fas fa-star"></i></p>
+                                <p><i className="fas fa-archive"></i>موجود در انبار</p>
+                                <p><span>(1401)</span>4.3<i className="fas fa-star"></i></p>
                             </div>
                             <p className='phone-card-price'>{price}<span>تومان</span></p>
                             <div className='phone-card-bottom'>
-                                <p><i class="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
+                                <p><i className="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
                             </div>
                         </Link>
                         </div>
@@ -74,12 +74,12 @@ export default function PhoneItems() {
                             <img className='img-fluid' src={phone.img} alt={phone.eng_name} />
                             <p className='phone-card-name'>{phone.name}</p>
                             <div className='phone-card-info'>
-                                <p><i class="fas fa-archive"></i>موجود در انبار</p>
-                                <p><span>(1401)</span>4.3<i class="fas fa-star"></i></p>
+                                <p><i className="fas fa-archive"></i>موجود در انبار</p>
+                                <p><span>(1401)</span>4.3<i className="fas fa-star"></i></p>
                             </div>
                             <p className='phone-card-price'>{price}<span>تومان</span></p>
                             <div className='phone-card-bottom'>
-                                <p><i class="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
+                                <p><i className="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
                             </div>
                         </Link>
                         </div>
@@ -98,12 +98,12 @@ export default function PhoneItems() {
                             <img className='img-fluid' src={phone.img} alt={phone.eng_name} />
                             <p className='phone-card-name'>{phone.name}</p>
                             <div className='phone-card-info'>
-                                <p><i class="fas fa-archive"></i>موجود در انبار</p>
-                                <p><span>(1401)</span>4.3<i class="fas fa-star"></i></p>
+                                <p><i className="fas fa-archive"></i>موجود در انبار</p>
+                                <p><span>(1401)</span>4.3<i className="fas fa-star"></i></p>
                             </div>
                             <p className='phone-card-price'>{price}<span>تومان</span></p>
                             <div className='phone-card-bottom'>
-                                <p><i class="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
+                                <p><i className="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
                             </div>
                         </Link>
                         </div>
@@ -122,20 +122,20 @@ export default function PhoneItems() {
                             <img className='img-fluid' src={phone.img} alt={phone.eng_name} />
                             <p className='phone-card-name'>{phone.name}</p>
                             <div className='phone-card-info'>
-                                <p><i class="fas fa-archive"></i>موجود در انبار</p>
-                                <p><span>(1401)</span>4.3<i class="fas fa-star"></i></p>
+                                <p><i className="fas fa-archive"></i>موجود در انبار</p>
+                                <p><span>(1401)</span>4.3<i className="fas fa-star"></i></p>
                             </div>
                             <p className='phone-card-price'>{price}<span>تومان</span></p>
                             <div className='phone-card-bottom'>
-                                <p><i class="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
+                                <p><i className="fas fa-store"></i>فروشنده: <span>آنلاین شاپ</span> </p>
                             </div>
                         </Link>
                         </div>
                 )
                 }))
             break;
-        }
-    }
+            default: return true
+        }}
 
     return ( 
         <>
@@ -146,7 +146,7 @@ export default function PhoneItems() {
                 / <a href="/phones">موبایل </a>
             </div>
             <div className="row phone-items-filters">
-                    <p><i class="fas fa-stream"></i>مرتب سازی براساس :</p>
+                    <p><i className="fas fa-stream"></i>مرتب سازی براساس :</p>
                     <button value='asc-name' onClick={(e) => handleSortPhone(e.target.value)}>پربازدیدترین</button>
                     <button value='desc-name' onClick={(e) => handleSortPhone(e.target.value)}>پرفروش‌ترین‌</button>
                     <button value='asc-name' onClick={(e) => handleSortPhone(e.target.value)}>محبوب‌ترین</button>

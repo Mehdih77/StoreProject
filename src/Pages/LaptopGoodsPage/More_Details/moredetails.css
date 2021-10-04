@@ -141,3 +141,20 @@
 .vote-tab-left .media img {
   width: 50px;
 }
+
+.error-login-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.error-login-first p {
+  text-align: center;
+}
+.error-login-first button {
+  margin: 5px 0;
+  background-color: #ef394e;
+  color: #fff !important;
+}
+.error-login-first button a {
+  color: #fff !important;
+}

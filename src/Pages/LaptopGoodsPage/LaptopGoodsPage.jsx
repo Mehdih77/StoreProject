@@ -1,9 +1,9 @@
+import { useCallback, useEffect, useState } from 'react';
+import '../../Style/main-style.css';
+import { get } from '../../Server/Axios';
+import { useParams } from 'react-router-dom';
 import MainDetails from './Main-Details/MainDetails';
 import MoreDetails from './More_Details/MoreDetails';
-import '../../Style/main-style.css';
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { get } from '../../Server/Axios';
 
 export default function LaptopGoodsPage() {
 
@@ -13,12 +13,13 @@ export default function LaptopGoodsPage() {
 
     const [getCurrentProducts, setGetCurrentProducts] = useState();
     
-    const getProduct = () => {
-        return get(`/products/${id}`).then(res => setGetCurrentProducts(res.data));
-    }
+    const getProduct = useCallback( async () => {
+        return await get(`/products/${id}`).then(res => setGetCurrentProducts(res.data));
+    },[id]);
+
     useEffect(() => {
         getProduct();
-    }, [])
+    }, [getProduct])
 
     return (
         <>

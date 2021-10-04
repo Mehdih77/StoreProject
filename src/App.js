@@ -6,7 +6,7 @@ import LaptopGoodsPage from './Pages/LaptopGoodsPage/LaptopGoodsPage';
 import ShopBasketPage from './Pages/ShopBasketPage/ShopBasketPage';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import ContactPage from './Pages/ContactPage/ContactPage';
-import {Switch, Route} from "react-router-dom";
+import {Switch, Route, Redirect} from "react-router-dom";
 import Layout from './Layout/Layout';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import SignupPage from './Pages/SignupPage/SignupPage';
@@ -15,8 +15,11 @@ import PhonePage from './Pages/PhonePage/PhonePage';
 import ProfilePage from './Pages/ProfilePage/ProfilePage';
 import FavoriteList from './Pages/FavoriteList/FavoriteList';
 import UpdateProfile from './Pages/UpdateProfile/UpdateProfile';
+import { useAuth } from './ContextApi/AuthProvider';
 
 export default function App() {
+
+    const {currentUser} = useAuth();
 
     return ( 
     <> 
@@ -35,13 +38,13 @@ export default function App() {
                 <HomePage/>
             </Route>
             <Route path='/profile' exact>
-                <ProfilePage/>
+                {(currentUser && currentUser.email) ? <ProfilePage/> : <Redirect to='/login' />}
             </Route>
             <Route path='/profile/favorite' exact>
-                <FavoriteList/>
+                {(currentUser && currentUser.email) ? <FavoriteList/> : <Redirect to='/login' />}
             </Route>
             <Route path='/profile/update-profile' exact>
-                <UpdateProfile/>
+                {(currentUser && currentUser.email) ? <UpdateProfile/> : <Redirect to='/login' />}
             </Route>
             <Route exact path='/phones'>
                 <PhonePage />

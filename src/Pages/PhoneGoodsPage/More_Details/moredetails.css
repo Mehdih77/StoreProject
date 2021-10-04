@@ -101,30 +101,35 @@
 
 /* comment style */
 
-.MuiTypography-root{
- font-size: 18px!important;
- width: 400px;
+.MuiTypography-root {
+  font-size: 18px !important;
+  width: 250px !important;
 }
-.comment-vote-form{
+.comment-vote-form {
   display: flex;
   flex-direction: column;
 }
-.comment-vote-form input{
+.comment-vote-form input {
   margin: 10px 0;
 }
-.comment-button{
+.comment-button {
   margin: 10px 0;
   background-color: #ef394e;
-  color: #fff!important;
+  color: #fff !important;
 }
-.comment-input-text:focus{
+.comment-input-text:focus {
   outline: none;
 }
-.remove-comment-button{
+.remove-comment-button {
   background-color: #fff;
 }
-.remove-comment-button i:hover{
-  color: #ef394e!important;
+.remove-comment-button i:hover {
+  color: #ef394e !important;
+}
+@media screen and (min-width: 980px) {
+  .MuiTypography-root {
+    width: 450px !important;
+  }
 }
 
 /* VOTE style LEFT */
@@ -140,4 +145,21 @@
 }
 .vote-tab-left .media img {
   width: 50px;
+}
+
+.error-login-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.error-login-first p {
+  text-align: center;
+}
+.error-login-first button {
+  margin: 5px 0;
+  background-color: #ef394e;
+  color: #fff !important;
+}
+.error-login-first button a {
+  color: #fff !important;
 }

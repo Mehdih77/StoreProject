@@ -39,7 +39,8 @@ export default function OfferTimer() {
 
   useEffect(() => {
     startTimer();
-    return () => clearInterval(interval.current);
+    let currentTime = interval.current;
+    return () => clearInterval(currentTime);
   }, [])
 
     return { hours, minutes, seconds}
