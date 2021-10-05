@@ -19,9 +19,9 @@ export default function ShopList({currentProducts}) {
     <> 
       {currentProducts.map((items) => ( 
         <> 
-        <div key={items.id} className='shop-list'>
+        <div className='shop-list'>
             <div className="card shop-list-card mb-3">
-                <div className="row">
+                <div key={items.id} className="row">
                     <div className="col-md-3">
                         <img src={items.img} className="card-img shop-list-img" alt="shop-img"/>
                     </div>

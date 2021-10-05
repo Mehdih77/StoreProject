@@ -1,16 +1,15 @@
-import './supermarket.css'
-import OfferTimer from '../../../components/OfferTimer'
+import './supermarket.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Navigation } from 'swiper/core';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToBasket, allProducts } from '../../../redux/shopSlice';
+import ShowTimer from '../../../components/OfferTimer/ShowTimer';
 SwiperCore.use([Navigation]);
 
 export default function SuperMarket() {
 
-  const {hours, minutes, seconds} = OfferTimer();
 
   const getAllProducts = useSelector(allProducts);
   const dispatch = useDispatch();
@@ -32,7 +31,7 @@ export default function SuperMarket() {
               <div className="card-time">
                 <p className="card-offprice"><span className="card-off-tag">{supermarket.off}%</span><span className="old-price">{supermarket.old_price}</span></p>
                 <p className="card-price">{supermarket.price} تومان</p>
-                <p className="card-clock"><span className="off-time">{hours}:{minutes}:{seconds}</span><i className="far fa-clock"></i></p>
+                <ShowTimer />
               </div>
               <button onClick={() => hanldeAddItemToBasket(supermarket)} className="btn btn-supermarket">افزودن به سبد خرید</button>
         </div>

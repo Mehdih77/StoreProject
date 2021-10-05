@@ -1,16 +1,14 @@
 import './topoffer.css'
-import OfferTimer from '../../../components/OfferTimer'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Navigation } from 'swiper/core';
 import { addToBasket, allProducts } from '../../../redux/shopSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import ShowTimer from '../../../components/OfferTimer/ShowTimer';
 SwiperCore.use([Navigation]);
 
 export default function TopOffer() {
-
-  const {hours ,minutes , seconds} = OfferTimer();
  
   const getAllProducts = useSelector(allProducts);
   const dispatch = useDispatch();
@@ -32,7 +30,7 @@ export default function TopOffer() {
            <div className="card-time">
              <p className="card-offprice"><span className="card-off-tag">{offer.off}%</span><span className="old-price">{offer.old_price}</span></p>
              <p className="card-price">{offer.price} تومان</p>
-              <p className="card-clock"><span className="off-time">{hours}:{minutes}:{seconds}</span><i className="far fa-clock"></i></p>
+             <ShowTimer />
            </div>
             <button onClick={() => hanldeAddItemToBasket(offer)} className="btn btn-top-offer">افزودن به سبد خرید</button>
           </div>

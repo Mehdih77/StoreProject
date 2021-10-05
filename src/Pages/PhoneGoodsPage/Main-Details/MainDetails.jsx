@@ -1,79 +1,17 @@
-import React, {useState} from "react";
 import './maindetails.css';
-import { useDispatch, useSelector  } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToBasket } from "../../../redux/shopSlice";
-import { addFavorite, removeFavorite, selectAllFavorite} from "../../../redux/favoriteSlice";
-import { addNotice, removeNotice, selectAllNotice } from "../../../redux/noticeSlice";
 import { toast } from 'react-toastify';
-import {withStyles} from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import MuiDialogContent from '@material-ui/core/DialogContent';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import Typography from '@material-ui/core/Typography';
-import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
 import SwiperCore, {Navigation, Thumbs} from 'swiper/core';
+import GoodsPageIcons from "../../../components/GoodPageIcons/GoodsPageIcons";
+import PhotoGallery from "../../../components/PhotoGallery/PhotoGallery";
 SwiperCore.use([Navigation, Thumbs]);
 
-const styles = (theme) => ({
-    root: {
-        margin: 0,
-        padding: theme.spacing(2)
-    },
-    closeButton: {
-        position: 'absolute',
-        right: theme.spacing(1),
-        top: theme.spacing(1),
-        color: theme.palette.grey[500]
-    }
-});
+export default function MainDetails({getCurrentProducts}) {
 
-const DialogTitle = withStyles(styles)((props) => {
-    const {
-        children,
-        classes,
-        onClose,
-        ...other
-    } = props;
-    return (
-        <MuiDialogTitle disableTypography className={classes.root} {...other}>
-            <Typography variant="h6">{children}</Typography>
-            {onClose
-                ? (
-                    <IconButton
-                        aria-label="close"
-                        className={classes.closeButton}
-                        onClick={onClose}>
-                        <CloseIcon/>
-                    </IconButton>
-                )
-                : null}
-        </MuiDialogTitle>
-    );
-});
-
-const DialogContent = withStyles((theme) => ({
-    root: {
-        padding: theme.spacing(2)
-    }
-}))(MuiDialogContent);
-
-export default function MainDetails({getCurrentProducts,id}) {
-
-    // gallery modal
-    const [thumbsSwiper,setThumbsSwiper] = useState(null);
-    const [open,setOpen] = React.useState(false);
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
 
     const dispatch = useDispatch();
     const hanldeAddItemToBasket = (items) => {
@@ -89,67 +27,6 @@ export default function MainDetails({getCurrentProducts,id}) {
             theme: "colored",
             });
     }
-    
-    const allFavorite = useSelector(selectAllFavorite);
-    const allNotice = useSelector(selectAllNotice)
-    // add & remove favorite item 
-    const existFavorite = getCurrentProducts && allFavorite.findIndex(item => item.id === getCurrentProducts.id);
-    const handleFavorite = () => {
-        if (existFavorite >= 0) {
-            dispatch(removeFavorite(getCurrentProducts.id));
-            toast.error('از علاقه مندی ها حذف شد', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                });
-        } else {
-            dispatch(addFavorite(getCurrentProducts))
-            toast.success('به علاقه مندی ها افزوده شد', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                });
-        }
-    }
-    // add & remove notice item 
-    const existNotice = getCurrentProducts && allNotice.findIndex(item => item.id === getCurrentProducts.id);
-    const handleNotice = () => {
-        if (existNotice >= 0) {
-            dispatch(removeNotice(getCurrentProducts.id));
-            toast.error('از اطلاع رسانی ها حذف شد', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                });
-        } else {
-            dispatch(addNotice(getCurrentProducts));
-            toast.warning('به اطلاع رسانی ها افزوده شد', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                });
-        }
-    }
 
     const itemPrice = getCurrentProducts && Number((getCurrentProducts.price).toFixed(3)).toLocaleString().split(/\s/).join(',');
 
@@ -157,77 +34,10 @@ export default function MainDetails({getCurrentProducts,id}) {
         <section className='container-fluid MainDetails-goodspage'>
             <section className='container my-4'>
                 <div className='row'>
-                    <div className='col-6 col-md-1 goodspage-icons'>
-                        <ul>
-                            <li>
-                                {existFavorite >= 0 ? <i onClick={handleFavorite} title='حذف از علاقه مندی ها' class="fas fa-heart active-favorite"></i>
-                                : <i onClick={handleFavorite} title='افزودن به علاقه مندی ها' className="far fa-heart"></i>
-                                }
-                            </li>
-                            <li>
-                                <i title='اشتراک گذاری' className="fas fa-share-alt"></i>
-                            </li>
-                            <li>
-                                {existNotice >= 0 ? <i onClick={handleNotice} title='حذف از اطلاع رسانی' class="fas fa-bell active-notice"></i>
-                                : <i onClick={handleNotice} title='افزودن به اطلاع رسانی' className="far fa-bell"></i>
-                                }
-                            </li>
-                            <li>
-                                <i title='نمودار قیمت' className="far fa-chart-bar"></i>
-                            </li>
-                        </ul>
-                    </div>
+                <GoodsPageIcons getCurrentProducts={getCurrentProducts} />
                     <div className='col-6 col-md-3'>
                         <img className='img-fluid img-detail' src={getCurrentProducts?.img} alt={getCurrentProducts?.name}/>
-                        <div>
-                            <Button onClick={handleClickOpen}>
-                                <p className='gallery-button'>گالری تصاویر</p>
-                            </Button>
-                            <Dialog
-                                onClose={handleClose}
-                                aria-labelledby="customized-dialog-title"
-                                open={open}>
-                                <DialogTitle
-                                    id="customized-dialog-title"
-                                    className='customized-dialog-title-goodspage'
-                                    onClose={handleClose}></DialogTitle>
-                                <DialogContent dividers>
-                                    <Swiper
-                                        style={{
-                                        '--swiper-navigation-color': '#fff',
-                                        '--swiper-pagination-color': '#fff'
-                                    }}
-                                        spaceBetween={10}
-                                        navigation={true}
-                                        thumbs={{
-                                        swiper: thumbsSwiper
-                                    }}
-                                        className="mySwiper2">
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_1} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_2} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_3} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_4} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_5} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_6} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                    </Swiper>
-                                    <Swiper
-                                        onSwiper={setThumbsSwiper}
-                                        spaceBetween={10}
-                                        slidesPerView={4}
-                                        freeMode={true}
-                                        watchSlidesVisibility={true}
-                                        watchSlidesProgress={true}
-                                        className="mySwiper">
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_1} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_2} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_3} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_4} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_5} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                        <SwiperSlide><img className='img-fluid' src={getCurrentProducts?.img_6} alt={getCurrentProducts?.name}/></SwiperSlide>
-                                    </Swiper>
-                                </DialogContent>
-                            </Dialog>
-                        </div>
+                        <PhotoGallery getCurrentProducts={getCurrentProducts} />
                     </div>
                     <div className='col-md-5'>
                         <h1 className='goods-name'>

@@ -1,7 +1,7 @@
 import React from 'react'
 import './shopbasketbanners.css'
 
-export default function ShopBasketBanners() {
+const ShopBasketBanners = () => {
     return (
         <div className='container'>
             <div className='row my-4 shop-basket-banners'>
@@ -21,3 +21,5 @@ export default function ShopBasketBanners() {
         </div>
     )
 }
+
+export default React.memo(ShopBasketBanners);

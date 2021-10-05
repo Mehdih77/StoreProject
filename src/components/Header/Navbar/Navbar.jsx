@@ -1,16 +1,12 @@
-import {useEffect, useState} from 'react';
+import { useState} from 'react';
 import Search from '../Search/Search';
 import './navbar.css';
 import {Link, useHistory} from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
-import { calcTotal, getCurrentProducts, getTotoalQty } from '../../../redux/shopSlice';
 import { useAuth } from '../../../ContextApi/AuthProvider';
+import ShopQty from './ShopQty';
 
 export default function Navbar() {
 
-  const dispatch = useDispatch();
-  const currentProducts = useSelector(getCurrentProducts);
-  const totoalQty = useSelector(getTotoalQty);
   const history = useHistory()
   const {currentUser,logOut} = useAuth();
 
@@ -30,9 +26,6 @@ export default function Navbar() {
     setOpenSubMenu(!openSubMenu);
   }
 
-  useEffect(() => {
-    dispatch(calcTotal());
-  }, [currentProducts,dispatch])
 
   return (
     <>
@@ -86,11 +79,7 @@ export default function Navbar() {
           : 
           <Link to='/login'><button className="user-login-btn"><i className="fas fa-user"></i>ورود به حساب کاربری </button></Link>
           }
-          <Link to='/shopbasket' className="store-shop">
-            <i className="fas fa-shopping-cart">
-              <span className="qty-shop">{totoalQty}</span>
-            </i>
-          </Link>
+          <ShopQty />
         </div>
       </div>
         <ul className="navbar-nav navbar-bottom mr-2">
